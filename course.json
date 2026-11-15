@@ -1,0 +1,374 @@
+{
+  "$schema": "https://sdaiaacademy.github.io/engine/schemas/course.schema.json",
+  "engine": "1",
+  "id": "fn-106",
+  "code": "FN-106",
+  "version": "2027.1.0",
+  "lang": "en",
+  "title": {
+    "en": "Responsible Data and AI Practice in the Kingdom",
+    "ar": "الممارسة المسؤولة للبيانات والذكاء الاصطناعي في المملكة"
+  },
+  "tagline": "REPLACE: one line under the title: what participants can do after the course",
+  "description": "Participants make one small build lawful and responsible: a parent-enquiry assistant for a fictional private school group that drafts replies from attendance and fee records with a language model. They map its personal data and minimise it under the Personal Data Protection Law (PDPL), classify each data set under the National Data Management Office (NDMO) policy, decide what may reach an external model, turn the SDAIA AI Ethics Principles into tests, assess risk with the National AI Risk Management Framework, and write the disclosure and records the build needs.",
+  "track": "foundations",
+  "level": 100,
+  "badge": {
+    "name": "Foundations"
+  },
+  "audience": "Beginners. Graduates and career changers entering the AI Engineering or Data Science track; computing and data graduates who pass the placement test skip the courses it covers.",
+  "prerequisites": [
+    "FN-101 Python for Data and AI Work",
+    "FN-105 How Machine Learning and Language Models Work",
+    "Reads a short Python program that calls a web API"
+  ],
+  "site": {
+    "url": "https://sdaiaacademy.github.io/fn-106/",
+    "repo": "SDAIAAcademy/fn-106"
+  },
+  "outcomes": [
+    {
+      "id": "LO1",
+      "text": "Explain the PDPL obligations that govern a build, from lawful basis and minimisation to rights, retention, transfer and breach handling, given the assistant's data flow diagram",
+      "level": "Awareness",
+      "evidence": "an annotated diagram naming the obligation at each step, checked against the reference"
+    },
+    {
+      "id": "LO2",
+      "text": "Distinguish what the data classification, data sharing and open data policies and the SDAIA Generative AI Guidelines each decide, given six questions about the build",
+      "level": "Awareness",
+      "evidence": "a decision table naming the governing instrument, matching the reference on at least five of six"
+    },
+    {
+      "id": "LO3",
+      "text": "Classify each data set of the build under the four NDMO classification levels and derive the rule for sending it to an external model service, given the school group's data inventory and the policy's impact categories",
+      "level": "Applied",
+      "evidence": "a classification register with level, reason and permitted destinations per data set"
+    },
+    {
+      "id": "LO4",
+      "text": "Apply minimisation and pseudonymisation to the data the assistant sends, and test whether records can be re-identified, given synthetic student and guardian records",
+      "level": "Applied",
+      "evidence": "a before-and-after field list, a pseudonymisation script and a re-identification test result"
+    },
+    {
+      "id": "LO5",
+      "text": "Prepare a risk assessment that places the assistant in an ethics risk tier and works through the four phases of the national risk framework, given the build description and five candidate harms",
+      "level": "Applied",
+      "evidence": "a risk register with tier, likelihood and impact ratings, an owner, a treatment and a review date per risk"
+    },
+    {
+      "id": "LO6",
+      "text": "Test the assistant against the ethics principles for fairness across Arabic and English enquiries, transparency and human review, and draft the disclosure parents see, given forty scripted enquiries",
+      "level": "Applied",
+      "evidence": "a test report with results per check, the changes made and the disclosure text"
+    }
+  ],
+  "case_study": {
+    "name": "REPLACE: the name of the fictional organisation every lab works on",
+    "summary": "REPLACE: two sentences on the case study and its synthetic data"
+  },
+  "format": "intensive",
+  "format_note": "Intensive: 3 teaching days of four sessions and a capstone day, with guided pre-work and a tracked follow-up task",
+  "hours": {
+    "instruction": 5,
+    "lab": 5,
+    "guided_self_study": 5,
+    "assessment": 1,
+    "capstone": 5
+  },
+  "unit": "day",
+  "days": [
+    {
+      "id": "day1",
+      "kind": "day",
+      "title": "Personal data and the law",
+      "deck": "slides/day1.html",
+      "sessions": [
+        {
+          "title": "Where personal data flows in a build",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO1"
+          ],
+          "lab": {
+            "id": "1.1",
+            "title": "Map every field the assistant reads, sends, logs and stores on a data flow diagram",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D1_1_map_every_field.ipynb"
+          }
+        },
+        {
+          "title": "Lawful basis and minimisation",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO1"
+          ],
+          "lab": {
+            "id": "1.2",
+            "title": "Set a lawful basis and purpose for each flow and remove the fields the purpose does not need",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D1_2_set_lawful_basis.ipynb"
+          }
+        },
+        {
+          "title": "Pseudonymisation and its limits",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO4"
+          ],
+          "lab": {
+            "id": "1.3",
+            "title": "Pseudonymise the guardian and student records and attempt to re-identify them by linkage",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D1_3_pseudonymise_guardian_student.ipynb"
+          }
+        },
+        {
+          "title": "Rights, retention and breaches",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO1"
+          ],
+          "lab": {
+            "id": "1.4",
+            "title": "Write a retention rule per store and walk a seeded breach through the PDPL breach guideline",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D1_4_write_retention_rule.ipynb"
+          }
+        }
+      ]
+    },
+    {
+      "id": "day2",
+      "kind": "day",
+      "title": "Classify, share and send",
+      "deck": "slides/day2.html",
+      "sessions": [
+        {
+          "title": "Data classification levels",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO3"
+          ],
+          "lab": {
+            "id": "2.1",
+            "title": "Classify the six data sets with the policy's impact categories and record the reasons",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D2_1_classify_six_data.ipynb"
+          }
+        },
+        {
+          "title": "What may reach an external model",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO3"
+          ],
+          "lab": {
+            "id": "2.2",
+            "title": "Decide for each data set whether it may go to a hosted model, a locally served model or neither",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D2_2_decide_each_data.ipynb"
+          }
+        },
+        {
+          "title": "Sharing with another entity",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO2"
+          ],
+          "lab": {
+            "id": "2.3",
+            "title": "Assess a partner entity's request for attendance data against the Data Sharing Policy and draft the conditions",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D2_3_assess_partner_entity.ipynb"
+          }
+        },
+        {
+          "title": "Licences and provenance",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO2"
+          ],
+          "lab": {
+            "id": "2.4",
+            "title": "Check the licences of two candidate open-weight models and one dataset and record the use restrictions",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D2_4_check_licences_two.ipynb"
+          }
+        }
+      ]
+    },
+    {
+      "id": "day3",
+      "kind": "day",
+      "title": "Ethics and risk in practice",
+      "deck": "slides/day3.html",
+      "sessions": [
+        {
+          "title": "Principles into tests",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO6"
+          ],
+          "lab": {
+            "id": "3.1",
+            "title": "Write three checks that turn fairness, transparency and accountability into pass or fail results",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D3_1_write_three_checks.ipynb"
+          }
+        },
+        {
+          "title": "Testing the assistant",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO6"
+          ],
+          "lab": {
+            "id": "3.2",
+            "title": "Run forty scripted enquiries in Arabic and English, compare reply quality and escalation rates, and name the bias types from the national guide that explain any gap",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D3_2_run_forty_scripted.ipynb"
+          }
+        },
+        {
+          "title": "Risk tier and risk register",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO5"
+          ],
+          "lab": {
+            "id": "3.3",
+            "title": "Place the assistant in a risk tier and rate five harms by likelihood and impact",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D3_3_place_assistant_risk.ipynb"
+          }
+        },
+        {
+          "title": "Disclosure and human review",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO6"
+          ],
+          "lab": {
+            "id": "3.4",
+            "title": "Draft the notice parents see and the rule that sends sensitive replies to staff",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D3_4_draft_notice_parents.ipynb"
+          }
+        }
+      ]
+    },
+    {
+      "id": "capstone",
+      "kind": "capstone",
+      "title": "Capstone project presentations",
+      "deck": "slides/capstone.html",
+      "subtitle": "REPLACE: the catalog gives 10 minutes for each presentation and nothing about questions; decide whether the questions are inside those minutes, set capstone.talk_minutes and capstone.qa_minutes in course.json and the timers of the now-presenting slide, and remove this line"
+    }
+  ],
+  "capstone": {
+    "summary": "A responsible build pack for the assistant or the participant's own build (registers, minimisation code with its re-identification test, ethics test report, a record of processing entry, a breach checklist and the disclosure), submitted as a public repository and defended in a ten-minute review",
+    "submission": "REPLACE: what participants submit and how: a public repository link, or a shared folder for a course without code",
+    "talk_minutes": 10,
+    "rubric": [
+      {
+        "criterion": "Data protection",
+        "weight": 25
+      },
+      {
+        "criterion": "Classification and sharing",
+        "weight": 20
+      },
+      {
+        "criterion": "Risk assessment",
+        "weight": 20
+      },
+      {
+        "criterion": "Ethics tests",
+        "weight": 20
+      },
+      {
+        "criterion": "Disclosure and records",
+        "weight": 15
+      }
+    ]
+  },
+  "labs": {
+    "kind": "notebooks",
+    "base": "labs/"
+  },
+  "tools": [
+    {
+      "slot": "Language model for the build",
+      "examples": [
+        "a small open-weight model served locally",
+        "a free hosted endpoint used only with synthetic data"
+      ]
+    },
+    {
+      "slot": "Personal data detection",
+      "examples": [
+        "Presidio",
+        "regular-expression rules"
+      ]
+    },
+    {
+      "slot": "De-identification and linkage testing",
+      "examples": [
+        "ARX",
+        "dataframe joins on quasi-identifiers"
+      ]
+    },
+    {
+      "slot": "Licence references",
+      "examples": [
+        "the SPDX licence list",
+        "model and dataset cards"
+      ]
+    },
+    {
+      "slot": "Diagramming",
+      "examples": [
+        "draw.io",
+        "Mermaid"
+      ]
+    }
+  ]
+}
