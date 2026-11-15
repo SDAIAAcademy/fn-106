@@ -22,34 +22,35 @@
     <div class="row"><span>Ethics tests</span><div class="bar c-purple" style="--w:80%"></div><span class="val">20%</span></div>
     <div class="row"><span>Disclosure and records</span><div class="bar c-amber" style="--w:60%"></div><span class="val">15%</span></div>
   </div>
-  <div class="callout tip mt"><b>Show results from at least two measured runs.</b> A claim without a number is a plan, not a result.</div>
-  <aside class="notes">Walk through each criterion with one example of what full marks look like.</aside>
+  <div class="callout tip mt"><b>Show measured results.</b> A re-identification rate, a fairness gap, a recall per language: a claim without a number is a plan.</div>
+  <aside class="notes"><p>Full marks, one example each. Data protection: the before-and-after field list, the pseudonymisation code and a re-identification rate measured on it, a retention rule as code. Classification and sharing: six sets with level, reason and destination, and the sharing conditions. Risk: a tier with reasons and a register with owners, dates and residual ratings. Ethics tests: the three checks and the forty-enquiry rows, with thresholds set first. Disclosure and records: the notice checked against nine items, a record of processing entry, a breach checklist with the 72-hour clock.</p></aside>
 </section>
 
 <section class="slide" id="format" data-label="Format">
   <div class="kicker">Format</div>
-  <h2>10 minutes for each presentation</h2>
+  <h2>Ten minutes each: six to present, four for a changed fact</h2>
   <div class="cols cols-3">
-    <div class="card c-teal"><h4>1 · The problem</h4><p class="small mb0">Who, what, why now. One slide.</p></div>
-    <div class="card c-cyan"><h4>2 · What you built</h4><p class="small mb0">Design, decisions, trade-offs. Then the live demo.</p></div>
-    <div class="card c-coral"><h4>3 · What you measured</h4><p class="small mb0">Baseline, improvement, failures found, what comes next.</p></div>
+    <div class="card c-teal"><h4>1 · The build</h4><p class="small mb0">Whose data, what it does, where prompts go. One slide or the README.</p></div>
+    <div class="card c-cyan"><h4>2 · The pack</h4><p class="small mb0">Walk the repository: registers, code, test report, records, notice. Show the numbers.</p></div>
+    <div class="card c-coral"><h4>3 · The changed fact</h4><p class="small mb0">The assessor changes one fact; you revise the classification and risk entries live.</p></div>
   </div>
-  <div class="callout note mt"><b>Peer feedback.</b> After each talk, everyone writes one strength, one question and one suggestion.</div>
+  <div class="callout note mt"><b>Peer feedback.</b> After each review, everyone writes one strength, one question and one risk they would add.</div>
+  <aside class="notes"><p>Changed facts to choose from, one per participant: a new field (a child's photo, a medical certificate); a new recipient (a transport contractor, a ministry report); a hosted model in another country for real data; sensitive replies sent without review; a data subject asks for deletion; a second breach. Keep the list private before the day. The commit history of each repository is inspected for authenticity.</p></aside>
 </section>
 
 <section class="slide order" id="running-order" data-label="Running order">
   <div class="kicker">Running order</div>
   <h2>Who presents when</h2>
   <table class="t small">
-    <tr><th>#</th><th>Presenter</th><th>Project</th></tr>
-    <tr><td>1</td><td><input placeholder="name"></td><td><input placeholder="Project"></td></tr>
-    <tr><td>2</td><td><input placeholder="name"></td><td><input placeholder="Project"></td></tr>
-    <tr><td>3</td><td><input placeholder="name"></td><td><input placeholder="Project"></td></tr>
-    <tr><td>4</td><td><input placeholder="name"></td><td><input placeholder="Project"></td></tr>
-    <tr><td>5</td><td><input placeholder="name"></td><td><input placeholder="Project"></td></tr>
-    <tr><td>6</td><td><input placeholder="name"></td><td><input placeholder="Project"></td></tr>
-    <tr><td>7</td><td><input placeholder="name"></td><td><input placeholder="Project"></td></tr>
-    <tr><td>8</td><td><input placeholder="name"></td><td><input placeholder="Project"></td></tr>
+    <tr><th>#</th><th>Presenter</th><th>Build</th></tr>
+    <tr><td>1</td><td><input placeholder="name"></td><td><input placeholder="build"></td></tr>
+    <tr><td>2</td><td><input placeholder="name"></td><td><input placeholder="build"></td></tr>
+    <tr><td>3</td><td><input placeholder="name"></td><td><input placeholder="build"></td></tr>
+    <tr><td>4</td><td><input placeholder="name"></td><td><input placeholder="build"></td></tr>
+    <tr><td>5</td><td><input placeholder="name"></td><td><input placeholder="build"></td></tr>
+    <tr><td>6</td><td><input placeholder="name"></td><td><input placeholder="build"></td></tr>
+    <tr><td>7</td><td><input placeholder="name"></td><td><input placeholder="build"></td></tr>
+    <tr><td>8</td><td><input placeholder="name"></td><td><input placeholder="build"></td></tr>
   </table>
   <aside class="notes">Type the names in at the start; the fields can be edited live and are not saved, so keep the list in your notes too.</aside>
 </section>
@@ -58,17 +59,18 @@
   <div class="kicker">Before the first presentation</div>
   <h1>Final prep · 20 minutes</h1>
   <div class="timer" data-minutes="20"></div>
-  <p class="lead">Rehearse once, record a backup, try the demo on this screen.</p>
+  <p class="lead">Check your repository is public and holds no real data or keys, rehearse once, open the README on this screen.</p>
   <aside class="notes">Press T to start the timer. Breaks are not slides: press B when the room needs one.</aside>
 </section>
 
 <section class="slide dark presenting" id="now-presenting" data-label="Now presenting">
   <div class="kicker center">Now presenting</div>
-  <div class="center"><input placeholder="Presenter · project"></div>
+  <div class="center"><input placeholder="Presenter · build"></div>
   <div class="timers mt">
-    <div><h3>Talk and demo</h3><div class="timer" data-minutes="10"></div></div>
+    <div><h3>The pack</h3><div class="timer" data-minutes="6"></div></div>
+    <div><h3>The changed fact</h3><div class="timer" data-minutes="4"></div></div>
   </div>
-  <aside class="notes">Type the presenter's name and press T to start the timer. Reuse this slide for every presenter.</aside>
+  <aside class="notes">Type the presenter's name and press T to start the first timer. At six minutes, state the changed fact and start the second. Reuse this slide for every presenter.</aside>
 </section>
 
 <section class="slide" id="review" data-label="Trainer review">
@@ -86,9 +88,11 @@
   <div class="kicker">After the course</div>
   <h2>Keep going</h2>
   <ul class="bullets">
-    <li><b>Your project stays yours:</b> keep it reproducible and add the next improvement you named today</li>
-    <li><b>Next Academy course:</b> REPLACE: the course that follows this one</li>
+    <li><b>The follow-up task:</b> apply the build pack to a second case, ideally a build from your own work, and submit it as tracked</li>
+    <li><b>Keep the instruments current:</b> recheck licences, guidelines and the risk framework before each real release</li>
+    <li><b>Your pack stays yours:</b> it is the template for the next build you make lawful</li>
   </ul>
+  <aside class="notes">The follow-up task is part of the course format in the catalog. Point participants to the README's sources list: every instrument used in the course, with its address.</aside>
 </section>
 
 <section class="slide dark" id="thanks" data-label="Thank you">

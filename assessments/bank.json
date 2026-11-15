@@ -349,6 +349,499 @@
       "level": "understand",
       "pool": "practice",
       "weight": 1
+    },
+    {
+      "id": "inst-genai-paste",
+      "type": "single",
+      "prompt": "A member of staff wants to paste a guardian's message, with the child's name and a medical detail, into a public chatbot to improve the wording of a reply. Which instrument decides whether that is allowed?",
+      "options": [
+        "The Open Data Policy",
+        "The Generative AI Guidelines",
+        "The Data Sharing Policy",
+        "No instrument; it is a matter of style"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "The Generative AI Guidelines say what may be entered into generative AI tools: nothing classified Restricted or higher.",
+      "misconceptions": [
+        "Thinks open data rules cover any data that leaves the organisation",
+        "",
+        "Treats a person typing into a tool as sharing between entities",
+        "Believes drafting help is outside the rules because no system is built"
+      ],
+      "lo": [
+        "LO2"
+      ],
+      "day": "day2",
+      "session": 4,
+      "level": "apply",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "inst-open-data",
+      "type": "single",
+      "prompt": "The school wants to publish its fee schedule as a machine-readable file anyone may reuse. Which instrument governs the release itself?",
+      "options": [
+        "The Data Classification Policy",
+        "The Personal Data Protection Law",
+        "The Open Data Policy",
+        "The Generative AI Guidelines"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "The Open Data Policy governs how Public data is released for reuse: open by default, machine-readable, free and licensed.",
+      "misconceptions": [
+        "Stops at the level and misses the release rules",
+        "Applies a personal data law to a set with no personal data",
+        "",
+        "Names an instrument about generative AI tools"
+      ],
+      "lo": [
+        "LO2"
+      ],
+      "day": "day2",
+      "session": 4,
+      "level": "understand",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "licence-nc",
+      "type": "single",
+      "prompt": "A fee-charging training company finds an instruction dataset under CC-BY-NC-4.0 and wants to tune its customer assistant on it. What does the licence allow?",
+      "options": [
+        "Any use with attribution",
+        "Any use, because the data is public on the hub",
+        "Use after classifying the dataset as Public",
+        "No use in the company's commercial service"
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "NC means non-commercial: a fee-charging service is commercial use whatever the attribution.",
+      "misconceptions": [
+        "Thinks attribution satisfies every Creative Commons licence",
+        "Equates downloadable with free for any use",
+        "Confuses a licence condition with a classification level",
+        ""
+      ],
+      "lo": [
+        "LO2"
+      ],
+      "day": "day2",
+      "session": 4,
+      "level": "apply",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "sharing-onward",
+      "type": "single",
+      "prompt": "A research partner asks for attendance data and adds \"we may pass it to other research partners when needed\". Under the Data Sharing Policy, which condition answers that line?",
+      "options": [
+        "No onward sharing, written into the signed agreement",
+        "Encryption of the file before sending",
+        "Publication of the results after the study",
+        "A shorter retention period"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Onward sharing changes the purpose and the accountable parties; the agreement must forbid it or name each recipient.",
+      "misconceptions": [
+        "",
+        "Fixes a security weakness instead of a purpose problem",
+        "Confuses the data with the study's findings",
+        "Treats a destination problem as a duration problem"
+      ],
+      "lo": [
+        "LO2"
+      ],
+      "day": "day2",
+      "session": 3,
+      "level": "analyse",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "class-combined",
+      "type": "single",
+      "prompt": "A report joins a published price list with each customer's outstanding balance. Which level does the report take?",
+      "options": [
+        "Restricted, the higher of its parts",
+        "Public, because the prices are published",
+        "Somewhere between the two levels",
+        "None until it is reviewed"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Combined data takes the highest level of its parts, and individual balances are Restricted.",
+      "misconceptions": [
+        "",
+        "Lets the public part set the level",
+        "Averages levels instead of taking the highest",
+        "Forgets that unclassified data is treated as Restricted"
+      ],
+      "lo": [
+        "LO3"
+      ],
+      "day": "day2",
+      "session": 1,
+      "level": "apply",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "class-small-cells",
+      "type": "single",
+      "prompt": "An attendance summary by campus, grade and gender has 12 of its 95 cells with fewer than five students. Before suppression, what level fits it?",
+      "options": [
+        "Public, because it holds no names",
+        "Secret, because it concerns children",
+        "Restricted, because small cells describe single children",
+        "Public once the column names are changed"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "A cell of one or two students is those students' attendance; until small cells are suppressed or merged, the table holds personal data.",
+      "misconceptions": [
+        "Thinks removing names removes the personal data",
+        "Over-classifies: Secret is for serious national or entity-level impact",
+        "",
+        "Treats a cosmetic change as protection"
+      ],
+      "lo": [
+        "LO3"
+      ],
+      "day": "day2",
+      "session": 1,
+      "level": "analyse",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "dest-pseudo",
+      "type": "single",
+      "prompt": "Under a rule that only Public data goes to hosted models and Restricted data without sensitive fields goes to a model served in-house, where may pseudonymised absence counts go?",
+      "options": [
+        "To any hosted model",
+        "Nowhere at all",
+        "To a hosted model if the key stays in-house",
+        "To the in-house model only"
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "Pseudonymised data is still personal data and keeps its Restricted level; counts without notes are not sensitive.",
+      "misconceptions": [
+        "Thinks pseudonymised means Public",
+        "Applies the sensitive-data branch to counts with no health content",
+        "Believes holding the key moves the data's level",
+        ""
+      ],
+      "lo": [
+        "LO3"
+      ],
+      "day": "day2",
+      "session": 2,
+      "level": "apply",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "dest-unknown-location",
+      "type": "single",
+      "prompt": "A free hosted model router does not say where prompts are processed. How should a team treat it when deciding what it may receive?",
+      "options": [
+        "As processing in the Kingdom until shown otherwise",
+        "As a transfer outside the Kingdom",
+        "As exempt, because the service is free",
+        "As a matter for the provider alone"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "If the location cannot be shown, the conditions for transfer cannot be shown to be met, so it is treated as abroad.",
+      "misconceptions": [
+        "Puts the burden of proof the wrong way round",
+        "",
+        "Thinks price changes the legal position",
+        "Shifts the controller's duty to the processor"
+      ],
+      "lo": [
+        "LO3"
+      ],
+      "day": "day2",
+      "session": 2,
+      "level": "understand",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "risk-level-product",
+      "type": "single",
+      "prompt": "Under the national framework's scales, a harm is rated likely (3) and high impact (3). What is its level and band?",
+      "options": [
+        "6, medium",
+        "9, high",
+        "3, medium",
+        "12, high"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "The level is likelihood times impact, 3 × 3 = 9, which falls in the 8 to 12 high band.",
+      "misconceptions": [
+        "Adds the ratings instead of multiplying",
+        "",
+        "Takes one rating as the level",
+        "Uses the wrong impact rating"
+      ],
+      "lo": [
+        "LO5"
+      ],
+      "day": "day3",
+      "session": 3,
+      "level": "apply",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "risk-catastrophic-band",
+      "type": "single",
+      "prompt": "A harm is rated unlikely (2) with a catastrophic impact (4). Which band does the framework give it?",
+      "options": [
+        "Catastrophic, because the impact is catastrophic",
+        "Medium",
+        "High",
+        "Low"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "2 × 4 = 8, the high band; only 16 is catastrophic.",
+      "misconceptions": [
+        "Lets the impact alone decide the band",
+        "Misreads the band edges",
+        "",
+        "Lets the low likelihood dominate"
+      ],
+      "lo": [
+        "LO5"
+      ],
+      "day": "day3",
+      "session": 3,
+      "level": "understand",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "risk-tier-change",
+      "type": "single",
+      "prompt": "An assistant drafts replies to parents; enquiries about health and custody go to staff before any reply. The team proposes sending those replies straight away and reviewing them later. How does the ethics risk tier change?",
+      "options": [
+        "It does not change; the same model is used",
+        "It falls, because replies are faster",
+        "It becomes unacceptable at once",
+        "It rises towards high risk, with conformity assessments"
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "Removing human review on sensitive matters affecting children raises the risk to basic rights, which the principles treat as high risk.",
+      "misconceptions": [
+        "Thinks the tier depends on the model, not the use",
+        "Confuses speed with lower risk",
+        "Jumps to a level reserved for prohibited uses",
+        ""
+      ],
+      "lo": [
+        "LO5"
+      ],
+      "day": "day3",
+      "session": 3,
+      "level": "analyse",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "risk-residual-accept",
+      "type": "single",
+      "prompt": "After treatment, a harm is still rated high. What does the framework expect next?",
+      "options": [
+        "Further treatment, or acceptance by someone with the authority, with a reason, and escalation",
+        "Deleting the harm from the register",
+        "Lowering the impact rating until it is medium",
+        "Waiting for the next annual review"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Residual risk is re-assessed; a risk outside the appetite is treated further or accepted at the right level and escalated.",
+      "misconceptions": [
+        "",
+        "Treats a register as a list of open tasks to close",
+        "Adjusts the rating to fit the wish",
+        "Leaves a known high risk unmanaged"
+      ],
+      "lo": [
+        "LO5"
+      ],
+      "day": "day3",
+      "session": 3,
+      "level": "understand",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "eth-threshold-first",
+      "type": "single",
+      "prompt": "Why must a fairness threshold be set before the test is run?",
+      "options": [
+        "Because the principles require a fixed value of ten points",
+        "Because tests cannot be rerun",
+        "So it cannot be fitted to the results",
+        "So the developer can choose it freely"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "A threshold defines fair before the run; one chosen after the results can be set to pass whatever happened.",
+      "misconceptions": [
+        "Invents a fixed number the principles do not set",
+        "Confuses timing with repeatability",
+        "",
+        "Thinks the builder should set the bar for their own work"
+      ],
+      "lo": [
+        "LO6"
+      ],
+      "day": "day3",
+      "session": 1,
+      "level": "understand",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "eth-paired",
+      "type": "single",
+      "prompt": "To test whether an assistant serves Arabic and English writers equally, which test set is best?",
+      "options": [
+        "Each question written in both languages, by the same guardian",
+        "Forty English questions and a translation of the replies",
+        "The questions guardians sent last month, in whatever language",
+        "Arabic questions in Modern Standard Arabic only"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Pairing makes the language the only difference; the Arabic side should include the varieties guardians write in.",
+      "misconceptions": [
+        "",
+        "Tests the translation, not the assistant",
+        "Mixes question difficulty with language",
+        "Leaves out the dialects real users write in"
+      ],
+      "lo": [
+        "LO6"
+      ],
+      "day": "day3",
+      "session": 2,
+      "level": "apply",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "eth-evaluation-bias",
+      "type": "single",
+      "prompt": "A pilot reports 100% correct replies. All test questions were in English, but half the users write in Arabic. Which bias type does the report show?",
+      "options": [
+        "Automation bias",
+        "Measurement bias",
+        "Evaluation bias",
+        "Exclusion bias"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "The test set did not reflect the real users, so the score overstated how well the assistant serves them.",
+      "misconceptions": [
+        "Confuses a test-set flaw with over-trust in outputs",
+        "Thinks the expected answers were wrong",
+        "",
+        "Names a bias about leaving data out of training"
+      ],
+      "lo": [
+        "LO6"
+      ],
+      "day": "day3",
+      "session": 2,
+      "level": "analyse",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "eth-notice-line",
+      "type": "single",
+      "prompt": "Which line at the foot of each reply meets the Generative AI Guidelines' transparency items?",
+      "options": [
+        "\"Sent by our digital service.\"",
+        "\"This reply may contain errors.\"",
+        "\"See our privacy policy.\"",
+        "\"Drafted with AI. Write 'staff' to reach a person.\""
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "It says the reply was produced with AI and offers a channel that does not go through the AI.",
+      "misconceptions": [
+        "Thinks a brand name discloses AI use",
+        "Replaces a route to a person with a disclaimer",
+        "Hides the information where people must look for it",
+        ""
+      ],
+      "lo": [
+        "LO6"
+      ],
+      "day": "day3",
+      "session": 4,
+      "level": "apply",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "eth-routing-keyword",
+      "type": "single",
+      "prompt": "A routing rule sends sensitive enquiries to staff. Why is the Arabic word for \"fees\" a poor keyword for it?",
+      "options": [
+        "It is too long to match",
+        "It appears in routine fee questions, so every balance question would go to staff",
+        "Arabic words cannot be matched",
+        "Fee questions are never sensitive"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "A keyword that routine questions use raises false alarms; the rule must separate a disputed fee from a question about one.",
+      "misconceptions": [
+        "Treats length as the matching problem",
+        "",
+        "Believes matching only works in English",
+        "Forgets that fee disputes are sensitive"
+      ],
+      "lo": [
+        "LO6"
+      ],
+      "day": "day3",
+      "session": 4,
+      "level": "analyse",
+      "pool": "practice",
+      "weight": 1
     }
   ]
 }
