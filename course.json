@@ -9,7 +9,7 @@
     "en": "Responsible Data and AI Practice in the Kingdom",
     "ar": "الممارسة المسؤولة للبيانات والذكاء الاصطناعي في المملكة"
   },
-  "tagline": "REPLACE: one line under the title: what participants can do after the course",
+  "tagline": "Make one AI build lawful and responsible: map and minimise its personal data, classify and share it under the national policies, test it against the ethics principles and write its risk register and disclosure",
   "description": "Participants make one small build lawful and responsible: a parent-enquiry assistant for a fictional private school group that drafts replies from attendance and fee records with a language model. They map its personal data and minimise it under the Personal Data Protection Law (PDPL), classify each data set under the National Data Management Office (NDMO) policy, decide what may reach an external model, turn the SDAIA AI Ethics Principles into tests, assess risk with the National AI Risk Management Framework, and write the disclosure and records the build needs.",
   "track": "foundations",
   "level": 100,
@@ -65,8 +65,8 @@
     }
   ],
   "case_study": {
-    "name": "REPLACE: the name of the fictional organisation every lab works on",
-    "summary": "REPLACE: two sentences on the case study and its synthetic data"
+    "name": "Rawafid Schools Group",
+    "summary": "Rawafid Schools Group is a fictional private school group with four campuses and about 1,200 students. Its systems lead built Wafi, an assistant that drafts replies to parents from attendance and fee records with a language model, and its data protection officer must now make that build lawful and responsible. Every record is synthetic, generated with a fixed seed, and planted with the problems the labs find: a prompt that carries the whole student file, a log kept too long, linkable quasi-identifiers, a partner asking for too much, a non-commercial dataset and a routing rule that only knows English."
   },
   "format": "intensive",
   "format_note": "Intensive: 3 teaching days of four sessions and a capstone day, with guided pre-work and a tracked follow-up task",
@@ -88,68 +88,170 @@
         {
           "title": "Where personal data flows in a build",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Identify the personal and sensitive data a build reads, sends, logs and stores",
+            "Draw a data flow diagram of an AI assistant with every store and external party",
+            "Name the PDPL obligation that applies at each step of the flow"
           ],
           "lo": [
             "LO1"
           ],
           "lab": {
             "id": "1.1",
-            "title": "Map every field the assistant reads, sends, logs and stores on a data flow diagram",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Trace Wafi's personal data",
+            "summary": "Map every field the assistant reads, sends, logs and stores on a data flow diagram.",
             "minutes": 25,
-            "href": "D1_1_map_every_field.ipynb"
-          }
+            "href": "D1_1_map_every_field.ipynb",
+            "steps": [
+              {
+                "text": "Run one enquiry through the instrumented Wafi",
+                "minutes": 4
+              },
+              {
+                "text": "List every field read, sent, logged and stored",
+                "minutes": 7
+              },
+              {
+                "text": "Flag the identifiers and the sensitive fields",
+                "minutes": 4
+              },
+              {
+                "text": "Draw the data flow diagram in Mermaid",
+                "minutes": 5
+              },
+              {
+                "text": "Name the PDPL obligation at each step",
+                "minutes": 5
+              }
+            ],
+            "stretch": "Add the hosted provider's own logs as a store you do not control"
+          },
+          "summary": "Prompts, logs, caches and the model provider are all places where personal data goes"
         },
         {
           "title": "Lawful basis and minimisation",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Choose a legal basis and a purpose for each flow of a build",
+            "Test each field against the purpose and remove what it does not need",
+            "Rewrite a prompt builder so it sends the minimum"
           ],
           "lo": [
-            "LO1"
+            "LO1",
+            "LO4"
           ],
           "lab": {
             "id": "1.2",
-            "title": "Set a lawful basis and purpose for each flow and remove the fields the purpose does not need",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Lawful basis and minimum fields",
+            "summary": "Set a lawful basis and purpose for each flow and remove the fields the purpose does not need.",
             "minutes": 25,
-            "href": "D1_2_set_lawful_basis.ipynb"
-          }
+            "href": "D1_2_set_lawful_basis.ipynb",
+            "steps": [
+              {
+                "text": "Set a basis and purpose for each of the five flows",
+                "minutes": 6
+              },
+              {
+                "text": "Test each prompt field against the purpose",
+                "minutes": 6
+              },
+              {
+                "text": "Write the minimised prompt builder",
+                "minutes": 7
+              },
+              {
+                "text": "Check ten prompts and print the before-and-after list",
+                "minutes": 6
+              }
+            ],
+            "stretch": "Draft the consent wording for the one optional flow"
+          },
+          "summary": "Every flow needs a legal basis and a purpose, and every field must earn its place against that purpose"
         },
         {
           "title": "Pseudonymisation and its limits",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Pseudonymise identifiers with a keyed hash and keep the key apart",
+            "Attempt re-identification by joining on quasi-identifiers",
+            "Generalise quasi-identifiers and measure the remaining risk"
           ],
           "lo": [
             "LO4"
           ],
           "lab": {
             "id": "1.3",
-            "title": "Pseudonymise the guardian and student records and attempt to re-identify them by linkage",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Pseudonymise, then attack",
+            "summary": "Pseudonymise the guardian and student records and attempt to re-identify them by linkage.",
             "minutes": 25,
-            "href": "D1_3_pseudonymise_guardian_student.ipynb"
-          }
+            "href": "D1_3_pseudonymise_guardian_student.ipynb",
+            "steps": [
+              {
+                "text": "Replace identifiers with keyed pseudonyms",
+                "minutes": 6
+              },
+              {
+                "text": "Join with the sports-day page on quasi-identifiers",
+                "minutes": 6
+              },
+              {
+                "text": "Measure the re-identification rate",
+                "minutes": 4
+              },
+              {
+                "text": "Generalise birth date and grade, measure again",
+                "minutes": 6
+              },
+              {
+                "text": "Record k and the residual risk",
+                "minutes": 3
+              }
+            ],
+            "stretch": "Show that an unkeyed hash of a national ID is reversed by trying every ID"
+          },
+          "summary": "A pseudonym hides a name, not a person: quasi-identifiers link records back"
         },
         {
           "title": "Rights, retention and breaches",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Explain the data subject's rights and who exercises them for a minor",
+            "Write a retention rule per store and find what is kept too long",
+            "Walk a breach through notice, containment and documentation"
           ],
           "lo": [
             "LO1"
           ],
           "lab": {
             "id": "1.4",
-            "title": "Write a retention rule per store and walk a seeded breach through the PDPL breach guideline",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Retention and a seeded breach",
+            "summary": "Write a retention rule per store and walk a seeded breach through the PDPL breach guideline.",
             "minutes": 25,
-            "href": "D1_4_write_retention_rule.ipynb"
-          }
+            "href": "D1_4_write_retention_rule.ipynb",
+            "steps": [
+              {
+                "text": "Write a retention rule per store",
+                "minutes": 6
+              },
+              {
+                "text": "Count log rows past the rule",
+                "minutes": 4
+              },
+              {
+                "text": "Read the incident and size the breach",
+                "minutes": 5
+              },
+              {
+                "text": "Draft the notice to SDAIA with its five contents",
+                "minutes": 6
+              },
+              {
+                "text": "Decide the notice to guardians",
+                "minutes": 4
+              }
+            ],
+            "stretch": "Add the breach to the documentation record with its corrective actions"
+          },
+          "summary": "Rights, retention rules and the breach procedure turn the law into dates and duties"
         }
-      ]
+      ],
+      "subtitle": "Map, justify, minimise, pseudonymise and keep the data of one build"
     },
     {
       "id": "day2",
@@ -160,68 +262,169 @@
         {
           "title": "Data classification levels",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Assess the impact category and level of a data set's disclosure",
+            "Assign a classification level with an evidence-based reason",
+            "Spot aggregates that still reveal individuals"
           ],
           "lo": [
             "LO3"
           ],
           "lab": {
             "id": "2.1",
-            "title": "Classify the six data sets with the policy's impact categories and record the reasons",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Classify six data sets",
+            "summary": "Classify the six data sets with the policy's impact categories and record the reasons.",
             "minutes": 25,
-            "href": "D2_1_classify_six_data.ipynb"
-          }
+            "href": "D2_1_classify_six_data.ipynb",
+            "steps": [
+              {
+                "text": "Read the inventory and the impact categories",
+                "minutes": 4
+              },
+              {
+                "text": "Assess impact category and level per set",
+                "minutes": 8
+              },
+              {
+                "text": "Map impact to level and sub-level",
+                "minutes": 5
+              },
+              {
+                "text": "Find the small cells in the aggregate table",
+                "minutes": 5
+              },
+              {
+                "text": "Record reasons in the register",
+                "minutes": 3
+              }
+            ],
+            "stretch": "Suppress the small cells and classify the aggregate table again"
+          },
+          "summary": "Classification follows the impact of disclosure: four levels, and sub-levels inside Restricted"
         },
         {
           "title": "What may reach an external model",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Derive a destination rule from the classification level and the data's nature",
+            "Apply the rule to data sets and to the fields of a prompt",
+            "Recognise a hosted endpoint abroad as a transfer outside the Kingdom"
           ],
           "lo": [
             "LO3"
           ],
           "lab": {
             "id": "2.2",
-            "title": "Decide for each data set whether it may go to a hosted model, a locally served model or neither",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Hosted, local or neither",
+            "summary": "Decide for each data set whether it may go to a hosted model, a locally served model or neither.",
             "minutes": 25,
-            "href": "D2_2_decide_each_data.ipynb"
-          }
+            "href": "D2_2_decide_each_data.ipynb",
+            "steps": [
+              {
+                "text": "Write the destination rule as a function",
+                "minutes": 7
+              },
+              {
+                "text": "Apply it to the six data sets",
+                "minutes": 4
+              },
+              {
+                "text": "Apply it field by field to Wafi's prompt",
+                "minutes": 6
+              },
+              {
+                "text": "Check the hosted endpoint's location as a transfer",
+                "minutes": 4
+              },
+              {
+                "text": "Record the permitted destinations",
+                "minutes": 4
+              }
+            ],
+            "stretch": "Write the rule for the synthetic class data and say why it differs"
+          },
+          "summary": "The classification level decides whether data may go to a hosted model, a locally served one, or neither"
         },
         {
           "title": "Sharing with another entity",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Assess a data request against the Data Sharing Policy principles",
+            "Cut a request down to the minimum data its purpose needs",
+            "Draft the conditions under which data may be shared"
           ],
           "lo": [
             "LO2"
           ],
           "lab": {
             "id": "2.3",
-            "title": "Assess a partner entity's request for attendance data against the Data Sharing Policy and draft the conditions",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "A partner's data request",
+            "summary": "Assess a partner entity's request for attendance data against the Data Sharing Policy and draft the conditions.",
             "minutes": 25,
-            "href": "D2_3_assess_partner_entity.ipynb"
-          }
+            "href": "D2_3_assess_partner_entity.ipynb",
+            "steps": [
+              {
+                "text": "Read the request against the eight principles",
+                "minutes": 6
+              },
+              {
+                "text": "Mark each requested field needed or not",
+                "minutes": 5
+              },
+              {
+                "text": "Draft the conditions of sharing",
+                "minutes": 6
+              },
+              {
+                "text": "Build the minimised extract",
+                "minutes": 5
+              },
+              {
+                "text": "Check the extract for small groups",
+                "minutes": 3
+              }
+            ],
+            "stretch": "Write the destruction confirmation the partner signs"
+          },
+          "summary": "A request to share data is judged on purpose, minimum data, access, transparency and destruction"
         },
         {
           "title": "Licences and provenance",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Read the licence of a model and of a dataset from its card",
+            "Record use restrictions and obligations in a licence register",
+            "Name the national instrument that decides a given question"
           ],
           "lo": [
             "LO2"
           ],
           "lab": {
             "id": "2.4",
-            "title": "Check the licences of two candidate open-weight models and one dataset and record the use restrictions",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Licences and provenance",
+            "summary": "Check the licences of two candidate open-weight models and one dataset and record the use restrictions.",
             "minutes": 25,
-            "href": "D2_4_check_licences_two.ipynb"
-          }
+            "href": "D2_4_check_licences_two.ipynb",
+            "steps": [
+              {
+                "text": "Read two model cards and one dataset card",
+                "minutes": 5
+              },
+              {
+                "text": "Record licence, SPDX identifier and obligations",
+                "minutes": 7
+              },
+              {
+                "text": "Decide fit for Wafi per artefact",
+                "minutes": 5
+              },
+              {
+                "text": "Answer six questions with the instrument that decides",
+                "minutes": 8
+              }
+            ],
+            "stretch": "Trace where the dataset's text came from and what that adds"
+          },
+          "summary": "Weights, code and data each carry terms, and each instrument decides a different question"
         }
-      ]
+      ],
+      "subtitle": "Classify each data set, decide where it may go, and check what you reuse"
     },
     {
       "id": "day3",
@@ -232,81 +435,182 @@
         {
           "title": "Principles into tests",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Translate an ethics principle into a measurable check",
+            "Set a threshold and a pass rule for each check",
+            "Run checks over a recorded run and read the failures"
           ],
           "lo": [
             "LO6"
           ],
           "lab": {
             "id": "3.1",
-            "title": "Write three checks that turn fairness, transparency and accountability into pass or fail results",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Three checks",
+            "summary": "Write three checks that turn fairness, transparency and accountability into pass or fail results.",
             "minutes": 25,
-            "href": "D3_1_write_three_checks.ipynb"
-          }
+            "href": "D3_1_write_three_checks.ipynb",
+            "steps": [
+              {
+                "text": "Turn fairness into a measurable check with a threshold",
+                "minutes": 8
+              },
+              {
+                "text": "Turn transparency into a check on every reply",
+                "minutes": 6
+              },
+              {
+                "text": "Turn accountability into a check on the log",
+                "minutes": 6
+              },
+              {
+                "text": "Run all three on the recorded run",
+                "minutes": 5
+              }
+            ],
+            "stretch": "Add a fourth check for privacy: no identifier in any reply"
+          },
+          "summary": "A principle becomes useful when it is a check with a threshold that passes or fails"
         },
         {
           "title": "Testing the assistant",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Run a scripted test set through an assistant",
+            "Compare reply quality and escalation rates per language",
+            "Name the bias types that explain a measured gap"
           ],
           "lo": [
             "LO6"
           ],
           "lab": {
             "id": "3.2",
-            "title": "Run forty scripted enquiries in Arabic and English, compare reply quality and escalation rates, and name the bias types from the national guide that explain any gap",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Forty enquiries",
+            "summary": "Run forty scripted enquiries in Arabic and English, compare reply quality and escalation rates, and name the bias types from the national guide that explain any gap.",
             "minutes": 25,
-            "href": "D3_2_run_forty_scripted.ipynb"
-          }
+            "href": "D3_2_run_forty_scripted.ipynb",
+            "steps": [
+              {
+                "text": "Run the forty enquiries through Wafi",
+                "minutes": 6
+              },
+              {
+                "text": "Score reply quality per language",
+                "minutes": 6
+              },
+              {
+                "text": "Compare escalation rates per language",
+                "minutes": 5
+              },
+              {
+                "text": "Name the bias types that explain the gaps",
+                "minutes": 5
+              },
+              {
+                "text": "Write the test report rows",
+                "minutes": 3
+              }
+            ],
+            "stretch": "Rerun with the Arabic keywords added and measure the change"
+          },
+          "summary": "Paired enquiries in Arabic and English show whether the assistant serves both groups equally"
         },
         {
           "title": "Risk tier and risk register",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Place an AI system in an ethics risk tier with reasons",
+            "Rate harms by likelihood and impact and compute the risk level",
+            "Write a register entry with treatment, owner and review date"
           ],
           "lo": [
             "LO5"
           ],
           "lab": {
             "id": "3.3",
-            "title": "Place the assistant in a risk tier and rate five harms by likelihood and impact",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Tier and register",
+            "summary": "Place the assistant in a risk tier and rate five harms by likelihood and impact.",
             "minutes": 25,
-            "href": "D3_3_place_assistant_risk.ipynb"
-          }
+            "href": "D3_3_place_assistant_risk.ipynb",
+            "steps": [
+              {
+                "text": "Place Wafi in an ethics risk tier with reasons",
+                "minutes": 5
+              },
+              {
+                "text": "Rate five harms by likelihood and impact",
+                "minutes": 8
+              },
+              {
+                "text": "Compute levels and bands",
+                "minutes": 3
+              },
+              {
+                "text": "Choose a treatment, owner and review date per harm",
+                "minutes": 6
+              },
+              {
+                "text": "Rate the residual risk again",
+                "minutes": 3
+              }
+            ],
+            "stretch": "Change one fact (replies sent without review) and redo the tier"
+          },
+          "summary": "The ethics tier sets the bar; the national framework rates, treats and reviews each risk"
         },
         {
           "title": "Disclosure and human review",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Draft a disclosure that names the assistant, the data and the human route",
+            "Write a rule that sends sensitive replies to staff",
+            "Test the rule for recall in both languages"
           ],
           "lo": [
             "LO6"
           ],
           "lab": {
             "id": "3.4",
-            "title": "Draft the notice parents see and the rule that sends sensitive replies to staff",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Notice and routing rule",
+            "summary": "Draft the notice parents see and the rule that sends sensitive replies to staff.",
             "minutes": 25,
-            "href": "D3_4_draft_notice_parents.ipynb"
-          }
+            "href": "D3_4_draft_notice_parents.ipynb",
+            "steps": [
+              {
+                "text": "Draft the notice parents see",
+                "minutes": 7
+              },
+              {
+                "text": "Check it against the required items",
+                "minutes": 4
+              },
+              {
+                "text": "Write the routing rule for sensitive replies",
+                "minutes": 6
+              },
+              {
+                "text": "Test the rule on the forty enquiries per language",
+                "minutes": 5
+              },
+              {
+                "text": "Choose your capstone build",
+                "minutes": 3
+              }
+            ],
+            "stretch": "Write the Arabic notice and check both say the same"
+          },
+          "summary": "Parents are told what the assistant is and does, and sensitive replies go to a person"
         }
-      ]
+      ],
+      "subtitle": "Turn the principles into tests, rate the risks and tell parents the truth"
     },
     {
       "id": "capstone",
       "kind": "capstone",
-      "title": "Capstone project presentations",
+      "title": "Capstone: the responsible build pack",
       "deck": "slides/capstone.html",
-      "subtitle": "REPLACE: the catalog gives 10 minutes for each presentation and nothing about questions; decide whether the questions are inside those minutes, set capstone.talk_minutes and capstone.qa_minutes in course.json and the timers of the now-presenting slide, and remove this line"
+      "subtitle": "Ten-minute reviews: six minutes to present the pack, four for the assessor's changed fact"
     }
   ],
   "capstone": {
     "summary": "A responsible build pack for the assistant or the participant's own build (registers, minimisation code with its re-identification test, ethics test report, a record of processing entry, a breach checklist and the disclosure), submitted as a public repository and defended in a ten-minute review",
-    "submission": "REPLACE: what participants submit and how: a public repository link, or a shared folder for a course without code",
-    "talk_minutes": 10,
+    "submission": "A public GitHub repository holding the build pack: the classification and risk registers, the minimisation and pseudonymisation code with its re-identification test, the ethics test report, a record of processing entry, a breach checklist and the disclosure, with a README that links each part. Then a ten-minute review in which the assessor changes one fact of the case and the participant revises the classification and risk entries live.",
+    "talk_minutes": 6,
     "rubric": [
       {
         "criterion": "Data protection",
@@ -328,7 +632,8 @@
         "criterion": "Disclosure and records",
         "weight": 15
       }
-    ]
+    ],
+    "qa_minutes": 4
   },
   "labs": {
     "kind": "notebooks",
@@ -338,22 +643,23 @@
     {
       "slot": "Language model for the build",
       "examples": [
-        "a small open-weight model served locally",
-        "a free hosted endpoint used only with synthetic data"
+        "a free hosted endpoint used only with synthetic data (an OpenRouter free model)",
+        "a scripted stand-in model that runs without a key",
+        "a small open-weight model served locally, for real data (not used in the labs)"
       ]
     },
     {
       "slot": "Personal data detection",
       "examples": [
-        "Presidio",
-        "regular-expression rules"
+        "regular-expression rules",
+        "Presidio"
       ]
     },
     {
       "slot": "De-identification and linkage testing",
       "examples": [
-        "ARX",
-        "dataframe joins on quasi-identifiers"
+        "dataframe joins on quasi-identifiers (pandas)",
+        "ARX"
       ]
     },
     {
@@ -366,8 +672,134 @@
     {
       "slot": "Diagramming",
       "examples": [
-        "draw.io",
-        "Mermaid"
+        "Mermaid",
+        "draw.io"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "group": "National references: personal data",
+      "items": [
+        {
+          "title": "Personal Data Protection Law (SDAIA)",
+          "url": "https://sdaia.gov.sa/en/SDAIA/about/Documents/PersonalDataProtectionLaw.pdf"
+        },
+        {
+          "title": "Implementing Regulation of the Personal Data Protection Law (SDAIA)",
+          "url": "https://sdaia.gov.sa/en/SDAIA/about/Documents/ImplementingRegulationPersonalDataProtectionLaw.pdf"
+        },
+        {
+          "title": "Regulation on Personal Data Transfer outside the Kingdom, version 2.0 (SDAIA)",
+          "url": "https://sdaia.gov.sa/Documents/RegulationonPersonalDataEN.pdf"
+        },
+        {
+          "title": "Minimum Personal Data Guideline (SDAIA)",
+          "url": "https://sdaia.gov.sa/Documents/MinmumPDGuideline.pdf"
+        },
+        {
+          "title": "Personal Data Processing Activities Records Guideline (SDAIA)",
+          "url": "https://sdaia.gov.sa/Documents/PersonalDataProcessingActivitiesRecordsGuideline.pdf"
+        },
+        {
+          "title": "Personal Data Destruction, Anonymization and Pseudonymisation Guideline (SDAIA)",
+          "url": "https://sdaia.gov.sa/Documents/PersonalDataDestructionAnonymizationAndEncryptionGuideline.pdf"
+        },
+        {
+          "title": "Personal Data Breach Incidents Procedural Guide (SDAIA)",
+          "url": "https://sdaia.gov.sa/en/SDAIA/about/Documents/PersonalDataBreachIncidents.pdf"
+        }
+      ]
+    },
+    {
+      "group": "National references: data management (NDMO)",
+      "items": [
+        {
+          "title": "Data Classification Policy (NDMO, SDAIA)",
+          "url": "https://sdaia.gov.sa/en/SDAIA/about/Documents/DataClassificationPolicy.pdf"
+        },
+        {
+          "title": "Data Sharing Policy (NDMO, SDAIA)",
+          "url": "https://sdaia.gov.sa/en/SDAIA/about/Documents/DataSharingPolicyEN.pdf"
+        },
+        {
+          "title": "Open Data Policy (NDMO, SDAIA)",
+          "url": "https://sdaia.gov.sa/en/SDAIA/about/Documents/OpenDataPolicy.pdf"
+        }
+      ]
+    },
+    {
+      "group": "National references: AI ethics, generative AI and risk",
+      "items": [
+        {
+          "title": "AI Ethics Principles (SDAIA)",
+          "url": "https://sdaia.gov.sa/en/SDAIA/about/Documents/ai-principles.pdf"
+        },
+        {
+          "title": "Generative AI Guidelines for Government (SDAIA)",
+          "url": "https://sdaia.gov.sa/en/SDAIA/about/Files/GenAIGuidelinesForGovernmentENCompressed.pdf"
+        },
+        {
+          "title": "Generative AI Guidelines for the Public (SDAIA)",
+          "url": "https://sdaia.gov.sa/en/SDAIA/about/Files/GenerativeAIPublicEN.pdf"
+        },
+        {
+          "title": "National AI Risk Management Framework, full text in Arabic (SDAIA, April 2026)",
+          "url": "https://sdaia.gov.sa/ar/MediaCenter/KnowledgeCenter/ResearchLibrary/ExecutiveSummaryAr.pdf"
+        },
+        {
+          "title": "National AI Risk Management Framework, English executive summary (SDAIA, April 2026)",
+          "url": "https://sdaia.gov.sa/en/MediaCenter/KnowledgeCenter/ResearchLibrary/ExecutiveSummaryEn.pdf"
+        },
+        {
+          "title": "AI Bias Reference Guide, first edition (SDAIA, May 2026)",
+          "url": "https://sdaia.gov.sa/en/MediaCenter/KnowledgeCenter/ResearchLibrary/EN-AI-BIAS.pdf"
+        },
+        {
+          "title": "Regulations and policies index (SDAIA)",
+          "url": "https://sdaia.gov.sa/en/SDAIA/about/Pages/RegulationsAndPolicies.aspx"
+        }
+      ]
+    },
+    {
+      "group": "Licences, cards and tools",
+      "items": [
+        {
+          "title": "SPDX License List",
+          "url": "https://spdx.org/licenses/"
+        },
+        {
+          "title": "Qwen3-4B model card and licence (Hugging Face)",
+          "url": "https://huggingface.co/Qwen/Qwen3-4B"
+        },
+        {
+          "title": "Gemma Terms of Use (Google)",
+          "url": "https://ai.google.dev/gemma/terms"
+        },
+        {
+          "title": "Gemma 3 4B instruction-tuned model card (Hugging Face)",
+          "url": "https://huggingface.co/google/gemma-3-4b-it"
+        },
+        {
+          "title": "Alpaca dataset card (Hugging Face)",
+          "url": "https://huggingface.co/datasets/tatsu-lab/alpaca"
+        },
+        {
+          "title": "OpenRouter models list",
+          "url": "https://openrouter.ai/models"
+        },
+        {
+          "title": "Presidio, personal data detection and anonymisation framework",
+          "url": "https://presidio.dataprivacystack.org/"
+        },
+        {
+          "title": "ARX Data Anonymization Tool",
+          "url": "https://arx.deidentifier.org/"
+        },
+        {
+          "title": "Mermaid flowchart syntax",
+          "url": "https://mermaid.js.org/syntax/flowchart.html"
+        }
       ]
     }
   ]

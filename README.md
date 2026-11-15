@@ -5,7 +5,7 @@
 
 Data & AI Foundations Track · SDAIA Academy · FN-106 · Level 100
 
-REPLACE: one line under the title: what participants can do after the course
+Make one AI build lawful and responsible: map and minimise its personal data, classify and share it under the national policies, test it against the ethics principles and write its risk register and disclosure
 
 Participants make one small build lawful and responsible: a parent-enquiry assistant for a fictional private school group that drafts replies from attendance and fee records with a language model. They map its personal data and minimise it under the Personal Data Protection Law (PDPL), classify each data set under the National Data Management Office (NDMO) policy, decide what may reach an external model, turn the SDAIA AI Ethics Principles into tests, assess risk with the National AI Risk Management Framework, and write the disclosure and records the build needs.
 
@@ -33,7 +33,7 @@ Participants make one small build lawful and responsible: a parent-enquiry assis
 | Day 1 | Personal data and the law | Where personal data flows in a build; Lawful basis and minimisation; Pseudonymisation and its limits; Rights, retention and breaches | [`slides/day1.html`](slides/day1.html) |
 | Day 2 | Classify, share and send | Data classification levels; What may reach an external model; Sharing with another entity; Licences and provenance | [`slides/day2.html`](slides/day2.html) |
 | Day 3 | Ethics and risk in practice | Principles into tests; Testing the assistant; Risk tier and risk register; Disclosure and human review | [`slides/day3.html`](slides/day3.html) |
-| Capstone | Capstone project presentations |  | [`slides/capstone.html`](slides/capstone.html) |
+| Capstone | Capstone: the responsible build pack |  | [`slides/capstone.html`](slides/capstone.html) |
 <!-- /academy:units -->
 
 ## Case study
@@ -47,18 +47,18 @@ Every lab is a notebook in `labs/`. Open it in Google Colab from the course page
 
 | | Session | Lab | File |
 |---|---|---|---|
-| 1.1 | Day 1 · Session 1 | Map every field the assistant reads, sends, logs and stores on a data flow diagram | [`D1_1_map_every_field.ipynb`](labs/D1_1_map_every_field.ipynb) |
-| 1.2 | Day 1 · Session 2 | Set a lawful basis and purpose for each flow and remove the fields the purpose does not need | [`D1_2_set_lawful_basis.ipynb`](labs/D1_2_set_lawful_basis.ipynb) |
-| 1.3 | Day 1 · Session 3 | Pseudonymise the guardian and student records and attempt to re-identify them by linkage | [`D1_3_pseudonymise_guardian_student.ipynb`](labs/D1_3_pseudonymise_guardian_student.ipynb) |
-| 1.4 | Day 1 · Session 4 | Write a retention rule per store and walk a seeded breach through the PDPL breach guideline | [`D1_4_write_retention_rule.ipynb`](labs/D1_4_write_retention_rule.ipynb) |
-| 2.1 | Day 2 · Session 1 | Classify the six data sets with the policy's impact categories and record the reasons | [`D2_1_classify_six_data.ipynb`](labs/D2_1_classify_six_data.ipynb) |
-| 2.2 | Day 2 · Session 2 | Decide for each data set whether it may go to a hosted model, a locally served model or neither | [`D2_2_decide_each_data.ipynb`](labs/D2_2_decide_each_data.ipynb) |
-| 2.3 | Day 2 · Session 3 | Assess a partner entity's request for attendance data against the Data Sharing Policy and draft the conditions | [`D2_3_assess_partner_entity.ipynb`](labs/D2_3_assess_partner_entity.ipynb) |
-| 2.4 | Day 2 · Session 4 | Check the licences of two candidate open-weight models and one dataset and record the use restrictions | [`D2_4_check_licences_two.ipynb`](labs/D2_4_check_licences_two.ipynb) |
-| 3.1 | Day 3 · Session 1 | Write three checks that turn fairness, transparency and accountability into pass or fail results | [`D3_1_write_three_checks.ipynb`](labs/D3_1_write_three_checks.ipynb) |
-| 3.2 | Day 3 · Session 2 | Run forty scripted enquiries in Arabic and English, compare reply quality and escalation rates, and name the bias types from the national guide that explain any gap | [`D3_2_run_forty_scripted.ipynb`](labs/D3_2_run_forty_scripted.ipynb) |
-| 3.3 | Day 3 · Session 3 | Place the assistant in a risk tier and rate five harms by likelihood and impact | [`D3_3_place_assistant_risk.ipynb`](labs/D3_3_place_assistant_risk.ipynb) |
-| 3.4 | Day 3 · Session 4 | Draft the notice parents see and the rule that sends sensitive replies to staff | [`D3_4_draft_notice_parents.ipynb`](labs/D3_4_draft_notice_parents.ipynb) |
+| 1.1 | Day 1 · Session 1 | Trace Wafi's personal data | [`D1_1_map_every_field.ipynb`](labs/D1_1_map_every_field.ipynb) |
+| 1.2 | Day 1 · Session 2 | Lawful basis and minimum fields | [`D1_2_set_lawful_basis.ipynb`](labs/D1_2_set_lawful_basis.ipynb) |
+| 1.3 | Day 1 · Session 3 | Pseudonymise, then attack | [`D1_3_pseudonymise_guardian_student.ipynb`](labs/D1_3_pseudonymise_guardian_student.ipynb) |
+| 1.4 | Day 1 · Session 4 | Retention and a seeded breach | [`D1_4_write_retention_rule.ipynb`](labs/D1_4_write_retention_rule.ipynb) |
+| 2.1 | Day 2 · Session 1 | Classify six data sets | [`D2_1_classify_six_data.ipynb`](labs/D2_1_classify_six_data.ipynb) |
+| 2.2 | Day 2 · Session 2 | Hosted, local or neither | [`D2_2_decide_each_data.ipynb`](labs/D2_2_decide_each_data.ipynb) |
+| 2.3 | Day 2 · Session 3 | A partner's data request | [`D2_3_assess_partner_entity.ipynb`](labs/D2_3_assess_partner_entity.ipynb) |
+| 2.4 | Day 2 · Session 4 | Licences and provenance | [`D2_4_check_licences_two.ipynb`](labs/D2_4_check_licences_two.ipynb) |
+| 3.1 | Day 3 · Session 1 | Three checks | [`D3_1_write_three_checks.ipynb`](labs/D3_1_write_three_checks.ipynb) |
+| 3.2 | Day 3 · Session 2 | Forty enquiries | [`D3_2_run_forty_scripted.ipynb`](labs/D3_2_run_forty_scripted.ipynb) |
+| 3.3 | Day 3 · Session 3 | Tier and register | [`D3_3_place_assistant_risk.ipynb`](labs/D3_3_place_assistant_risk.ipynb) |
+| 3.4 | Day 3 · Session 4 | Notice and routing rule | [`D3_4_draft_notice_parents.ipynb`](labs/D3_4_draft_notice_parents.ipynb) |
 <!-- /academy:labs -->
 
 ## Capstone
@@ -78,17 +78,53 @@ A responsible build pack for the assistant or the participant's own build (regis
 
 Each line is a capability; the examples are interchangeable.
 
-- **Language model for the build:** a small open-weight model served locally, a free hosted endpoint used only with synthetic data
-- **Personal data detection:** Presidio, regular-expression rules
-- **De-identification and linkage testing:** ARX, dataframe joins on quasi-identifiers
+- **Language model for the build:** a free hosted endpoint used only with synthetic data (an OpenRouter free model), a scripted stand-in model that runs without a key, a small open-weight model served locally, for real data (not used in the labs)
+- **Personal data detection:** regular-expression rules, Presidio
+- **De-identification and linkage testing:** dataframe joins on quasi-identifiers (pandas), ARX
 - **Licence references:** the SPDX licence list, model and dataset cards
-- **Diagramming:** draw.io, Mermaid
+- **Diagramming:** Mermaid, draw.io
 <!-- /academy:tools -->
 
 <!-- academy:sources -->
 ## Sources
 
-- REPLACE: every source the course cites, with its address, in course.json under "sources"; this list is written from there
+### National references: personal data
+
+- [Personal Data Protection Law (SDAIA)](https://sdaia.gov.sa/en/SDAIA/about/Documents/PersonalDataProtectionLaw.pdf)
+- [Implementing Regulation of the Personal Data Protection Law (SDAIA)](https://sdaia.gov.sa/en/SDAIA/about/Documents/ImplementingRegulationPersonalDataProtectionLaw.pdf)
+- [Regulation on Personal Data Transfer outside the Kingdom, version 2.0 (SDAIA)](https://sdaia.gov.sa/Documents/RegulationonPersonalDataEN.pdf)
+- [Minimum Personal Data Guideline (SDAIA)](https://sdaia.gov.sa/Documents/MinmumPDGuideline.pdf)
+- [Personal Data Processing Activities Records Guideline (SDAIA)](https://sdaia.gov.sa/Documents/PersonalDataProcessingActivitiesRecordsGuideline.pdf)
+- [Personal Data Destruction, Anonymization and Pseudonymisation Guideline (SDAIA)](https://sdaia.gov.sa/Documents/PersonalDataDestructionAnonymizationAndEncryptionGuideline.pdf)
+- [Personal Data Breach Incidents Procedural Guide (SDAIA)](https://sdaia.gov.sa/en/SDAIA/about/Documents/PersonalDataBreachIncidents.pdf)
+
+### National references: data management (NDMO)
+
+- [Data Classification Policy (NDMO, SDAIA)](https://sdaia.gov.sa/en/SDAIA/about/Documents/DataClassificationPolicy.pdf)
+- [Data Sharing Policy (NDMO, SDAIA)](https://sdaia.gov.sa/en/SDAIA/about/Documents/DataSharingPolicyEN.pdf)
+- [Open Data Policy (NDMO, SDAIA)](https://sdaia.gov.sa/en/SDAIA/about/Documents/OpenDataPolicy.pdf)
+
+### National references: AI ethics, generative AI and risk
+
+- [AI Ethics Principles (SDAIA)](https://sdaia.gov.sa/en/SDAIA/about/Documents/ai-principles.pdf)
+- [Generative AI Guidelines for Government (SDAIA)](https://sdaia.gov.sa/en/SDAIA/about/Files/GenAIGuidelinesForGovernmentENCompressed.pdf)
+- [Generative AI Guidelines for the Public (SDAIA)](https://sdaia.gov.sa/en/SDAIA/about/Files/GenerativeAIPublicEN.pdf)
+- [National AI Risk Management Framework, full text in Arabic (SDAIA, April 2026)](https://sdaia.gov.sa/ar/MediaCenter/KnowledgeCenter/ResearchLibrary/ExecutiveSummaryAr.pdf)
+- [National AI Risk Management Framework, English executive summary (SDAIA, April 2026)](https://sdaia.gov.sa/en/MediaCenter/KnowledgeCenter/ResearchLibrary/ExecutiveSummaryEn.pdf)
+- [AI Bias Reference Guide, first edition (SDAIA, May 2026)](https://sdaia.gov.sa/en/MediaCenter/KnowledgeCenter/ResearchLibrary/EN-AI-BIAS.pdf)
+- [Regulations and policies index (SDAIA)](https://sdaia.gov.sa/en/SDAIA/about/Pages/RegulationsAndPolicies.aspx)
+
+### Licences, cards and tools
+
+- [SPDX License List](https://spdx.org/licenses/)
+- [Qwen3-4B model card and licence (Hugging Face)](https://huggingface.co/Qwen/Qwen3-4B)
+- [Gemma Terms of Use (Google)](https://ai.google.dev/gemma/terms)
+- [Gemma 3 4B instruction-tuned model card (Hugging Face)](https://huggingface.co/google/gemma-3-4b-it)
+- [Alpaca dataset card (Hugging Face)](https://huggingface.co/datasets/tatsu-lab/alpaca)
+- [OpenRouter models list](https://openrouter.ai/models)
+- [Presidio, personal data detection and anonymisation framework](https://presidio.dataprivacystack.org/)
+- [ARX Data Anonymization Tool](https://arx.deidentifier.org/)
+- [Mermaid flowchart syntax](https://mermaid.js.org/syntax/flowchart.html)
 <!-- /academy:sources -->
 
 ### National references
