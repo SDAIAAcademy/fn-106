@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-ax="page" data-track="foundations">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Responsible Data and AI Practice in the Kingdom · SDAIA Academy</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<meta name="description" content="Make one AI build lawful and responsible: map and minimise its personal data, classify and share it under the national policies, test it against the ethics principles and write its risk register and disclosure">
+<link rel="icon" href="_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="index.md">
+<link rel="describedby" href="llms.txt">
+<link rel="stylesheet" href="_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo" id="logo"></div><nav><a href="slides/day1.html">Slides</a><a href="practice.html">Practice</a><a href="index.md" type="text/markdown">Markdown</a></nav></div>
+<div class="kicker">Data &amp; AI Foundations Track · SDAIA Academy · FN-106</div>
+<h1>Responsible Data and AI Practice in the Kingdom<span class="sub ar" lang="ar" dir="rtl">الممارسة المسؤولة للبيانات والذكاء الاصطناعي في المملكة</span></h1>
+<p>Make one AI build lawful and responsible: map and minimise its personal data, classify and share it under the national policies, test it against the ethics principles and write its risk register and disclosure</p>
+<div class="meta"><span class="track">Data &amp; AI Foundations Track</span><span>3 teaching days + capstone day</span><span>21 hours</span><span>Level 100</span><span>Foundations badge</span></div>
+</div>
+</header>
+<main class="wrap">
+<h2>About the course</h2>
+<p>Participants make one small build lawful and responsible: a parent-enquiry assistant for a fictional private school group that drafts replies from attendance and fee records with a language model. They map its personal data and minimise it under the Personal Data Protection Law (PDPL), classify each data set under the National Data Management Office (NDMO) policy, decide what may reach an external model, turn the SDAIA AI Ethics Principles into tests, assess risk with the National AI Risk Management Framework, and write the disclosure and records the build needs.</p>
+<p><b>Who it is for:</b> Beginners. Graduates and career changers entering the AI Engineering or Data Science track; computing and data graduates who pass the placement test skip the courses it covers.</p>
+<p><b>Format:</b> Intensive: 3 teaching days of four sessions and a capstone day, with guided pre-work and a tracked follow-up task</p>
+<h2>The case study</h2>
+<div class="note info"><b>Rawafid Schools Group.</b> Rawafid Schools Group is a fictional private school group with four campuses and about 1,200 students. Its systems lead built Wafi, an assistant that drafts replies to parents from attendance and fee records with a language model, and its data protection officer must now make that build lawful and responsible. Every record is synthetic, generated with a fixed seed, and planted with the problems the labs find: a prompt that carries the whole student file, a log kept too long, linkable quasi-identifiers, a partner asking for too much, a non-commercial dataset and a routing rule that only knows English.</div>
+<h2>The course</h2>
+<div class="day">
+<div class="day-head c-teal"><div><div class="t">Day 1 · 4 sessions · 4 labs</div><h3>Personal data and the law</h3></div><a class="btn" href="slides/day1.html">Open the slides</a></div>
+<div class="scroll"><table>
+<tr><th>Session</th><th>Topic</th><th>Lab</th></tr>
+<tr><td>1</td><td><b>Where personal data flows in a build</b><br>Prompts, logs, caches and the model provider are all places where personal data goes<ul><li>Identify the personal and sensitive data a build reads, sends, logs and stores</li><li>Draw a data flow diagram of an AI assistant with every store and external party</li><li>Name the PDPL obligation that applies at each step of the flow</li></ul></td><td><a href="labs/D1_1_map_every_field.ipynb">Lab 1.1 · Trace Wafi's personal data</a> <span class="muted">(25 min)</span><br><a href="https://colab.research.google.com/github/SDAIAAcademy/fn-106/blob/main/labs/D1_1_map_every_field.ipynb">Open in Colab</a></td></tr>
+<tr><td>2</td><td><b>Lawful basis and minimisation</b><br>Every flow needs a legal basis and a purpose, and every field must earn its place against that purpose<ul><li>Choose a legal basis and a purpose for each flow of a build</li><li>Test each field against the purpose and remove what it does not need</li><li>Rewrite a prompt builder so it sends the minimum</li></ul></td><td><a href="labs/D1_2_set_lawful_basis.ipynb">Lab 1.2 · Lawful basis and minimum fields</a> <span class="muted">(25 min)</span><br><a href="https://colab.research.google.com/github/SDAIAAcademy/fn-106/blob/main/labs/D1_2_set_lawful_basis.ipynb">Open in Colab</a></td></tr>
+<tr><td>3</td><td><b>Pseudonymisation and its limits</b><br>A pseudonym hides a name, not a person: quasi-identifiers link records back<ul><li>Pseudonymise identifiers with a keyed hash and keep the key apart</li><li>Attempt re-identification by joining on quasi-identifiers</li><li>Generalise quasi-identifiers and measure the remaining risk</li></ul></td><td><a href="labs/D1_3_pseudonymise_guardian_student.ipynb">Lab 1.3 · Pseudonymise, then attack</a> <span class="muted">(25 min)</span><br><a href="https://colab.research.google.com/github/SDAIAAcademy/fn-106/blob/main/labs/D1_3_pseudonymise_guardian_student.ipynb">Open in Colab</a></td></tr>
+<tr><td>4</td><td><b>Rights, retention and breaches</b><br>Rights, retention rules and the breach procedure turn the law into dates and duties<ul><li>Explain the data subject's rights and who exercises them for a minor</li><li>Write a retention rule per store and find what is kept too long</li><li>Walk a breach through notice, containment and documentation</li></ul></td><td><a href="labs/D1_4_write_retention_rule.ipynb">Lab 1.4 · Retention and a seeded breach</a> <span class="muted">(25 min)</span><br><a href="https://colab.research.google.com/github/SDAIAAcademy/fn-106/blob/main/labs/D1_4_write_retention_rule.ipynb">Open in Colab</a></td></tr>
+</table></div>
+</div>
+<div class="day">
+<div class="day-head c-cyan"><div><div class="t">Day 2 · 4 sessions · 4 labs</div><h3>Classify, share and send</h3></div><a class="btn" href="slides/day2.html">Open the slides</a></div>
+<div class="scroll"><table>
+<tr><th>Session</th><th>Topic</th><th>Lab</th></tr>
+<tr><td>1</td><td><b>Data classification levels</b><br>Classification follows the impact of disclosure: four levels, and sub-levels inside Restricted<ul><li>Assess the impact category and level of a data set's disclosure</li><li>Assign a classification level with an evidence-based reason</li><li>Spot aggregates that still reveal individuals</li></ul></td><td><a href="labs/D2_1_classify_six_data.ipynb">Lab 2.1 · Classify six data sets</a> <span class="muted">(25 min)</span><br><a href="https://colab.research.google.com/github/SDAIAAcademy/fn-106/blob/main/labs/D2_1_classify_six_data.ipynb">Open in Colab</a></td></tr>
+<tr><td>2</td><td><b>What may reach an external model</b><br>The classification level decides whether data may go to a hosted model, a locally served one, or neither<ul><li>Derive a destination rule from the classification level and the data's nature</li><li>Apply the rule to data sets and to the fields of a prompt</li><li>Recognise a hosted endpoint abroad as a transfer outside the Kingdom</li></ul></td><td><a href="labs/D2_2_decide_each_data.ipynb">Lab 2.2 · Hosted, local or neither</a> <span class="muted">(25 min)</span><br><a href="https://colab.research.google.com/github/SDAIAAcademy/fn-106/blob/main/labs/D2_2_decide_each_data.ipynb">Open in Colab</a></td></tr>
+<tr><td>3</td><td><b>Sharing with another entity</b><br>A request to share data is judged on purpose, minimum data, access, transparency and destruction<ul><li>Assess a data request against the Data Sharing Policy principles</li><li>Cut a request down to the minimum data its purpose needs</li><li>Draft the conditions under which data may be shared</li></ul></td><td><a href="labs/D2_3_assess_partner_entity.ipynb">Lab 2.3 · A partner's data request</a> <span class="muted">(25 min)</span><br><a href="https://colab.research.google.com/github/SDAIAAcademy/fn-106/blob/main/labs/D2_3_assess_partner_entity.ipynb">Open in Colab</a></td></tr>
+<tr><td>4</td><td><b>Licences and provenance</b><br>Weights, code and data each carry terms, and each instrument decides a different question<ul><li>Read the licence of a model and of a dataset from its card</li><li>Record use restrictions and obligations in a licence register</li><li>Name the national instrument that decides a given question</li></ul></td><td><a href="labs/D2_4_check_licences_two.ipynb">Lab 2.4 · Licences and provenance</a> <span class="muted">(25 min)</span><br><a href="https://colab.research.google.com/github/SDAIAAcademy/fn-106/blob/main/labs/D2_4_check_licences_two.ipynb">Open in Colab</a></td></tr>
+</table></div>
+</div>
+<div class="day">
+<div class="day-head c-coral"><div><div class="t">Day 3 · 4 sessions · 4 labs</div><h3>Ethics and risk in practice</h3></div><a class="btn" href="slides/day3.html">Open the slides</a></div>
+<div class="scroll"><table>
+<tr><th>Session</th><th>Topic</th><th>Lab</th></tr>
+<tr><td>1</td><td><b>Principles into tests</b><br>A principle becomes useful when it is a check with a threshold that passes or fails<ul><li>Translate an ethics principle into a measurable check</li><li>Set a threshold and a pass rule for each check</li><li>Run checks over a recorded run and read the failures</li></ul></td><td><a href="labs/D3_1_write_three_checks.ipynb">Lab 3.1 · Three checks</a> <span class="muted">(25 min)</span><br><a href="https://colab.research.google.com/github/SDAIAAcademy/fn-106/blob/main/labs/D3_1_write_three_checks.ipynb">Open in Colab</a></td></tr>
+<tr><td>2</td><td><b>Testing the assistant</b><br>Paired enquiries in Arabic and English show whether the assistant serves both groups equally<ul><li>Run a scripted test set through an assistant</li><li>Compare reply quality and escalation rates per language</li><li>Name the bias types that explain a measured gap</li></ul></td><td><a href="labs/D3_2_run_forty_scripted.ipynb">Lab 3.2 · Forty enquiries</a> <span class="muted">(25 min)</span><br><a href="https://colab.research.google.com/github/SDAIAAcademy/fn-106/blob/main/labs/D3_2_run_forty_scripted.ipynb">Open in Colab</a></td></tr>
+<tr><td>3</td><td><b>Risk tier and risk register</b><br>The ethics tier sets the bar; the national framework rates, treats and reviews each risk<ul><li>Place an AI system in an ethics risk tier with reasons</li><li>Rate harms by likelihood and impact and compute the risk level</li><li>Write a register entry with treatment, owner and review date</li></ul></td><td><a href="labs/D3_3_place_assistant_risk.ipynb">Lab 3.3 · Tier and register</a> <span class="muted">(25 min)</span><br><a href="https://colab.research.google.com/github/SDAIAAcademy/fn-106/blob/main/labs/D3_3_place_assistant_risk.ipynb">Open in Colab</a></td></tr>
+<tr><td>4</td><td><b>Disclosure and human review</b><br>Parents are told what the assistant is and does, and sensitive replies go to a person<ul><li>Draft a disclosure that names the assistant, the data and the human route</li><li>Write a rule that sends sensitive replies to staff</li><li>Test the rule for recall in both languages</li></ul></td><td><a href="labs/D3_4_draft_notice_parents.ipynb">Lab 3.4 · Notice and routing rule</a> <span class="muted">(25 min)</span><br><a href="https://colab.research.google.com/github/SDAIAAcademy/fn-106/blob/main/labs/D3_4_draft_notice_parents.ipynb">Open in Colab</a></td></tr>
+</table></div>
+</div>
+<div class="day">
+<div class="day-head c-amber"><div><div class="t">Capstone</div><h3>Capstone: the responsible build pack</h3></div><a class="btn" href="slides/capstone.html">Open the slides</a></div>
+<div class="scroll"><table><tr><td>Ten-minute reviews: six minutes to present the pack, four for the assessor's changed fact</td></tr></table></div>
+</div>
+<h2>Capstone</h2>
+<div class="two">
+<div><p>A responsible build pack for the assistant or the participant's own build (registers, minimisation code with its re-identification test, ethics test report, a record of processing entry, a breach checklist and the disclosure), submitted as a public repository and defended in a ten-minute review</p><p><b>What you submit:</b> A public GitHub repository holding the build pack: the classification and risk registers, the minimisation and pseudonymisation code with its re-identification test, the ethics test report, a record of processing entry, a breach checklist and the disclosure, with a README that links each part. Then a ten-minute review in which the assessor changes one fact of the case and the participant revises the classification and risk entries live.</p><p><b>Format:</b> 6 min talk and demo · 4 min Q&amp;A</p></div>
+<div><h3>Rubric</h3><div class="bar c-teal"><span>Data protection<i style="--w:100%"></i></span><b>25%</b></div><div class="bar c-cyan"><span>Classification and sharing<i style="--w:80%"></i></span><b>20%</b></div><div class="bar c-coral"><span>Risk assessment<i style="--w:80%"></i></span><b>20%</b></div><div class="bar c-purple"><span>Ethics tests<i style="--w:80%"></i></span><b>20%</b></div><div class="bar c-amber"><span>Disclosure and records<i style="--w:60%"></i></span><b>15%</b></div></div>
+</div>
+<h2>Outcomes</h2>
+<p>By the end of the course, participants can:</p>
+<div class="day"><div class="scroll"><table>
+<tr><th></th><th>Outcomes</th><th>Level</th><th>Evidence</th></tr>
+<tr><td><b>LO1</b></td><td>Explain the PDPL obligations that govern a build, from lawful basis and minimisation to rights, retention, transfer and breach handling, given the assistant's data flow diagram</td><td>Awareness</td><td>an annotated diagram naming the obligation at each step, checked against the reference</td></tr>
+<tr><td><b>LO2</b></td><td>Distinguish what the data classification, data sharing and open data policies and the SDAIA Generative AI Guidelines each decide, given six questions about the build</td><td>Awareness</td><td>a decision table naming the governing instrument, matching the reference on at least five of six</td></tr>
+<tr><td><b>LO3</b></td><td>Classify each data set of the build under the four NDMO classification levels and derive the rule for sending it to an external model service, given the school group's data inventory and the policy's impact categories</td><td>Applied</td><td>a classification register with level, reason and permitted destinations per data set</td></tr>
+<tr><td><b>LO4</b></td><td>Apply minimisation and pseudonymisation to the data the assistant sends, and test whether records can be re-identified, given synthetic student and guardian records</td><td>Applied</td><td>a before-and-after field list, a pseudonymisation script and a re-identification test result</td></tr>
+<tr><td><b>LO5</b></td><td>Prepare a risk assessment that places the assistant in an ethics risk tier and works through the four phases of the national risk framework, given the build description and five candidate harms</td><td>Applied</td><td>a risk register with tier, likelihood and impact ratings, an owner, a treatment and a review date per risk</td></tr>
+<tr><td><b>LO6</b></td><td>Test the assistant against the ethics principles for fairness across Arabic and English enquiries, transparency and human review, and draft the disclosure parents see, given forty scripted enquiries</td><td>Applied</td><td>a test report with results per check, the changes made and the disclosure text</td></tr>
+</table></div></div>
+<h2>Tools</h2>
+<div class="grid">
+<div class="card c-teal"><h3>Language model for the build</h3><p>a free hosted endpoint used only with synthetic data (an OpenRouter free model) · a scripted stand-in model that runs without a key · a small open-weight model served locally, for real data (not used in the labs)</p></div>
+<div class="card c-cyan"><h3>Personal data detection</h3><p>regular-expression rules · Presidio</p></div>
+<div class="card c-coral"><h3>De-identification and linkage testing</h3><p>dataframe joins on quasi-identifiers (pandas) · ARX</p></div>
+<div class="card c-purple"><h3>Licence references</h3><p>the SPDX licence list · model and dataset cards</p></div>
+<div class="card c-green"><h3>Diagramming</h3><p>Mermaid · draw.io</p></div>
+</div>
+<h2>Before you start</h2>
+<h3>Prerequisites</h3>
+<ul><li>FN-101 Python for Data and AI Work</li><li>FN-105 How Machine Learning and Language Models Work</li><li>Reads a short Python program that calls a web API</li></ul>
+<div class="note tip">The labs are notebooks. Open each one in Google Colab from the table above, or clone the repository and run them locally.</div>
+<h2>Sources</h2>
+<h3>National references: personal data</h3>
+<ul><li><a href="https://sdaia.gov.sa/en/SDAIA/about/Documents/PersonalDataProtectionLaw.pdf">Personal Data Protection Law (SDAIA)</a></li><li><a href="https://sdaia.gov.sa/en/SDAIA/about/Documents/ImplementingRegulationPersonalDataProtectionLaw.pdf">Implementing Regulation of the Personal Data Protection Law (SDAIA)</a></li><li><a href="https://sdaia.gov.sa/Documents/RegulationonPersonalDataEN.pdf">Regulation on Personal Data Transfer outside the Kingdom, version 2.0 (SDAIA)</a></li><li><a href="https://sdaia.gov.sa/Documents/MinmumPDGuideline.pdf">Minimum Personal Data Guideline (SDAIA)</a></li><li><a href="https://sdaia.gov.sa/Documents/PersonalDataProcessingActivitiesRecordsGuideline.pdf">Personal Data Processing Activities Records Guideline (SDAIA)</a></li><li><a href="https://sdaia.gov.sa/Documents/PersonalDataDestructionAnonymizationAndEncryptionGuideline.pdf">Personal Data Destruction, Anonymization and Pseudonymisation Guideline (SDAIA)</a></li><li><a href="https://sdaia.gov.sa/en/SDAIA/about/Documents/PersonalDataBreachIncidents.pdf">Personal Data Breach Incidents Procedural Guide (SDAIA)</a></li></ul>
+<h3>National references: data management (NDMO)</h3>
+<ul><li><a href="https://sdaia.gov.sa/en/SDAIA/about/Documents/DataClassificationPolicy.pdf">Data Classification Policy (NDMO, SDAIA)</a></li><li><a href="https://sdaia.gov.sa/en/SDAIA/about/Documents/DataSharingPolicyEN.pdf">Data Sharing Policy (NDMO, SDAIA)</a></li><li><a href="https://sdaia.gov.sa/en/SDAIA/about/Documents/OpenDataPolicy.pdf">Open Data Policy (NDMO, SDAIA)</a></li></ul>
+<h3>National references: AI ethics, generative AI and risk</h3>
+<ul><li><a href="https://sdaia.gov.sa/en/SDAIA/about/Documents/ai-principles.pdf">AI Ethics Principles (SDAIA)</a></li><li><a href="https://sdaia.gov.sa/en/SDAIA/about/Files/GenAIGuidelinesForGovernmentENCompressed.pdf">Generative AI Guidelines for Government (SDAIA)</a></li><li><a href="https://sdaia.gov.sa/en/SDAIA/about/Files/GenerativeAIPublicEN.pdf">Generative AI Guidelines for the Public (SDAIA)</a></li><li><a href="https://sdaia.gov.sa/ar/MediaCenter/KnowledgeCenter/ResearchLibrary/ExecutiveSummaryAr.pdf">National AI Risk Management Framework, full text in Arabic (SDAIA, April 2026)</a></li><li><a href="https://sdaia.gov.sa/en/MediaCenter/KnowledgeCenter/ResearchLibrary/ExecutiveSummaryEn.pdf">National AI Risk Management Framework, English executive summary (SDAIA, April 2026)</a></li><li><a href="https://sdaia.gov.sa/en/MediaCenter/KnowledgeCenter/ResearchLibrary/EN-AI-BIAS.pdf">AI Bias Reference Guide, first edition (SDAIA, May 2026)</a></li><li><a href="https://sdaia.gov.sa/en/SDAIA/about/Pages/RegulationsAndPolicies.aspx">Regulations and policies index (SDAIA)</a></li></ul>
+<h3>Licences, cards and tools</h3>
+<ul><li><a href="https://spdx.org/licenses/">SPDX License List</a></li><li><a href="https://huggingface.co/Qwen/Qwen3-4B">Qwen3-4B model card and licence (Hugging Face)</a></li><li><a href="https://ai.google.dev/gemma/terms">Gemma Terms of Use (Google)</a></li><li><a href="https://huggingface.co/google/gemma-3-4b-it">Gemma 3 4B instruction-tuned model card (Hugging Face)</a></li><li><a href="https://huggingface.co/datasets/tatsu-lab/alpaca">Alpaca dataset card (Hugging Face)</a></li><li><a href="https://openrouter.ai/models">OpenRouter models list</a></li><li><a href="https://presidio.dataprivacystack.org/">Presidio, personal data detection and anonymisation framework</a></li><li><a href="https://arx.deidentifier.org/">ARX Data Anonymization Tool</a></li><li><a href="https://mermaid.js.org/syntax/flowchart.html">Mermaid flowchart syntax</a></li></ul>
+<h2>Files and links</h2>
+<div class="files">
+<a href="practice.html"><b>practice.html</b><span>Practice questions with feedback</span></a>
+<a href="index.md"><b>index.md</b><span>This page as Markdown, for an AI assistant</span></a>
+<a href="llms.txt"><b>llms.txt</b><span>The course for AI assistants (llms.txt)</span></a>
+<a href="https://github.com/SDAIAAcademy/fn-106"><b>SDAIAAcademy/fn-106</b><span>The course repository</span></a>
+</div>
+</main>
+<footer><div class="wrap">SDAIA Academy · Data &amp; AI Foundations Track · Responsible Data and AI Practice in the Kingdom<br><span class="muted">Course version 2027.1.0 · engine 1.0.0 · built 2026-11-15 · commit b84fcbb</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-15T04:50:12Z","version":"2027.1.0","commit":"b84fcbb"},"course":{"id":"fn-106","code":"FN-106","title":"Responsible Data and AI Practice in the Kingdom","track":"foundations","lang":"en","dir":"ltr","url":"https://sdaiaacademy.github.io/fn-106/","repo":"SDAIAAcademy/fn-106","home":"index.html"},"ai":{"context":{"course":"context/course.md","courseJs":"context/course.js","day":null,"llms":"llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="_engine/academy.js"></script>
+</body>
+</html>

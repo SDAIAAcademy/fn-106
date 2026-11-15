@@ -1,0 +1,56 @@
+[
+ {
+  "name": "fee_schedule",
+  "level": "Public",
+  "sub_level": "",
+  "impact": "None / None",
+  "reason": "Already published on the website; disclosure has no impact.",
+  "owner": "Osama Al-Qurashi",
+  "review_by": "2026-12-12"
+ },
+ {
+  "name": "guardians",
+  "level": "Restricted",
+  "sub_level": "B",
+  "impact": "Individuals / Low",
+  "reason": "Names, national IDs, mobiles and IBANs of individuals; disclosure would breach the PDPL.",
+  "owner": "Layla Haddad",
+  "review_by": "2026-12-12"
+ },
+ {
+  "name": "students",
+  "level": "Restricted",
+  "sub_level": "B",
+  "impact": "Individuals / Low",
+  "reason": "Children's identities and health notes; disclosure would breach the PDPL.",
+  "owner": "Dr. Amal Al-Sayari",
+  "review_by": "2026-12-12"
+ },
+ {
+  "name": "attendance",
+  "level": "Restricted",
+  "sub_level": "B",
+  "impact": "Individuals / Low",
+  "reason": "Each child's absences, with notes that can reveal health.",
+  "owner": "Dr. Amal Al-Sayari",
+  "review_by": "2026-12-12"
+ },
+ {
+  "name": "fees",
+  "level": "Restricted",
+  "sub_level": "B",
+  "impact": "Individuals / Low",
+  "reason": "Each family's payments and balance: detailed statements of individual transactions.",
+  "owner": "Osama Al-Qurashi",
+  "review_by": "2026-12-12"
+ },
+ {
+  "name": "attendance_summary",
+  "level": "Restricted",
+  "sub_level": "B",
+  "impact": "Individuals / Low",
+  "reason": "12 cells have under five students, so rates can point at a child.",
+  "owner": "Dr. Amal Al-Sayari",
+  "review_by": "2026-12-12"
+ }
+]

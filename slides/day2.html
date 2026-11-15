@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-ax="deck" data-track="foundations">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 2 · Classify, share and send · Responsible Data and AI Practice in the Kingdom</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="day2.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<div class="deck" data-course="Responsible Data and AI Practice in the Kingdom" data-track="foundations" data-day="Day 2">
+<!-- ======================= OPENING ======================= -->
+<section class="slide title" id="title" data-auto="title" data-label="Welcome" data-n="1">
+  <div class="kicker">SDAIA Academy · Responsible Data and AI Practice in the Kingdom</div>
+  <h1>Classify, share and send</h1>
+  <p class="lead mt">Day 2: Classify each data set, decide where it may go, and check what you reuse</p>
+  <div class="meta"><span class="track">Data &amp; AI Foundations Track</span><span>3 teaching days + capstone day</span><span>4 sessions · 4 labs</span><span>FN-106</span></div>
+  <aside class="notes"><p>Welcome back. Yesterday was the law; today is the national data policies and what they decide for an AI build. Ask one person to say in one sentence what Wafi's prompt carries now (after Lab 1.2: a first name and three counts).</p></aside>
+</section>
+
+<section class="slide" id="agenda" data-auto="agenda" data-label="Agenda" data-n="2">
+  <div class="kicker">Today</div>
+  <h2>Classify, share and send</h2>
+  <div class="agenda"><div class="item"><div><b>Session 1 · Data classification levels</b><small>Classification follows the impact of disclosure: four levels, and sub-levels inside Restricted</small></div></div><div class="item"><div><b>Session 2 · What may reach an external model</b><small>The classification level decides whether data may go to a hosted model, a locally served one, or neither</small></div></div><div class="item"><div><b>Session 3 · Sharing with another entity</b><small>A request to share data is judged on purpose, minimum data, access, transparency and destruction</small></div></div><div class="item"><div><b>Session 4 · Licences and provenance</b><small>Weights, code and data each carry terms, and each instrument decides a different question</small></div></div></div>
+</section>
+
+<section class="slide" id="review-day1" data-lo="LO1 LO4" data-n="3">
+  <div class="kicker">Review of Day 1</div>
+  <h2>Which change does the most for Wafi's log?</h2>
+  <div class="quiz" data-type="single" data-lo="LO1" data-id="review-day1-q1">
+    <p class="lead">Wafi's log keeps every full prompt since the pilot began. Nasser can make one change this week. Which one reduces the exposure the most?</p>
+    <div class="opts">
+      <div class="opt" data-why="Treats a stronger lock as a substitute for keeping less: what is kept can still leak" data-k="A">Encrypt the log file on disk</div>
+      <div class="opt" data-why="Thinks removing names alone makes records anonymous; Lab 1.3 re-identified 96%" data-k="B">Remove the names from old rows</div>
+      <div class="opt" data-ok data-k="C">Send minimised prompts and delete rows past 90 days</div>
+      <div class="opt" data-why="Believes telling people about a practice makes it lawful" data-k="D">Add the log to the privacy notice</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> Minimisation cuts what each row holds, and the retention rule cuts how many rows exist: 78% of the log was past a 90-day rule.</div>
+  </div>
+  <aside class="notes"><p>Answer: C. Encryption (A) is a security measure the law also asks for, but it does not reduce what a breach or a rights request exposes. Use this to bridge: today's question is not "how do we protect it" but "where may it go at all".</p></aside>
+</section>
+
+<!-- ======================= SESSION 1 ======================= -->
+<section class="slide section" id="s1" data-auto="section" data-session="1" data-n="4">
+  <div class="kicker">Session 1</div>
+  <h1>Data classification levels</h1>
+  <ul class="bullets outcomes"><li>Assess the impact category and level of a data set's disclosure</li><li>Assign a classification level with an evidence-based reason</li><li>Spot aggregates that still reveal individuals</li></ul>
+  <div class="sess-no">01</div>
+</section>
+
+<section class="slide" id="why-classify" data-lo="LO3" data-n="5" data-session="1">
+  <div class="kicker">What classification is for</div>
+  <h2>A classification level is a decision about handling, made once</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>Every data set gets a level when it is created or received.</li>
+      <li>The level decides access, storage, sharing, publication and, today, which model may see it.</li>
+      <li>Data not yet classified is treated as <b>Restricted</b> until it is.</li>
+      <li>The level is reviewed within a month of the first classification.</li>
+    </ul>
+    <div class="card c-purple"><h4>Whose policy?</h4><p class="small mb0">The NDMO Data Classification Policy is written for public entities. Rawafid, a private group, adopts it in its own data policy; the PDPL binds it by law.</p></div>
+  </div>
+  <aside class="notes"><p>Sources: Data Classification Policy (NDMO, version 1, 2020): scope (public entities), principle 3 timely classification, section 1.4 (unclassified data is treated as Restricted), step 6 (review within one month). Be honest about the scope: the policy binds government entities. Many private organisations that work with government adopt it; Rawafid does so in this course, which is a choice of the case, not a legal claim.</p></aside>
+</section>
+
+<section class="slide" id="four-levels" data-lo="LO3" data-n="6" data-session="1">
+  <div class="kicker">Four levels</div>
+  <h2>The level follows the impact of unauthorised disclosure</h2>
+  <table class="t">
+    <tr><th>Level</th><th>Impact</th><th>Example in the policy</th></tr>
+    <tr><td><b>Top Secret</b></td><td>High: exceptionally serious, irreparable</td><td>National security information</td></tr>
+    <tr><td><b>Secret</b></td><td>Medium: serious</td><td>Information on vital installations</td></tr>
+    <tr class="hl"><td><b>Restricted</b></td><td>Low: limited</td><td>Personal identifiers, a medical file, individual transactions</td></tr>
+    <tr><td><b>Public</b></td><td>None</td><td>Published statistics, public announcements</td></tr>
+  </table>
+  <p class="small mt">Restricted has sub-levels by scale: <b>A</b> a whole sector, <b>B</b> several entities or a group of individuals, <b>C</b> one entity or one individual.</p>
+  <aside class="notes"><p>Source: Data Classification Policy, section 1.3, Table 1 and the Restricted sub-levels. Point out where personal data sits: the policy's examples for Restricted include names, addresses, national ID numbers, phone numbers, bank accounts and medical files. A VIP's personal data can be Secret when it affects the national interest. School records are Restricted.</p></aside>
+</section>
+
+<section class="slide" id="impact-categories" data-lo="LO3" data-n="7" data-session="1">
+  <div class="kicker">How to assess impact</div>
+  <h2>Ask what disclosure would harm, then how badly and for how long</h2>
+  <div class="cols cols-4 gap-s">
+    <div class="card c-navy flat"><h4>National interest</h4><p class="small mb0">Reputation, security, economy, infrastructure, government functions.</p></div>
+    <div class="card c-cyan flat"><h4>Entity activities</h4><p class="small mb0">Profits and functions of entities.</p></div>
+    <div class="card c-coral flat"><h4>Individuals</h4><p class="small mb0">Health and safety; <b>privacy</b>.</p></div>
+    <div class="card c-green flat"><h4>Environment</h4><p class="small mb0">Environmental and natural resources.</p></div>
+  </div>
+  <p class="small mt">The level weighs the duration of the damage, the time to recover and its scale. Every impact named must be specific and evidence-based.</p>
+  <aside class="notes"><p>Source: Data Classification Policy, Table 2 (categories and levels) and step 3 (impact category, then impact level: duration, recovery, size). For individuals' privacy the policy's guidance is: disclosure of an individual's personal information is a Low impact. That is the line Lab 2.1 uses.</p></aside>
+</section>
+
+<section class="slide" id="low-impact-two-steps" data-lo="LO3" data-n="8" data-session="1">
+  <div class="kicker">The policy's process</div>
+  <h2>A low impact still has two questions before it becomes a level</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>Impact Low</b>limited, short-term, controllable</div>
+    <div class="arrow">→</div>
+    <div class="step c-coral"><b>Step 4</b>Would disclosure break a law? Yes: Restricted</div>
+    <div class="arrow">→</div>
+    <div class="step c-cyan"><b>Step 5</b>Do the benefits outweigh the harm? Yes: Public. No: Restricted</div>
+  </div>
+  <div class="callout tip mt"><b>Open by default.</b> The two steps exist so that data is not locked away when nothing forbids its release.</div>
+  <aside class="notes"><p>Source: Data Classification Policy, steps 3b, 4 and 5, and principle 1 (open by default, for the development sector). For Rawafid's record sets step 4 answers yes at once: disclosure would breach the PDPL. For the fee schedule nothing is at stake. The interesting case is the summary table.</p></aside>
+</section>
+
+<section class="slide" id="highest-level-wins" data-lo="LO3" data-n="9" data-session="1">
+  <div class="kicker">Combining data</div>
+  <h2>A set built from several levels takes the highest of them</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>Principle 4 · highest level of protection</h4><p class="small mb0">If a data set integrates parts with different levels, the highest level applies.</p></div>
+    <div class="card c-coral"><h4>At Rawafid</h4><p class="small mb0">The fee schedule (Public) joined with each family's balance (Restricted) is Restricted. So is a prompt that carries one Restricted field.</p></div>
+  </div>
+  <aside class="notes"><p>Source: Data Classification Policy, principle 4. This is the rule behind Lab 2.2's field-by-field decision: a prompt is a combined data set, so its level is the level of its most protected field.</p></aside>
+</section>
+
+<section class="slide" id="small-cells" data-lo="LO3" data-n="10" data-session="1">
+  <div class="kicker">Measured in Lab 2.1</div>
+  <h2>An aggregate table can still describe one child</h2>
+  <div class="cols cols-2">
+    <div class="stat center"><div class="big">12 / 95</div><div class="lbl">cells of the attendance summary hold fewer than five students</div></div>
+    <ul class="bullets">
+      <li>Each cell is campus, grade and gender, with an absence rate.</li>
+      <li>A cell of one student <b>is</b> that student's attendance.</li>
+      <li>Until small cells are suppressed or merged, the table is Restricted.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>From the solution run of Lab 2.1: 12 of 95 cells have under five students, mostly older grades at the smaller campuses (the generator thinned them on purpose). The same idea as Day 1's k: no row, no name, and still a child. The stretch suppresses them and reclassifies the table as Public.</p></aside>
+</section>
+
+<section class="slide" id="register-day2" data-lo="LO3" data-n="11" data-session="1">
+  <div class="kicker">The register</div>
+  <h2>Six sets, two levels, one reason each</h2>
+  <table class="t small">
+    <tr><th>Set</th><th>Level</th><th>Reason</th></tr>
+    <tr><td>fee_schedule</td><td>Public</td><td>Already published</td></tr>
+    <tr><td>guardians</td><td>Restricted B</td><td>Names, national IDs, mobiles, IBANs</td></tr>
+    <tr><td>students</td><td>Restricted B</td><td>Children's identities and health notes</td></tr>
+    <tr><td>attendance</td><td>Restricted B</td><td>Absences, with notes that can reveal health</td></tr>
+    <tr><td>fees</td><td>Restricted B</td><td>Detailed statements of individual transactions</td></tr>
+    <tr><td>attendance_summary</td><td>Restricted B</td><td>Cells under five students</td></tr>
+  </table>
+  <aside class="notes"><p>The reference register of Lab 2.1. The B sub-level: each set concerns a group of individuals. Ask: if a single student's file were leaked, is that C? Yes, for that one record; the register classifies the set as a whole. Owners and a review date one month on are in the lab's output.</p></aside>
+</section>
+
+<section class="slide" id="check-classify-combined" data-lo="LO3" data-n="12" data-session="1">
+  <div class="kicker">Checkpoint</div>
+  <h2>What level does Dana's new report take?</h2>
+  <div class="quiz" data-type="single" data-lo="LO3" data-id="check-classify-combined-q1">
+    <p class="lead">Dana joins the published fee schedule with each family's balance to show who is behind on payments. What is the report's level?</p>
+    <div class="opts">
+      <div class="opt" data-ok data-k="A">Restricted, the higher of its two parts</div>
+      <div class="opt" data-why="Averages levels instead of taking the highest" data-k="B">Somewhere between Public and Restricted</div>
+      <div class="opt" data-why="Lets the public part decide the level of the whole" data-k="C">Public, because the fees are published</div>
+      <div class="opt" data-why="Thinks a new combination needs no classification until someone asks" data-k="D">Unclassified until someone reviews it</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> Combined data takes the highest level of its parts, and each family's balance is a Restricted individual transaction.</div>
+  </div>
+  <aside class="notes"><p>Answer: A. D is wrong twice: data is classified when created, and unclassified data is treated as Restricted anyway.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-2-1" data-auto="lab" data-lab="2.1" data-label="Lab 2.1" data-n="13" data-session="1">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">Lab 2.1 · 25 min</div><h2>Classify six data sets</h2><p class="lead small">Classify the six data sets with the policy's impact categories and record the reasons.</p><a class="nb" href="../labs/D2_1_classify_six_data.ipynb">D2_1_classify_six_data.ipynb</a></div><ul class="checklist"><li>Read the inventory and the impact categories <span class="min">4 min</span></li><li>Assess impact category and level per set <span class="min">8 min</span></li><li>Map impact to level and sub-level <span class="min">5 min</span></li><li>Find the small cells in the aggregate table <span class="min">5 min</span></li><li>Record reasons in the register <span class="min">3 min</span></li><li class="stretch">✱ Stretch: Suppress the small cells and classify the aggregate table again</li></ul></div>
+  <aside class="notes"><p>AI off for task 2, the first classification. Watch for: participants who make the student file Secret because it holds health data (the policy reserves Secret for serious national or entity-level impact; the PDPL's sensitive-data rules handle health); and those who make the summary Public at once. Expected: one Public set, five Restricted B, 12 small cells. Review date: one month from today.</p></aside>
+</section>
+
+<!-- ======================= SESSION 2 ======================= -->
+<section class="slide section" id="s2" data-auto="section" data-session="2" data-n="14">
+  <div class="kicker">Session 2</div>
+  <h1>What may reach an external model</h1>
+  <ul class="bullets outcomes"><li>Derive a destination rule from the classification level and the data's nature</li><li>Apply the rule to data sets and to the fields of a prompt</li><li>Recognise a hosted endpoint abroad as a transfer outside the Kingdom</li></ul>
+  <div class="sess-no">02</div>
+</section>
+
+<section class="slide" id="three-destinations" data-lo="LO3" data-n="15" data-session="2">
+  <div class="kicker">Where a prompt can go</div>
+  <h2>Three destinations: a hosted service, a model you run, or no model</h2>
+  <div class="cols cols-3 gap-s">
+    <div class="card c-cyan"><h4>Hosted</h4><p class="small mb0">A provider's model over an API. Fast to start; the data leaves you, under the provider's terms and location.</p></div>
+    <div class="card c-teal"><h4>Locally served</h4><p class="small mb0">An open-weight model on your own machines in the Kingdom. The data stays under your controls.</p></div>
+    <div class="card c-coral"><h4>Neither</h4><p class="small mb0">Some data has no business in a prompt at all. Minimisation decides before any model does.</p></div>
+  </div>
+  <aside class="notes"><p>This is the decision the catalog asks participants to make. A locally served model does not appear in the labs: the course runs only free hosted models on synthetic data, so nobody downloads model weights. The decision is made on paper here and is what Rawafid would need for real data.</p></aside>
+</section>
+
+<section class="slide" id="genai-guideline-rule" data-lo="LO3 LO2" data-n="16" data-session="2">
+  <div class="kicker">What the guidelines say</div>
+  <h2>Generative AI tools get Public data only</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>The Generative AI Guidelines for Government: do not enter data classified <b>Restricted or higher</b> into generative AI tools.</li>
+      <li>Limit their use to data classified <b>Public</b>; check the tool's privacy, disclosure and sharing terms.</li>
+      <li>Data analysis with generative AI is limited to Public or open data sets.</li>
+    </ul>
+    <div class="card c-purple"><h4>Rawafid's reading</h4><p class="small mb0">The rule covers hosted services Rawafid does not control. A model Rawafid runs itself, under the source system's access rules, may see minimised Restricted fields.</p></div>
+  </div>
+  <aside class="notes"><p>Source: Generative AI Guidelines for Government (SDAIA, 2025), section 3.5 (privacy and security: no Restricted or higher, limit to Public) and the best practices on data analysis. The card on the right is the course's interpretation for a private entity running its own model; say plainly that it is Rawafid's policy choice, and that a stricter reading (no generative AI on Restricted data at all) is also defensible.</p></aside>
+</section>
+
+<section class="slide" id="destination-rule-code" data-lo="LO3" data-n="17" data-session="2">
+  <div class="kicker">The rule as code</div>
+  <h2>Three lines turn a level into a destination</h2>
+  <pre class="code" data-file="Lab 2.2"><code class="language-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">destination</span>(<span class="hljs-params">level, has_sensitive</span>):
+    <span class="hljs-keyword">if</span> level == <span class="hljs-string">&quot;Public&quot;</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;hosted&quot;</span>
+    <span class="hljs-keyword">if</span> level == <span class="hljs-string">&quot;Restricted&quot;</span> <span class="hljs-keyword">and</span> <span class="hljs-keyword">not</span> has_sensitive:
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;local&quot;</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;neither&quot;</span></code></pre>
+  <p class="small mt">Pseudonymised data keeps its Restricted level, so pseudonymising does not change the answer.</p>
+  <aside class="notes"><p>Walk through the four test cases of the lab: Public goes anywhere; Restricted without sensitive fields goes to a local model; Restricted with health notes goes nowhere; Secret goes nowhere. Ask: what would make you add a fourth branch? (A sector regulator's rule, for example health data in a hospital.)</p></aside>
+</section>
+
+<section class="slide" id="six-sets-destinations" data-lo="LO3" data-n="18" data-session="2">
+  <div class="kicker">Measured in Lab 2.2</div>
+  <h2>Only the published fee schedule may go to a hosted model</h2>
+  <div class="bars">
+    <div class="row"><span>fee_schedule</span><div class="bar c-cyan" style="--w:100%"></div><span class="val">hosted</span></div>
+    <div class="row"><span>guardians, fees, summary</span><div class="bar c-teal" style="--w:66%"></div><span class="val">local</span></div>
+    <div class="row"><span>students, attendance</span><div class="bar c-coral" style="--w:33%"></div><span class="val">neither</span></div>
+  </div>
+  <p class="small mt">Field by field, all five fields of the minimised prompt are Restricted: <b>local only</b>. Minimised is small, not Public.</p>
+  <aside class="notes"><p>From the solution run: one hosted, three local, two neither (the student file and attendance carry health in notes). For the student and attendance sets, derived counts without notes may go to a local model. The bar lengths only order the three answers; they are not measurements.</p></aside>
+</section>
+
+<section class="slide" id="hosted-is-transfer" data-lo="LO1 LO3" data-n="19" data-session="2">
+  <div class="kicker">The other half of the question</div>
+  <h2>A hosted endpoint outside the Kingdom makes every prompt a transfer</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>Transfer only for listed purposes, without harm to national security or vital interests.</li>
+      <li>With an adequate level of protection abroad, and the <b>minimum</b> data needed.</li>
+      <li>Otherwise safeguards: standard contractual clauses, binding common rules or a certificate.</li>
+    </ul>
+    <div class="card c-coral"><h4>Location unknown?</h4><p class="small mb0">Treat it as abroad. If you cannot show where prompts are processed, you cannot show the conditions are met.</p></div>
+  </div>
+  <aside class="notes"><p>Sources: PDPL Article 29; Regulation on Personal Data Transfer outside the Kingdom, version 2.0, Articles 2 to 4 (purposes, the adequacy list, safeguards and exemptions). The free model router used in class sends prompts to providers it chooses; the course treats its location as unknown and therefore as a transfer. That is fine for synthetic data and decisive for real data.</p></aside>
+</section>
+
+<section class="slide" id="class-data-is-synthetic" data-lo="LO3" data-n="20" data-session="2">
+  <div class="kicker">Why the class may use a hosted model</div>
+  <h2>Synthetic records describe nobody, so they may go anywhere</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>In class</b>synthetic records, hosted free model</div>
+    <div class="arrow">→</div>
+    <div class="step c-purple"><b>The gate</b>before real records: classify again</div>
+    <div class="arrow">→</div>
+    <div class="step c-coral"><b>In production</b>Restricted fields, local model only</div>
+  </div>
+  <div class="callout warn mt"><b>What goes wrong.</b> A prototype built on a hosted model is pointed at real data "just for a test". The test is the breach.</div>
+  <aside class="notes"><p>This is the course's own rule, stated in the catalog entry: a free hosted endpoint used only with synthetic data. Lab 2.2's stretch asks participants to write the check that must hold before anyone points Wafi at real records.</p></aside>
+</section>
+
+<section class="slide" id="check-pseudonymised-hosted" data-lo="LO3" data-n="21" data-session="2">
+  <div class="kicker">Checkpoint</div>
+  <h2>Does pseudonymising open the hosted route?</h2>
+  <div class="quiz" data-type="single" data-lo="LO3" data-id="check-pseudonymised-hosted-q1">
+    <p class="lead">Dana pseudonymises attendance counts with a keyed hash and asks to send them to the free hosted model for a monthly summary. Under Rawafid's rule, where may they go?</p>
+    <div class="opts">
+      <div class="opt" data-why="Thinks pseudonymised data is anonymous and so Public" data-k="A">To the hosted model, now that they are pseudonymised</div>
+      <div class="opt" data-why="Believes a key held by Rawafid moves the data's location" data-k="B">To the hosted model, because Rawafid keeps the key</div>
+      <div class="opt" data-why="Over-applies the sensitive-data branch to counts without notes" data-k="C">Nowhere: attendance data can never reach a model</div>
+      <div class="opt" data-ok data-k="D">To a locally served model only</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> Pseudonymised data is still personal data and keeps its Restricted level; counts without notes carry no health data, so a local model is permitted.</div>
+  </div>
+  <aside class="notes"><p>Answer: D. C is a careful but wrong answer: the "neither" applies to the raw attendance set because its notes can reveal health; derived counts without notes are not sensitive.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-2-2" data-auto="lab" data-lab="2.2" data-label="Lab 2.2" data-n="22" data-session="2">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">Lab 2.2 · 25 min</div><h2>Hosted, local or neither</h2><p class="lead small">Decide for each data set whether it may go to a hosted model, a locally served model or neither.</p><a class="nb" href="../labs/D2_2_decide_each_data.ipynb">D2_2_decide_each_data.ipynb</a></div><ul class="checklist"><li>Write the destination rule as a function <span class="min">7 min</span></li><li>Apply it to the six data sets <span class="min">4 min</span></li><li>Apply it field by field to Wafi's prompt <span class="min">6 min</span></li><li>Check the hosted endpoint's location as a transfer <span class="min">4 min</span></li><li>Record the permitted destinations <span class="min">4 min</span></li><li class="stretch">✱ Stretch: Write the rule for the synthetic class data and say why it differs</li></ul></div>
+  <aside class="notes"><p>The lab starts from the reference register of Lab 2.1, so nobody is blocked. Watch for: field_level() that calls the first name Public ("it is only a first name"); is_transfer() that treats unknown as inside. Expected: hosted for the fee schedule only; every prompt field local; the class endpoint a transfer.</p></aside>
+</section>
+
+<!-- ======================= SESSION 3 ======================= -->
+<section class="slide section" id="s3" data-auto="section" data-session="3" data-n="23">
+  <div class="kicker">Session 3</div>
+  <h1>Sharing with another entity</h1>
+  <ul class="bullets outcomes"><li>Assess a data request against the Data Sharing Policy principles</li><li>Cut a request down to the minimum data its purpose needs</li><li>Draft the conditions under which data may be shared</li></ul>
+  <div class="sess-no">03</div>
+</section>
+
+<section class="slide" id="partner-request" data-lo="LO2" data-n="24" data-session="3">
+  <div class="kicker">The request</div>
+  <h2>A research centre asks for three years of attendance, with names</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li><b>Purpose:</b> commute distance and absence in primary and middle school.</li>
+      <li><b>Fields:</b> names, national IDs, birth dates, district, guardian's employer, daily records, absence notes, health notes.</li>
+      <li><b>Storage:</b> a cloud workspace outside the Kingdom.</li>
+      <li><b>Retention:</b> indefinitely; <b>onward:</b> research partners when needed.</li>
+    </ul>
+    <div class="card c-teal"><h4>The decision</h4><p class="small mb0">Not yes or no: <b>what</b>, in which form, <b>on what conditions</b>.</p></div>
+  </div>
+  <aside class="notes"><p>The request is in labs/data/partner_request.json. Al-Mizan Centre for Education Research is fictional. Ask the room for a gut answer before any instrument: most say no. The lab turns that into a reasoned yes with conditions, which is what the policy's sharing culture asks for.</p></aside>
+</section>
+
+<section class="slide" id="eight-principles" data-lo="LO2" data-n="25" data-session="3">
+  <div class="kicker">The Data Sharing Policy</div>
+  <h2>Eight principles decide whether and how data is shared</h2>
+  <div class="cols cols-4 gap-s">
+    <div class="card c-teal flat"><h4>Sharing culture</h4><p class="small mb0">Share by default, under the policy.</p></div>
+    <div class="card c-teal flat"><h4>Single source</h4><p class="small mb0">The entity that produces data shares it.</p></div>
+    <div class="card c-coral flat"><h4>Legitimate purpose</h4><p class="small mb0">A legal basis; used only for that purpose.</p></div>
+    <div class="card c-coral flat"><h4>Authorised access</h4><p class="small mb0">Identified, verified people.</p></div>
+    <div class="card c-cyan flat"><h4>Transparency</h4><p class="small mb0">Data, level, storage, protection, destruction.</p></div>
+    <div class="card c-cyan flat"><h4>Accountability</h4><p class="small mb0">Shared, under an agreement.</p></div>
+    <div class="card c-purple flat"><h4>Security</h4><p class="small mb0">Controls per the national rules.</p></div>
+    <div class="card c-purple flat"><h4>Ethical use</h4><p class="small mb0">Fairness, integrity, trust.</p></div>
+  </div>
+  <aside class="notes"><p>Source: Data Sharing Policy (NDMO), section two, the eight principles. The policy governs government data shared with requesters; Rawafid's policy adopts the principles for its own sharing, and the PDPL's disclosure rules apply by law. The agreement signatory depends on the level: for Restricted data, the director of the data management office.</p></aside>
+</section>
+
+<section class="slide" id="pdpl-disclosure-research" data-lo="LO1 LO2" data-n="26" data-session="3">
+  <div class="kicker">The law's side</div>
+  <h2>The PDPL allows research sharing when the data does not identify the child</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>Disclosure (Article 15)</h4><p class="small mb0">Only in listed cases, among them consent, and later processing in a form that cannot identify the data subject directly or indirectly.</p></div>
+    <div class="card c-cyan"><h4>Research (Article 27)</h4><p class="small mb0">Without consent when the data does not specifically identify the person, or identity evidence is destroyed first and the data is not sensitive.</p></div>
+  </div>
+  <div class="callout warn mt"><b>The health notes fail both.</b> They are sensitive and they identify; a commute study does not need them.</div>
+  <aside class="notes"><p>Sources: PDPL Articles 15, 16 and 27. Article 16 adds cases where disclosure is refused even when Article 15 allows it, including conflict with the interests of a person lacking legal capacity: a child.</p></aside>
+</section>
+
+<section class="slide" id="cut-the-request" data-lo="LO2" data-n="27" data-session="3">
+  <div class="kicker">Measured in Lab 2.3</div>
+  <h2>Six of eleven requested fields survive, in a coarser form</h2>
+  <table class="t small">
+    <tr><th>Requested</th><th>Shared as</th></tr>
+    <tr><td>date of birth</td><td>birth year</td></tr>
+    <tr><td>grade</td><td>grade band, grades 1 to 9 only</td></tr>
+    <tr><td>gender, campus, district</td><td>as they are</td></tr>
+    <tr><td>daily attendance records</td><td>absence counts per month</td></tr>
+    <tr class="hl"><td>names, national IDs, employer, notes, health notes</td><td>refused</td></tr>
+  </table>
+  <aside class="notes"><p>From the solution run: the extract has 1,043 rows (grades 1 to 9) and ten columns, with a project pseudonym from a key used for this study only. The guardian's employer has nothing to do with commute distance; the district does.</p></aside>
+</section>
+
+<section class="slide" id="district-trade-off" data-lo="LO2 LO4" data-n="28" data-session="3">
+  <div class="kicker">The trade-off in the extract</div>
+  <h2>The field the study needs most makes the smallest groups</h2>
+  <div class="cols cols-2">
+    <div class="stack">
+      <div class="stat center"><div class="big">k = 2</div><div class="lbl">with the district: 4 of 96 groups under five</div></div>
+      <div class="stat center"><div class="big">k = 11</div><div class="lbl">without it: no group under five</div></div>
+    </div>
+    <ul class="bullets">
+      <li>Share the district and suppress or merge the small groups before release.</li>
+      <li>Or compute commute bands inside Rawafid and share those instead of the district.</li>
+      <li>Either way, write the choice into the conditions.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>From Lab 2.3's run on campus, district, grade band and gender. This links Day 1 Session 3 to sharing: the minimisation of a request is measured the same way as a pseudonymisation.</p></aside>
+</section>
+
+<section class="slide" id="conditions-of-sharing" data-lo="LO2" data-n="29" data-session="3">
+  <div class="kicker">The answer to the centre</div>
+  <h2>Yes, on nine conditions</h2>
+  <ol class="bullets small">
+    <li>The stated study only.</li>
+    <li>The pseudonymised extract, coarse fields.</li>
+    <li>Labelled Restricted in the metadata.</li>
+    <li>Stored in the Kingdom, or a lawful transfer.</li>
+    <li>Named researchers only.</li>
+    <li>No onward sharing.</li>
+    <li>Destroyed at the end, with a signed confirmation.</li>
+    <li>A secure channel, not email.</li>
+    <li>An agreement signed before any data moves.</li>
+  </ol>
+  <aside class="notes"><p>The reference conditions of Lab 2.3. Three principles were "not met" in the request as written: authorised access, collective accountability and data security. Each condition answers one of them, or the PDPL. The stretch is the destruction confirmation.</p></aside>
+</section>
+
+<section class="slide" id="check-research-purpose" data-lo="LO2" data-n="30" data-session="3">
+  <div class="kicker">Checkpoint</div>
+  <h2>Is "for research" enough?</h2>
+  <div class="quiz" data-type="single" data-lo="LO2" data-id="check-research-purpose-q1">
+    <p class="lead">The centre says the purpose is research, so every requested field should be shared. What does the Data Sharing Policy's legitimate-purpose principle add?</p>
+    <div class="opts">
+      <div class="opt" data-why="Treats the word research as a basis for any data" data-k="A">Nothing: research is always a legitimate purpose</div>
+      <div class="opt" data-ok data-k="B">The data is used only for the stated purpose, and fields beyond it are not shared</div>
+      <div class="opt" data-why="Confuses a legitimate purpose with the requester's status" data-k="C">Only public entities may receive data</div>
+      <div class="opt" data-why="Believes a purpose principle concerns storage" data-k="D">Data must be stored on the requester's own servers</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> A legitimate purpose rests on a legal basis or an operational need, and limits use to that purpose; the PDPL limits content to what the purpose needs.</div>
+  </div>
+  <aside class="notes"><p>Answer: B. Return to the field table: a study of commute distance needs the district, not the guardian's employer or the child's health notes.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-2-3" data-auto="lab" data-lab="2.3" data-label="Lab 2.3" data-n="31" data-session="3">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">Lab 2.3 · 25 min</div><h2>A partner's data request</h2><p class="lead small">Assess a partner entity's request for attendance data against the Data Sharing Policy and draft the conditions.</p><a class="nb" href="../labs/D2_3_assess_partner_entity.ipynb">D2_3_assess_partner_entity.ipynb</a></div><ul class="checklist"><li>Read the request against the eight principles <span class="min">6 min</span></li><li>Mark each requested field needed or not <span class="min">5 min</span></li><li>Draft the conditions of sharing <span class="min">6 min</span></li><li>Build the minimised extract <span class="min">5 min</span></li><li>Check the extract for small groups <span class="min">3 min</span></li><li class="stretch">✱ Stretch: Write the destruction confirmation the partner signs</li></ul></div>
+  <aside class="notes"><p>Watch for: assessments that mark everything "not met" (the policy's culture is to share when conditions hold); extracts that keep daily dates. Expected: three principles not met as requested, six of eleven fields kept in coarser form, 1,043 rows, 4 of 96 groups under five with the district.</p></aside>
+</section>
+
+<!-- ======================= SESSION 4 ======================= -->
+<section class="slide section" id="s4" data-auto="section" data-session="4" data-n="32">
+  <div class="kicker">Session 4</div>
+  <h1>Licences and provenance</h1>
+  <ul class="bullets outcomes"><li>Read the licence of a model and of a dataset from its card</li><li>Record use restrictions and obligations in a licence register</li><li>Name the national instrument that decides a given question</li></ul>
+  <div class="sess-no">04</div>
+</section>
+
+<section class="slide" id="three-things-licensed" data-lo="LO2" data-n="33" data-session="4">
+  <div class="kicker">What you reuse</div>
+  <h2>Weights, code and data each carry their own terms</h2>
+  <div class="cols cols-3 gap-s">
+    <div class="card c-teal"><h4>Weights</h4><p class="small mb0">An open-source licence, or the vendor's own terms with a use policy.</p></div>
+    <div class="card c-cyan"><h4>Code</h4><p class="small mb0">Usually a standard licence in the repository.</p></div>
+    <div class="card c-coral"><h4>Data</h4><p class="small mb0">Often Creative Commons, and with a provenance of its own.</p></div>
+  </div>
+  <div class="callout warn mt"><b>Open weights are not public domain.</b> Downloadable does not mean free of conditions.</div>
+  <aside class="notes"><p>Lab 2.2 concluded that Wafi needs a locally served model for real data. That raises the next question: which model, and which data to tune it on, under which terms. The course does not download the model: participants read cards and licences.</p></aside>
+</section>
+
+<section class="slide" id="spdx" data-lo="LO2" data-n="34" data-session="4">
+  <div class="kicker">A shared vocabulary</div>
+  <h2>An SPDX identifier names one exact licence text</h2>
+  <div class="cols cols-2">
+    <table class="t small">
+      <tr><th>Licence</th><th>SPDX identifier</th></tr>
+      <tr><td>Apache License 2.0</td><td><code>Apache-2.0</code></td></tr>
+      <tr><td>Creative Commons Attribution Non Commercial 4.0</td><td><code>CC-BY-NC-4.0</code></td></tr>
+      <tr><td>A vendor's own terms</td><td><code>LicenseRef-</code> and a name</td></tr>
+    </table>
+    <ul class="bullets">
+      <li>A register, a scanner and a lawyer then mean the same thing.</li>
+      <li>Cards on model hubs carry a licence tag; read the licence file it points to.</li>
+      <li>Record the date you checked: terms change.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>Source: the SPDX License List (version of 2026-10-28 checked for this course). LicenseRef- is the SPDX convention for a licence outside the list. Show the list page if there is a network.</p></aside>
+</section>
+
+<section class="slide" id="three-cards" data-lo="LO2" data-n="35" data-session="4">
+  <div class="kicker">Read in Lab 2.4</div>
+  <h2>Two models and one dataset, three different answers</h2>
+  <table class="t small">
+    <tr><th>Artefact</th><th>Licence</th><th>For Wafi</th></tr>
+    <tr><td>Qwen3-4B (weights)</td><td>Apache-2.0</td><td><b>Yes</b>: keep the licence and notices</td></tr>
+    <tr><td>Gemma 3 4B IT (weights)</td><td>Gemma Terms of Use</td><td><b>Yes, with conditions</b>: use policy, notice file, pass restrictions on</td></tr>
+    <tr class="hl"><td>Alpaca (dataset)</td><td>CC-BY-NC-4.0</td><td><b>No</b>: non-commercial, English only, generated by another company's model</td></tr>
+  </table>
+  <aside class="notes"><p>Checked on 2026-11-15: the Qwen3-4B card links an Apache 2.0 licence file; Gemma 3 is gated on the hub and governed by the Gemma Terms of Use (last modified 1 April 2026), which incorporate a Prohibited Use Policy, require a Notice file and passing the use restrictions to recipients; the Alpaca card states CC BY-NC 4.0 and that the data was generated by text-davinci-003 and contains errors and biases. These facts change: recheck the week before a cohort. The names are examples, not recommendations.</p></aside>
+</section>
+
+<section class="slide" id="provenance" data-lo="LO2" data-n="36" data-session="4">
+  <div class="kicker">Beyond the licence</div>
+  <h2>Provenance asks where the content came from, and what came with it</h2>
+  <ul class="bullets">
+    <li><b>Who made it</b>, from what: a dataset generated by another model may carry that model's terms and errors.</li>
+    <li><b>Which languages</b>: an English-only dataset will not teach Gulf Arabic replies.</li>
+    <li><b>What is inside</b>: personal data in training text is still personal data.</li>
+    <li><b>When you checked</b>, and where the record of it lives.</li>
+  </ul>
+  <aside class="notes"><p>The national risk framework's data pillar mentions tracing data sources; the Generative AI Guidelines ask users to respect intellectual property. Day 3 measures what English-centred data does to Arabic users.</p></aside>
+</section>
+
+<section class="slide" id="open-data" data-lo="LO2" data-n="37" data-session="4">
+  <div class="kicker">Licences in the other direction</div>
+  <h2>Publishing open data means classifying it Public first, then licensing it</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>Open data is a subset of <b>Public</b> data: classify first, publish second.</li>
+      <li>Open by default, unless the data needs protection.</li>
+      <li>Machine-readable (CSV, JSON), free of charge, no registration.</li>
+      <li>Released under a licence that states the conditions of reuse.</li>
+    </ul>
+    <div class="card c-coral"><h4>At Rawafid</h4><p class="small mb0">The fee schedule can be published today. The attendance summary only after its small cells are suppressed and it is classified again. The sports-day page was published with dates of birth: Lab 1.3 showed what that cost.</p></div>
+  </div>
+  <aside class="notes"><p>Source: Open Data Policy (NDMO, version 1, 2020): scope (unprotected public data produced by public entities), principles 1 (open by default), 2 (open format and machine-readable), 5 (non-discriminatory, no registration), 6 (free of charge) and 7 (a licence), and step 1 of the valuation process (identify the data sets classified Public). As with the other NDMO policies, it binds public entities and Rawafid adopts it. The point for a builder: you have just read other people's licences; when you publish, you are the one who writes the licence, and the classification register is what tells you which sets may be published at all. Ask: which Day 1 lab would have stopped the sports-day page? (Lab 1.3: the page needed age categories, not dates of birth.)</p></aside>
+</section>
+
+<section class="slide" id="which-instrument" data-lo="LO2" data-n="38" data-session="4">
+  <div class="kicker">Closing the day</div>
+  <h2>Each instrument decides its own question</h2>
+  <table class="t small">
+    <tr><th>Instrument</th><th>Decides</th></tr>
+    <tr><td>Data Classification Policy</td><td>The level of a data set, and who reviews it</td></tr>
+    <tr><td>Data Sharing Policy</td><td>Whether and on what conditions data goes to another entity</td></tr>
+    <tr><td>Open Data Policy</td><td>How Public data is released for anyone to reuse</td></tr>
+    <tr><td>Generative AI Guidelines</td><td>What may enter a generative AI tool, and what users are told</td></tr>
+    <tr class="hl"><td>Personal Data Protection Law</td><td>Everything about personal data, whichever policy also applies</td></tr>
+  </table>
+  <aside class="notes"><p>Sources: the four NDMO and SDAIA instruments read today. The Open Data Policy applies to unprotected public data of public entities: open by default, machine-readable, free, licensed. This table is the LO2 evidence in miniature; Lab 2.4's last task asks six questions about the build.</p></aside>
+</section>
+
+<section class="slide" id="check-licence" data-lo="LO2" data-n="39" data-session="4">
+  <div class="kicker">Checkpoint</div>
+  <h2>Can Rawafid tune Wafi on the dataset?</h2>
+  <div class="quiz" data-type="single" data-lo="LO2" data-id="check-licence-q1">
+    <p class="lead">Dana finds a public instruction dataset under CC-BY-NC-4.0 and wants to tune Wafi's replies with it. Rawafid is a fee-charging private school group. What does the licence allow?</p>
+    <div class="opts">
+      <div class="opt" data-why="Equates publicly downloadable with free for any use" data-k="A">Any use, since it is public on the hub</div>
+      <div class="opt" data-why="Thinks attribution alone satisfies a non-commercial licence" data-k="B">Any use, with attribution</div>
+      <div class="opt" data-ok data-k="C">No use in Rawafid's commercial service</div>
+      <div class="opt" data-why="Confuses a licence condition with a classification level" data-k="D">Use only after classifying it as Public</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> NC means non-commercial: a fee-charging service is commercial use, whatever the attribution.</div>
+  </div>
+  <aside class="notes"><p>Answer: C. D mixes up two instruments: classification decides handling of Rawafid's own data, not the rights it has in someone else's.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-2-4" data-auto="lab" data-lab="2.4" data-label="Lab 2.4" data-n="40" data-session="4">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">Lab 2.4 · 25 min</div><h2>Licences and provenance</h2><p class="lead small">Check the licences of two candidate open-weight models and one dataset and record the use restrictions.</p><a class="nb" href="../labs/D2_4_check_licences_two.ipynb">D2_4_check_licences_two.ipynb</a></div><ul class="checklist"><li>Read two model cards and one dataset card <span class="min">5 min</span></li><li>Record licence, SPDX identifier and obligations <span class="min">7 min</span></li><li>Decide fit for Wafi per artefact <span class="min">5 min</span></li><li>Answer six questions with the instrument that decides <span class="min">8 min</span></li><li class="stretch">✱ Stretch: Trace where the dataset's text came from and what that adds</li></ul></div>
+  <aside class="notes"><p>Task 4 without an assistant first. Watch for: Gemma marked "no" because it is not Apache (it allows commercial use under its terms); the six questions answered with "PDPL" for everything. Expected: Apache-2.0 yes, Gemma yes with conditions, Alpaca no; six of six on the instrument table, five needed to pass.</p></aside>
+</section>
+
+<!-- ======================= CLOSE ======================= -->
+<section class="slide" id="wrap-up" data-n="41" data-session="4">
+  <div class="kicker">Day 2 · Three things to keep</div>
+  <h2>The level decides where data may go; the purpose decides what goes</h2>
+  <div class="cols cols-3 gap-s">
+    <div class="card c-teal"><h4>Level first</h4><p class="small mb0">Classify by impact; the highest level of the parts wins; unclassified is Restricted.</p></div>
+    <div class="card c-cyan"><h4>Hosted is a choice</h4><p class="small mb0">Only Public data goes to a hosted model. Real records need a model you run.</p></div>
+    <div class="card c-coral"><h4>Yes, on conditions</h4><p class="small mb0">Sharing and reuse are decided field by field and term by term, and written down.</p></div>
+  </div>
+  <aside class="notes"><p>Collect the six-question tables from two participants and compare them aloud. Then link to Day 3: today decided where data may go; tomorrow tests what Wafi does with it, for whom, and how risky that is.</p></aside>
+</section>
+
+<section class="slide dark" id="next" data-n="42" data-session="4">
+  <div class="kicker">Before Day 3</div>
+  <h2>Tomorrow: the ethics principles as tests, and the risk register</h2>
+  <ul class="bullets">
+    <li>Read the seven AI Ethics Principles' one-paragraph definitions and the four risk levels (about 15 minutes).</li>
+    <li>Skim the English summary of the National AI Risk Management Framework.</li>
+    <li>Optional: set a free OpenRouter key so Day 3's forty enquiries also run on a hosted model.</li>
+  </ul>
+  <aside class="notes"><p>The framework's full text is in Arabic; the English summary names its phases. The key is optional: the stand-in model gives every participant the same results, which makes the Day 3 discussion easier; a hosted model gives real but varying ones.</p></aside>
+</section>
+</div>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-15T04:50:12Z","version":"2027.1.0","commit":"b84fcbb"},"course":{"id":"fn-106","code":"FN-106","title":"Responsible Data and AI Practice in the Kingdom","track":"foundations","lang":"en","dir":"ltr","url":"https://sdaiaacademy.github.io/fn-106/","repo":"SDAIAAcademy/fn-106","home":"../index.html"},"deck":{"id":"day2","kind":"day","day":2,"label":"Day 2","title":"Classify, share and send","prev":"day1.html","next":"day3.html","md":"day2.md","alt":{}},"sessions":[{"n":1,"label":"Session 1","title":"Data classification levels","slide":"s1","outcomes":["Assess the impact category and level of a data set's disclosure","Assign a classification level with an evidence-based reason","Spot aggregates that still reveal individuals"],"minutes":50,"lab":{"id":"2.1","title":"Classify six data sets","minutes":25,"href":"../labs/D2_1_classify_six_data.ipynb"}},{"n":2,"label":"Session 2","title":"What may reach an external model","slide":"s2","outcomes":["Derive a destination rule from the classification level and the data's nature","Apply the rule to data sets and to the fields of a prompt","Recognise a hosted endpoint abroad as a transfer outside the Kingdom"],"minutes":50,"lab":{"id":"2.2","title":"Hosted, local or neither","minutes":25,"href":"../labs/D2_2_decide_each_data.ipynb"}},{"n":3,"label":"Session 3","title":"Sharing with another entity","slide":"s3","outcomes":["Assess a data request against the Data Sharing Policy principles","Cut a request down to the minimum data its purpose needs","Draft the conditions under which data may be shared"],"minutes":50,"lab":{"id":"2.3","title":"A partner's data request","minutes":25,"href":"../labs/D2_3_assess_partner_entity.ipynb"}},{"n":4,"label":"Session 4","title":"Licences and provenance","slide":"s4","outcomes":["Read the licence of a model and of a dataset from its card","Record use restrictions and obligations in a licence register","Name the national instrument that decides a given question"],"minutes":50,"lab":{"id":"2.4","title":"Licences and provenance","minutes":25,"href":"../labs/D2_4_check_licences_two.ipynb"}}],"slides":[{"id":"title","n":1,"title":"Classify, share and send","kind":"title","session":0,"hash":"1ca66a65","md":"#### [day2#title] Classify, share and send\n\n*SDAIA Academy · Responsible Data and AI Practice in the Kingdom*\n\nDay 2: Classify each data set, decide where it may go, and check what you reuse\n\nData & AI Foundations Track · 3 teaching days + capstone day · 4 sessions · 4 labs · FN-106","notes":"Welcome back. Yesterday was the law; today is the national data policies and what they decide for an AI build. Ask one person to say in one sentence what Wafi's prompt carries now (after Lab 1.2: a first name and three counts).","minutes":null,"lo":[]},{"id":"agenda","n":2,"title":"Classify, share and send","kind":"content","session":0,"hash":"042eaa01","md":"#### [day2#agenda] Classify, share and send\n\n*Today*\n\n- **Session 1 · Data classification levels**: Classification follows the impact of disclosure: four levels, and sub-levels inside Restricted\n- **Session 2 · What may reach an external model**: The classification level decides whether data may go to a hosted model, a locally served one, or neither\n- **Session 3 · Sharing with another entity**: A request to share data is judged on purpose, minimum data, access, transparency and destruction\n- **Session 4 · Licences and provenance**: Weights, code and data each carry terms, and each instrument decides a different question","notes":"","minutes":null,"lo":[]},{"id":"review-day1","n":3,"title":"Which change does the most for Wafi's log?","kind":"quiz","session":0,"hash":"847d6a17","md":"#### [day2#review-day1] Which change does the most for Wafi's log?\n\n*Review of Day 1*\n\n**Question:** Wafi's log keeps every full prompt since the pilot began. Nasser can make one change this week. Which one reduces the exposure the most?\n\n- A. Encrypt the log file on disk\n- B. Remove the names from old rows\n- C. Send minimised prompts and delete rows past 90 days\n- D. Add the log to the privacy notice","notes":"Answer: C. Encryption (A) is a security measure the law also asks for, but it does not reduce what a breach or a rights request exposes. Use this to bridge: today's question is not \"how do we protect it\" but \"where may it go at all\".","minutes":null,"lo":["LO1","LO4"]},{"id":"s1","n":4,"title":"Data classification levels","kind":"section","session":1,"hash":"4b3c44d3","md":"#### [day2#s1] Data classification levels\n\n*Session 1*\n\n- Assess the impact category and level of a data set's disclosure\n- Assign a classification level with an evidence-based reason\n- Spot aggregates that still reveal individuals","notes":"","minutes":null,"lo":["LO3"]},{"id":"why-classify","n":5,"title":"A classification level is a decision about handling, made once","kind":"content","session":1,"hash":"8abcafcd","md":"#### [day2#why-classify] A classification level is a decision about handling, made once\n\n*What classification is for*\n\n- Every data set gets a level when it is created or received.\n- The level decides access, storage, sharing, publication and, today, which model may see it.\n- Data not yet classified is treated as **Restricted** until it is.\n- The level is reviewed within a month of the first classification.\n\n- **Whose policy?** The NDMO Data Classification Policy is written for public entities. Rawafid, a private group, adopts it in its own data policy; the PDPL binds it by law.","notes":"Sources: Data Classification Policy (NDMO, version 1, 2020): scope (public entities), principle 3 timely classification, section 1.4 (unclassified data is treated as Restricted), step 6 (review within one month). Be honest about the scope: the policy binds government entities. Many private organisations that work with government adopt it; Rawafid does so in this course, which is a choice of the case, not a legal claim.","minutes":null,"lo":["LO3"]},{"id":"four-levels","n":6,"title":"The level follows the impact of unauthorised disclosure","kind":"content","session":1,"hash":"c0368225","md":"#### [day2#four-levels] The level follows the impact of unauthorised disclosure\n\n*Four levels*\n\n| Level | Impact | Example in the policy |\n| --- | --- | --- |\n| **Top Secret** | High: exceptionally serious, irreparable | National security information |\n| **Secret** | Medium: serious | Information on vital installations |\n| **Restricted** | Low: limited | Personal identifiers, a medical file, individual transactions |\n| **Public** | None | Published statistics, public announcements |\n\nRestricted has sub-levels by scale: **A** a whole sector, **B** several entities or a group of individuals, **C** one entity or one individual.","notes":"Source: Data Classification Policy, section 1.3, Table 1 and the Restricted sub-levels. Point out where personal data sits: the policy's examples for Restricted include names, addresses, national ID numbers, phone numbers, bank accounts and medical files. A VIP's personal data can be Secret when it affects the national interest. School records are Restricted.","minutes":null,"lo":["LO3"]},{"id":"impact-categories","n":7,"title":"Ask what disclosure would harm, then how badly and for how long","kind":"content","session":1,"hash":"9c3f2e1b","md":"#### [day2#impact-categories] Ask what disclosure would harm, then how badly and for how long\n\n*How to assess impact*\n\n- **National interest.** Reputation, security, economy, infrastructure, government functions.\n- **Entity activities.** Profits and functions of entities.\n- **Individuals.** Health and safety; **privacy**.\n- **Environment.** Environmental and natural resources.\n\nThe level weighs the duration of the damage, the time to recover and its scale. Every impact named must be specific and evidence-based.","notes":"Source: Data Classification Policy, Table 2 (categories and levels) and step 3 (impact category, then impact level: duration, recovery, size). For individuals' privacy the policy's guidance is: disclosure of an individual's personal information is a Low impact. That is the line Lab 2.1 uses.","minutes":null,"lo":["LO3"]},{"id":"low-impact-two-steps","n":8,"title":"A low impact still has two questions before it becomes a level","kind":"content","session":1,"hash":"e399cce8","md":"#### [day2#low-impact-two-steps] A low impact still has two questions before it becomes a level\n\n*The policy's process*\n\n1. **Impact Low** limited, short-term, controllable\n2. **Step 4** Would disclosure break a law? Yes: Restricted\n3. **Step 5** Do the benefits outweigh the harm? Yes: Public. No: Restricted\n\n> **Open by default.** The two steps exist so that data is not locked away when nothing forbids its release.","notes":"Source: Data Classification Policy, steps 3b, 4 and 5, and principle 1 (open by default, for the development sector). For Rawafid's record sets step 4 answers yes at once: disclosure would breach the PDPL. For the fee schedule nothing is at stake. The interesting case is the summary table.","minutes":null,"lo":["LO3"]},{"id":"highest-level-wins","n":9,"title":"A set built from several levels takes the highest of them","kind":"content","session":1,"hash":"5abe5b31","md":"#### [day2#highest-level-wins] A set built from several levels takes the highest of them\n\n*Combining data*\n\n- **Principle 4 · highest level of protection.** If a data set integrates parts with different levels, the highest level applies.\n- **At Rawafid.** The fee schedule (Public) joined with each family's balance (Restricted) is Restricted. So is a prompt that carries one Restricted field.","notes":"Source: Data Classification Policy, principle 4. This is the rule behind Lab 2.2's field-by-field decision: a prompt is a combined data set, so its level is the level of its most protected field.","minutes":null,"lo":["LO3"]},{"id":"small-cells","n":10,"title":"An aggregate table can still describe one child","kind":"content","session":1,"hash":"4583b61a","md":"#### [day2#small-cells] An aggregate table can still describe one child\n\n*Measured in Lab 2.1*\n\n**12 / 95** cells of the attendance summary hold fewer than five students\n\n- Each cell is campus, grade and gender, with an absence rate.\n- A cell of one student **is** that student's attendance.\n- Until small cells are suppressed or merged, the table is Restricted.","notes":"From the solution run of Lab 2.1: 12 of 95 cells have under five students, mostly older grades at the smaller campuses (the generator thinned them on purpose). The same idea as Day 1's k: no row, no name, and still a child. The stretch suppresses them and reclassifies the table as Public.","minutes":null,"lo":["LO3"]},{"id":"register-day2","n":11,"title":"Six sets, two levels, one reason each","kind":"content","session":1,"hash":"7349139c","md":"#### [day2#register-day2] Six sets, two levels, one reason each\n\n*The register*\n\n| Set | Level | Reason |\n| --- | --- | --- |\n| fee_schedule | Public | Already published |\n| guardians | Restricted B | Names, national IDs, mobiles, IBANs |\n| students | Restricted B | Children's identities and health notes |\n| attendance | Restricted B | Absences, with notes that can reveal health |\n| fees | Restricted B | Detailed statements of individual transactions |\n| attendance_summary | Restricted B | Cells under five students |","notes":"The reference register of Lab 2.1. The B sub-level: each set concerns a group of individuals. Ask: if a single student's file were leaked, is that C? Yes, for that one record; the register classifies the set as a whole. Owners and a review date one month on are in the lab's output.","minutes":null,"lo":["LO3"]},{"id":"check-classify-combined","n":12,"title":"What level does Dana's new report take?","kind":"quiz","session":1,"hash":"c3c972bd","md":"#### [day2#check-classify-combined] What level does Dana's new report take?\n\n*Checkpoint*\n\n**Question:** Dana joins the published fee schedule with each family's balance to show who is behind on payments. What is the report's level?\n\n- A. Restricted, the higher of its two parts\n- B. Somewhere between Public and Restricted\n- C. Public, because the fees are published\n- D. Unclassified until someone reviews it","notes":"Answer: A. D is wrong twice: data is classified when created, and unclassified data is treated as Restricted anyway.","minutes":null,"lo":["LO3"]},{"id":"lab-2-1","n":13,"title":"Classify six data sets","kind":"lab","session":1,"hash":"ad775cf8","md":"#### [day2#lab-2-1] Classify six data sets\n\nLab 2.1 · 25 min\n\nClassify the six data sets with the policy's impact categories and record the reasons.\n\n[D2_1_classify_six_data.ipynb](https://sdaiaacademy.github.io/fn-106/labs/D2_1_classify_six_data.ipynb)\n\n- [ ] Read the inventory and the impact categories (4 min)\n- [ ] Assess impact category and level per set (8 min)\n- [ ] Map impact to level and sub-level (5 min)\n- [ ] Find the small cells in the aggregate table (5 min)\n- [ ] Record reasons in the register (3 min)\n- [ ] ✱ Stretch: Suppress the small cells and classify the aggregate table again","notes":"AI off for task 2, the first classification. Watch for: participants who make the student file Secret because it holds health data (the policy reserves Secret for serious national or entity-level impact; the PDPL's sensitive-data rules handle health); and those who make the summary Public at once. Expected: one Public set, five Restricted B, 12 small cells. Review date: one month from today.","minutes":null,"lo":[]},{"id":"s2","n":14,"title":"What may reach an external model","kind":"section","session":2,"hash":"0405716f","md":"#### [day2#s2] What may reach an external model\n\n*Session 2*\n\n- Derive a destination rule from the classification level and the data's nature\n- Apply the rule to data sets and to the fields of a prompt\n- Recognise a hosted endpoint abroad as a transfer outside the Kingdom","notes":"","minutes":null,"lo":["LO3"]},{"id":"three-destinations","n":15,"title":"Three destinations: a hosted service, a model you run, or no model","kind":"content","session":2,"hash":"800f6e88","md":"#### [day2#three-destinations] Three destinations: a hosted service, a model you run, or no model\n\n*Where a prompt can go*\n\n- **Hosted.** A provider's model over an API. Fast to start; the data leaves you, under the provider's terms and location.\n- **Locally served.** An open-weight model on your own machines in the Kingdom. The data stays under your controls.\n- **Neither.** Some data has no business in a prompt at all. Minimisation decides before any model does.","notes":"This is the decision the catalog asks participants to make. A locally served model does not appear in the labs: the course runs only free hosted models on synthetic data, so nobody downloads model weights. The decision is made on paper here and is what Rawafid would need for real data.","minutes":null,"lo":["LO3"]},{"id":"genai-guideline-rule","n":16,"title":"Generative AI tools get Public data only","kind":"content","session":2,"hash":"a6072544","md":"#### [day2#genai-guideline-rule] Generative AI tools get Public data only\n\n*What the guidelines say*\n\n- The Generative AI Guidelines for Government: do not enter data classified **Restricted or higher** into generative AI tools.\n- Limit their use to data classified **Public**; check the tool's privacy, disclosure and sharing terms.\n- Data analysis with generative AI is limited to Public or open data sets.\n\n- **Rawafid's reading.** The rule covers hosted services Rawafid does not control. A model Rawafid runs itself, under the source system's access rules, may see minimised Restricted fields.","notes":"Source: Generative AI Guidelines for Government (SDAIA, 2025), section 3.5 (privacy and security: no Restricted or higher, limit to Public) and the best practices on data analysis. The card on the right is the course's interpretation for a private entity running its own model; say plainly that it is Rawafid's policy choice, and that a stricter reading (no generative AI on Restricted data at all) is also defensible.","minutes":null,"lo":["LO3","LO2"]},{"id":"destination-rule-code","n":17,"title":"Three lines turn a level into a destination","kind":"content","session":2,"hash":"b588eb75","md":"#### [day2#destination-rule-code] Three lines turn a level into a destination\n\n*The rule as code*\n\n```python\n# file: Lab 2.2\ndef destination(level, has_sensitive):\n    if level == \"Public\":\n        return \"hosted\"\n    if level == \"Restricted\" and not has_sensitive:\n        return \"local\"\n    return \"neither\"\n```\n\nPseudonymised data keeps its Restricted level, so pseudonymising does not change the answer.","notes":"Walk through the four test cases of the lab: Public goes anywhere; Restricted without sensitive fields goes to a local model; Restricted with health notes goes nowhere; Secret goes nowhere. Ask: what would make you add a fourth branch? (A sector regulator's rule, for example health data in a hospital.)","minutes":null,"lo":["LO3"]},{"id":"six-sets-destinations","n":18,"title":"Only the published fee schedule may go to a hosted model","kind":"content","session":2,"hash":"0e59b037","md":"#### [day2#six-sets-destinations] Only the published fee schedule may go to a hosted model\n\n*Measured in Lab 2.2*\n\n| Item | Value |\n| --- | --- |\n| fee_schedule | hosted |\n| guardians, fees, summary | local |\n| students, attendance | neither |\n\nField by field, all five fields of the minimised prompt are Restricted: **local only**. Minimised is small, not Public.","notes":"From the solution run: one hosted, three local, two neither (the student file and attendance carry health in notes). For the student and attendance sets, derived counts without notes may go to a local model. The bar lengths only order the three answers; they are not measurements.","minutes":null,"lo":["LO3"]},{"id":"hosted-is-transfer","n":19,"title":"A hosted endpoint outside the Kingdom makes every prompt a transfer","kind":"content","session":2,"hash":"7855c8e9","md":"#### [day2#hosted-is-transfer] A hosted endpoint outside the Kingdom makes every prompt a transfer\n\n*The other half of the question*\n\n- Transfer only for listed purposes, without harm to national security or vital interests.\n- With an adequate level of protection abroad, and the **minimum** data needed.\n- Otherwise safeguards: standard contractual clauses, binding common rules or a certificate.\n\n- **Location unknown?** Treat it as abroad. If you cannot show where prompts are processed, you cannot show the conditions are met.","notes":"Sources: PDPL Article 29; Regulation on Personal Data Transfer outside the Kingdom, version 2.0, Articles 2 to 4 (purposes, the adequacy list, safeguards and exemptions). The free model router used in class sends prompts to providers it chooses; the course treats its location as unknown and therefore as a transfer. That is fine for synthetic data and decisive for real data.","minutes":null,"lo":["LO1","LO3"]},{"id":"class-data-is-synthetic","n":20,"title":"Synthetic records describe nobody, so they may go anywhere","kind":"content","session":2,"hash":"d806d23c","md":"#### [day2#class-data-is-synthetic] Synthetic records describe nobody, so they may go anywhere\n\n*Why the class may use a hosted model*\n\n1. **In class** synthetic records, hosted free model\n2. **The gate** before real records: classify again\n3. **In production** Restricted fields, local model only\n\n> **What goes wrong.** A prototype built on a hosted model is pointed at real data \"just for a test\". The test is the breach.","notes":"This is the course's own rule, stated in the catalog entry: a free hosted endpoint used only with synthetic data. Lab 2.2's stretch asks participants to write the check that must hold before anyone points Wafi at real records.","minutes":null,"lo":["LO3"]},{"id":"check-pseudonymised-hosted","n":21,"title":"Does pseudonymising open the hosted route?","kind":"quiz","session":2,"hash":"89042d7a","md":"#### [day2#check-pseudonymised-hosted] Does pseudonymising open the hosted route?\n\n*Checkpoint*\n\n**Question:** Dana pseudonymises attendance counts with a keyed hash and asks to send them to the free hosted model for a monthly summary. Under Rawafid's rule, where may they go?\n\n- A. To the hosted model, now that they are pseudonymised\n- B. To the hosted model, because Rawafid keeps the key\n- C. Nowhere: attendance data can never reach a model\n- D. To a locally served model only","notes":"Answer: D. C is a careful but wrong answer: the \"neither\" applies to the raw attendance set because its notes can reveal health; derived counts without notes are not sensitive.","minutes":null,"lo":["LO3"]},{"id":"lab-2-2","n":22,"title":"Hosted, local or neither","kind":"lab","session":2,"hash":"7eff798b","md":"#### [day2#lab-2-2] Hosted, local or neither\n\nLab 2.2 · 25 min\n\nDecide for each data set whether it may go to a hosted model, a locally served model or neither.\n\n[D2_2_decide_each_data.ipynb](https://sdaiaacademy.github.io/fn-106/labs/D2_2_decide_each_data.ipynb)\n\n- [ ] Write the destination rule as a function (7 min)\n- [ ] Apply it to the six data sets (4 min)\n- [ ] Apply it field by field to Wafi's prompt (6 min)\n- [ ] Check the hosted endpoint's location as a transfer (4 min)\n- [ ] Record the permitted destinations (4 min)\n- [ ] ✱ Stretch: Write the rule for the synthetic class data and say why it differs","notes":"The lab starts from the reference register of Lab 2.1, so nobody is blocked. Watch for: field_level() that calls the first name Public (\"it is only a first name\"); is_transfer() that treats unknown as inside. Expected: hosted for the fee schedule only; every prompt field local; the class endpoint a transfer.","minutes":null,"lo":[]},{"id":"s3","n":23,"title":"Sharing with another entity","kind":"section","session":3,"hash":"bc450653","md":"#### [day2#s3] Sharing with another entity\n\n*Session 3*\n\n- Assess a data request against the Data Sharing Policy principles\n- Cut a request down to the minimum data its purpose needs\n- Draft the conditions under which data may be shared","notes":"","minutes":null,"lo":["LO2"]},{"id":"partner-request","n":24,"title":"A research centre asks for three years of attendance, with names","kind":"content","session":3,"hash":"52511fc4","md":"#### [day2#partner-request] A research centre asks for three years of attendance, with names\n\n*The request*\n\n- **Purpose:** commute distance and absence in primary and middle school.\n- **Fields:** names, national IDs, birth dates, district, guardian's employer, daily records, absence notes, health notes.\n- **Storage:** a cloud workspace outside the Kingdom.\n- **Retention:** indefinitely; **onward:** research partners when needed.\n\n- **The decision.** Not yes or no: **what**, in which form, **on what conditions**.","notes":"The request is in labs/data/partner_request.json. Al-Mizan Centre for Education Research is fictional. Ask the room for a gut answer before any instrument: most say no. The lab turns that into a reasoned yes with conditions, which is what the policy's sharing culture asks for.","minutes":null,"lo":["LO2"]},{"id":"eight-principles","n":25,"title":"Eight principles decide whether and how data is shared","kind":"content","session":3,"hash":"19503d0f","md":"#### [day2#eight-principles] Eight principles decide whether and how data is shared\n\n*The Data Sharing Policy*\n\n- **Sharing culture.** Share by default, under the policy.\n- **Single source.** The entity that produces data shares it.\n- **Legitimate purpose.** A legal basis; used only for that purpose.\n- **Authorised access.** Identified, verified people.\n- **Transparency.** Data, level, storage, protection, destruction.\n- **Accountability.** Shared, under an agreement.\n- **Security.** Controls per the national rules.\n- **Ethical use.** Fairness, integrity, trust.","notes":"Source: Data Sharing Policy (NDMO), section two, the eight principles. The policy governs government data shared with requesters; Rawafid's policy adopts the principles for its own sharing, and the PDPL's disclosure rules apply by law. The agreement signatory depends on the level: for Restricted data, the director of the data management office.","minutes":null,"lo":["LO2"]},{"id":"pdpl-disclosure-research","n":26,"title":"The PDPL allows research sharing when the data does not identify the child","kind":"content","session":3,"hash":"b45c98cc","md":"#### [day2#pdpl-disclosure-research] The PDPL allows research sharing when the data does not identify the child\n\n*The law's side*\n\n- **Disclosure (Article 15).** Only in listed cases, among them consent, and later processing in a form that cannot identify the data subject directly or indirectly.\n- **Research (Article 27).** Without consent when the data does not specifically identify the person, or identity evidence is destroyed first and the data is not sensitive.\n\n> **The health notes fail both.** They are sensitive and they identify; a commute study does not need them.","notes":"Sources: PDPL Articles 15, 16 and 27. Article 16 adds cases where disclosure is refused even when Article 15 allows it, including conflict with the interests of a person lacking legal capacity: a child.","minutes":null,"lo":["LO1","LO2"]},{"id":"cut-the-request","n":27,"title":"Six of eleven requested fields survive, in a coarser form","kind":"content","session":3,"hash":"c56972d8","md":"#### [day2#cut-the-request] Six of eleven requested fields survive, in a coarser form\n\n*Measured in Lab 2.3*\n\n| Requested | Shared as |\n| --- | --- |\n| date of birth | birth year |\n| grade | grade band, grades 1 to 9 only |\n| gender, campus, district | as they are |\n| daily attendance records | absence counts per month |\n| names, national IDs, employer, notes, health notes | refused |","notes":"From the solution run: the extract has 1,043 rows (grades 1 to 9) and ten columns, with a project pseudonym from a key used for this study only. The guardian's employer has nothing to do with commute distance; the district does.","minutes":null,"lo":["LO2"]},{"id":"district-trade-off","n":28,"title":"The field the study needs most makes the smallest groups","kind":"content","session":3,"hash":"a3787e8f","md":"#### [day2#district-trade-off] The field the study needs most makes the smallest groups\n\n*The trade-off in the extract*\n\n- **k = 2** with the district: 4 of 96 groups under five\n- **k = 11** without it: no group under five\n\n- Share the district and suppress or merge the small groups before release.\n- Or compute commute bands inside Rawafid and share those instead of the district.\n- Either way, write the choice into the conditions.","notes":"From Lab 2.3's run on campus, district, grade band and gender. This links Day 1 Session 3 to sharing: the minimisation of a request is measured the same way as a pseudonymisation.","minutes":null,"lo":["LO2","LO4"]},{"id":"conditions-of-sharing","n":29,"title":"Yes, on nine conditions","kind":"content","session":3,"hash":"d4de70b2","md":"#### [day2#conditions-of-sharing] Yes, on nine conditions\n\n*The answer to the centre*\n\n1. The stated study only.\n2. The pseudonymised extract, coarse fields.\n3. Labelled Restricted in the metadata.\n4. Stored in the Kingdom, or a lawful transfer.\n5. Named researchers only.\n6. No onward sharing.\n7. Destroyed at the end, with a signed confirmation.\n8. A secure channel, not email.\n9. An agreement signed before any data moves.","notes":"The reference conditions of Lab 2.3. Three principles were \"not met\" in the request as written: authorised access, collective accountability and data security. Each condition answers one of them, or the PDPL. The stretch is the destruction confirmation.","minutes":null,"lo":["LO2"]},{"id":"check-research-purpose","n":30,"title":"Is \"for research\" enough?","kind":"quiz","session":3,"hash":"6668797f","md":"#### [day2#check-research-purpose] Is \"for research\" enough?\n\n*Checkpoint*\n\n**Question:** The centre says the purpose is research, so every requested field should be shared. What does the Data Sharing Policy's legitimate-purpose principle add?\n\n- A. Nothing: research is always a legitimate purpose\n- B. The data is used only for the stated purpose, and fields beyond it are not shared\n- C. Only public entities may receive data\n- D. Data must be stored on the requester's own servers","notes":"Answer: B. Return to the field table: a study of commute distance needs the district, not the guardian's employer or the child's health notes.","minutes":null,"lo":["LO2"]},{"id":"lab-2-3","n":31,"title":"A partner's data request","kind":"lab","session":3,"hash":"06948dff","md":"#### [day2#lab-2-3] A partner's data request\n\nLab 2.3 · 25 min\n\nAssess a partner entity's request for attendance data against the Data Sharing Policy and draft the conditions.\n\n[D2_3_assess_partner_entity.ipynb](https://sdaiaacademy.github.io/fn-106/labs/D2_3_assess_partner_entity.ipynb)\n\n- [ ] Read the request against the eight principles (6 min)\n- [ ] Mark each requested field needed or not (5 min)\n- [ ] Draft the conditions of sharing (6 min)\n- [ ] Build the minimised extract (5 min)\n- [ ] Check the extract for small groups (3 min)\n- [ ] ✱ Stretch: Write the destruction confirmation the partner signs","notes":"Watch for: assessments that mark everything \"not met\" (the policy's culture is to share when conditions hold); extracts that keep daily dates. Expected: three principles not met as requested, six of eleven fields kept in coarser form, 1,043 rows, 4 of 96 groups under five with the district.","minutes":null,"lo":[]},{"id":"s4","n":32,"title":"Licences and provenance","kind":"section","session":4,"hash":"ef4986cb","md":"#### [day2#s4] Licences and provenance\n\n*Session 4*\n\n- Read the licence of a model and of a dataset from its card\n- Record use restrictions and obligations in a licence register\n- Name the national instrument that decides a given question","notes":"","minutes":null,"lo":["LO2"]},{"id":"three-things-licensed","n":33,"title":"Weights, code and data each carry their own terms","kind":"content","session":4,"hash":"e6a7fa1f","md":"#### [day2#three-things-licensed] Weights, code and data each carry their own terms\n\n*What you reuse*\n\n- **Weights.** An open-source licence, or the vendor's own terms with a use policy.\n- **Code.** Usually a standard licence in the repository.\n- **Data.** Often Creative Commons, and with a provenance of its own.\n\n> **Open weights are not public domain.** Downloadable does not mean free of conditions.","notes":"Lab 2.2 concluded that Wafi needs a locally served model for real data. That raises the next question: which model, and which data to tune it on, under which terms. The course does not download the model: participants read cards and licences.","minutes":null,"lo":["LO2"]},{"id":"spdx","n":34,"title":"An SPDX identifier names one exact licence text","kind":"content","session":4,"hash":"962b9aa1","md":"#### [day2#spdx] An SPDX identifier names one exact licence text\n\n*A shared vocabulary*\n\n| Licence | SPDX identifier |\n| --- | --- |\n| Apache License 2.0 | `Apache-2.0` |\n| Creative Commons Attribution Non Commercial 4.0 | `CC-BY-NC-4.0` |\n| A vendor's own terms | `LicenseRef-` and a name |\n\n- A register, a scanner and a lawyer then mean the same thing.\n- Cards on model hubs carry a licence tag; read the licence file it points to.\n- Record the date you checked: terms change.","notes":"Source: the SPDX License List (version of 2026-10-28 checked for this course). LicenseRef- is the SPDX convention for a licence outside the list. Show the list page if there is a network.","minutes":null,"lo":["LO2"]},{"id":"three-cards","n":35,"title":"Two models and one dataset, three different answers","kind":"content","session":4,"hash":"347b2811","md":"#### [day2#three-cards] Two models and one dataset, three different answers\n\n*Read in Lab 2.4*\n\n| Artefact | Licence | For Wafi |\n| --- | --- | --- |\n| Qwen3-4B (weights) | Apache-2.0 | **Yes**: keep the licence and notices |\n| Gemma 3 4B IT (weights) | Gemma Terms of Use | **Yes, with conditions**: use policy, notice file, pass restrictions on |\n| Alpaca (dataset) | CC-BY-NC-4.0 | **No**: non-commercial, English only, generated by another company's model |","notes":"Checked on 2026-11-15: the Qwen3-4B card links an Apache 2.0 licence file; Gemma 3 is gated on the hub and governed by the Gemma Terms of Use (last modified 1 April 2026), which incorporate a Prohibited Use Policy, require a Notice file and passing the use restrictions to recipients; the Alpaca card states CC BY-NC 4.0 and that the data was generated by text-davinci-003 and contains errors and biases. These facts change: recheck the week before a cohort. The names are examples, not recommendations.","minutes":null,"lo":["LO2"]},{"id":"provenance","n":36,"title":"Provenance asks where the content came from, and what came with it","kind":"content","session":4,"hash":"cbe0e2b9","md":"#### [day2#provenance] Provenance asks where the content came from, and what came with it\n\n*Beyond the licence*\n\n- **Who made it**, from what: a dataset generated by another model may carry that model's terms and errors.\n- **Which languages**: an English-only dataset will not teach Gulf Arabic replies.\n- **What is inside**: personal data in training text is still personal data.\n- **When you checked**, and where the record of it lives.","notes":"The national risk framework's data pillar mentions tracing data sources; the Generative AI Guidelines ask users to respect intellectual property. Day 3 measures what English-centred data does to Arabic users.","minutes":null,"lo":["LO2"]},{"id":"open-data","n":37,"title":"Publishing open data means classifying it Public first, then licensing it","kind":"content","session":4,"hash":"c8648233","md":"#### [day2#open-data] Publishing open data means classifying it Public first, then licensing it\n\n*Licences in the other direction*\n\n- Open data is a subset of **Public** data: classify first, publish second.\n- Open by default, unless the data needs protection.\n- Machine-readable (CSV, JSON), free of charge, no registration.\n- Released under a licence that states the conditions of reuse.\n\n- **At Rawafid.** The fee schedule can be published today. The attendance summary only after its small cells are suppressed and it is classified again. The sports-day page was published with dates of birth: Lab 1.3 showed what that cost.","notes":"Source: Open Data Policy (NDMO, version 1, 2020): scope (unprotected public data produced by public entities), principles 1 (open by default), 2 (open format and machine-readable), 5 (non-discriminatory, no registration), 6 (free of charge) and 7 (a licence), and step 1 of the valuation process (identify the data sets classified Public). As with the other NDMO policies, it binds public entities and Rawafid adopts it. The point for a builder: you have just read other people's licences; when you publish, you are the one who writes the licence, and the classification register is what tells you which sets may be published at all. Ask: which Day 1 lab would have stopped the sports-day page? (Lab 1.3: the page needed age categories, not dates of birth.)","minutes":null,"lo":["LO2"]},{"id":"which-instrument","n":38,"title":"Each instrument decides its own question","kind":"content","session":4,"hash":"96a3eed0","md":"#### [day2#which-instrument] Each instrument decides its own question\n\n*Closing the day*\n\n| Instrument | Decides |\n| --- | --- |\n| Data Classification Policy | The level of a data set, and who reviews it |\n| Data Sharing Policy | Whether and on what conditions data goes to another entity |\n| Open Data Policy | How Public data is released for anyone to reuse |\n| Generative AI Guidelines | What may enter a generative AI tool, and what users are told |\n| Personal Data Protection Law | Everything about personal data, whichever policy also applies |","notes":"Sources: the four NDMO and SDAIA instruments read today. The Open Data Policy applies to unprotected public data of public entities: open by default, machine-readable, free, licensed. This table is the LO2 evidence in miniature; Lab 2.4's last task asks six questions about the build.","minutes":null,"lo":["LO2"]},{"id":"check-licence","n":39,"title":"Can Rawafid tune Wafi on the dataset?","kind":"quiz","session":4,"hash":"73fbefde","md":"#### [day2#check-licence] Can Rawafid tune Wafi on the dataset?\n\n*Checkpoint*\n\n**Question:** Dana finds a public instruction dataset under CC-BY-NC-4.0 and wants to tune Wafi's replies with it. Rawafid is a fee-charging private school group. What does the licence allow?\n\n- A. Any use, since it is public on the hub\n- B. Any use, with attribution\n- C. No use in Rawafid's commercial service\n- D. Use only after classifying it as Public","notes":"Answer: C. D mixes up two instruments: classification decides handling of Rawafid's own data, not the rights it has in someone else's.","minutes":null,"lo":["LO2"]},{"id":"lab-2-4","n":40,"title":"Licences and provenance","kind":"lab","session":4,"hash":"38128f07","md":"#### [day2#lab-2-4] Licences and provenance\n\nLab 2.4 · 25 min\n\nCheck the licences of two candidate open-weight models and one dataset and record the use restrictions.\n\n[D2_4_check_licences_two.ipynb](https://sdaiaacademy.github.io/fn-106/labs/D2_4_check_licences_two.ipynb)\n\n- [ ] Read two model cards and one dataset card (5 min)\n- [ ] Record licence, SPDX identifier and obligations (7 min)\n- [ ] Decide fit for Wafi per artefact (5 min)\n- [ ] Answer six questions with the instrument that decides (8 min)\n- [ ] ✱ Stretch: Trace where the dataset's text came from and what that adds","notes":"Task 4 without an assistant first. Watch for: Gemma marked \"no\" because it is not Apache (it allows commercial use under its terms); the six questions answered with \"PDPL\" for everything. Expected: Apache-2.0 yes, Gemma yes with conditions, Alpaca no; six of six on the instrument table, five needed to pass.","minutes":null,"lo":[]},{"id":"wrap-up","n":41,"title":"The level decides where data may go; the purpose decides what goes","kind":"content","session":4,"hash":"f739e040","md":"#### [day2#wrap-up] The level decides where data may go; the purpose decides what goes\n\n*Day 2 · Three things to keep*\n\n- **Level first.** Classify by impact; the highest level of the parts wins; unclassified is Restricted.\n- **Hosted is a choice.** Only Public data goes to a hosted model. Real records need a model you run.\n- **Yes, on conditions.** Sharing and reuse are decided field by field and term by term, and written down.","notes":"Collect the six-question tables from two participants and compare them aloud. Then link to Day 3: today decided where data may go; tomorrow tests what Wafi does with it, for whom, and how risky that is.","minutes":null,"lo":[]},{"id":"next","n":42,"title":"Tomorrow: the ethics principles as tests, and the risk register","kind":"content","session":4,"hash":"1760be0d","md":"#### [day2#next] Tomorrow: the ethics principles as tests, and the risk register\n\n*Before Day 3*\n\n- Read the seven AI Ethics Principles' one-paragraph definitions and the four risk levels (about 15 minutes).\n- Skim the English summary of the National AI Risk Management Framework.\n- Optional: set a free OpenRouter key so Day 3's forty enquiries also run on a hosted model.","notes":"The framework's full text is in Arabic; the English summary names its phases. The key is optional: the stand-in model gives every participant the same results, which makes the Day 3 discussion easier; a hosted model gives real but varying ones.","minutes":null,"lo":[]}],"activities":[{"id":"review-day1-q1","slide":"review-day1","type":"single","prompt":"Wafi's log keeps every full prompt since the pilot began. Nasser can make one change this week. Which one reduces the exposure the most?","options":[{"key":"A","text":"Encrypt the log file on disk"},{"key":"B","text":"Remove the names from old rows"},{"key":"C","text":"Send minimised prompts and delete rows past 90 days"},{"key":"D","text":"Add the log to the privacy notice"}],"correct":[2],"explanation":"Minimisation cuts what each row holds, and the retention rule cuts how many rows exist: 78% of the log was past a 90-day rule.","misconceptions":["Treats a stronger lock as a substitute for keeping less: what is kept can still leak","Thinks removing names alone makes records anonymous; Lab 1.3 re-identified 96%","","Believes telling people about a practice makes it lawful"],"lo":["LO1"]},{"id":"check-classify-combined-q1","slide":"check-classify-combined","type":"single","prompt":"Dana joins the published fee schedule with each family's balance to show who is behind on payments. What is the report's level?","options":[{"key":"A","text":"Restricted, the higher of its two parts"},{"key":"B","text":"Somewhere between Public and Restricted"},{"key":"C","text":"Public, because the fees are published"},{"key":"D","text":"Unclassified until someone reviews it"}],"correct":[0],"explanation":"Combined data takes the highest level of its parts, and each family's balance is a Restricted individual transaction.","misconceptions":["","Averages levels instead of taking the highest","Lets the public part decide the level of the whole","Thinks a new combination needs no classification until someone asks"],"lo":["LO3"]},{"id":"check-pseudonymised-hosted-q1","slide":"check-pseudonymised-hosted","type":"single","prompt":"Dana pseudonymises attendance counts with a keyed hash and asks to send them to the free hosted model for a monthly summary. Under Rawafid's rule, where may they go?","options":[{"key":"A","text":"To the hosted model, now that they are pseudonymised"},{"key":"B","text":"To the hosted model, because Rawafid keeps the key"},{"key":"C","text":"Nowhere: attendance data can never reach a model"},{"key":"D","text":"To a locally served model only"}],"correct":[3],"explanation":"Pseudonymised data is still personal data and keeps its Restricted level; counts without notes carry no health data, so a local model is permitted.","misconceptions":["Thinks pseudonymised data is anonymous and so Public","Believes a key held by Rawafid moves the data's location","Over-applies the sensitive-data branch to counts without notes",""],"lo":["LO3"]},{"id":"check-research-purpose-q1","slide":"check-research-purpose","type":"single","prompt":"The centre says the purpose is research, so every requested field should be shared. What does the Data Sharing Policy's legitimate-purpose principle add?","options":[{"key":"A","text":"Nothing: research is always a legitimate purpose"},{"key":"B","text":"The data is used only for the stated purpose, and fields beyond it are not shared"},{"key":"C","text":"Only public entities may receive data"},{"key":"D","text":"Data must be stored on the requester's own servers"}],"correct":[1],"explanation":"A legitimate purpose rests on a legal basis or an operational need, and limits use to that purpose; the PDPL limits content to what the purpose needs.","misconceptions":["Treats the word research as a basis for any data","","Confuses a legitimate purpose with the requester's status","Believes a purpose principle concerns storage"],"lo":["LO2"]},{"id":"check-licence-q1","slide":"check-licence","type":"single","prompt":"Dana finds a public instruction dataset under CC-BY-NC-4.0 and wants to tune Wafi's replies with it. Rawafid is a fee-charging private school group. What does the licence allow?","options":[{"key":"A","text":"Any use, since it is public on the hub"},{"key":"B","text":"Any use, with attribution"},{"key":"C","text":"No use in Rawafid's commercial service"},{"key":"D","text":"Use only after classifying it as Public"}],"correct":[2],"explanation":"NC means non-commercial: a fee-charging service is commercial use, whatever the attribution.","misconceptions":["Equates publicly downloadable with free for any use","Thinks attribution alone satisfies a non-commercial licence","","Confuses a licence condition with a classification level"],"lo":["LO2"]}],"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":"day2.md","llms":"../llms.txt"},"tasks":[],"tools":[]},"bridge":{"allowedOrigins":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

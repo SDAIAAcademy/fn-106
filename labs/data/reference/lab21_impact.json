@@ -1,0 +1,32 @@
+{
+ "fee_schedule": {
+  "category": "None",
+  "sub_category": "already published",
+  "level": "None"
+ },
+ "guardians": {
+  "category": "Individuals",
+  "sub_category": "Privacy",
+  "level": "Low"
+ },
+ "students": {
+  "category": "Individuals",
+  "sub_category": "Privacy",
+  "level": "Low"
+ },
+ "attendance": {
+  "category": "Individuals",
+  "sub_category": "Privacy",
+  "level": "Low"
+ },
+ "fees": {
+  "category": "Individuals",
+  "sub_category": "Privacy (detailed statements of individual transactions)",
+  "level": "Low"
+ },
+ "attendance_summary": {
+  "category": "Individuals",
+  "sub_category": "Privacy (cells small enough to point at a child)",
+  "level": "Low"
+ }
+}

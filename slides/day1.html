@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-ax="deck" data-track="foundations">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 1 · Personal data and the law · Responsible Data and AI Practice in the Kingdom</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="day1.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<div class="deck" data-course="Responsible Data and AI Practice in the Kingdom" data-track="foundations" data-day="Day 1">
+<!-- ======================= OPENING ======================= -->
+<section class="slide title" id="title" data-auto="title" data-label="Welcome" data-n="1">
+  <div class="kicker">SDAIA Academy · Responsible Data and AI Practice in the Kingdom</div>
+  <h1>Personal data and the law</h1>
+  <p class="lead mt">Day 1: Map, justify, minimise, pseudonymise and keep the data of one build</p>
+  <div class="meta"><span class="track">Data &amp; AI Foundations Track</span><span>3 teaching days + capstone day</span><span>4 sessions · 4 labs</span><span>FN-106</span></div>
+  <aside class="notes"><p>Welcome the room. Ask two questions by show of hands: who has written code that calls a language model, and who has ever been asked "is this allowed?" about data in a project. The course is for the second question. Participants read Python (FN-101) and know what a language model does (FN-105); nobody needs a law degree. Rhythm of each day: four sessions, each with about 20 minutes of ideas, a checkpoint and a 25-minute lab.</p></aside>
+</section>
+
+<section class="slide" id="three-days-one-build" data-label="The course" data-n="2">
+  <div class="kicker">The course at a glance</div>
+  <h2>Three days on one build, then a review of your build pack</h2>
+  <div class="cols cols-4 gap-s">
+    <div class="card c-teal"><h4>Day 1 · The law</h4><p class="small mb0">Where personal data flows, the legal basis, minimisation, pseudonyms, retention and breaches.</p></div>
+    <div class="card c-cyan"><h4>Day 2 · Classify and share</h4><p class="small mb0">Classification levels, what may reach an external model, sharing, licences.</p></div>
+    <div class="card c-coral"><h4>Day 3 · Ethics and risk</h4><p class="small mb0">Principles as tests, Arabic and English fairness, the risk register, the disclosure.</p></div>
+    <div class="card c-purple"><h4>Day 4 · Capstone</h4><p class="small mb0">A responsible build pack in a public repository, defended in ten minutes.</p></div>
+  </div>
+  <div class="callout tip mt"><b>Every lab adds a page to the pack.</b> By Day 3 you hold the registers, the code, the test report and the disclosure the capstone asks for.</div>
+  <aside class="notes"><p>One sentence per day. Stress that the capstone is assembled from the labs: nothing in it is new work, but all of it must be correct and consistent. In the review the assessor changes one fact of the case (a new data field, a transfer abroad) and the participant revises the classification and risk entries live.</p></aside>
+</section>
+
+<section class="slide" id="rawafid-and-wafi" data-label="Case study" data-n="3">
+  <div class="kicker">One case all week</div>
+  <h2>Rawafid Schools Group and Wafi, its parent-enquiry assistant</h2>
+  <p class="lead">A fictional private school group: four campuses, about 1,200 students, parents who write in Arabic and English. Its systems lead built <b>Wafi</b> (<span class="ar">وافي</span>), which drafts replies from attendance and fee records with a language model.</p>
+  <div class="cols cols-3 gap-s mt-s">
+    <div class="card c-teal flat"><h4>Dr. Amal Al-Sayari</h4><p class="small mb0">Group director of schools. Owns the build and its risks.</p></div>
+    <div class="card c-coral flat"><h4>Nasser Al-Mansour</h4><p class="small mb0">Data protection officer. Your client this week.</p></div>
+    <div class="card c-cyan flat"><h4>Dana Al-Saleh</h4><p class="small mb0">Systems lead. Built Wafi fast, and it shows.</p></div>
+  </div>
+  <aside class="notes"><p>Two more people appear later: Layla Haddad, head of parent relations, who reviews escalated replies, and Osama Al-Qurashi, fees manager. Every record is synthetic, generated with seed 106 by labs/prepare_data.py; the national IDs and mobile numbers have the right shape and belong to nobody. The labs' "today" is Thursday 2026-11-12. Do not reveal the planted problems: the labs find them.</p></aside>
+</section>
+
+<section class="slide" id="how-this-course-works" data-label="How we work" data-n="4">
+  <div class="kicker">How this course works</div>
+  <h2>Read the official text, then turn it into code and records</h2>
+  <div class="cols cols-3 gap-s">
+    <div class="card c-navy"><h4>Primary sources</h4><p class="small mb0">Every rule on a slide comes from the instrument itself, named in the notes. Commentary is not a source.</p></div>
+    <div class="card c-teal"><h4>Evidence, not opinion</h4><p class="small mb0">A finding is a number from a lab run: fields sent, names re-identified, a gap between languages.</p></div>
+    <div class="card c-coral"><h4>Synthetic data only</h4><p class="small mb0">No real person enters any lab, prompt or assistant. That is what lets us use a free hosted model.</p></div>
+  </div>
+  <div class="callout warn small mt"><b>AI policy.</b> AI off for the scenario check and each first classification. An assistant may help you read the instruments; check every answer against the official text. No real personal data in any assistant.</div>
+  <aside class="notes"><p>Read the AI policy aloud. It comes from the catalog entry. The reason for the AI-off parts: the supervised scenario check (30% of the grade) is taken without assistance, and the first classification is a judgement you must be able to defend without a tool. Ask the room why an assistant's summary of the PDPL is not good enough: it may be out of date, invent an article number, or blur what the law says with what a blog says.</p></aside>
+</section>
+
+<section class="slide" id="setup-check" data-label="Setup" data-n="5">
+  <div class="kicker">Lab environment</div>
+  <h2>Open the labs and run the setup check before the first lab</h2>
+  <div class="cols cols-2">
+    <ol class="bullets">
+      <li><b>Colab:</b> open a notebook from the course page; its first cell clones the repository.</li>
+      <li><b>Laptop:</b> clone, then <code>uv sync</code> in <code>labs/</code> and open Jupyter.</li>
+      <li>No key is needed: Wafi answers through a <b>scripted stand-in model</b> unless you set a free OpenRouter key.</li>
+      <li>Every lab starts from supplied files. None needs another lab's result.</li>
+    </ol>
+    <pre class="code s" data-file="terminal (laptop)"><code class="language-bash">git <span class="hljs-built_in">clone</span> https://github.com/SDAIAAcademy/fn-106
+<span class="hljs-built_in">cd</span> fn-106/labs
+uv <span class="hljs-built_in">sync</span>
+uv run jupyter lab</code></pre>
+  </div>
+  <aside class="notes"><p>The setup check is the first cell of Lab 1.1: it imports rawafid and wafi and loads the records. Common failures: a path too long on Windows (set UV_PROJECT_ENVIRONMENT to a short folder before uv sync), a proxy that blocks GitHub (use Colab). With a free OpenRouter key in OPENROUTER_API_KEY, Wafi drafts with a hosted free model; without one, or when it answers 401 or 429, the stand-in answers and the result says model "stand-in". The stand-in is not a language model: it fills templates from the facts in the prompt.</p></aside>
+</section>
+
+<section class="slide" id="agenda" data-auto="agenda" data-label="Agenda" data-n="6">
+  <div class="kicker">Today</div>
+  <h2>Personal data and the law</h2>
+  <div class="agenda"><div class="item"><div><b>Session 1 · Where personal data flows in a build</b><small>Prompts, logs, caches and the model provider are all places where personal data goes</small></div></div><div class="item"><div><b>Session 2 · Lawful basis and minimisation</b><small>Every flow needs a legal basis and a purpose, and every field must earn its place against that purpose</small></div></div><div class="item"><div><b>Session 3 · Pseudonymisation and its limits</b><small>A pseudonym hides a name, not a person: quasi-identifiers link records back</small></div></div><div class="item"><div><b>Session 4 · Rights, retention and breaches</b><small>Rights, retention rules and the breach procedure turn the law into dates and duties</small></div></div></div>
+</section>
+
+<!-- ======================= SESSION 1 ======================= -->
+<section class="slide section" id="s1" data-auto="section" data-session="1" data-n="7">
+  <div class="kicker">Session 1</div>
+  <h1>Where personal data flows in a build</h1>
+  <ul class="bullets outcomes"><li>Identify the personal and sensitive data a build reads, sends, logs and stores</li><li>Draw a data flow diagram of an AI assistant with every store and external party</li><li>Name the PDPL obligation that applies at each step of the flow</li></ul>
+  <div class="sess-no">01</div>
+</section>
+
+<section class="slide" id="what-personal-data-is" data-lo="LO1" data-n="8" data-session="1">
+  <div class="kicker">The law's starting point</div>
+  <h2>Personal data is anything that can identify a person, directly or not</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li><b>Directly:</b> a name, a national ID number, a mobile number.</li>
+      <li><b>Indirectly:</b> a campus, a grade and a date of birth together.</li>
+      <li><b>Sensitive data</b> is a named list in the law: racial or ethnic origin, beliefs, criminal and security data, biometric and genetic data, health data, and data showing a parent is unknown.</li>
+      <li>It applies to processing in the Kingdom, and from abroad for people living here.</li>
+    </ul>
+    <div class="card c-coral"><h4>At Rawafid</h4><p class="small mb0">A note "asthma flare" on an absence is health data about a child. So is "insulin at lunch" in a student file.</p></div>
+  </div>
+  <aside class="notes"><p>Sources: Personal Data Protection Law, Article 1 (definitions of personal data and sensitive data) and Article 2 (scope). The AI Ethics Principles use a longer list that also names credit and location data; follow the law's own list when you classify. Do not read the list aloud in full; point to it. The key move for engineers: indirect identification. Session 3 proves it with a join.</p></aside>
+</section>
+
+<section class="slide" id="who-is-who" data-lo="LO1" data-n="9" data-session="1">
+  <div class="kicker">Three roles</div>
+  <h2>The controller decides, the processor acts for it, the data subject has the rights</h2>
+  <table class="t">
+    <tr><th>Role</th><th>In the law</th><th>At Rawafid</th></tr>
+    <tr><td><b>Controller</b></td><td>Decides why and how data is processed; carries the obligations</td><td>Rawafid Schools Group</td></tr>
+    <tr><td><b>Processor</b></td><td>Processes for the controller; chosen only if it gives the necessary guarantees</td><td>The model provider, the hosting company</td></tr>
+    <tr><td><b>Data subject</b></td><td>The person the data is about, or their legal guardian</td><td>Each student, represented by a guardian; each guardian</td></tr>
+  </table>
+  <div class="callout tip small mt"><b>A minor's rights are exercised by the guardian,</b> and the guardian's authority must be verified.</div>
+  <aside class="notes"><p>Sources: PDPL Article 8 (choosing processors that give guarantees, and monitoring them); Implementing Regulation Article 13 (the legal guardian acts in the child's best interest, and the controller verifies guardianship). Ask: is the hosted model provider a controller or a processor? A processor, as long as it uses the prompts only to answer Rawafid. That is a contract question, which is why Lab 1.4 writes the provider's retention into the contract.</p></aside>
+</section>
+
+<section class="slide" id="stores-you-forget" data-lo="LO1" data-n="10" data-session="1">
+  <div class="kicker">Where an AI build keeps data</div>
+  <h2>Prompts, logs and caches are stores of personal data too</h2>
+  <div class="cols cols-4 gap-s">
+    <div class="card c-teal flat"><h4>Records</h4><p class="small mb0">The systems the build reads: students, guardians, attendance, fees.</p></div>
+    <div class="card c-cyan flat"><h4>Prompts</h4><p class="small mb0">Everything the build sends to the model leaves your systems.</p></div>
+    <div class="card c-coral flat"><h4>Logs</h4><p class="small mb0">Often the full prompt and the reply, kept "for debugging", for ever.</p></div>
+    <div class="card c-purple flat"><h4>Caches and queues</h4><p class="small mb0">Replies kept for reuse; drafts waiting for staff.</p></div>
+  </div>
+  <div class="callout warn mt"><b>What goes wrong.</b> Teams map the database and forget the log. The log usually holds more personal data per row than any table.</div>
+  <aside class="notes"><p>Ask the room to name a system they built and where its logs go. Most logging libraries write whole request bodies by default. The model provider is a fifth store you do not control: its retention is set by its terms, which is why Lab 1.1's stretch adds it.</p></aside>
+</section>
+
+<section class="slide" id="wafi-pipeline" data-lo="LO1" data-n="11" data-session="1">
+  <div class="kicker">The build as Dana wrote it</div>
+  <h2>One parent message passes through nine steps</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>1 · Intake</b>mobile and message</div>
+    <div class="arrow">→</div>
+    <div class="step c-teal"><b>2 to 4 · Look up</b>guardian, child, attendance, fees</div>
+    <div class="arrow">→</div>
+    <div class="step c-coral"><b>5 · Prompt</b>to the model provider</div>
+    <div class="arrow">→</div>
+    <div class="step c-cyan"><b>6 · Draft</b>back from the model</div>
+    <div class="arrow">→</div>
+    <div class="step c-purple"><b>7 to 9 · Keep</b>review queue, log, cache</div>
+  </div>
+  <p class="small mt">Lab 1.1 runs one enquiry through this pipeline with a tracer that records every field at every step.</p>
+  <aside class="notes"><p>Show labs/wafi.py on screen, the handle method: each trace call is one step. Open the file, scroll, do not explain every line. The point: the pipeline is short and ordinary, and still every step touches personal data.</p></aside>
+</section>
+
+<section class="slide" id="twenty-one-fields" data-lo="LO1" data-n="12" data-session="1">
+  <div class="kicker">Measured in Lab 1.1</div>
+  <h2>One question about absences sends 21 fields out of Rawafid</h2>
+  <div class="cols cols-3">
+    <div class="stat center"><div class="big">21</div><div class="lbl">fields in one prompt</div></div>
+    <div class="stat center"><div class="big">8</div><div class="lbl">of them identifiers</div></div>
+    <div class="stat center"><div class="big">1</div><div class="lbl">sensitive: the health notes</div></div>
+  </div>
+  <p class="small mt">The prompt carries the whole student record, the guardian's name, national ID and mobile, and three counts. The question needed one count.</p>
+  <aside class="notes"><p>Numbers from the solution run of Lab 1.1: 37 distinct fields in the trace, 21 sent to the model provider, eight of them identifiers (student number, both names, the student's national ID, guardian number, the guardian's name, national ID and mobile), and the health notes. Do not show the field list yet: participants build it in the lab.</p></aside>
+</section>
+
+<section class="slide" id="data-flow-diagram" data-lo="LO1" data-n="13" data-session="1">
+  <div class="kicker">The tool for this session</div>
+  <h2>A data flow diagram shows every place data goes and what goes there</h2>
+  <div class="cols cols-2">
+    <pre class="code s" data-file="Mermaid (part)"><code>flowchart LR
+  Wafi([Wafi])
+  ModelProvider["model provider"]
+  WafiEnquiryLog["Wafi enquiry log"]
+  Wafi --&gt;|"5 send prompt: send 21"| ModelProvider
+  Wafi --&gt;|"8 log: log 4"| WafiEnquiryLog</code></pre>
+    <ul class="bullets">
+      <li>Nodes: the build, each store, each outside party.</li>
+      <li>Edges: one per step, labelled with what moves.</li>
+      <li>Annotate each edge with the obligation that applies there.</li>
+      <li>Mermaid is text: it lives in the repository and changes with the code. draw.io is the drawing alternative.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>The Mermaid text here is the start of the lab's output. Paste it into mermaid.live to show it rendered. The LO1 evidence in the assessment is exactly this: an annotated diagram naming the obligation at each step, checked against the reference.</p></aside>
+</section>
+
+<section class="slide" id="obligations-on-the-diagram" data-lo="LO1" data-n="14" data-session="1">
+  <div class="kicker">From diagram to duties</div>
+  <h2>Each step of the flow carries its own obligation</h2>
+  <table class="t small">
+    <tr><th>Step</th><th>Obligation (Personal Data Protection Law)</th></tr>
+    <tr><td>Intake</td><td>Tell the guardian the basis, the purpose and who receives the data (Article 13)</td></tr>
+    <tr><td>Look up</td><td>A legal basis and purpose (Articles 5, 6, 10); accuracy (Article 14)</td></tr>
+    <tr class="hl"><td>Prompt</td><td>Minimum content (Article 11); security (Article 19); transfer abroad (Article 29)</td></tr>
+    <tr><td>Draft</td><td>Accuracy before anything is sent to the guardian (Article 14)</td></tr>
+    <tr class="hl"><td>Log and cache</td><td>Destruction when no longer needed (Article 18); security (Article 19)</td></tr>
+    <tr><td>Whole activity</td><td>A record of processing (Article 31)</td></tr>
+  </table>
+  <aside class="notes"><p>Sources: PDPL Articles 5, 6, 10, 11, 13, 14, 18, 19, 29 and 31, read in the SDAIA English text. This table is the menu of Lab 1.1, task 5. The two highlighted rows are the ones the lab's check insists on. Say that article numbers are for finding the text, not for reciting.</p></aside>
+</section>
+
+<section class="slide" id="check-where-data-lives" data-lo="LO1" data-n="15" data-session="1">
+  <div class="kicker">Checkpoint</div>
+  <h2>Which store did Dana forget?</h2>
+  <div class="quiz" data-type="single" data-lo="LO1" data-id="check-where-data-lives-q1">
+    <p class="lead">Dana's data map lists the student system, the fee system and the model provider. Wafi writes every prompt to its enquiry log. What does the map miss?</p>
+    <div class="opts">
+      <div class="opt" data-why="Treats the provider as the only place outside the database, and forgets Rawafid's own files" data-k="A">Nothing: the provider is the only other store</div>
+      <div class="opt" data-ok data-k="B">The log, which holds the full prompt of every enquiry</div>
+      <div class="opt" data-why="Believes debugging data is not personal data because engineers made it" data-k="C">Only debug output, which the law does not cover</div>
+      <div class="opt" data-why="Thinks data is personal only while it sits in a database table" data-k="D">The cache, but caches hold no personal data</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> A log that keeps prompts keeps everything the prompt carries. It is a store of personal data with the same obligations as a table.</div>
+  </div>
+  <aside class="notes"><p>Answer: B. If the room picks C, ask whether a printout of a student file stops being personal data because a developer printed it. The cache does hold personal data too, which makes D tempting for the wrong reason.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-1-1" data-auto="lab" data-lab="1.1" data-label="Lab 1.1" data-n="16" data-session="1">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">Lab 1.1 · 25 min</div><h2>Trace Wafi's personal data</h2><p class="lead small">Map every field the assistant reads, sends, logs and stores on a data flow diagram.</p><a class="nb" href="../labs/D1_1_map_every_field.ipynb">D1_1_map_every_field.ipynb</a></div><ul class="checklist"><li>Run one enquiry through the instrumented Wafi <span class="min">4 min</span></li><li>List every field read, sent, logged and stored <span class="min">7 min</span></li><li>Flag the identifiers and the sensitive fields <span class="min">4 min</span></li><li>Draw the data flow diagram in Mermaid <span class="min">5 min</span></li><li>Name the PDPL obligation at each step <span class="min">5 min</span></li><li class="stretch">✱ Stretch: Add the hosted provider's own logs as a store you do not control</li></ul></div>
+  <aside class="notes"><p>Walk the room. Common problems: the inventory counts events instead of fields (they get 9 rows, not 37); flag() puts prompt.hash under personal. Expected numbers: 21 fields sent, 8 identifiers, one sensitive field sent. Early finishers: the stretch, the provider's own logs. Remind them the obligations menu is in the notebook and that the check looks at steps 5 and 8.</p></aside>
+</section>
+
+<!-- ======================= SESSION 2 ======================= -->
+<section class="slide section" id="s2" data-auto="section" data-session="2" data-n="17">
+  <div class="kicker">Session 2</div>
+  <h1>Lawful basis and minimisation</h1>
+  <ul class="bullets outcomes"><li>Choose a legal basis and a purpose for each flow of a build</li><li>Test each field against the purpose and remove what it does not need</li><li>Rewrite a prompt builder so it sends the minimum</li></ul>
+  <div class="sess-no">02</div>
+</section>
+
+<section class="slide" id="consent-is-the-default" data-lo="LO1" data-n="18" data-session="2">
+  <div class="kicker">The rule and its exceptions</div>
+  <h2>Consent is the default; the law lists when processing runs without it</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>Consent (Article 5)</h4><p class="small mb0">No processing and no change of purpose without the data subject's consent, which can be withdrawn at any time. For a minor, the guardian consents.</p></div>
+    <div class="stack">
+      <div class="card c-cyan flat"><h4>Without consent (Article 6)</h4><p class="small mb0">The data subject's actual interest when contact is impossible; another law or an agreement the data subject is party to; a public entity's security or judicial needs; the controller's legitimate interest.</p></div>
+      <div class="card c-coral flat"><h4>The catch</h4><p class="small mb0">Legitimate interest never covers sensitive data.</p></div>
+    </div>
+  </div>
+  <aside class="notes"><p>Sources: PDPL Articles 5 and 6; Implementing Regulation Article 16 sets the controls of legitimate interest (an assessment of purpose, necessity and the data subject's rights). Also Article 7: consent may not be made a condition of a service unless the service needs that processing. Ask: Rawafid's enrolment contract is signed by the guardian. Which basis covers answering their question about their child?</p></aside>
+</section>
+
+<section class="slide" id="five-flows-five-bases" data-lo="LO1" data-n="19" data-session="2">
+  <div class="kicker">Wafi's five flows</div>
+  <h2>Each flow gets its own basis and purpose</h2>
+  <table class="t small">
+    <tr><th>Flow</th><th>Basis</th><th>Purpose</th></tr>
+    <tr><td>F1 · answer the guardian</td><td>contract</td><td>The enrolment contract the guardian signed</td></tr>
+    <tr><td>F2 · draft with a model</td><td>contract</td><td>The provider acts as processor for F1</td></tr>
+    <tr><td>F3 · keep a log</td><td>legitimate interest</td><td>Quality and complaints, <b>without sensitive data</b></td></tr>
+    <tr><td>F4 · cache replies</td><td>legitimate interest</td><td>Avoid repeated model calls</td></tr>
+    <tr class="hl"><td>F5 · add summer-camp offers</td><td>consent</td><td>Advertising needs prior consent and a way to stop</td></tr>
+  </table>
+  <aside class="notes"><p>This is the reference of Lab 1.2, task 1. F5 rests on PDPL Articles 25 and 26 (advertising and marketing need consent; sensitive data never for marketing). The interesting row is F3: legitimate interest is possible only once the log no longer holds health notes, so the basis forces the minimisation. Reveal this slide after the lab if the room is quick; otherwise use it to set the lab up.</p></aside>
+</section>
+
+<section class="slide" id="purpose-limits-content" data-lo="LO1 LO4" data-n="20" data-session="2">
+  <div class="kicker">Minimisation</div>
+  <h2>The purpose decides which fields may be collected and sent</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>The purpose must relate directly to the controller's purposes (Article 11).</li>
+      <li>Content is limited to <b>the minimum the purpose needs</b>.</li>
+      <li>Data not needed any more is no longer collected, and what was collected is destroyed.</li>
+      <li>Data is processed only for the purpose it was collected for, with listed exceptions (Article 10).</li>
+    </ul>
+    <div class="card c-teal"><h4>The guideline's test, per field</h4><p class="small mb0">Actual need, purpose, method of collection, content, destruction, retention. If a field fails "actual need", it goes.</p></div>
+  </div>
+  <aside class="notes"><p>Sources: PDPL Articles 10 and 11; the Minimum Personal Data Guideline, first section (six principles) and its examples. Tell the guideline's example in one breath: a recruiter that asks every applicant for health data fails the test; an employer that keeps the blood type of field staff in dangerous work passes it. Necessity is about this purpose, not about possible future use.</p></aside>
+</section>
+
+<section class="slide" id="field-by-field" data-lo="LO4" data-n="21" data-session="2">
+  <div class="kicker">Measured in Lab 1.2</div>
+  <h2>Five of the 21 fields are needed to answer the question</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>Keep</h4><p class="small mb0">The child's first name, absences this term, late arrivals this term, the fee balance, the message.</p></div>
+    <div class="card c-coral"><h4>Drop: 16 fields</h4><p class="small mb0">Both national IDs, the guardian's mobile and name, date of birth, nationality, campus, section, bus route, health notes and the internal IDs.</p></div>
+  </div>
+  <div class="bars mt">
+    <div class="row"><span>Before</span><div class="bar c-coral" style="--w:100%"></div><span class="val">678 characters</span></div>
+    <div class="row"><span>After</span><div class="bar c-teal" style="--w:42%"></div><span class="val">286 characters</span></div>
+  </div>
+  <aside class="notes"><p>From the solution run of Lab 1.2: 21 fields become 5; on ten logged enquiries all ten replies are unchanged, and no minimised prompt carries a national ID, a mobile number or a health note. The prompt length fell from 678 to 286 characters on the last enquiry: minimisation is also cheaper. A participant may keep the child's grade "for context": ask what question the grade answers.</p></aside>
+</section>
+
+<section class="slide" id="minimised-builder" data-lo="LO4" data-n="22" data-session="2">
+  <div class="kicker">The change in code</div>
+  <h2>Send facts, not records</h2>
+  <pre class="code s" data-file="build_prompt_min (Lab 1.2)"><code class="language-python">name = (student[<span class="hljs-string">&quot;full_name_ar&quot;</span>] <span class="hljs-keyword">if</span> is_arabic(text) <span class="hljs-keyword">else</span> student[<span class="hljs-string">&quot;full_name&quot;</span>]).split()[<span class="hljs-number">0</span>]
+data = {<span class="hljs-string">&quot;first_name&quot;</span>: name, **facts}   <span class="hljs-comment"># three counts, nothing else</span>
+prompt = (<span class="hljs-string">&quot;You are Wafi ... using only these facts.\n&quot;</span>
+          <span class="hljs-string">f&quot;Facts: <span class="hljs-subst">{json.dumps(data, ensure_ascii=<span class="hljs-literal">False</span>)}</span>\n&quot;</span>
+          <span class="hljs-string">f&quot;Guardian message: <span class="hljs-subst">{text}</span>&quot;</span>)</code></pre>
+  <div class="callout tip small mt"><b>Pattern.</b> Compute what the question needs inside your systems; send the answer's ingredients, never the source rows.</div>
+  <aside class="notes"><p>Contrast with build_prompt_v1 in wafi.py, which dumps the whole record as JSON. The pattern generalises: compute counts and totals locally, pass them in. Ask the room what still is personal data in the new prompt: the first name and the counts, which are about an identifiable child. Minimised is not anonymous.</p></aside>
+</section>
+
+<section class="slide" id="children-and-guardians" data-lo="LO1" data-n="23" data-session="2">
+  <div class="kicker">A school's special case</div>
+  <h2>For a child, the guardian consents and exercises the rights</h2>
+  <ul class="bullets">
+    <li>When a data subject lacks full legal capacity, the legal guardian acts in the child's best interest.</li>
+    <li>The controller takes appropriate steps to <b>verify the guardianship</b> before relying on it.</li>
+    <li>The guardian's consent may not harm the child's interests.</li>
+    <li>When the child reaches legal capacity, they exercise their rights themselves.</li>
+  </ul>
+  <div class="callout warn mt"><b>What goes wrong.</b> Wafi finds the family by mobile number. A number shared between two families, or a parent without custody, gets another child's data.</div>
+  <aside class="notes"><p>Source: Implementing Regulation, Article 13. The planted problem behind the warning appears again in Lab 3.3 as harm H1. A Day 3 enquiry mentions a custody order: that one must go to a person, never to an automatic reply.</p></aside>
+</section>
+
+<section class="slide" id="check-basis-and-health" data-lo="LO1" data-n="24" data-session="2">
+  <div class="kicker">Checkpoint</div>
+  <h2>Can the log run on legitimate interest?</h2>
+  <div class="quiz" data-type="single" data-lo="LO1" data-id="check-basis-and-health-q1">
+    <p class="lead">Dana says the enquiry log runs on Rawafid's legitimate interest in quality checks. The log keeps full prompts, health notes included. Is that basis available?</p>
+    <div class="opts">
+      <div class="opt" data-why="Assumes any business reason makes an interest legitimate whatever data it covers" data-k="A">Yes: quality checking is a legitimate interest</div>
+      <div class="opt" data-why="Confuses the enrolment contract, which covers answering, with every later use of the data" data-k="B">Yes: the enrolment contract covers all of Wafi</div>
+      <div class="opt" data-why="Thinks consent is the only basis, so every flow without consent is unlawful" data-k="C">No: every flow needs the guardian's consent</div>
+      <div class="opt" data-ok data-k="D">No: legitimate interest excludes sensitive data</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> The law allows legitimate interest only when no sensitive data is processed. Remove the health notes from the log and the basis becomes available.</div>
+  </div>
+  <aside class="notes"><p>Answer: D. C is the most common wrong answer from people who know only consent: the law lists other bases. B is the subtle one: the contract covers answering the guardian, not keeping a quality log for months.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-1-2" data-auto="lab" data-lab="1.2" data-label="Lab 1.2" data-n="25" data-session="2">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">Lab 1.2 · 25 min</div><h2>Lawful basis and minimum fields</h2><p class="lead small">Set a lawful basis and purpose for each flow and remove the fields the purpose does not need.</p><a class="nb" href="../labs/D1_2_set_lawful_basis.ipynb">D1_2_set_lawful_basis.ipynb</a></div><ul class="checklist"><li>Set a basis and purpose for each of the five flows <span class="min">6 min</span></li><li>Test each prompt field against the purpose <span class="min">6 min</span></li><li>Write the minimised prompt builder <span class="min">7 min</span></li><li>Check ten prompts and print the before-and-after list <span class="min">6 min</span></li><li class="stretch">✱ Stretch: Draft the consent wording for the one optional flow</li></ul></div>
+  <aside class="notes"><p>Watch for: participants who keep the grade or the campus "for context" (ask which question it answers); builders that forget the Arabic first name, which makes the Arabic replies differ and fails the "unchanged" check. Expected: 21 fields to 5, ten of ten replies unchanged, zero leaks. Stretch: consent wording for F5, which must say that saying no changes nothing (Article 7).</p></aside>
+</section>
+
+<!-- ======================= SESSION 3 ======================= -->
+<section class="slide section" id="s3" data-auto="section" data-session="3" data-n="26">
+  <div class="kicker">Session 3</div>
+  <h1>Pseudonymisation and its limits</h1>
+  <ul class="bullets outcomes"><li>Pseudonymise identifiers with a keyed hash and keep the key apart</li><li>Attempt re-identification by joining on quasi-identifiers</li><li>Generalise quasi-identifiers and measure the remaining risk</li></ul>
+  <div class="sess-no">03</div>
+</section>
+
+<section class="slide" id="three-words" data-lo="LO4" data-n="27" data-session="3">
+  <div class="kicker">Three words people mix up</div>
+  <h2>Minimised, pseudonymised and anonymised are three different promises</h2>
+  <div class="cols cols-3 gap-s">
+    <div class="card c-teal"><h4>Minimised</h4><p class="small mb0">Fewer fields. What is left still identifies the person.</p></div>
+    <div class="card c-cyan"><h4>Pseudonymised</h4><p class="small mb0">Identifiers replaced by codes; the extra information that links back is kept apart. <b>Still personal data.</b></p></div>
+    <div class="card c-coral"><h4>Anonymised</h4><p class="small mb0">Irreversibly unidentifiable, directly and indirectly. Outside the law, <b>once tested</b> for re-identification.</p></div>
+  </div>
+  <aside class="notes"><p>Source: Personal Data Destruction, Anonymization and Pseudonymisation Guideline, sections two and three. The guideline says pseudonymised data remains personal data and protects less than anonymisation; anonymisation requires an impact assessment that evaluates re-identification. Ask: Dana took the names out. Which of the three did she do?</p></aside>
+</section>
+
+<section class="slide" id="keyed-hash" data-lo="LO4" data-n="28" data-session="3">
+  <div class="kicker">How to pseudonymise</div>
+  <h2>Use a keyed hash, and keep the key away from the data</h2>
+  <div class="cols cols-2">
+    <pre class="code s" data-file="Lab 1.3"><code class="language-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">code</span>(<span class="hljs-params">value, key</span>):
+    mac = hmac.new(key.encode(), value.encode(),
+                   hashlib.sha256)
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;P&quot;</span> + mac.hexdigest()[:<span class="hljs-number">10</span>]
+
+out = df.drop(columns=[<span class="hljs-string">&quot;full_name&quot;</span>,
+                       <span class="hljs-string">&quot;full_name_ar&quot;</span>, <span class="hljs-string">&quot;national_id&quot;</span>])
+out[<span class="hljs-string">&quot;student_id&quot;</span>] = out[<span class="hljs-string">&quot;student_id&quot;</span>].<span class="hljs-built_in">map</span>(
+    <span class="hljs-keyword">lambda</span> v: code(v, KEY))</code></pre>
+    <ul class="bullets">
+      <li>Same person, same code: joins across files still work.</li>
+      <li>Without the key nobody can recompute a code.</li>
+      <li>A <b>plain</b> hash is not a pseudonym: anyone can hash every student number and look it up.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>The stretch of Lab 1.3 shows the plain-hash failure: 1,200 student numbers are reversed in a fraction of a second. The lab key in data/lab_key.txt is for synthetic data only; in a real build the key lives in a secrets manager, not in the repository.</p></aside>
+</section>
+
+<section class="slide" id="quasi-identifiers" data-lo="LO4" data-n="29" data-session="3">
+  <div class="kicker">The attacker's tool</div>
+  <h2>Quasi-identifiers link a record back to a name</h2>
+  <div class="flow">
+    <div class="step c-cyan"><b>Pseudonymised file</b>campus, grade, gender, date of birth, health notes</div>
+    <div class="arrow">→</div>
+    <div class="step c-coral"><b>Join</b>on the four shared columns</div>
+    <div class="arrow">←</div>
+    <div class="step c-teal"><b>Public page</b>sports-day results: name, campus, grade, gender, date of birth</div>
+  </div>
+  <p class="small mt">No single column identifies a child. Together they almost always do.</p>
+  <aside class="notes"><p>The public page is Rawafid's own website: 320 names of children in races, with dates of birth for the age categories. The attack needs nothing but a dataframe merge. ARX is a full tool for this kind of test; in the lab a pandas join is enough.</p></aside>
+</section>
+
+<section class="slide" id="ninety-six-percent" data-lo="LO4" data-n="30" data-session="3">
+  <div class="kicker">Measured in Lab 1.3</div>
+  <h2>A join re-identifies 96% of the names on the sports-day page</h2>
+  <div class="cols cols-3">
+    <div class="stat center"><div class="big">308 / 320</div><div class="lbl">page names matched to one record</div></div>
+    <div class="stat center"><div class="big">26</div><div class="lbl">children whose health note is now known</div></div>
+    <div class="stat center"><div class="big">0</div><div class="lbl">names in the pseudonymised file</div></div>
+  </div>
+  <div class="callout warn mt"><b>What goes wrong.</b> "We removed the names" is the most common description of a file that is still personal data.</div>
+  <aside class="notes"><p>Numbers from the solution run: 308 of 320 page rows match exactly one record (96.3%), and 26 of those children carry a health note in the file. Count page rows, not names: two children can share a name. The date of birth does most of the work.</p></aside>
+</section>
+
+<section class="slide" id="generalise" data-lo="LO4" data-n="31" data-session="3">
+  <div class="kicker">The fix, and its limit</div>
+  <h2>Generalising cuts the attack to almost nothing, and leaves the rare child exposed</h2>
+  <div class="cols cols-2">
+    <div class="bars">
+      <div class="row"><span>Exact birth date and grade</span><div class="bar c-coral" style="--w:96%"></div><span class="val">96%</span></div>
+      <div class="row"><span>Birth year and grade band</span><div class="bar c-teal" style="--w:1%"></div><span class="val">0.3%</span></div>
+    </div>
+    <ul class="bullets">
+      <li>Birth date becomes birth year; grade becomes a band of three.</li>
+      <li>One page name still matches one record.</li>
+      <li>The smallest group holds <b>one</b> child: k = 1.</li>
+      <li>33 of 121 groups hold fewer than five children.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>From the solution run: after generalisation 1 of 320 page rows is re-identified, k = 1, and 33 of 121 groups are under five. k-anonymity: every combination of quasi-identifiers is shared by at least k records. The guideline names generalisation and aggregation as techniques; the measurement is what tells you whether they were enough. Suppression of small groups is the next step, and Day 2 meets the same problem in an aggregate table.</p></aside>
+</section>
+
+<section class="slide" id="test-before-you-claim" data-lo="LO4" data-n="32" data-session="3">
+  <div class="kicker">The rule for any release</div>
+  <h2>Claim anonymity only after you have tried to break it</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>1 · Remove</b>direct identifiers</div>
+    <div class="arrow">→</div>
+    <div class="step c-cyan"><b>2 · Attack</b>join with what is public</div>
+    <div class="arrow">→</div>
+    <div class="step c-purple"><b>3 · Generalise</b>and suppress small groups</div>
+    <div class="arrow">→</div>
+    <div class="step c-coral"><b>4 · Measure</b>rate and k, written down</div>
+  </div>
+  <div class="callout tip mt"><b>Your evidence for LO4:</b> the before-and-after field list, the pseudonymisation script and the re-identification result.</div>
+  <aside class="notes"><p>The guideline asks the controller to evaluate the effectiveness of anonymisation techniques and adjust them, and to keep records of anonymisation and pseudonymisation activities. Lab 1.3's last task writes that record. In the capstone review the assessor may add a field (say, the bus route) and ask what happens to k.</p></aside>
+</section>
+
+<section class="slide" id="check-hashed-id" data-lo="LO4" data-n="33" data-session="3">
+  <div class="kicker">Checkpoint</div>
+  <h2>Is the contractor's file still personal data?</h2>
+  <div class="quiz" data-type="single" data-lo="LO4" data-id="check-hashed-id-q1">
+    <p class="lead">Dana sends a contractor the student file with names and national IDs removed and student numbers replaced by HMAC codes. Rawafid keeps the key. Under the PDPL guidelines, what is the file?</p>
+    <div class="opts">
+      <div class="opt" data-ok data-k="A">Personal data, because it can be linked back</div>
+      <div class="opt" data-why="Equates removing names with anonymisation" data-k="B">Anonymous data, because no names remain</div>
+      <div class="opt" data-why="Thinks a cryptographic step takes data out of the law" data-k="C">Outside the law, because the codes are encrypted</div>
+      <div class="opt" data-why="Believes data stops being personal once it leaves the controller" data-k="D">Personal data only while Rawafid holds it</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> Pseudonymised data stays personal data: the key, and the quasi-identifiers, link it back to a child. Only tested, irreversible anonymisation leaves the law's scope.</div>
+  </div>
+  <aside class="notes"><p>Answer: A. If many pick B, return to the 96% slide. D is tempting to people who think obligations end at the door; in fact sharing the file is a disclosure with its own conditions (Day 2, Session 3).</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-1-3" data-auto="lab" data-lab="1.3" data-label="Lab 1.3" data-n="34" data-session="3">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">Lab 1.3 · 25 min</div><h2>Pseudonymise, then attack</h2><p class="lead small">Pseudonymise the guardian and student records and attempt to re-identify them by linkage.</p><a class="nb" href="../labs/D1_3_pseudonymise_guardian_student.ipynb">D1_3_pseudonymise_guardian_student.ipynb</a></div><ul class="checklist"><li>Replace identifiers with keyed pseudonyms <span class="min">6 min</span></li><li>Join with the sports-day page on quasi-identifiers <span class="min">6 min</span></li><li>Measure the re-identification rate <span class="min">4 min</span></li><li>Generalise birth date and grade, measure again <span class="min">6 min</span></li><li>Record k and the residual risk <span class="min">3 min</span></li><li class="stretch">✱ Stretch: Show that an unkeyed hash of a student number is reversed by trying every number</li></ul></div>
+  <aside class="notes"><p>AI off for the first attempt at the join. Watch for: grouping by name instead of page row (gives 66%, because names repeat); generalise() that fails on the page because it has no section column. Expected: 308 of 320 (96%), 26 health notes, after generalisation 1 of 320, k = 1. Stretch: reverse a plain SHA-256 of the student numbers by trying all 1,200.</p></aside>
+</section>
+
+<!-- ======================= SESSION 4 ======================= -->
+<section class="slide section" id="s4" data-auto="section" data-session="4" data-n="35">
+  <div class="kicker">Session 4</div>
+  <h1>Rights, retention and breaches</h1>
+  <ul class="bullets outcomes"><li>Explain the data subject's rights and who exercises them for a minor</li><li>Write a retention rule per store and find what is kept too long</li><li>Walk a breach through notice, containment and documentation</li></ul>
+  <div class="sess-no">04</div>
+</section>
+
+<section class="slide" id="five-rights" data-lo="LO1" data-n="36" data-session="4">
+  <div class="kicker">What the data subject may ask</div>
+  <h2>Five rights, answered within 30 days</h2>
+  <div class="cols cols-2">
+    <ol class="bullets">
+      <li>To be told the legal basis and purpose.</li>
+      <li>To access their data.</li>
+      <li>To obtain it in a readable, clear format.</li>
+      <li>To have it corrected, completed or updated.</li>
+      <li>To have it destroyed when no longer needed.</li>
+    </ol>
+    <div class="stack">
+      <div class="stat center"><div class="big">30 days</div><div class="lbl">to act on a request, extendable by 30 with notice and reasons</div></div>
+      <div class="card c-coral flat"><h4>For Wafi</h4><p class="small mb0">A guardian's request covers the log and the cache, not only the student system.</p></div>
+    </div>
+  </div>
+  <aside class="notes"><p>Sources: PDPL Article 4 (the rights) and Article 21 (respond within the period the Regulation sets); Implementing Regulation Article 3 (30 days, one extension of 30 with prior notice and reasons). Ask: if a guardian asks for everything Rawafid holds about their child, where must Dana look? Every store on the Lab 1.1 diagram.</p></aside>
+</section>
+
+<section class="slide" id="destroy-when-done" data-lo="LO1" data-n="37" data-session="4">
+  <div class="kicker">Retention</div>
+  <h2>Destroy data once its purpose is met, unless a law says keep it</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>Destroy without undue delay once the purpose no longer needs the data (Article 18).</li>
+      <li>Keep it only for a legal basis with a set period, or a case before a court.</li>
+      <li>Data with nothing that identifies the person may be kept.</li>
+      <li>Destroy every copy, backups included, and tell those you disclosed it to.</li>
+    </ul>
+    <div class="card c-teal"><h4>A rule has three parts</h4><p class="small mb0"><b>Period</b> (90 days), <b>start</b> (the date of the enquiry), <b>method</b> (scheduled deletion of rows and backups).</p></div>
+  </div>
+  <aside class="notes"><p>Sources: PDPL Article 18; the Destruction Guideline, first section (when to destroy, conditions, techniques such as overwriting and secure erasure). Where another law sets the period (financial records, education records), the course does not quote a number: the rule names who confirms it. Lab 1.4 writes the six rules.</p></aside>
+</section>
+
+<section class="slide" id="log-past-its-rule" data-lo="LO1" data-n="38" data-session="4">
+  <div class="kicker">Measured in Lab 1.4</div>
+  <h2>Under a 90-day rule, 78% of Wafi's log should not exist</h2>
+  <div class="cols cols-2">
+    <div class="stat center"><div class="big">1,027</div><div class="lbl">of 1,315 log rows older than 90 days</div></div>
+    <ul class="bullets">
+      <li>The oldest row is from the pilot's first week, 2025-09-14.</li>
+      <li>Each row holds a full prompt: a child's record.</li>
+      <li>The rule is 60 days for complaints to arrive plus 30 to investigate them.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>From the solution run: 1,027 of 1,315 rows (78%) are past a 90-day rule. The period is Rawafid's decision, justified by the purpose of the log (the DPO agreed complaints arrive within 60 days). A participant who picks 30 days should be asked how a complaint on day 45 would then be investigated.</p></aside>
+</section>
+
+<section class="slide" id="breach-three-stages" data-lo="LO1" data-n="39" data-session="4">
+  <div class="kicker">The breach guide</div>
+  <h2>A breach has three stages: notify, contain, document</h2>
+  <div class="flow">
+    <div class="step c-coral"><b>1 · Notify SDAIA</b>within 72 hours of becoming aware, when harm is expected</div>
+    <div class="arrow">→</div>
+    <div class="step c-teal"><b>2 · Contain</b>stop it, change what can be changed, tell the data subjects</div>
+    <div class="arrow">→</div>
+    <div class="step c-purple"><b>3 · Document</b>keep the notice, the actions and the lessons</div>
+  </div>
+  <div class="callout warn mt"><b>The clock starts at awareness,</b> not on the day of the breach and not when the investigation ends.</div>
+  <aside class="notes"><p>Source: Personal Data Breach Incidents Procedural Guide (October 2024), and Implementing Regulation (72 hours). Notification goes through the national data governance platform, which requires registration: do that before an incident. The guide also says a report under the National Cybersecurity Authority's rules does not replace this one.</p></aside>
+</section>
+
+<section class="slide" id="five-contents" data-lo="LO1" data-n="40" data-session="4">
+  <div class="kicker">What the notice to SDAIA holds</div>
+  <h2>Five contents, written while the clock runs</h2>
+  <table class="t small">
+    <tr><th></th><th>Content</th><th>For Rawafid's incident</th></tr>
+    <tr><td>1</td><td>What happened, when, how, and when you became aware</td><td>Log export on a shared drive; found 2026-11-09</td></tr>
+    <tr><td>2</td><td>Categories and numbers of data subjects; kinds of data</td><td>434 students, 396 guardians; IDs, health notes</td></tr>
+    <tr><td>3</td><td>Risks, remedial actions, measures against recurrence</td><td>Link removed; prompts minimised; log at 90 days</td></tr>
+    <tr><td>4</td><td>Whether data subjects are or will be notified</td><td>Yes, without undue delay</td></tr>
+    <tr><td>5</td><td>Contact of the controller or its DPO</td><td>Nasser Al-Mansour</td></tr>
+  </table>
+  <aside class="notes"><p>Numbers from Lab 1.4's run on the export's date range: 541 log rows, 396 guardians, 434 students, 48 rows whose prompt carries a health note, 434 student national IDs. Awareness on Monday 2026-11-09 means the deadline falls on the labs' today, Thursday 2026-11-12. That is deliberate: say it at the end of the lab.</p></aside>
+</section>
+
+<section class="slide" id="records-of-processing" data-lo="LO1" data-n="41" data-session="4">
+  <div class="kicker">The record that ties it together</div>
+  <h2>A record of processing lists what you have just mapped</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>Controller and DPO contacts; the purpose.</li>
+      <li>Categories of data subjects and of data.</li>
+      <li>Who receives it; transfers outside the Kingdom.</li>
+      <li>Retention period per category; security measures.</li>
+    </ul>
+    <div class="card c-purple"><h4>Kept in writing, up to date</h4><p class="small mb0">Available to the competent authority on request, and kept five years after the activity ends.</p></div>
+  </div>
+  <aside class="notes"><p>Sources: PDPL Article 31; Personal Data Processing Activities Records Guideline (contents, five years, the template with mandatory and optional fields). The capstone asks for one record entry for Wafi: the diagram of Lab 1.1, the bases of Lab 1.2 and the rules of Lab 1.4 fill most of it.</p></aside>
+</section>
+
+<section class="slide" id="check-seventy-two-hours" data-lo="LO1" data-n="42" data-session="4">
+  <div class="kicker">Checkpoint</div>
+  <h2>When must Rawafid have notified SDAIA?</h2>
+  <div class="quiz" data-type="single" data-lo="LO1" data-id="check-seventy-two-hours-q1">
+    <p class="lead">The export went on the shared drive on 2026-10-21. Dana found the public link and told the DPO on 2026-11-09. Harm to the children is expected. By when must SDAIA be notified?</p>
+    <div class="opts">
+      <div class="opt" data-why="Starts the clock on the day of the breach rather than on awareness" data-k="A">By 2026-10-24, three days after the upload</div>
+      <div class="opt" data-why="Thinks the notice waits until the investigation is complete" data-k="B">When the investigation is finished</div>
+      <div class="opt" data-ok data-k="C">Within 72 hours of 2026-11-09, so by 2026-11-12</div>
+      <div class="opt" data-why="Believes only a confirmed misuse of the data triggers a notice" data-k="D">Only if someone is shown to have misused the data</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> The guide counts the 72 hours from the time the controller becomes aware, when the breach is expected to harm the data or the data subjects.</div>
+  </div>
+  <aside class="notes"><p>Answer: C. A is the most common mistake: the breach started earlier, but the obligation starts with awareness. Discuss briefly why D is wrong: the test is expected harm, and children's IDs and health notes on a public link meet it.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-1-4" data-auto="lab" data-lab="1.4" data-label="Lab 1.4" data-n="43" data-session="4">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">Lab 1.4 · 25 min</div><h2>Retention and a seeded breach</h2><p class="lead small">Write a retention rule per store and walk a seeded breach through the PDPL breach guideline.</p><a class="nb" href="../labs/D1_4_write_retention_rule.ipynb">D1_4_write_retention_rule.ipynb</a></div><ul class="checklist"><li>Write a retention rule per store <span class="min">6 min</span></li><li>Count log rows past the rule <span class="min">4 min</span></li><li>Read the incident and size the breach <span class="min">5 min</span></li><li>Draft the notice to SDAIA with its five contents <span class="min">6 min</span></li><li>Decide the notice to guardians <span class="min">4 min</span></li><li class="stretch">✱ Stretch: Add the breach to the documentation record with its corrective actions</li></ul></div>
+  <aside class="notes"><p>Watch for: rules without a start event ("90 days" from what?); a breach size that counts rows instead of distinct children; a deadline computed from the upload date. Expected: 1,027 rows past the rule; 541 rows, 396 guardians, 434 students, 48 health-note rows; deadline 2026-11-12. End the lab by pointing out that the deadline is today.</p></aside>
+</section>
+
+<!-- ======================= CLOSE ======================= -->
+<section class="slide" id="wrap-up" data-n="44" data-session="4">
+  <div class="kicker">Day 1 · Three things to keep</div>
+  <h2>Map everything, send the minimum, and test before you call it anonymous</h2>
+  <div class="cols cols-3 gap-s">
+    <div class="card c-teal"><h4>The log is a store</h4><p class="small mb0">Prompts, logs, caches and the provider all hold personal data, with all the obligations.</p></div>
+    <div class="card c-cyan"><h4>Facts, not records</h4><p class="small mb0">One question needed 5 of 21 fields. Basis and purpose decide which.</p></div>
+    <div class="card c-coral"><h4>Pseudonymised is personal</h4><p class="small mb0">96% came back by a join. Measure k, write it down, and keep the key apart.</p></div>
+  </div>
+  <aside class="notes"><p>Ask each table to name one change they would make to a build of their own tomorrow. Collect two or three answers. Then point at the four lab outputs: diagram, field list, pseudonymisation record, retention table and breach notice. They go into the build pack.</p></aside>
+</section>
+
+<section class="slide dark" id="next" data-n="45" data-session="4">
+  <div class="kicker">Before Day 2</div>
+  <h2>Tomorrow: classify the data, then decide where it may go</h2>
+  <ul class="bullets">
+    <li>Read the Data Classification Policy's table of levels and its impact categories (about 15 minutes).</li>
+    <li>Keep your Lab 1.1 diagram and Lab 1.2 field list: Lab 2.2 applies tomorrow's rule to the same prompt.</li>
+    <li>Finish any Day 1 lab: the reference results in <code>data/reference/</code> let you start Day 2 without them.</li>
+  </ul>
+  <aside class="notes"><p>The pre-work guide (labs/PREWORK.md) lists the policy with its address; it is on SDAIA's regulations page. Remind the room that Day 2 opens with a short review checkpoint on today.</p></aside>
+</section>
+</div>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-15T04:50:12Z","version":"2027.1.0","commit":"b84fcbb"},"course":{"id":"fn-106","code":"FN-106","title":"Responsible Data and AI Practice in the Kingdom","track":"foundations","lang":"en","dir":"ltr","url":"https://sdaiaacademy.github.io/fn-106/","repo":"SDAIAAcademy/fn-106","home":"../index.html"},"deck":{"id":"day1","kind":"day","day":1,"label":"Day 1","title":"Personal data and the law","prev":null,"next":"day2.html","md":"day1.md","alt":{}},"sessions":[{"n":1,"label":"Session 1","title":"Where personal data flows in a build","slide":"s1","outcomes":["Identify the personal and sensitive data a build reads, sends, logs and stores","Draw a data flow diagram of an AI assistant with every store and external party","Name the PDPL obligation that applies at each step of the flow"],"minutes":50,"lab":{"id":"1.1","title":"Trace Wafi's personal data","minutes":25,"href":"../labs/D1_1_map_every_field.ipynb"}},{"n":2,"label":"Session 2","title":"Lawful basis and minimisation","slide":"s2","outcomes":["Choose a legal basis and a purpose for each flow of a build","Test each field against the purpose and remove what it does not need","Rewrite a prompt builder so it sends the minimum"],"minutes":50,"lab":{"id":"1.2","title":"Lawful basis and minimum fields","minutes":25,"href":"../labs/D1_2_set_lawful_basis.ipynb"}},{"n":3,"label":"Session 3","title":"Pseudonymisation and its limits","slide":"s3","outcomes":["Pseudonymise identifiers with a keyed hash and keep the key apart","Attempt re-identification by joining on quasi-identifiers","Generalise quasi-identifiers and measure the remaining risk"],"minutes":50,"lab":{"id":"1.3","title":"Pseudonymise, then attack","minutes":25,"href":"../labs/D1_3_pseudonymise_guardian_student.ipynb"}},{"n":4,"label":"Session 4","title":"Rights, retention and breaches","slide":"s4","outcomes":["Explain the data subject's rights and who exercises them for a minor","Write a retention rule per store and find what is kept too long","Walk a breach through notice, containment and documentation"],"minutes":50,"lab":{"id":"1.4","title":"Retention and a seeded breach","minutes":25,"href":"../labs/D1_4_write_retention_rule.ipynb"}}],"slides":[{"id":"title","n":1,"title":"Personal data and the law","kind":"title","session":0,"hash":"d619c630","md":"#### [day1#title] Personal data and the law\n\n*SDAIA Academy · Responsible Data and AI Practice in the Kingdom*\n\nDay 1: Map, justify, minimise, pseudonymise and keep the data of one build\n\nData & AI Foundations Track · 3 teaching days + capstone day · 4 sessions · 4 labs · FN-106","notes":"Welcome the room. Ask two questions by show of hands: who has written code that calls a language model, and who has ever been asked \"is this allowed?\" about data in a project. The course is for the second question. Participants read Python (FN-101) and know what a language model does (FN-105); nobody needs a law degree. Rhythm of each day: four sessions, each with about 20 minutes of ideas, a checkpoint and a 25-minute lab.","minutes":null,"lo":[]},{"id":"three-days-one-build","n":2,"title":"Three days on one build, then a review of your build pack","kind":"content","session":0,"hash":"b1c46071","md":"#### [day1#three-days-one-build] Three days on one build, then a review of your build pack\n\n*The course at a glance*\n\n- **Day 1 · The law.** Where personal data flows, the legal basis, minimisation, pseudonyms, retention and breaches.\n- **Day 2 · Classify and share.** Classification levels, what may reach an external model, sharing, licences.\n- **Day 3 · Ethics and risk.** Principles as tests, Arabic and English fairness, the risk register, the disclosure.\n- **Day 4 · Capstone.** A responsible build pack in a public repository, defended in ten minutes.\n\n> **Every lab adds a page to the pack.** By Day 3 you hold the registers, the code, the test report and the disclosure the capstone asks for.","notes":"One sentence per day. Stress that the capstone is assembled from the labs: nothing in it is new work, but all of it must be correct and consistent. In the review the assessor changes one fact of the case (a new data field, a transfer abroad) and the participant revises the classification and risk entries live.","minutes":null,"lo":[]},{"id":"rawafid-and-wafi","n":3,"title":"Rawafid Schools Group and Wafi, its parent-enquiry assistant","kind":"content","session":0,"hash":"ca676e7c","md":"#### [day1#rawafid-and-wafi] Rawafid Schools Group and Wafi, its parent-enquiry assistant\n\n*One case all week*\n\nA fictional private school group: four campuses, about 1,200 students, parents who write in Arabic and English. Its systems lead built **Wafi** (وافي), which drafts replies from attendance and fee records with a language model.\n\n- **Dr. Amal Al-Sayari.** Group director of schools. Owns the build and its risks.\n- **Nasser Al-Mansour.** Data protection officer. Your client this week.\n- **Dana Al-Saleh.** Systems lead. Built Wafi fast, and it shows.","notes":"Two more people appear later: Layla Haddad, head of parent relations, who reviews escalated replies, and Osama Al-Qurashi, fees manager. Every record is synthetic, generated with seed 106 by labs/prepare_data.py; the national IDs and mobile numbers have the right shape and belong to nobody. The labs' \"today\" is Thursday 2026-11-12. Do not reveal the planted problems: the labs find them.","minutes":null,"lo":[]},{"id":"how-this-course-works","n":4,"title":"Read the official text, then turn it into code and records","kind":"content","session":0,"hash":"97d5c188","md":"#### [day1#how-this-course-works] Read the official text, then turn it into code and records\n\n*How this course works*\n\n- **Primary sources.** Every rule on a slide comes from the instrument itself, named in the notes. Commentary is not a source.\n- **Evidence, not opinion.** A finding is a number from a lab run: fields sent, names re-identified, a gap between languages.\n- **Synthetic data only.** No real person enters any lab, prompt or assistant. That is what lets us use a free hosted model.\n\n> **AI policy.** AI off for the scenario check and each first classification. An assistant may help you read the instruments; check every answer against the official text. No real personal data in any assistant.","notes":"Read the AI policy aloud. It comes from the catalog entry. The reason for the AI-off parts: the supervised scenario check (30% of the grade) is taken without assistance, and the first classification is a judgement you must be able to defend without a tool. Ask the room why an assistant's summary of the PDPL is not good enough: it may be out of date, invent an article number, or blur what the law says with what a blog says.","minutes":null,"lo":[]},{"id":"setup-check","n":5,"title":"Open the labs and run the setup check before the first lab","kind":"content","session":0,"hash":"4c169fc9","md":"#### [day1#setup-check] Open the labs and run the setup check before the first lab\n\n*Lab environment*\n\n1. **Colab:** open a notebook from the course page; its first cell clones the repository.\n2. **Laptop:** clone, then `uv sync` in `labs/` and open Jupyter.\n3. No key is needed: Wafi answers through a **scripted stand-in model** unless you set a free OpenRouter key.\n4. Every lab starts from supplied files. None needs another lab's result.\n\n```bash\n# file: terminal (laptop)\ngit clone https://github.com/SDAIAAcademy/fn-106\ncd fn-106/labs\nuv sync\nuv run jupyter lab\n```","notes":"The setup check is the first cell of Lab 1.1: it imports rawafid and wafi and loads the records. Common failures: a path too long on Windows (set UV_PROJECT_ENVIRONMENT to a short folder before uv sync), a proxy that blocks GitHub (use Colab). With a free OpenRouter key in OPENROUTER_API_KEY, Wafi drafts with a hosted free model; without one, or when it answers 401 or 429, the stand-in answers and the result says model \"stand-in\". The stand-in is not a language model: it fills templates from the facts in the prompt.","minutes":null,"lo":[]},{"id":"agenda","n":6,"title":"Personal data and the law","kind":"content","session":0,"hash":"76d577ab","md":"#### [day1#agenda] Personal data and the law\n\n*Today*\n\n- **Session 1 · Where personal data flows in a build**: Prompts, logs, caches and the model provider are all places where personal data goes\n- **Session 2 · Lawful basis and minimisation**: Every flow needs a legal basis and a purpose, and every field must earn its place against that purpose\n- **Session 3 · Pseudonymisation and its limits**: A pseudonym hides a name, not a person: quasi-identifiers link records back\n- **Session 4 · Rights, retention and breaches**: Rights, retention rules and the breach procedure turn the law into dates and duties","notes":"","minutes":null,"lo":[]},{"id":"s1","n":7,"title":"Where personal data flows in a build","kind":"section","session":1,"hash":"1f00ee3d","md":"#### [day1#s1] Where personal data flows in a build\n\n*Session 1*\n\n- Identify the personal and sensitive data a build reads, sends, logs and stores\n- Draw a data flow diagram of an AI assistant with every store and external party\n- Name the PDPL obligation that applies at each step of the flow","notes":"","minutes":null,"lo":["LO1"]},{"id":"what-personal-data-is","n":8,"title":"Personal data is anything that can identify a person, directly or not","kind":"content","session":1,"hash":"ede54c72","md":"#### [day1#what-personal-data-is] Personal data is anything that can identify a person, directly or not\n\n*The law's starting point*\n\n- **Directly:** a name, a national ID number, a mobile number.\n- **Indirectly:** a campus, a grade and a date of birth together.\n- **Sensitive data** is a named list in the law: racial or ethnic origin, beliefs, criminal and security data, biometric and genetic data, health data, and data showing a parent is unknown.\n- It applies to processing in the Kingdom, and from abroad for people living here.\n\n- **At Rawafid.** A note \"asthma flare\" on an absence is health data about a child. So is \"insulin at lunch\" in a student file.","notes":"Sources: Personal Data Protection Law, Article 1 (definitions of personal data and sensitive data) and Article 2 (scope). The AI Ethics Principles use a longer list that also names credit and location data; follow the law's own list when you classify. Do not read the list aloud in full; point to it. The key move for engineers: indirect identification. Session 3 proves it with a join.","minutes":null,"lo":["LO1"]},{"id":"who-is-who","n":9,"title":"The controller decides, the processor acts for it, the data subject has the rights","kind":"content","session":1,"hash":"46b672a4","md":"#### [day1#who-is-who] The controller decides, the processor acts for it, the data subject has the rights\n\n*Three roles*\n\n| Role | In the law | At Rawafid |\n| --- | --- | --- |\n| **Controller** | Decides why and how data is processed; carries the obligations | Rawafid Schools Group |\n| **Processor** | Processes for the controller; chosen only if it gives the necessary guarantees | The model provider, the hosting company |\n| **Data subject** | The person the data is about, or their legal guardian | Each student, represented by a guardian; each guardian |\n\n> **A minor's rights are exercised by the guardian,** and the guardian's authority must be verified.","notes":"Sources: PDPL Article 8 (choosing processors that give guarantees, and monitoring them); Implementing Regulation Article 13 (the legal guardian acts in the child's best interest, and the controller verifies guardianship). Ask: is the hosted model provider a controller or a processor? A processor, as long as it uses the prompts only to answer Rawafid. That is a contract question, which is why Lab 1.4 writes the provider's retention into the contract.","minutes":null,"lo":["LO1"]},{"id":"stores-you-forget","n":10,"title":"Prompts, logs and caches are stores of personal data too","kind":"content","session":1,"hash":"aee122fb","md":"#### [day1#stores-you-forget] Prompts, logs and caches are stores of personal data too\n\n*Where an AI build keeps data*\n\n- **Records.** The systems the build reads: students, guardians, attendance, fees.\n- **Prompts.** Everything the build sends to the model leaves your systems.\n- **Logs.** Often the full prompt and the reply, kept \"for debugging\", for ever.\n- **Caches and queues.** Replies kept for reuse; drafts waiting for staff.\n\n> **What goes wrong.** Teams map the database and forget the log. The log usually holds more personal data per row than any table.","notes":"Ask the room to name a system they built and where its logs go. Most logging libraries write whole request bodies by default. The model provider is a fifth store you do not control: its retention is set by its terms, which is why Lab 1.1's stretch adds it.","minutes":null,"lo":["LO1"]},{"id":"wafi-pipeline","n":11,"title":"One parent message passes through nine steps","kind":"content","session":1,"hash":"d859652d","md":"#### [day1#wafi-pipeline] One parent message passes through nine steps\n\n*The build as Dana wrote it*\n\n1. **1 · Intake** mobile and message\n2. **2 to 4 · Look up** guardian, child, attendance, fees\n3. **5 · Prompt** to the model provider\n4. **6 · Draft** back from the model\n5. **7 to 9 · Keep** review queue, log, cache\n\nLab 1.1 runs one enquiry through this pipeline with a tracer that records every field at every step.","notes":"Show labs/wafi.py on screen, the handle method: each trace call is one step. Open the file, scroll, do not explain every line. The point: the pipeline is short and ordinary, and still every step touches personal data.","minutes":null,"lo":["LO1"]},{"id":"twenty-one-fields","n":12,"title":"One question about absences sends 21 fields out of Rawafid","kind":"content","session":1,"hash":"3d73037a","md":"#### [day1#twenty-one-fields] One question about absences sends 21 fields out of Rawafid\n\n*Measured in Lab 1.1*\n\n- **21** fields in one prompt\n- **8** of them identifiers\n- **1** sensitive: the health notes\n\nThe prompt carries the whole student record, the guardian's name, national ID and mobile, and three counts. The question needed one count.","notes":"Numbers from the solution run of Lab 1.1: 37 distinct fields in the trace, 21 sent to the model provider, eight of them identifiers (student number, both names, the student's national ID, guardian number, the guardian's name, national ID and mobile), and the health notes. Do not show the field list yet: participants build it in the lab.","minutes":null,"lo":["LO1"]},{"id":"data-flow-diagram","n":13,"title":"A data flow diagram shows every place data goes and what goes there","kind":"content","session":1,"hash":"0802fbf7","md":"#### [day1#data-flow-diagram] A data flow diagram shows every place data goes and what goes there\n\n*The tool for this session*\n\n```\n# file: Mermaid (part)\nflowchart LR\n  Wafi([Wafi])\n  ModelProvider[\"model provider\"]\n  WafiEnquiryLog[\"Wafi enquiry log\"]\n  Wafi -->|\"5 send prompt: send 21\"| ModelProvider\n  Wafi -->|\"8 log: log 4\"| WafiEnquiryLog\n```\n\n- Nodes: the build, each store, each outside party.\n- Edges: one per step, labelled with what moves.\n- Annotate each edge with the obligation that applies there.\n- Mermaid is text: it lives in the repository and changes with the code. draw.io is the drawing alternative.","notes":"The Mermaid text here is the start of the lab's output. Paste it into mermaid.live to show it rendered. The LO1 evidence in the assessment is exactly this: an annotated diagram naming the obligation at each step, checked against the reference.","minutes":null,"lo":["LO1"]},{"id":"obligations-on-the-diagram","n":14,"title":"Each step of the flow carries its own obligation","kind":"content","session":1,"hash":"c9f86f5c","md":"#### [day1#obligations-on-the-diagram] Each step of the flow carries its own obligation\n\n*From diagram to duties*\n\n| Step | Obligation (Personal Data Protection Law) |\n| --- | --- |\n| Intake | Tell the guardian the basis, the purpose and who receives the data (Article 13) |\n| Look up | A legal basis and purpose (Articles 5, 6, 10); accuracy (Article 14) |\n| Prompt | Minimum content (Article 11); security (Article 19); transfer abroad (Article 29) |\n| Draft | Accuracy before anything is sent to the guardian (Article 14) |\n| Log and cache | Destruction when no longer needed (Article 18); security (Article 19) |\n| Whole activity | A record of processing (Article 31) |","notes":"Sources: PDPL Articles 5, 6, 10, 11, 13, 14, 18, 19, 29 and 31, read in the SDAIA English text. This table is the menu of Lab 1.1, task 5. The two highlighted rows are the ones the lab's check insists on. Say that article numbers are for finding the text, not for reciting.","minutes":null,"lo":["LO1"]},{"id":"check-where-data-lives","n":15,"title":"Which store did Dana forget?","kind":"quiz","session":1,"hash":"831fe3d2","md":"#### [day1#check-where-data-lives] Which store did Dana forget?\n\n*Checkpoint*\n\n**Question:** Dana's data map lists the student system, the fee system and the model provider. Wafi writes every prompt to its enquiry log. What does the map miss?\n\n- A. Nothing: the provider is the only other store\n- B. The log, which holds the full prompt of every enquiry\n- C. Only debug output, which the law does not cover\n- D. The cache, but caches hold no personal data","notes":"Answer: B. If the room picks C, ask whether a printout of a student file stops being personal data because a developer printed it. The cache does hold personal data too, which makes D tempting for the wrong reason.","minutes":null,"lo":["LO1"]},{"id":"lab-1-1","n":16,"title":"Trace Wafi's personal data","kind":"lab","session":1,"hash":"f2a48858","md":"#### [day1#lab-1-1] Trace Wafi's personal data\n\nLab 1.1 · 25 min\n\nMap every field the assistant reads, sends, logs and stores on a data flow diagram.\n\n[D1_1_map_every_field.ipynb](https://sdaiaacademy.github.io/fn-106/labs/D1_1_map_every_field.ipynb)\n\n- [ ] Run one enquiry through the instrumented Wafi (4 min)\n- [ ] List every field read, sent, logged and stored (7 min)\n- [ ] Flag the identifiers and the sensitive fields (4 min)\n- [ ] Draw the data flow diagram in Mermaid (5 min)\n- [ ] Name the PDPL obligation at each step (5 min)\n- [ ] ✱ Stretch: Add the hosted provider's own logs as a store you do not control","notes":"Walk the room. Common problems: the inventory counts events instead of fields (they get 9 rows, not 37); flag() puts prompt.hash under personal. Expected numbers: 21 fields sent, 8 identifiers, one sensitive field sent. Early finishers: the stretch, the provider's own logs. Remind them the obligations menu is in the notebook and that the check looks at steps 5 and 8.","minutes":null,"lo":[]},{"id":"s2","n":17,"title":"Lawful basis and minimisation","kind":"section","session":2,"hash":"5892654b","md":"#### [day1#s2] Lawful basis and minimisation\n\n*Session 2*\n\n- Choose a legal basis and a purpose for each flow of a build\n- Test each field against the purpose and remove what it does not need\n- Rewrite a prompt builder so it sends the minimum","notes":"","minutes":null,"lo":["LO1","LO4"]},{"id":"consent-is-the-default","n":18,"title":"Consent is the default; the law lists when processing runs without it","kind":"content","session":2,"hash":"57a59f7c","md":"#### [day1#consent-is-the-default] Consent is the default; the law lists when processing runs without it\n\n*The rule and its exceptions*\n\n- **Consent (Article 5).** No processing and no change of purpose without the data subject's consent, which can be withdrawn at any time. For a minor, the guardian consents.\n\n- **Without consent (Article 6).** The data subject's actual interest when contact is impossible; another law or an agreement the data subject is party to; a public entity's security or judicial needs; the controller's legitimate interest.\n- **The catch.** Legitimate interest never covers sensitive data.","notes":"Sources: PDPL Articles 5 and 6; Implementing Regulation Article 16 sets the controls of legitimate interest (an assessment of purpose, necessity and the data subject's rights). Also Article 7: consent may not be made a condition of a service unless the service needs that processing. Ask: Rawafid's enrolment contract is signed by the guardian. Which basis covers answering their question about their child?","minutes":null,"lo":["LO1"]},{"id":"five-flows-five-bases","n":19,"title":"Each flow gets its own basis and purpose","kind":"content","session":2,"hash":"efe7144e","md":"#### [day1#five-flows-five-bases] Each flow gets its own basis and purpose\n\n*Wafi's five flows*\n\n| Flow | Basis | Purpose |\n| --- | --- | --- |\n| F1 · answer the guardian | contract | The enrolment contract the guardian signed |\n| F2 · draft with a model | contract | The provider acts as processor for F1 |\n| F3 · keep a log | legitimate interest | Quality and complaints, **without sensitive data** |\n| F4 · cache replies | legitimate interest | Avoid repeated model calls |\n| F5 · add summer-camp offers | consent | Advertising needs prior consent and a way to stop |","notes":"This is the reference of Lab 1.2, task 1. F5 rests on PDPL Articles 25 and 26 (advertising and marketing need consent; sensitive data never for marketing). The interesting row is F3: legitimate interest is possible only once the log no longer holds health notes, so the basis forces the minimisation. Reveal this slide after the lab if the room is quick; otherwise use it to set the lab up.","minutes":null,"lo":["LO1"]},{"id":"purpose-limits-content","n":20,"title":"The purpose decides which fields may be collected and sent","kind":"content","session":2,"hash":"598f5080","md":"#### [day1#purpose-limits-content] The purpose decides which fields may be collected and sent\n\n*Minimisation*\n\n- The purpose must relate directly to the controller's purposes (Article 11).\n- Content is limited to **the minimum the purpose needs**.\n- Data not needed any more is no longer collected, and what was collected is destroyed.\n- Data is processed only for the purpose it was collected for, with listed exceptions (Article 10).\n\n- **The guideline's test, per field.** Actual need, purpose, method of collection, content, destruction, retention. If a field fails \"actual need\", it goes.","notes":"Sources: PDPL Articles 10 and 11; the Minimum Personal Data Guideline, first section (six principles) and its examples. Tell the guideline's example in one breath: a recruiter that asks every applicant for health data fails the test; an employer that keeps the blood type of field staff in dangerous work passes it. Necessity is about this purpose, not about possible future use.","minutes":null,"lo":["LO1","LO4"]},{"id":"field-by-field","n":21,"title":"Five of the 21 fields are needed to answer the question","kind":"content","session":2,"hash":"835a27e2","md":"#### [day1#field-by-field] Five of the 21 fields are needed to answer the question\n\n*Measured in Lab 1.2*\n\n- **Keep.** The child's first name, absences this term, late arrivals this term, the fee balance, the message.\n- **Drop: 16 fields.** Both national IDs, the guardian's mobile and name, date of birth, nationality, campus, section, bus route, health notes and the internal IDs.\n\n| Item | Value |\n| --- | --- |\n| Before | 678 characters |\n| After | 286 characters |","notes":"From the solution run of Lab 1.2: 21 fields become 5; on ten logged enquiries all ten replies are unchanged, and no minimised prompt carries a national ID, a mobile number or a health note. The prompt length fell from 678 to 286 characters on the last enquiry: minimisation is also cheaper. A participant may keep the child's grade \"for context\": ask what question the grade answers.","minutes":null,"lo":["LO4"]},{"id":"minimised-builder","n":22,"title":"Send facts, not records","kind":"content","session":2,"hash":"cc51330c","md":"#### [day1#minimised-builder] Send facts, not records\n\n*The change in code*\n\n```python\n# file: build_prompt_min (Lab 1.2)\nname = (student[\"full_name_ar\"] if is_arabic(text) else student[\"full_name\"]).split()[0]\ndata = {\"first_name\": name, **facts}   # three counts, nothing else\nprompt = (\"You are Wafi ... using only these facts.\\n\"\n          f\"Facts: {json.dumps(data, ensure_ascii=False)}\\n\"\n          f\"Guardian message: {text}\")\n```\n\n> **Pattern.** Compute what the question needs inside your systems; send the answer's ingredients, never the source rows.","notes":"Contrast with build_prompt_v1 in wafi.py, which dumps the whole record as JSON. The pattern generalises: compute counts and totals locally, pass them in. Ask the room what still is personal data in the new prompt: the first name and the counts, which are about an identifiable child. Minimised is not anonymous.","minutes":null,"lo":["LO4"]},{"id":"children-and-guardians","n":23,"title":"For a child, the guardian consents and exercises the rights","kind":"content","session":2,"hash":"433fb10a","md":"#### [day1#children-and-guardians] For a child, the guardian consents and exercises the rights\n\n*A school's special case*\n\n- When a data subject lacks full legal capacity, the legal guardian acts in the child's best interest.\n- The controller takes appropriate steps to **verify the guardianship** before relying on it.\n- The guardian's consent may not harm the child's interests.\n- When the child reaches legal capacity, they exercise their rights themselves.\n\n> **What goes wrong.** Wafi finds the family by mobile number. A number shared between two families, or a parent without custody, gets another child's data.","notes":"Source: Implementing Regulation, Article 13. The planted problem behind the warning appears again in Lab 3.3 as harm H1. A Day 3 enquiry mentions a custody order: that one must go to a person, never to an automatic reply.","minutes":null,"lo":["LO1"]},{"id":"check-basis-and-health","n":24,"title":"Can the log run on legitimate interest?","kind":"quiz","session":2,"hash":"1c68bf80","md":"#### [day1#check-basis-and-health] Can the log run on legitimate interest?\n\n*Checkpoint*\n\n**Question:** Dana says the enquiry log runs on Rawafid's legitimate interest in quality checks. The log keeps full prompts, health notes included. Is that basis available?\n\n- A. Yes: quality checking is a legitimate interest\n- B. Yes: the enrolment contract covers all of Wafi\n- C. No: every flow needs the guardian's consent\n- D. No: legitimate interest excludes sensitive data","notes":"Answer: D. C is the most common wrong answer from people who know only consent: the law lists other bases. B is the subtle one: the contract covers answering the guardian, not keeping a quality log for months.","minutes":null,"lo":["LO1"]},{"id":"lab-1-2","n":25,"title":"Lawful basis and minimum fields","kind":"lab","session":2,"hash":"a39b025f","md":"#### [day1#lab-1-2] Lawful basis and minimum fields\n\nLab 1.2 · 25 min\n\nSet a lawful basis and purpose for each flow and remove the fields the purpose does not need.\n\n[D1_2_set_lawful_basis.ipynb](https://sdaiaacademy.github.io/fn-106/labs/D1_2_set_lawful_basis.ipynb)\n\n- [ ] Set a basis and purpose for each of the five flows (6 min)\n- [ ] Test each prompt field against the purpose (6 min)\n- [ ] Write the minimised prompt builder (7 min)\n- [ ] Check ten prompts and print the before-and-after list (6 min)\n- [ ] ✱ Stretch: Draft the consent wording for the one optional flow","notes":"Watch for: participants who keep the grade or the campus \"for context\" (ask which question it answers); builders that forget the Arabic first name, which makes the Arabic replies differ and fails the \"unchanged\" check. Expected: 21 fields to 5, ten of ten replies unchanged, zero leaks. Stretch: consent wording for F5, which must say that saying no changes nothing (Article 7).","minutes":null,"lo":[]},{"id":"s3","n":26,"title":"Pseudonymisation and its limits","kind":"section","session":3,"hash":"54271bf2","md":"#### [day1#s3] Pseudonymisation and its limits\n\n*Session 3*\n\n- Pseudonymise identifiers with a keyed hash and keep the key apart\n- Attempt re-identification by joining on quasi-identifiers\n- Generalise quasi-identifiers and measure the remaining risk","notes":"","minutes":null,"lo":["LO4"]},{"id":"three-words","n":27,"title":"Minimised, pseudonymised and anonymised are three different promises","kind":"content","session":3,"hash":"b9b06a89","md":"#### [day1#three-words] Minimised, pseudonymised and anonymised are three different promises\n\n*Three words people mix up*\n\n- **Minimised.** Fewer fields. What is left still identifies the person.\n- **Pseudonymised.** Identifiers replaced by codes; the extra information that links back is kept apart. **Still personal data.**\n- **Anonymised.** Irreversibly unidentifiable, directly and indirectly. Outside the law, **once tested** for re-identification.","notes":"Source: Personal Data Destruction, Anonymization and Pseudonymisation Guideline, sections two and three. The guideline says pseudonymised data remains personal data and protects less than anonymisation; anonymisation requires an impact assessment that evaluates re-identification. Ask: Dana took the names out. Which of the three did she do?","minutes":null,"lo":["LO4"]},{"id":"keyed-hash","n":28,"title":"Use a keyed hash, and keep the key away from the data","kind":"content","session":3,"hash":"315d0f1c","md":"#### [day1#keyed-hash] Use a keyed hash, and keep the key away from the data\n\n*How to pseudonymise*\n\n```python\n# file: Lab 1.3\ndef code(value, key):\n    mac = hmac.new(key.encode(), value.encode(),\n                   hashlib.sha256)\n    return \"P\" + mac.hexdigest()[:10]\n\nout = df.drop(columns=[\"full_name\",\n                       \"full_name_ar\", \"national_id\"])\nout[\"student_id\"] = out[\"student_id\"].map(\n    lambda v: code(v, KEY))\n```\n\n- Same person, same code: joins across files still work.\n- Without the key nobody can recompute a code.\n- A **plain** hash is not a pseudonym: anyone can hash every student number and look it up.","notes":"The stretch of Lab 1.3 shows the plain-hash failure: 1,200 student numbers are reversed in a fraction of a second. The lab key in data/lab_key.txt is for synthetic data only; in a real build the key lives in a secrets manager, not in the repository.","minutes":null,"lo":["LO4"]},{"id":"quasi-identifiers","n":29,"title":"Quasi-identifiers link a record back to a name","kind":"content","session":3,"hash":"69e5a3c0","md":"#### [day1#quasi-identifiers] Quasi-identifiers link a record back to a name\n\n*The attacker's tool*\n\n1. **Pseudonymised file** campus, grade, gender, date of birth, health notes\n2. **Join** on the four shared columns\n3. **Public page** sports-day results: name, campus, grade, gender, date of birth\n\nNo single column identifies a child. Together they almost always do.","notes":"The public page is Rawafid's own website: 320 names of children in races, with dates of birth for the age categories. The attack needs nothing but a dataframe merge. ARX is a full tool for this kind of test; in the lab a pandas join is enough.","minutes":null,"lo":["LO4"]},{"id":"ninety-six-percent","n":30,"title":"A join re-identifies 96% of the names on the sports-day page","kind":"content","session":3,"hash":"19fd564e","md":"#### [day1#ninety-six-percent] A join re-identifies 96% of the names on the sports-day page\n\n*Measured in Lab 1.3*\n\n- **308 / 320** page names matched to one record\n- **26** children whose health note is now known\n- **0** names in the pseudonymised file\n\n> **What goes wrong.** \"We removed the names\" is the most common description of a file that is still personal data.","notes":"Numbers from the solution run: 308 of 320 page rows match exactly one record (96.3%), and 26 of those children carry a health note in the file. Count page rows, not names: two children can share a name. The date of birth does most of the work.","minutes":null,"lo":["LO4"]},{"id":"generalise","n":31,"title":"Generalising cuts the attack to almost nothing, and leaves the rare child exposed","kind":"content","session":3,"hash":"de6e9375","md":"#### [day1#generalise] Generalising cuts the attack to almost nothing, and leaves the rare child exposed\n\n*The fix, and its limit*\n\n| Item | Value |\n| --- | --- |\n| Exact birth date and grade | 96% |\n| Birth year and grade band | 0.3% |\n\n- Birth date becomes birth year; grade becomes a band of three.\n- One page name still matches one record.\n- The smallest group holds **one** child: k = 1.\n- 33 of 121 groups hold fewer than five children.","notes":"From the solution run: after generalisation 1 of 320 page rows is re-identified, k = 1, and 33 of 121 groups are under five. k-anonymity: every combination of quasi-identifiers is shared by at least k records. The guideline names generalisation and aggregation as techniques; the measurement is what tells you whether they were enough. Suppression of small groups is the next step, and Day 2 meets the same problem in an aggregate table.","minutes":null,"lo":["LO4"]},{"id":"test-before-you-claim","n":32,"title":"Claim anonymity only after you have tried to break it","kind":"content","session":3,"hash":"750fa3d2","md":"#### [day1#test-before-you-claim] Claim anonymity only after you have tried to break it\n\n*The rule for any release*\n\n1. **1 · Remove** direct identifiers\n2. **2 · Attack** join with what is public\n3. **3 · Generalise** and suppress small groups\n4. **4 · Measure** rate and k, written down\n\n> **Your evidence for LO4:** the before-and-after field list, the pseudonymisation script and the re-identification result.","notes":"The guideline asks the controller to evaluate the effectiveness of anonymisation techniques and adjust them, and to keep records of anonymisation and pseudonymisation activities. Lab 1.3's last task writes that record. In the capstone review the assessor may add a field (say, the bus route) and ask what happens to k.","minutes":null,"lo":["LO4"]},{"id":"check-hashed-id","n":33,"title":"Is the contractor's file still personal data?","kind":"quiz","session":3,"hash":"b3b98613","md":"#### [day1#check-hashed-id] Is the contractor's file still personal data?\n\n*Checkpoint*\n\n**Question:** Dana sends a contractor the student file with names and national IDs removed and student numbers replaced by HMAC codes. Rawafid keeps the key. Under the PDPL guidelines, what is the file?\n\n- A. Personal data, because it can be linked back\n- B. Anonymous data, because no names remain\n- C. Outside the law, because the codes are encrypted\n- D. Personal data only while Rawafid holds it","notes":"Answer: A. If many pick B, return to the 96% slide. D is tempting to people who think obligations end at the door; in fact sharing the file is a disclosure with its own conditions (Day 2, Session 3).","minutes":null,"lo":["LO4"]},{"id":"lab-1-3","n":34,"title":"Pseudonymise, then attack","kind":"lab","session":3,"hash":"5c56cc13","md":"#### [day1#lab-1-3] Pseudonymise, then attack\n\nLab 1.3 · 25 min\n\nPseudonymise the guardian and student records and attempt to re-identify them by linkage.\n\n[D1_3_pseudonymise_guardian_student.ipynb](https://sdaiaacademy.github.io/fn-106/labs/D1_3_pseudonymise_guardian_student.ipynb)\n\n- [ ] Replace identifiers with keyed pseudonyms (6 min)\n- [ ] Join with the sports-day page on quasi-identifiers (6 min)\n- [ ] Measure the re-identification rate (4 min)\n- [ ] Generalise birth date and grade, measure again (6 min)\n- [ ] Record k and the residual risk (3 min)\n- [ ] ✱ Stretch: Show that an unkeyed hash of a student number is reversed by trying every number","notes":"AI off for the first attempt at the join. Watch for: grouping by name instead of page row (gives 66%, because names repeat); generalise() that fails on the page because it has no section column. Expected: 308 of 320 (96%), 26 health notes, after generalisation 1 of 320, k = 1. Stretch: reverse a plain SHA-256 of the student numbers by trying all 1,200.","minutes":null,"lo":[]},{"id":"s4","n":35,"title":"Rights, retention and breaches","kind":"section","session":4,"hash":"4e2c3cbb","md":"#### [day1#s4] Rights, retention and breaches\n\n*Session 4*\n\n- Explain the data subject's rights and who exercises them for a minor\n- Write a retention rule per store and find what is kept too long\n- Walk a breach through notice, containment and documentation","notes":"","minutes":null,"lo":["LO1"]},{"id":"five-rights","n":36,"title":"Five rights, answered within 30 days","kind":"content","session":4,"hash":"c906877d","md":"#### [day1#five-rights] Five rights, answered within 30 days\n\n*What the data subject may ask*\n\n1. To be told the legal basis and purpose.\n2. To access their data.\n3. To obtain it in a readable, clear format.\n4. To have it corrected, completed or updated.\n5. To have it destroyed when no longer needed.\n\n**30 days** to act on a request, extendable by 30 with notice and reasons\n\n- **For Wafi.** A guardian's request covers the log and the cache, not only the student system.","notes":"Sources: PDPL Article 4 (the rights) and Article 21 (respond within the period the Regulation sets); Implementing Regulation Article 3 (30 days, one extension of 30 with prior notice and reasons). Ask: if a guardian asks for everything Rawafid holds about their child, where must Dana look? Every store on the Lab 1.1 diagram.","minutes":null,"lo":["LO1"]},{"id":"destroy-when-done","n":37,"title":"Destroy data once its purpose is met, unless a law says keep it","kind":"content","session":4,"hash":"bad2c269","md":"#### [day1#destroy-when-done] Destroy data once its purpose is met, unless a law says keep it\n\n*Retention*\n\n- Destroy without undue delay once the purpose no longer needs the data (Article 18).\n- Keep it only for a legal basis with a set period, or a case before a court.\n- Data with nothing that identifies the person may be kept.\n- Destroy every copy, backups included, and tell those you disclosed it to.\n\n- **A rule has three parts.** **Period** (90 days), **start** (the date of the enquiry), **method** (scheduled deletion of rows and backups).","notes":"Sources: PDPL Article 18; the Destruction Guideline, first section (when to destroy, conditions, techniques such as overwriting and secure erasure). Where another law sets the period (financial records, education records), the course does not quote a number: the rule names who confirms it. Lab 1.4 writes the six rules.","minutes":null,"lo":["LO1"]},{"id":"log-past-its-rule","n":38,"title":"Under a 90-day rule, 78% of Wafi's log should not exist","kind":"content","session":4,"hash":"c7d3f2b6","md":"#### [day1#log-past-its-rule] Under a 90-day rule, 78% of Wafi's log should not exist\n\n*Measured in Lab 1.4*\n\n**1,027** of 1,315 log rows older than 90 days\n\n- The oldest row is from the pilot's first week, 2025-09-14.\n- Each row holds a full prompt: a child's record.\n- The rule is 60 days for complaints to arrive plus 30 to investigate them.","notes":"From the solution run: 1,027 of 1,315 rows (78%) are past a 90-day rule. The period is Rawafid's decision, justified by the purpose of the log (the DPO agreed complaints arrive within 60 days). A participant who picks 30 days should be asked how a complaint on day 45 would then be investigated.","minutes":null,"lo":["LO1"]},{"id":"breach-three-stages","n":39,"title":"A breach has three stages: notify, contain, document","kind":"content","session":4,"hash":"c3affa20","md":"#### [day1#breach-three-stages] A breach has three stages: notify, contain, document\n\n*The breach guide*\n\n1. **1 · Notify SDAIA** within 72 hours of becoming aware, when harm is expected\n2. **2 · Contain** stop it, change what can be changed, tell the data subjects\n3. **3 · Document** keep the notice, the actions and the lessons\n\n> **The clock starts at awareness,** not on the day of the breach and not when the investigation ends.","notes":"Source: Personal Data Breach Incidents Procedural Guide (October 2024), and Implementing Regulation (72 hours). Notification goes through the national data governance platform, which requires registration: do that before an incident. The guide also says a report under the National Cybersecurity Authority's rules does not replace this one.","minutes":null,"lo":["LO1"]},{"id":"five-contents","n":40,"title":"Five contents, written while the clock runs","kind":"content","session":4,"hash":"c34594f8","md":"#### [day1#five-contents] Five contents, written while the clock runs\n\n*What the notice to SDAIA holds*\n\n|  | Content | For Rawafid's incident |\n| --- | --- | --- |\n| 1 | What happened, when, how, and when you became aware | Log export on a shared drive; found 2026-11-09 |\n| 2 | Categories and numbers of data subjects; kinds of data | 434 students, 396 guardians; IDs, health notes |\n| 3 | Risks, remedial actions, measures against recurrence | Link removed; prompts minimised; log at 90 days |\n| 4 | Whether data subjects are or will be notified | Yes, without undue delay |\n| 5 | Contact of the controller or its DPO | Nasser Al-Mansour |","notes":"Numbers from Lab 1.4's run on the export's date range: 541 log rows, 396 guardians, 434 students, 48 rows whose prompt carries a health note, 434 student national IDs. Awareness on Monday 2026-11-09 means the deadline falls on the labs' today, Thursday 2026-11-12. That is deliberate: say it at the end of the lab.","minutes":null,"lo":["LO1"]},{"id":"records-of-processing","n":41,"title":"A record of processing lists what you have just mapped","kind":"content","session":4,"hash":"c2413a6a","md":"#### [day1#records-of-processing] A record of processing lists what you have just mapped\n\n*The record that ties it together*\n\n- Controller and DPO contacts; the purpose.\n- Categories of data subjects and of data.\n- Who receives it; transfers outside the Kingdom.\n- Retention period per category; security measures.\n\n- **Kept in writing, up to date.** Available to the competent authority on request, and kept five years after the activity ends.","notes":"Sources: PDPL Article 31; Personal Data Processing Activities Records Guideline (contents, five years, the template with mandatory and optional fields). The capstone asks for one record entry for Wafi: the diagram of Lab 1.1, the bases of Lab 1.2 and the rules of Lab 1.4 fill most of it.","minutes":null,"lo":["LO1"]},{"id":"check-seventy-two-hours","n":42,"title":"When must Rawafid have notified SDAIA?","kind":"quiz","session":4,"hash":"6933d448","md":"#### [day1#check-seventy-two-hours] When must Rawafid have notified SDAIA?\n\n*Checkpoint*\n\n**Question:** The export went on the shared drive on 2026-10-21. Dana found the public link and told the DPO on 2026-11-09. Harm to the children is expected. By when must SDAIA be notified?\n\n- A. By 2026-10-24, three days after the upload\n- B. When the investigation is finished\n- C. Within 72 hours of 2026-11-09, so by 2026-11-12\n- D. Only if someone is shown to have misused the data","notes":"Answer: C. A is the most common mistake: the breach started earlier, but the obligation starts with awareness. Discuss briefly why D is wrong: the test is expected harm, and children's IDs and health notes on a public link meet it.","minutes":null,"lo":["LO1"]},{"id":"lab-1-4","n":43,"title":"Retention and a seeded breach","kind":"lab","session":4,"hash":"3140adb2","md":"#### [day1#lab-1-4] Retention and a seeded breach\n\nLab 1.4 · 25 min\n\nWrite a retention rule per store and walk a seeded breach through the PDPL breach guideline.\n\n[D1_4_write_retention_rule.ipynb](https://sdaiaacademy.github.io/fn-106/labs/D1_4_write_retention_rule.ipynb)\n\n- [ ] Write a retention rule per store (6 min)\n- [ ] Count log rows past the rule (4 min)\n- [ ] Read the incident and size the breach (5 min)\n- [ ] Draft the notice to SDAIA with its five contents (6 min)\n- [ ] Decide the notice to guardians (4 min)\n- [ ] ✱ Stretch: Add the breach to the documentation record with its corrective actions","notes":"Watch for: rules without a start event (\"90 days\" from what?); a breach size that counts rows instead of distinct children; a deadline computed from the upload date. Expected: 1,027 rows past the rule; 541 rows, 396 guardians, 434 students, 48 health-note rows; deadline 2026-11-12. End the lab by pointing out that the deadline is today.","minutes":null,"lo":[]},{"id":"wrap-up","n":44,"title":"Map everything, send the minimum, and test before you call it anonymous","kind":"content","session":4,"hash":"15a5c443","md":"#### [day1#wrap-up] Map everything, send the minimum, and test before you call it anonymous\n\n*Day 1 · Three things to keep*\n\n- **The log is a store.** Prompts, logs, caches and the provider all hold personal data, with all the obligations.\n- **Facts, not records.** One question needed 5 of 21 fields. Basis and purpose decide which.\n- **Pseudonymised is personal.** 96% came back by a join. Measure k, write it down, and keep the key apart.","notes":"Ask each table to name one change they would make to a build of their own tomorrow. Collect two or three answers. Then point at the four lab outputs: diagram, field list, pseudonymisation record, retention table and breach notice. They go into the build pack.","minutes":null,"lo":[]},{"id":"next","n":45,"title":"Tomorrow: classify the data, then decide where it may go","kind":"content","session":4,"hash":"e3cbd8c5","md":"#### [day1#next] Tomorrow: classify the data, then decide where it may go\n\n*Before Day 2*\n\n- Read the Data Classification Policy's table of levels and its impact categories (about 15 minutes).\n- Keep your Lab 1.1 diagram and Lab 1.2 field list: Lab 2.2 applies tomorrow's rule to the same prompt.\n- Finish any Day 1 lab: the reference results in `data/reference/` let you start Day 2 without them.","notes":"The pre-work guide (labs/PREWORK.md) lists the policy with its address; it is on SDAIA's regulations page. Remind the room that Day 2 opens with a short review checkpoint on today.","minutes":null,"lo":[]}],"activities":[{"id":"check-where-data-lives-q1","slide":"check-where-data-lives","type":"single","prompt":"Dana's data map lists the student system, the fee system and the model provider. Wafi writes every prompt to its enquiry log. What does the map miss?","options":[{"key":"A","text":"Nothing: the provider is the only other store"},{"key":"B","text":"The log, which holds the full prompt of every enquiry"},{"key":"C","text":"Only debug output, which the law does not cover"},{"key":"D","text":"The cache, but caches hold no personal data"}],"correct":[1],"explanation":"A log that keeps prompts keeps everything the prompt carries. It is a store of personal data with the same obligations as a table.","misconceptions":["Treats the provider as the only place outside the database, and forgets Rawafid's own files","","Believes debugging data is not personal data because engineers made it","Thinks data is personal only while it sits in a database table"],"lo":["LO1"]},{"id":"check-basis-and-health-q1","slide":"check-basis-and-health","type":"single","prompt":"Dana says the enquiry log runs on Rawafid's legitimate interest in quality checks. The log keeps full prompts, health notes included. Is that basis available?","options":[{"key":"A","text":"Yes: quality checking is a legitimate interest"},{"key":"B","text":"Yes: the enrolment contract covers all of Wafi"},{"key":"C","text":"No: every flow needs the guardian's consent"},{"key":"D","text":"No: legitimate interest excludes sensitive data"}],"correct":[3],"explanation":"The law allows legitimate interest only when no sensitive data is processed. Remove the health notes from the log and the basis becomes available.","misconceptions":["Assumes any business reason makes an interest legitimate whatever data it covers","Confuses the enrolment contract, which covers answering, with every later use of the data","Thinks consent is the only basis, so every flow without consent is unlawful",""],"lo":["LO1"]},{"id":"check-hashed-id-q1","slide":"check-hashed-id","type":"single","prompt":"Dana sends a contractor the student file with names and national IDs removed and student numbers replaced by HMAC codes. Rawafid keeps the key. Under the PDPL guidelines, what is the file?","options":[{"key":"A","text":"Personal data, because it can be linked back"},{"key":"B","text":"Anonymous data, because no names remain"},{"key":"C","text":"Outside the law, because the codes are encrypted"},{"key":"D","text":"Personal data only while Rawafid holds it"}],"correct":[0],"explanation":"Pseudonymised data stays personal data: the key, and the quasi-identifiers, link it back to a child. Only tested, irreversible anonymisation leaves the law's scope.","misconceptions":["","Equates removing names with anonymisation","Thinks a cryptographic step takes data out of the law","Believes data stops being personal once it leaves the controller"],"lo":["LO4"]},{"id":"check-seventy-two-hours-q1","slide":"check-seventy-two-hours","type":"single","prompt":"The export went on the shared drive on 2026-10-21. Dana found the public link and told the DPO on 2026-11-09. Harm to the children is expected. By when must SDAIA be notified?","options":[{"key":"A","text":"By 2026-10-24, three days after the upload"},{"key":"B","text":"When the investigation is finished"},{"key":"C","text":"Within 72 hours of 2026-11-09, so by 2026-11-12"},{"key":"D","text":"Only if someone is shown to have misused the data"}],"correct":[2],"explanation":"The guide counts the 72 hours from the time the controller becomes aware, when the breach is expected to harm the data or the data subjects.","misconceptions":["Starts the clock on the day of the breach rather than on awareness","Thinks the notice waits until the investigation is complete","","Believes only a confirmed misuse of the data triggers a notice"],"lo":["LO1"]}],"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":"day1.md","llms":"../llms.txt"},"tasks":[],"tools":[]},"bridge":{"allowedOrigins":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

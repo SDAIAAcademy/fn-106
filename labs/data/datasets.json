@@ -1,0 +1,109 @@
+[
+ {
+  "name": "fee_schedule",
+  "file": "fee_schedule.csv",
+  "description": "Published fees by grade band and campus, as on the website",
+  "records": 8,
+  "individuals": false,
+  "fields": [
+   "campus",
+   "grade_band",
+   "annual_fee_sar"
+  ],
+  "owner": "Osama Al-Qurashi"
+ },
+ {
+  "name": "guardians",
+  "file": "guardians.csv",
+  "description": "One row per family contact: identity, contact, bank account for refunds",
+  "records": 860,
+  "individuals": true,
+  "fields": [
+   "guardian_id",
+   "full_name",
+   "full_name_ar",
+   "national_id",
+   "mobile",
+   "email",
+   "relationship",
+   "preferred_language",
+   "campus",
+   "district",
+   "employer",
+   "iban",
+   "marketing_consent"
+  ],
+  "owner": "Layla Haddad"
+ },
+ {
+  "name": "students",
+  "file": "students.csv",
+  "description": "The student file, including health notes kept by the school nurse",
+  "records": 1200,
+  "individuals": true,
+  "fields": [
+   "student_id",
+   "full_name",
+   "full_name_ar",
+   "national_id",
+   "date_of_birth",
+   "gender",
+   "grade",
+   "section",
+   "campus",
+   "nationality",
+   "health_notes",
+   "guardian_id",
+   "bus_route"
+  ],
+  "owner": "Dr. Amal Al-Sayari"
+ },
+ {
+  "name": "attendance",
+  "file": "attendance.csv",
+  "description": "Every absence and late arrival this term, with reason and free-text note",
+  "records": 5850,
+  "individuals": true,
+  "fields": [
+   "student_id",
+   "date",
+   "status",
+   "reason",
+   "note"
+  ],
+  "owner": "Dr. Amal Al-Sayari"
+ },
+ {
+  "name": "fees",
+  "file": "fees.csv",
+  "description": "This term's invoice per student: due, paid, balance, plan, card digits",
+  "records": 1200,
+  "individuals": true,
+  "fields": [
+   "student_id",
+   "term",
+   "amount_due",
+   "amount_paid",
+   "balance",
+   "plan",
+   "last_payment_date",
+   "card_last4"
+  ],
+  "owner": "Osama Al-Qurashi"
+ },
+ {
+  "name": "attendance_summary",
+  "file": "attendance_summary.csv",
+  "description": "Absence rate per campus, grade and gender, prepared for the annual report",
+  "records": 95,
+  "individuals": false,
+  "fields": [
+   "campus",
+   "grade",
+   "gender",
+   "students",
+   "absence_rate_pct"
+  ],
+  "owner": "Dr. Amal Al-Sayari"
+ }
+]

@@ -1,0 +1,5 @@
+{
+ "language bias": "Routine replies fail mostly on Gulf Arabic phrasings while the Modern Standard Arabic versions of the same questions succeed.",
+ "evaluation bias": "Dana's router and replies were tested in English only, so the pilot's results overstated how well Wafi serves Arabic-writing guardians.",
+ "automation bias": "Arabic sensitive enquiries that Wafi does not escalate are sent without a person reading them, because staff only see what the router flags."
+}

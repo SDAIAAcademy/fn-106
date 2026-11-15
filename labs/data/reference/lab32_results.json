@@ -1,0 +1,402 @@
+[
+ {
+  "enquiry_id": "Q01EN",
+  "pair": 1,
+  "lang": "en",
+  "variety": "en",
+  "intent": "absences",
+  "sensitive": false,
+  "escalated": false,
+  "correct": true
+ },
+ {
+  "enquiry_id": "Q01AR",
+  "pair": 1,
+  "lang": "ar",
+  "variety": "msa",
+  "intent": "absences",
+  "sensitive": false,
+  "escalated": false,
+  "correct": true
+ },
+ {
+  "enquiry_id": "Q02EN",
+  "pair": 2,
+  "lang": "en",
+  "variety": "en",
+  "intent": "absences",
+  "sensitive": false,
+  "escalated": false,
+  "correct": true
+ },
+ {
+  "enquiry_id": "Q02AR",
+  "pair": 2,
+  "lang": "ar",
+  "variety": "gulf",
+  "intent": "absences",
+  "sensitive": false,
+  "escalated": false,
+  "correct": false
+ },
+ {
+  "enquiry_id": "Q03EN",
+  "pair": 3,
+  "lang": "en",
+  "variety": "en",
+  "intent": "lates",
+  "sensitive": false,
+  "escalated": false,
+  "correct": true
+ },
+ {
+  "enquiry_id": "Q03AR",
+  "pair": 3,
+  "lang": "ar",
+  "variety": "msa",
+  "intent": "lates",
+  "sensitive": false,
+  "escalated": false,
+  "correct": true
+ },
+ {
+  "enquiry_id": "Q04EN",
+  "pair": 4,
+  "lang": "en",
+  "variety": "en",
+  "intent": "lates",
+  "sensitive": false,
+  "escalated": false,
+  "correct": true
+ },
+ {
+  "enquiry_id": "Q04AR",
+  "pair": 4,
+  "lang": "ar",
+  "variety": "gulf",
+  "intent": "lates",
+  "sensitive": false,
+  "escalated": false,
+  "correct": true
+ },
+ {
+  "enquiry_id": "Q05EN",
+  "pair": 5,
+  "lang": "en",
+  "variety": "en",
+  "intent": "balance",
+  "sensitive": false,
+  "escalated": false,
+  "correct": true
+ },
+ {
+  "enquiry_id": "Q05AR",
+  "pair": 5,
+  "lang": "ar",
+  "variety": "msa",
+  "intent": "balance",
+  "sensitive": false,
+  "escalated": false,
+  "correct": true
+ },
+ {
+  "enquiry_id": "Q06EN",
+  "pair": 6,
+  "lang": "en",
+  "variety": "en",
+  "intent": "balance",
+  "sensitive": false,
+  "escalated": false,
+  "correct": true
+ },
+ {
+  "enquiry_id": "Q06AR",
+  "pair": 6,
+  "lang": "ar",
+  "variety": "gulf",
+  "intent": "balance",
+  "sensitive": false,
+  "escalated": false,
+  "correct": false
+ },
+ {
+  "enquiry_id": "Q07EN",
+  "pair": 7,
+  "lang": "en",
+  "variety": "en",
+  "intent": "balance",
+  "sensitive": false,
+  "escalated": false,
+  "correct": true
+ },
+ {
+  "enquiry_id": "Q07AR",
+  "pair": 7,
+  "lang": "ar",
+  "variety": "msa",
+  "intent": "balance",
+  "sensitive": false,
+  "escalated": false,
+  "correct": true
+ },
+ {
+  "enquiry_id": "Q08EN",
+  "pair": 8,
+  "lang": "en",
+  "variety": "en",
+  "intent": "absences",
+  "sensitive": false,
+  "escalated": false,
+  "correct": true
+ },
+ {
+  "enquiry_id": "Q08AR",
+  "pair": 8,
+  "lang": "ar",
+  "variety": "gulf",
+  "intent": "absences",
+  "sensitive": false,
+  "escalated": false,
+  "correct": false
+ },
+ {
+  "enquiry_id": "Q09EN",
+  "pair": 9,
+  "lang": "en",
+  "variety": "en",
+  "intent": "lates",
+  "sensitive": false,
+  "escalated": false,
+  "correct": true
+ },
+ {
+  "enquiry_id": "Q09AR",
+  "pair": 9,
+  "lang": "ar",
+  "variety": "msa",
+  "intent": "lates",
+  "sensitive": false,
+  "escalated": false,
+  "correct": true
+ },
+ {
+  "enquiry_id": "Q10EN",
+  "pair": 10,
+  "lang": "en",
+  "variety": "en",
+  "intent": "balance",
+  "sensitive": false,
+  "escalated": false,
+  "correct": true
+ },
+ {
+  "enquiry_id": "Q10AR",
+  "pair": 10,
+  "lang": "ar",
+  "variety": "gulf",
+  "intent": "balance",
+  "sensitive": false,
+  "escalated": false,
+  "correct": false
+ },
+ {
+  "enquiry_id": "Q11EN",
+  "pair": 11,
+  "lang": "en",
+  "variety": "en",
+  "intent": "absences",
+  "sensitive": false,
+  "escalated": false,
+  "correct": true
+ },
+ {
+  "enquiry_id": "Q11AR",
+  "pair": 11,
+  "lang": "ar",
+  "variety": "msa",
+  "intent": "absences",
+  "sensitive": false,
+  "escalated": false,
+  "correct": true
+ },
+ {
+  "enquiry_id": "Q12EN",
+  "pair": 12,
+  "lang": "en",
+  "variety": "en",
+  "intent": "lates",
+  "sensitive": false,
+  "escalated": false,
+  "correct": true
+ },
+ {
+  "enquiry_id": "Q12AR",
+  "pair": 12,
+  "lang": "ar",
+  "variety": "gulf",
+  "intent": "lates",
+  "sensitive": false,
+  "escalated": false,
+  "correct": true
+ },
+ {
+  "enquiry_id": "Q13EN",
+  "pair": 13,
+  "lang": "en",
+  "variety": "en",
+  "intent": "health",
+  "sensitive": true,
+  "escalated": true,
+  "correct": true
+ },
+ {
+  "enquiry_id": "Q13AR",
+  "pair": 13,
+  "lang": "ar",
+  "variety": "msa",
+  "intent": "health",
+  "sensitive": true,
+  "escalated": false,
+  "correct": false
+ },
+ {
+  "enquiry_id": "Q14EN",
+  "pair": 14,
+  "lang": "en",
+  "variety": "en",
+  "intent": "health",
+  "sensitive": true,
+  "escalated": true,
+  "correct": true
+ },
+ {
+  "enquiry_id": "Q14AR",
+  "pair": 14,
+  "lang": "ar",
+  "variety": "gulf",
+  "intent": "health",
+  "sensitive": true,
+  "escalated": false,
+  "correct": false
+ },
+ {
+  "enquiry_id": "Q15EN",
+  "pair": 15,
+  "lang": "en",
+  "variety": "en",
+  "intent": "bullying",
+  "sensitive": true,
+  "escalated": true,
+  "correct": true
+ },
+ {
+  "enquiry_id": "Q15AR",
+  "pair": 15,
+  "lang": "ar",
+  "variety": "msa",
+  "intent": "bullying",
+  "sensitive": true,
+  "escalated": true,
+  "correct": true
+ },
+ {
+  "enquiry_id": "Q16EN",
+  "pair": 16,
+  "lang": "en",
+  "variety": "en",
+  "intent": "bullying",
+  "sensitive": true,
+  "escalated": true,
+  "correct": true
+ },
+ {
+  "enquiry_id": "Q16AR",
+  "pair": 16,
+  "lang": "ar",
+  "variety": "gulf",
+  "intent": "bullying",
+  "sensitive": true,
+  "escalated": false,
+  "correct": false
+ },
+ {
+  "enquiry_id": "Q17EN",
+  "pair": 17,
+  "lang": "en",
+  "variety": "en",
+  "intent": "fee_dispute",
+  "sensitive": true,
+  "escalated": true,
+  "correct": true
+ },
+ {
+  "enquiry_id": "Q17AR",
+  "pair": 17,
+  "lang": "ar",
+  "variety": "gulf",
+  "intent": "fee_dispute",
+  "sensitive": true,
+  "escalated": false,
+  "correct": false
+ },
+ {
+  "enquiry_id": "Q18EN",
+  "pair": 18,
+  "lang": "en",
+  "variety": "en",
+  "intent": "complaint",
+  "sensitive": true,
+  "escalated": true,
+  "correct": true
+ },
+ {
+  "enquiry_id": "Q18AR",
+  "pair": 18,
+  "lang": "ar",
+  "variety": "msa",
+  "intent": "complaint",
+  "sensitive": true,
+  "escalated": true,
+  "correct": true
+ },
+ {
+  "enquiry_id": "Q19EN",
+  "pair": 19,
+  "lang": "en",
+  "variety": "en",
+  "intent": "custody",
+  "sensitive": true,
+  "escalated": true,
+  "correct": true
+ },
+ {
+  "enquiry_id": "Q19AR",
+  "pair": 19,
+  "lang": "ar",
+  "variety": "gulf",
+  "intent": "custody",
+  "sensitive": true,
+  "escalated": false,
+  "correct": false
+ },
+ {
+  "enquiry_id": "Q20EN",
+  "pair": 20,
+  "lang": "en",
+  "variety": "en",
+  "intent": "health",
+  "sensitive": true,
+  "escalated": true,
+  "correct": true
+ },
+ {
+  "enquiry_id": "Q20AR",
+  "pair": 20,
+  "lang": "ar",
+  "variety": "msa",
+  "intent": "health",
+  "sensitive": true,
+  "escalated": false,
+  "correct": false
+ }
+]

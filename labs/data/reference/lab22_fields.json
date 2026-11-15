@@ -1,0 +1,7 @@
+{
+ "student.first_name": "local",
+ "derived.absences_this_term": "local",
+ "derived.lates_this_term": "local",
+ "derived.balance": "local",
+ "enquiry.text": "local"
+}

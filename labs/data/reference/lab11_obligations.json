@@ -1,0 +1,11 @@
+{
+ "1 intake": "C",
+ "2 find guardian": "AB",
+ "3 find student": "AB",
+ "4 attendance and fees": "ABH",
+ "5 send prompt": "BDF",
+ "6 receive draft": "H",
+ "7 staff review": "D",
+ "8 log": "BDE",
+ "9 cache": "DE"
+}

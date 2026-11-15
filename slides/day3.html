@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-ax="deck" data-track="foundations">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 3 · Ethics and risk in practice · Responsible Data and AI Practice in the Kingdom</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="day3.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<div class="deck" data-course="Responsible Data and AI Practice in the Kingdom" data-track="foundations" data-day="Day 3">
+<!-- ======================= OPENING ======================= -->
+<section class="slide title" id="title" data-auto="title" data-label="Welcome" data-n="1">
+  <div class="kicker">SDAIA Academy · Responsible Data and AI Practice in the Kingdom</div>
+  <h1>Ethics and risk in practice</h1>
+  <p class="lead mt">Day 3: Turn the principles into tests, rate the risks and tell parents the truth</p>
+  <div class="meta"><span class="track">Data &amp; AI Foundations Track</span><span>3 teaching days + capstone day</span><span>4 sessions · 4 labs</span><span>FN-106</span></div>
+  <aside class="notes"><p>Day 3 turns principles into tests and risks into a register. Ask the room: "Wafi passed the pilot. Who decided what passing meant?" Nobody did: that is today's starting point.</p></aside>
+</section>
+
+<section class="slide" id="agenda" data-auto="agenda" data-label="Agenda" data-n="2">
+  <div class="kicker">Today</div>
+  <h2>Ethics and risk in practice</h2>
+  <div class="agenda"><div class="item"><div><b>Session 1 · Principles into tests</b><small>A principle becomes useful when it is a check with a threshold that passes or fails</small></div></div><div class="item"><div><b>Session 2 · Testing the assistant</b><small>Paired enquiries in Arabic and English show whether the assistant serves both groups equally</small></div></div><div class="item"><div><b>Session 3 · Risk tier and risk register</b><small>The ethics tier sets the bar; the national framework rates, treats and reviews each risk</small></div></div><div class="item"><div><b>Session 4 · Disclosure and human review</b><small>Parents are told what the assistant is and does, and sensitive replies go to a person</small></div></div></div>
+</section>
+
+<section class="slide" id="review-day2" data-lo="LO3" data-n="3">
+  <div class="kicker">Review of Day 2</div>
+  <h2>Where may Wafi's minimised prompt go?</h2>
+  <div class="quiz" data-type="single" data-lo="LO3" data-id="review-day2-q1">
+    <p class="lead">After Lab 1.2 Wafi's prompt carries a child's first name, three counts and the guardian's message. Under Rawafid's rule, where may that prompt go with real records?</p>
+    <div class="opts">
+      <div class="opt" data-why="Thinks a short prompt is a Public one" data-k="A">To the free hosted model, since it is minimised</div>
+      <div class="opt" data-ok data-k="B">To a model served inside Rawafid only</div>
+      <div class="opt" data-why="Treats counts as health data, which they are not" data-k="C">Nowhere: it describes a child</div>
+      <div class="opt" data-why="Believes a provider's terms decide the classification" data-k="D">To any hosted model whose terms forbid training on it</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> Every field of the minimised prompt is still Restricted personal data, and Restricted data goes to a locally served model only.</div>
+  </div>
+  <aside class="notes"><p>Answer: B. D is a common belief: a provider's no-training clause is a contract term worth having, but it does not change the data's level or make the prompt any less of a transfer.</p></aside>
+</section>
+
+<!-- ======================= SESSION 1 ======================= -->
+<section class="slide section" id="s1" data-auto="section" data-session="1" data-n="4">
+  <div class="kicker">Session 1</div>
+  <h1>Principles into tests</h1>
+  <ul class="bullets outcomes"><li>Translate an ethics principle into a measurable check</li><li>Set a threshold and a pass rule for each check</li><li>Run checks over a recorded run and read the failures</li></ul>
+  <div class="sess-no">01</div>
+</section>
+
+<section class="slide" id="seven-principles" data-lo="LO6" data-n="5" data-session="1">
+  <div class="kicker">The AI Ethics Principles</div>
+  <h2>Seven principles, and three of them can be tested today</h2>
+  <div class="cols cols-4 gap-s">
+    <div class="card c-teal"><h4>Fairness</h4><p class="small mb0">No bias, discrimination or stigma.</p></div>
+    <div class="card c-navy flat"><h4>Privacy and security</h4><p class="small mb0">Days 1 and 2.</p></div>
+    <div class="card c-navy flat"><h4>Humanity</h4><p class="small mb0">Human-centred, human oversight.</p></div>
+    <div class="card c-navy flat"><h4>Social and environmental benefits</h4><p class="small mb0">Serve people and the planet.</p></div>
+    <div class="card c-navy flat"><h4>Reliability and safety</h4><p class="small mb0">Works as specified, safely.</p></div>
+    <div class="card c-teal"><h4>Transparency and explainability</h4><p class="small mb0">People know and understand.</p></div>
+    <div class="card c-teal"><h4>Accountability and responsibility</h4><p class="small mb0">Someone answers for it.</p></div>
+  </div>
+  <aside class="notes"><p>Source: AI Ethics Principles (SDAIA, version 1.0, 2023), principles 1 to 7. Privacy and security has been the subject of two days. Humanity returns in Session 4 (human review). The three highlighted ones are the checks of Lab 3.1.</p></aside>
+</section>
+
+<section class="slide" id="principle-to-check" data-lo="LO6" data-n="6" data-session="1">
+  <div class="kicker">From a word to a test</div>
+  <h2>A principle becomes useful when it is a check that can fail</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>Principle</b>"fair to all guardians"</div>
+    <div class="arrow">→</div>
+    <div class="step c-cyan"><b>Measure</b>correct replies per language</div>
+    <div class="arrow">→</div>
+    <div class="step c-purple"><b>Threshold</b>gap at most 10 points, set first</div>
+    <div class="arrow">→</div>
+    <div class="step c-coral"><b>Result</b>pass or fail, with the cases to read</div>
+  </div>
+  <div class="callout tip mt"><b>The principle asks for this.</b> Fairness metrics are chosen early, with a threshold that defines fair and unfair, and monitored in production.</div>
+  <aside class="notes"><p>Source: AI Ethics Principles, fairness, the design and build-phase guidance (fairness assessment metrics chosen at design, thresholds defined, champion model within threshold, monitoring in production). Ask: who at Rawafid should sign the threshold? (The group director, not the developer.)</p></aside>
+</section>
+
+<section class="slide" id="recorded-run" data-lo="LO6" data-n="7" data-session="1">
+  <div class="kicker">What the checks read</div>
+  <h2>A recorded run: 24 replies from the pilot, with what each one did</h2>
+  <table class="t small">
+    <tr><th>Field</th><th>Feeds</th></tr>
+    <tr><td>language, sensitive, a reviewer's quality mark, escalated</td><td>Fairness</td></tr>
+    <tr><td>AI disclosure line, human route, sent</td><td>Transparency</td></tr>
+    <tr><td>model, prompt version, reviewed by</td><td>Accountability</td></tr>
+  </table>
+  <p class="small mt">If the log does not record a field, the principle that needs it cannot be checked.</p>
+  <aside class="notes"><p>The file is labs/data/recorded_run.jsonl: twelve English and twelve Arabic replies. This links back to Day 1: the log has to hold the fields accountability needs (model, prompt version, reviewer), and not the ones privacy forbids (the full prompt).</p></aside>
+</section>
+
+<section class="slide" id="three-results" data-lo="LO6" data-n="8" data-session="1">
+  <div class="kicker">Measured in Lab 3.1</div>
+  <h2>All three checks fail on the pilot's own log</h2>
+  <div class="cols cols-3 gap-s">
+    <div class="stat center"><div class="big">58% / 100%</div><div class="lbl">replies marked correct, Arabic against English</div></div>
+    <div class="stat center"><div class="big">2 of 24</div><div class="lbl">replies sent without the AI notice</div></div>
+    <div class="stat center"><div class="big">5</div><div class="lbl">replies with no model, no reviewer or no escalation</div></div>
+  </div>
+  <p class="small mt">The two sensitive replies that were never escalated are both Arabic.</p>
+  <aside class="notes"><p>From the solution run. Fairness: quality 58.3% against 100% (gap 41.7 points), escalation of sensitive enquiries 33.3% against 100%. Transparency: R09 and R22. Accountability: R15 has no model; R11 and R17 are sensitive with no reviewer; R06 and R18 are sensitive, Arabic, and never escalated.</p></aside>
+</section>
+
+<section class="slide" id="tolerance" data-lo="LO6" data-n="9" data-session="1">
+  <div class="kicker">Thresholds</div>
+  <h2>Rates across groups need a tolerance; duties to each person do not</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>Fairness: ten points</h4><p class="small mb0">Rates move by chance across small groups. The gap is judged against a threshold set in advance.</p></div>
+    <div class="card c-coral"><h4>Transparency: zero</h4><p class="small mb0">Each guardian is owed the notice. One reply without it is one guardian misled.</p></div>
+  </div>
+  <div class="callout warn mt"><b>What goes wrong.</b> A threshold written after the results are known is fitted to pass.</div>
+  <aside class="notes"><p>Ask the room for an example of each kind in their own work. A useful extra point: with twelve replies per language, one reply moves the rate by more than eight points; a real test set needs more cases than this classroom one.</p></aside>
+</section>
+
+<section class="slide" id="check-threshold" data-lo="LO6" data-n="10" data-session="1">
+  <div class="kicker">Checkpoint</div>
+  <h2>Dana wants to change the threshold</h2>
+  <div class="quiz" data-type="single" data-lo="LO6" data-id="check-threshold-q1">
+    <p class="lead">The fairness check fails with a gap of 42 points. Dana proposes raising the threshold to 45 so the release can go ahead. What is wrong with that?</p>
+    <div class="opts">
+      <div class="opt" data-why="Thinks the problem is the size of the number, not when it was set" data-k="A">Nothing, if the new threshold is written down</div>
+      <div class="opt" data-why="Confuses a fairness threshold with a statistical significance test" data-k="B">Thresholds must always be five points</div>
+      <div class="opt" data-why="Believes fairness checks only apply in production" data-k="C">The check only matters after release</div>
+      <div class="opt" data-ok data-k="D">A threshold set after the results is fitted to pass</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> The threshold defines fair before the run; moving it after a failure hides the gap instead of treating it.</div>
+  </div>
+  <aside class="notes"><p>Answer: D. The legitimate path is the risk register: record the failure as a risk, treat it, and re-test; or accept it by someone with authority, with a reason.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-3-1" data-auto="lab" data-lab="3.1" data-label="Lab 3.1" data-n="11" data-session="1">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">Lab 3.1 · 25 min</div><h2>Three checks</h2><p class="lead small">Write three checks that turn fairness, transparency and accountability into pass or fail results.</p><a class="nb" href="../labs/D3_1_write_three_checks.ipynb">D3_1_write_three_checks.ipynb</a></div><ul class="checklist"><li>Turn fairness into a measurable check with a threshold <span class="min">8 min</span></li><li>Turn transparency into a check on every reply <span class="min">6 min</span></li><li>Turn accountability into a check on the log <span class="min">6 min</span></li><li>Run all three on the recorded run <span class="min">5 min</span></li><li class="stretch">✱ Stretch: Add a fourth check for privacy: no identifier in any reply</li></ul></div>
+  <aside class="notes"><p>Watch for: fairness computed over all replies rather than per language; transparency that ignores the "sent" flag; accountability that misses empty strings. Expected: all three checks fail, the transparency failures are R09 and R22. Nothing depends on an earlier lab.</p></aside>
+</section>
+
+<!-- ======================= SESSION 2 ======================= -->
+<section class="slide section" id="s2" data-auto="section" data-session="2" data-n="12">
+  <div class="kicker">Session 2</div>
+  <h1>Testing the assistant</h1>
+  <ul class="bullets outcomes"><li>Run a scripted test set through an assistant</li><li>Compare reply quality and escalation rates per language</li><li>Name the bias types that explain a measured gap</li></ul>
+  <div class="sess-no">02</div>
+</section>
+
+<section class="slide" id="paired-test" data-lo="LO6" data-n="13" data-session="2">
+  <div class="kicker">How to test for a language gap</div>
+  <h2>Ask the same thing twice, once in each language</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>Twenty enquiries guardians send, each in English and in Arabic.</li>
+      <li>Arabic in the forms guardians write: Modern Standard and Gulf.</li>
+      <li>Twelve routine questions with a known answer; eight sensitive ones that must reach a person.</li>
+      <li>Same guardian, same child, same question: the only difference is the language.</li>
+    </ul>
+    <div class="card c-teal"><h4>Example pair</h4><p class="small mb0">"Can you tell me Yousef's absences so far?"</p><p class="small mb0" dir="rtl" lang="ar">كم مرة غاب يوسف لين الحين؟</p></div>
+  </div>
+  <aside class="notes"><p>The set is labs/data/enquiries_40.jsonl. Pairing removes the excuse that the Arabic questions were harder. Ask an Arabic speaker in the room to read the Gulf example aloud and say what a system trained on formal Arabic would make of it.</p></aside>
+</section>
+
+<section class="slide" id="standin-and-hosted" data-lo="LO6" data-n="14" data-session="2">
+  <div class="kicker">The model behind the test</div>
+  <h2>A scripted stand-in gives everyone the same numbers</h2>
+  <div class="cols cols-2">
+    <div class="card c-cyan"><h4>Stand-in (default)</h4><p class="small mb0">Fixed templates filled from the prompt. It reads Modern Standard Arabic phrasings and misses Gulf ones, on purpose, so the method can be learned on a known gap.</p></div>
+    <div class="card c-purple"><h4>Free hosted model (optional)</h4><p class="small mb0">With a key, a real model drafts the replies. Results vary by model and day; synthetic data only.</p></div>
+  </div>
+  <div class="callout warn mt"><b>Say it plainly.</b> The stand-in is not evidence about any real model. The method is what transfers.</div>
+  <aside class="notes"><p>wafi.py documents both paths. Be explicit with participants: the 67% and 25% of Lab 3.2 are the stand-in's, designed to imitate a common weakness, and the recorded run of Lab 3.1 (58%) was written to show the same pattern. A participant with a key should run both and compare: the interesting discussion is whether the hosted model's gap is smaller, larger or different in kind.</p></aside>
+</section>
+
+<section class="slide" id="forty-results" data-lo="LO6" data-n="15" data-session="2">
+  <div class="kicker">Measured in Lab 3.2</div>
+  <h2>English is served fully; Gulf Arabic is served least</h2>
+  <table class="t">
+    <tr><th>Variety</th><th>Routine replies correct</th><th>Sensitive enquiries escalated</th></tr>
+    <tr><td>English</td><td>12 of 12</td><td>8 of 8</td></tr>
+    <tr><td>Modern Standard Arabic</td><td>6 of 6</td><td>2 of 4</td></tr>
+    <tr class="hl"><td>Gulf Arabic</td><td>2 of 6</td><td>0 of 4</td></tr>
+  </table>
+  <aside class="notes"><p>From the solution run with the stand-in and Dana's router: Arabic routine 8 of 12 (67%), Arabic sensitive escalated 2 of 8 (25%). The escalations that work are the two whose Arabic words Dana happened to add (complaint and bullying in their standard forms). Every Gulf health, bullying, fee dispute and custody message was missed.</p></aside>
+</section>
+
+<section class="slide" id="two-failures" data-lo="LO6" data-n="16" data-session="2">
+  <div class="kicker">Which gap matters more</div>
+  <h2>A weak reply is visible; a missed escalation reaches nobody</h2>
+  <div class="cols cols-2">
+    <div class="card c-cyan"><h4>Routine reply wrong</h4><p class="small mb0">The guardian sees a generic answer and asks again or calls. Annoying, recoverable.</p></div>
+    <div class="card c-coral"><h4>Sensitive enquiry not escalated</h4><p class="small mb0">"Rahaf was unwell at school yesterday" gets a template reply and no person reads it. The school never knew.</p></div>
+  </div>
+  <aside class="notes"><p>Q14AR is the example: a Gulf Arabic message about a child feeling unwell. Link to Day 3 Session 3: this is harm H3, and its impact depends on which enquiries are missed, not only on how many.</p></aside>
+</section>
+
+<section class="slide" id="bias-types" data-lo="LO6" data-n="17" data-session="2">
+  <div class="kicker">The AI Bias Reference Guide</div>
+  <h2>Three bias types explain what the test measured</h2>
+  <table class="t small">
+    <tr><th>Bias type</th><th>The guide's sense</th><th>At Rawafid</th></tr>
+    <tr><td><b>Language</b></td><td>Trained on standard language, fails on dialect</td><td>Gulf phrasings fail where MSA succeeds</td></tr>
+    <tr><td><b>Evaluation</b></td><td>Tests do not reflect the real users</td><td>The pilot was tested in English only</td></tr>
+    <tr><td><b>Automation</b></td><td>People trust the system's output over their judgement</td><td>Staff read only what the router flags</td></tr>
+  </table>
+  <aside class="notes"><p>Source: AI Bias Reference Guide (SDAIA, first edition 2026): entries for language bias, evaluation bias and automation bias. The guide's own example for language bias is a model trained on formal text failing on dialect comments, which is exactly the stand-in's behaviour. Measurement bias is a distractor here: nothing suggests the expected values are wrong.</p></aside>
+</section>
+
+<section class="slide" id="check-bias-type" data-lo="LO6" data-n="18" data-session="2">
+  <div class="kicker">Checkpoint</div>
+  <h2>Which bias type does the pilot's test show?</h2>
+  <div class="quiz" data-type="single" data-lo="LO6" data-id="check-bias-type-q1">
+    <p class="lead">Dana's pilot report said Wafi answered 100% of test enquiries correctly. Every test enquiry was in English. Which bias type from the national guide does the report show?</p>
+    <div class="opts">
+      <div class="opt" data-why="Confuses a test-set problem with people over-trusting outputs" data-k="A">Automation bias</div>
+      <div class="opt" data-ok data-k="B">Evaluation bias</div>
+      <div class="opt" data-why="Thinks the expected answers themselves were wrong" data-k="C">Measurement bias</div>
+      <div class="opt" data-why="Names a bias of the model's behaviour, not of the report" data-k="D">Language bias</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> The test set did not reflect the guardians who use Wafi, so the score overstated how well it serves them.</div>
+  </div>
+  <aside class="notes"><p>Answer: B. D is close: language bias is what the model does; the report's flaw is in the evaluation. Both appear in the Lab 3.2 answer, which is the point of naming them separately.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-3-2" data-auto="lab" data-lab="3.2" data-label="Lab 3.2" data-n="19" data-session="2">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">Lab 3.2 · 25 min</div><h2>Forty enquiries</h2><p class="lead small">Run forty scripted enquiries in Arabic and English, compare reply quality and escalation rates, and name the bias types from the national guide that explain any gap.</p><a class="nb" href="../labs/D3_2_run_forty_scripted.ipynb">D3_2_run_forty_scripted.ipynb</a></div><ul class="checklist"><li>Run the forty enquiries through Wafi <span class="min">6 min</span></li><li>Score reply quality per language <span class="min">6 min</span></li><li>Compare escalation rates per language <span class="min">5 min</span></li><li>Name the bias types that explain the gaps <span class="min">5 min</span></li><li>Write the test report rows <span class="min">3 min</span></li><li class="stretch">✱ Stretch: Rerun with the Arabic keywords added and measure the change</li></ul></div>
+  <aside class="notes"><p>Run with WAFI_MODEL=standin unless a participant has a working key. Watch for: scoring a sensitive enquiry by the reply text instead of escalation; averaging over both languages. Expected with the stand-in: Arabic routine 8 of 12, Arabic sensitive escalated 2 of 8; English 12 of 12 and 8 of 8.</p></aside>
+</section>
+
+<!-- ======================= SESSION 3 ======================= -->
+<section class="slide section" id="s3" data-auto="section" data-session="3" data-n="20">
+  <div class="kicker">Session 3</div>
+  <h1>Risk tier and risk register</h1>
+  <ul class="bullets outcomes"><li>Place an AI system in an ethics risk tier with reasons</li><li>Rate harms by likelihood and impact and compute the risk level</li><li>Write a register entry with treatment, owner and review date</li></ul>
+  <div class="sess-no">03</div>
+</section>
+
+<section class="slide" id="four-risk-levels" data-lo="LO5" data-n="21" data-session="3">
+  <div class="kicker">The AI Ethics Principles</div>
+  <h2>Four risk levels set how much is required before use</h2>
+  <table class="t">
+    <tr><th>Level</th><th>What follows</th></tr>
+    <tr><td>Little or no risk</td><td>No restrictions; ethical compliance recommended</td></tr>
+    <tr class="hl"><td>Limited risk</td><td>The AI ethics principles apply</td></tr>
+    <tr><td>High risk</td><td>Conformity assessments before and after deployment, and the statutory requirements</td></tr>
+    <tr><td>Unacceptable risk</td><td>Not allowed; examples include exploitation of children</td></tr>
+  </table>
+  <aside class="notes"><p>Source: AI Ethics Principles, the risk-based approach (little or no risk, limited, high, unacceptable). The levels concern risk to people's basic rights, safety and livelihood. Ask the room to place Wafi before showing the next slide.</p></aside>
+</section>
+
+<section class="slide" id="wafi-tier" data-lo="LO5" data-n="22" data-session="3">
+  <div class="kicker">Placing Wafi</div>
+  <h2>Limited risk, on one condition</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>Wafi answers factual questions; it decides nothing about a child.</li>
+      <li>Health, safety, custody, complaints and disputed fees are meant to reach a person first.</li>
+      <li>So the principles apply, and Wafi is tested against them.</li>
+    </ul>
+    <div class="card c-coral"><h4>The condition</h4><p class="small mb0">If sensitive replies went out without review, or Wafi began to decide anything about a child, it would be high risk. Lab 3.2 showed the routing does not yet hold in Arabic.</p></div>
+  </div>
+  <aside class="notes"><p>This is the course's placement, and reasonable people may argue for high: minors' data at scale. The capstone review often changes this fact. The stretch of Lab 3.3 asks what follows if replies are sent without review.</p></aside>
+</section>
+
+<section class="slide" id="framework-phases" data-lo="LO5" data-n="23" data-session="3">
+  <div class="kicker">The National AI Risk Management Framework</div>
+  <h2>Set the context, then four phases that repeat</h2>
+  <div class="flow">
+    <div class="step c-navy"><b>Context and scope</b>the system, its users, the rules</div>
+    <div class="arrow">→</div>
+    <div class="step c-teal"><b>Identify</b>what could go wrong</div>
+    <div class="arrow">→</div>
+    <div class="step c-cyan"><b>Assess</b>likelihood × impact</div>
+    <div class="arrow">→</div>
+    <div class="step c-purple"><b>Treat</b>avoid, mitigate, transfer, accept</div>
+    <div class="arrow">→</div>
+    <div class="step c-coral"><b>Monitor and review</b>re-rate, report</div>
+  </div>
+  <p class="small mt">It rests on four pillars: general principles, AI regulations, data regulations and sector regulations.</p>
+  <aside class="notes"><p>Source: National AI Risk Management Framework (SDAIA, April 2026; full text in Arabic, English summary). The catalog's "four phases" are read in this course as identify, assess, treat, and monitor and review, after setting the context. If the Arabic text you teach from names them differently, use its names.</p></aside>
+</section>
+
+<section class="slide" id="likelihood-impact" data-lo="LO5" data-n="24" data-session="3">
+  <div class="kicker">Assess</div>
+  <h2>Two four-point scales, multiplied, give four bands</h2>
+  <div class="cols cols-2">
+    <table class="t small">
+      <tr><th></th><th>Likelihood</th><th>Impact</th></tr>
+      <tr><td>1</td><td>Rare</td><td>Low</td></tr>
+      <tr><td>2</td><td>Unlikely</td><td>Medium</td></tr>
+      <tr><td>3</td><td>Likely</td><td>High</td></tr>
+      <tr><td>4</td><td>Almost certain</td><td>Catastrophic</td></tr>
+    </table>
+    <table class="t small">
+      <tr><th>Level</th><th>Band</th></tr>
+      <tr><td>1 to 2</td><td>Low</td></tr>
+      <tr><td>3 to 6</td><td>Medium</td></tr>
+      <tr><td>8 to 12</td><td>High</td></tr>
+      <tr class="hl"><td>16</td><td>Catastrophic</td></tr>
+    </table>
+  </div>
+  <aside class="notes"><p>Source: the framework's assessment matrix. The framework's examples of catastrophic impact include a large leak of minors' or health data, which is why H2's impact is 4. Levels 7, 13, 14 and 15 cannot occur as products of two numbers from 1 to 4.</p></aside>
+</section>
+
+<section class="slide" id="register-results" data-lo="LO5" data-n="25" data-session="3">
+  <div class="kicker">Measured in Lab 3.3</div>
+  <h2>Three of five harms rate high before treatment</h2>
+  <table class="t small">
+    <tr><th>Harm</th><th>L × I</th><th>Band</th><th>Owner</th><th>After</th></tr>
+    <tr><td>H1 wrong family's data</td><td>2 × 3 = 6</td><td>medium</td><td>Dana Al-Saleh</td><td>3 medium</td></tr>
+    <tr class="hl"><td>H2 log leaks</td><td>2 × 4 = 8</td><td>high</td><td>Nasser Al-Mansour</td><td>4 medium</td></tr>
+    <tr class="hl"><td>H3 Gulf Arabic served less</td><td>4 × 2 = 8</td><td>high</td><td>Layla Haddad</td><td>4 medium</td></tr>
+    <tr><td>H4 wrong number stated</td><td>3 × 2 = 6</td><td>medium</td><td>Osama Al-Qurashi</td><td>2 low</td></tr>
+    <tr class="hl"><td>H5 drafts approved unread</td><td>3 × 3 = 9</td><td>high</td><td>Dr. Amal Al-Sayari</td><td>6 medium</td></tr>
+  </table>
+  <aside class="notes"><p>The reference register. Every treatment is "mitigate"; review dates are 30 days for high and 90 for medium (Rawafid's choice). Participants' ratings will differ by a point; ask two tables with different H3 ratings to defend them. The defence matters more than the number.</p></aside>
+</section>
+
+<section class="slide" id="residual" data-lo="LO5" data-n="26" data-session="3">
+  <div class="kicker">Treat, then rate again</div>
+  <h2>Treatment lowers likelihood more easily than impact</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>H2 after treatment: 1 × 4</h4><p class="small mb0">Minimised prompts and deletion after 90 days make a leak less likely and smaller. A leak of children's records is still catastrophic.</p></div>
+    <div class="card c-coral"><h4>Still high after treatment?</h4><p class="small mb0">Treat it further, or have someone with the authority accept it with a recorded reason, and escalate.</p></div>
+  </div>
+  <aside class="notes"><p>Source: the framework's treatment phase (residual risk re-assessed; accepted within appetite or escalated). In the reference register no residual risk stays high, so every decision is "accept and monitor"; a participant who keeps H5 high should show the escalation to Dr. Amal.</p></aside>
+</section>
+
+<section class="slide" id="check-rating" data-lo="LO5" data-n="27" data-session="3">
+  <div class="kicker">Checkpoint</div>
+  <h2>Rate the new harm</h2>
+  <div class="quiz" data-type="single" data-lo="LO5" data-id="check-rating-q1">
+    <p class="lead">Nasser adds a harm: an export of the full log, with health notes of 434 children, is shared outside Rawafid. He rates it unlikely (2) and catastrophic (4). What is its level and band?</p>
+    <div class="opts">
+      <div class="opt" data-why="Adds the two ratings instead of multiplying them" data-k="A">6, medium</div>
+      <div class="opt" data-why="Lets the impact rating alone decide the band" data-k="B">Catastrophic, because the impact is catastrophic</div>
+      <div class="opt" data-ok data-k="C">8, high</div>
+      <div class="opt" data-why="Takes the higher rating as the level" data-k="D">4, medium</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> The level is likelihood times impact, 2 × 4 = 8, and 8 to 12 is the high band.</div>
+  </div>
+  <aside class="notes"><p>Answer: C. B is tempting and wrong under this framework: only 16 (almost certain and catastrophic) is the catastrophic band. A catastrophic impact still deserves the attention of the group director whatever the band; say so.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-3-3" data-auto="lab" data-lab="3.3" data-label="Lab 3.3" data-n="28" data-session="3">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">Lab 3.3 · 25 min</div><h2>Tier and register</h2><p class="lead small">Place the assistant in a risk tier and rate five harms by likelihood and impact.</p><a class="nb" href="../labs/D3_3_place_assistant_risk.ipynb">D3_3_place_assistant_risk.ipynb</a></div><ul class="checklist"><li>Place Wafi in an ethics risk tier with reasons <span class="min">5 min</span></li><li>Rate five harms by likelihood and impact <span class="min">8 min</span></li><li>Compute levels and bands <span class="min">3 min</span></li><li>Choose a treatment, owner and review date per harm <span class="min">6 min</span></li><li>Rate the residual risk again <span class="min">3 min</span></li><li class="stretch">✱ Stretch: Change one fact (replies sent without review) and redo the tier</li></ul></div>
+  <aside class="notes"><p>Watch for: ratings with no "why"; treatments with no owner; residual ratings that are higher than the original. Expected reference: limited risk; H2, H3 and H5 high before treatment; nothing high after. Accept other ratings that are defended from the harm's facts.</p></aside>
+</section>
+
+<!-- ======================= SESSION 4 ======================= -->
+<section class="slide section" id="s4" data-auto="section" data-session="4" data-n="29">
+  <div class="kicker">Session 4</div>
+  <h1>Disclosure and human review</h1>
+  <ul class="bullets outcomes"><li>Draft a disclosure that names the assistant, the data and the human route</li><li>Write a rule that sends sensitive replies to staff</li><li>Test the rule for recall in both languages</li></ul>
+  <div class="sess-no">04</div>
+</section>
+
+<section class="slide" id="notice-sources" data-lo="LO6 LO1" data-n="30" data-session="4">
+  <div class="kicker">What parents must be told</div>
+  <h2>Three sources decide what the notice says</h2>
+  <div class="cols cols-3 gap-s">
+    <div class="card c-teal"><h4>PDPL Article 13</h4><p class="small mb0">Purpose and basis, how data is collected, who is responsible and how to reach them, recipients, rights.</p></div>
+    <div class="card c-cyan"><h4>Generative AI Guidelines</h4><p class="small mb0">Say when content is made with generative AI; offer a channel that does not go through it.</p></div>
+    <div class="card c-purple"><h4>AI Ethics Principles</h4><p class="small mb0">Transparency, and humanity: a person reviews what matters.</p></div>
+  </div>
+  <aside class="notes"><p>Sources: PDPL Article 13 (information to the data subject at collection); Generative AI Guidelines for Government (notify beneficiaries of generative AI use, provide a non-automated channel, human review of outputs); AI Ethics Principles 3 and 6. The PDPL items apply to any controller; the guideline items are adopted by Rawafid's policy.</p></aside>
+</section>
+
+<section class="slide" id="genai-two-guidelines" data-lo="LO6 LO2" data-n="31" data-session="4">
+  <div class="kicker">The Generative AI Guidelines</div>
+  <h2>Two documents: one for government staff, one for everyone who builds or uses</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>For government</h4><p class="small mb0">Public data only in generative AI tools. Tell beneficiaries when content is made with generative AI, offer a channel that is not automated, and proofread outputs for accuracy.</p></div>
+    <div class="card c-cyan"><h4>For the public</h4><p class="small mb0">Addressed to developers and users. Follow the Personal Data Protection Law, assess the tool on the four risk levels, label generated content, and verify outputs before relying on them.</p></div>
+  </div>
+  <div class="callout tip mt"><b>For Wafi.</b> Rawafid builds and uses a generative AI service, so the public guidelines speak to it directly; it adopts the government ones as its house rule.</div>
+  <aside class="notes"><p>Sources: Generative AI Guidelines for Government, sections 3.3 (transparency: notify beneficiaries, alternative non-automated channels, watermarks) and 3.5 (privacy and security), and its best practices on proofreading content; Generative AI Guidelines for the Public, section 4 (principles for developers and users, including the four risk levels of the AI Ethics Principles) and section 5 (risks and mitigation: content labelling, user verification). Both are guidelines, not law: the binding rules stay the PDPL and, for public entities, the NDMO policies. Day 2 used the government document for the data rule; today uses both for what people are told.</p></aside>
+</section>
+
+<section class="slide" id="notice-draft" data-lo="LO6" data-n="32" data-session="4">
+  <div class="kicker">The reference notice, shortened</div>
+  <h2>131 words that answer nine questions</h2>
+  <div class="card c-teal"><p class="small mb0">"Wafi is Rawafid Schools Group's assistant. It uses generative AI to draft replies to your questions about your child's attendance, lateness and fees. To answer, it reads your child's first name and this term's counts from our records; nothing else is sent. Questions about health, safety, custody, complaints or a disputed fee always go to a member of staff, who replies to you. [...] You may ask a person at any time [...]"</p></div>
+  <p class="small mt">The full text adds the basis, the 90-day retention, no sharing outside Rawafid, the rights and the data protection officer's contact.</p>
+  <aside class="notes"><p>The full notice is in Lab 3.4's solution. Point out what it does not say: no technical words, no model name, no promises the build cannot keep. Ask: which sentence would become false if Lab 1.2 had not been done? ("nothing else is sent".)</p></aside>
+</section>
+
+<section class="slide" id="routing-rule" data-lo="LO6" data-n="33" data-session="4">
+  <div class="kicker">Human review that works in both languages</div>
+  <h2>The routing rule needs the words guardians actually write</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>English, Modern Standard Arabic and Gulf Arabic forms for health, harm, disputes, complaints and custody.</li>
+      <li>Leave out words routine questions use: "fee" and "رسوم" would send every balance question to staff.</li>
+      <li>Measure recall per language, and false alarms.</li>
+    </ul>
+    <div class="card c-coral"><h4>Gulf forms that Dana's list missed</h4><p class="small mb0" dir="rtl" lang="ar">تعبان · يضايقون · خصمتوا · صك حضانة</p></div>
+  </div>
+  <aside class="notes"><p>Ask the Arabic speakers in the room for more forms, including other varieties than Gulf. Every word added is a possible false alarm: the test shows it.</p></aside>
+</section>
+
+<section class="slide" id="human-review" data-lo="LO6" data-n="34" data-session="4">
+  <div class="kicker">Human review</div>
+  <h2>A review counts only if the reviewer can disagree with the draft</h2>
+  <div class="cols cols-3 gap-s">
+    <div class="card c-teal"><h4>Sees the facts</h4><p class="small mb0">The reviewer reads the guardian's message and the record beside the draft, not the draft alone.</p></div>
+    <div class="card c-cyan"><h4>Is named</h4><p class="small mb0">Each escalated reply records who approved it. Lab 3.1's accountability check reads that field.</p></div>
+    <div class="card c-coral"><h4>Has the time</h4><p class="small mb0">A queue cleared in seconds per reply is approval, not review. That is harm H5.</p></div>
+  </div>
+  <div class="callout warn mt"><b>What goes wrong.</b> The draft reads well, so it is approved unread: automation bias, with a person's name on it.</div>
+  <aside class="notes"><p>Sources: AI Ethics Principles, principle 3 (humanity: human-centred design that allows human choice) and principle 7 (accountability); the AI Bias Reference Guide's entry on automation bias. The fact behind harm H5 in labs/data/harms.json: the median review time of escalated drafts in the queue is under ten seconds. Ask Layla's question to the room: how would you know from the log that a review was real? Possible answers: time between draft and approval, the share of drafts edited, a sample re-read by a second person. Lab 3.4 writes the rule that decides what reaches the queue; this slide is about what happens in it.</p></aside>
+</section>
+
+<section class="slide" id="recall-results" data-lo="LO6" data-n="35" data-session="4">
+  <div class="kicker">Measured in Lab 3.4</div>
+  <h2>The new rule reaches a person for every sensitive enquiry</h2>
+  <table class="t">
+    <tr><th>Rule</th><th>English recall</th><th>Arabic recall</th><th>False alarms</th></tr>
+    <tr><td>Dana's router</td><td>8 of 8</td><td>2 of 8</td><td>0 of 24</td></tr>
+    <tr class="hl"><td>The reference rule</td><td>8 of 8</td><td>8 of 8</td><td>0 of 24</td></tr>
+  </table>
+  <div class="callout warn mt"><b>Read it carefully.</b> A list that catches all forty has learned these forty. Grow the test set from the messages staff re-route by hand.</div>
+  <aside class="notes"><p>From the solution run of Lab 3.4. This is evaluation bias again, now on our side: the rule was written while looking at the test set. The fix is a held-out set and a log of misses in production.</p></aside>
+</section>
+
+<section class="slide" id="check-notice" data-lo="LO6" data-n="36" data-session="4">
+  <div class="kicker">Checkpoint</div>
+  <h2>Which notice meets the guidelines?</h2>
+  <div class="quiz" data-type="single" data-lo="LO6" data-id="check-notice-q1">
+    <p class="lead">Layla must choose one line for the foot of every Wafi reply. Which one meets the Generative AI Guidelines' transparency items?</p>
+    <div class="opts">
+      <div class="opt" data-why="Thinks a brand name tells people they are dealing with AI" data-k="A">"Sent by Wafi, Rawafid's digital service."</div>
+      <div class="opt" data-why="Believes a disclaimer replaces a route to a person" data-k="B">"This reply may contain errors."</div>
+      <div class="opt" data-ok data-k="C">"Drafted with AI. Write 'staff' to reach a person."</div>
+      <div class="opt" data-why="Puts transparency in a document people must look for" data-k="D">"See our privacy policy for details."</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> It says the reply was made with AI and gives a channel that does not go through the AI.</div>
+  </div>
+  <aside class="notes"><p>Answer: C. The full Article 13 notice still appears once at first contact; this line is the per-reply reminder that the transparency check of Lab 3.1 looks for.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-3-4" data-auto="lab" data-lab="3.4" data-label="Lab 3.4" data-n="37" data-session="4">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">Lab 3.4 · 25 min</div><h2>Notice and routing rule</h2><p class="lead small">Draft the notice parents see and the rule that sends sensitive replies to staff.</p><a class="nb" href="../labs/D3_4_draft_notice_parents.ipynb">D3_4_draft_notice_parents.ipynb</a></div><ul class="checklist"><li>Draft the notice parents see <span class="min">7 min</span></li><li>Check it against the required items <span class="min">4 min</span></li><li>Write the routing rule for sensitive replies <span class="min">6 min</span></li><li>Test the rule on the forty enquiries per language <span class="min">5 min</span></li><li>Choose your capstone build <span class="min">3 min</span></li><li class="stretch">✱ Stretch: Write the Arabic notice and check both say the same</li></ul></div>
+  <aside class="notes"><p>Watch for: notices over 150 words; routing lists that include "fee" or "رسوم"; participants who edit the item check instead of the notice. Task 5 matters for tomorrow: everyone leaves with one line naming their capstone build. Participants without an own build use Wafi.</p></aside>
+</section>
+
+<!-- ======================= CLOSE ======================= -->
+<section class="slide" id="wrap-up" data-n="38" data-session="4">
+  <div class="kicker">Day 3 · Three things to keep</div>
+  <h2>Test it, rate it, tell people the truth about it</h2>
+  <div class="cols cols-3 gap-s">
+    <div class="card c-teal"><h4>Checks with thresholds</h4><p class="small mb0">Set before the run; read the failing cases, not only the verdict.</p></div>
+    <div class="card c-cyan"><h4>A register with owners</h4><p class="small mb0">Likelihood × impact, a treatment, a person, a date, and a second rating.</p></div>
+    <div class="card c-coral"><h4>A notice and a person</h4><p class="small mb0">Say it is AI, what it reads, and how to reach a human, in both languages.</p></div>
+  </div>
+  <aside class="notes"><p>Go round the room: each participant reads their capstone build line from Lab 3.4. Note any build that holds sensitive data in a regulated sector: the assessor will want the sector pillar of the framework.</p></aside>
+</section>
+
+<section class="slide dark" id="next" data-n="39" data-session="4">
+  <div class="kicker">Before the capstone</div>
+  <h2>Tomorrow: the responsible build pack, reviewed live</h2>
+  <ul class="bullets">
+    <li>Put the registers, the minimisation code and its re-identification test, the test report, the record of processing, the breach checklist and the notice in one public repository.</li>
+    <li>A README that links each part.</li>
+    <li>Six minutes to present; four for the assessor's changed fact.</li>
+  </ul>
+  <aside class="notes"><p>Remind participants that the repository is public: synthetic data only, no real records, no keys. The changed fact is usually one of: a new data field, a new recipient, replies sent without review, or a hosted model in another country.</p></aside>
+</section>
+</div>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-15T04:50:12Z","version":"2027.1.0","commit":"b84fcbb"},"course":{"id":"fn-106","code":"FN-106","title":"Responsible Data and AI Practice in the Kingdom","track":"foundations","lang":"en","dir":"ltr","url":"https://sdaiaacademy.github.io/fn-106/","repo":"SDAIAAcademy/fn-106","home":"../index.html"},"deck":{"id":"day3","kind":"day","day":3,"label":"Day 3","title":"Ethics and risk in practice","prev":"day2.html","next":"capstone.html","md":"day3.md","alt":{}},"sessions":[{"n":1,"label":"Session 1","title":"Principles into tests","slide":"s1","outcomes":["Translate an ethics principle into a measurable check","Set a threshold and a pass rule for each check","Run checks over a recorded run and read the failures"],"minutes":50,"lab":{"id":"3.1","title":"Three checks","minutes":25,"href":"../labs/D3_1_write_three_checks.ipynb"}},{"n":2,"label":"Session 2","title":"Testing the assistant","slide":"s2","outcomes":["Run a scripted test set through an assistant","Compare reply quality and escalation rates per language","Name the bias types that explain a measured gap"],"minutes":50,"lab":{"id":"3.2","title":"Forty enquiries","minutes":25,"href":"../labs/D3_2_run_forty_scripted.ipynb"}},{"n":3,"label":"Session 3","title":"Risk tier and risk register","slide":"s3","outcomes":["Place an AI system in an ethics risk tier with reasons","Rate harms by likelihood and impact and compute the risk level","Write a register entry with treatment, owner and review date"],"minutes":50,"lab":{"id":"3.3","title":"Tier and register","minutes":25,"href":"../labs/D3_3_place_assistant_risk.ipynb"}},{"n":4,"label":"Session 4","title":"Disclosure and human review","slide":"s4","outcomes":["Draft a disclosure that names the assistant, the data and the human route","Write a rule that sends sensitive replies to staff","Test the rule for recall in both languages"],"minutes":50,"lab":{"id":"3.4","title":"Notice and routing rule","minutes":25,"href":"../labs/D3_4_draft_notice_parents.ipynb"}}],"slides":[{"id":"title","n":1,"title":"Ethics and risk in practice","kind":"title","session":0,"hash":"36ef2a96","md":"#### [day3#title] Ethics and risk in practice\n\n*SDAIA Academy · Responsible Data and AI Practice in the Kingdom*\n\nDay 3: Turn the principles into tests, rate the risks and tell parents the truth\n\nData & AI Foundations Track · 3 teaching days + capstone day · 4 sessions · 4 labs · FN-106","notes":"Day 3 turns principles into tests and risks into a register. Ask the room: \"Wafi passed the pilot. Who decided what passing meant?\" Nobody did: that is today's starting point.","minutes":null,"lo":[]},{"id":"agenda","n":2,"title":"Ethics and risk in practice","kind":"content","session":0,"hash":"c4cc86a7","md":"#### [day3#agenda] Ethics and risk in practice\n\n*Today*\n\n- **Session 1 · Principles into tests**: A principle becomes useful when it is a check with a threshold that passes or fails\n- **Session 2 · Testing the assistant**: Paired enquiries in Arabic and English show whether the assistant serves both groups equally\n- **Session 3 · Risk tier and risk register**: The ethics tier sets the bar; the national framework rates, treats and reviews each risk\n- **Session 4 · Disclosure and human review**: Parents are told what the assistant is and does, and sensitive replies go to a person","notes":"","minutes":null,"lo":[]},{"id":"review-day2","n":3,"title":"Where may Wafi's minimised prompt go?","kind":"quiz","session":0,"hash":"e660fc3c","md":"#### [day3#review-day2] Where may Wafi's minimised prompt go?\n\n*Review of Day 2*\n\n**Question:** After Lab 1.2 Wafi's prompt carries a child's first name, three counts and the guardian's message. Under Rawafid's rule, where may that prompt go with real records?\n\n- A. To the free hosted model, since it is minimised\n- B. To a model served inside Rawafid only\n- C. Nowhere: it describes a child\n- D. To any hosted model whose terms forbid training on it","notes":"Answer: B. D is a common belief: a provider's no-training clause is a contract term worth having, but it does not change the data's level or make the prompt any less of a transfer.","minutes":null,"lo":["LO3"]},{"id":"s1","n":4,"title":"Principles into tests","kind":"section","session":1,"hash":"9dc7f65c","md":"#### [day3#s1] Principles into tests\n\n*Session 1*\n\n- Translate an ethics principle into a measurable check\n- Set a threshold and a pass rule for each check\n- Run checks over a recorded run and read the failures","notes":"","minutes":null,"lo":["LO6"]},{"id":"seven-principles","n":5,"title":"Seven principles, and three of them can be tested today","kind":"content","session":1,"hash":"f7208473","md":"#### [day3#seven-principles] Seven principles, and three of them can be tested today\n\n*The AI Ethics Principles*\n\n- **Fairness.** No bias, discrimination or stigma.\n- **Privacy and security.** Days 1 and 2.\n- **Humanity.** Human-centred, human oversight.\n- **Social and environmental benefits.** Serve people and the planet.\n- **Reliability and safety.** Works as specified, safely.\n- **Transparency and explainability.** People know and understand.\n- **Accountability and responsibility.** Someone answers for it.","notes":"Source: AI Ethics Principles (SDAIA, version 1.0, 2023), principles 1 to 7. Privacy and security has been the subject of two days. Humanity returns in Session 4 (human review). The three highlighted ones are the checks of Lab 3.1.","minutes":null,"lo":["LO6"]},{"id":"principle-to-check","n":6,"title":"A principle becomes useful when it is a check that can fail","kind":"content","session":1,"hash":"6da5a89c","md":"#### [day3#principle-to-check] A principle becomes useful when it is a check that can fail\n\n*From a word to a test*\n\n1. **Principle** \"fair to all guardians\"\n2. **Measure** correct replies per language\n3. **Threshold** gap at most 10 points, set first\n4. **Result** pass or fail, with the cases to read\n\n> **The principle asks for this.** Fairness metrics are chosen early, with a threshold that defines fair and unfair, and monitored in production.","notes":"Source: AI Ethics Principles, fairness, the design and build-phase guidance (fairness assessment metrics chosen at design, thresholds defined, champion model within threshold, monitoring in production). Ask: who at Rawafid should sign the threshold? (The group director, not the developer.)","minutes":null,"lo":["LO6"]},{"id":"recorded-run","n":7,"title":"A recorded run: 24 replies from the pilot, with what each one did","kind":"content","session":1,"hash":"b9ea0a42","md":"#### [day3#recorded-run] A recorded run: 24 replies from the pilot, with what each one did\n\n*What the checks read*\n\n| Field | Feeds |\n| --- | --- |\n| language, sensitive, a reviewer's quality mark, escalated | Fairness |\n| AI disclosure line, human route, sent | Transparency |\n| model, prompt version, reviewed by | Accountability |\n\nIf the log does not record a field, the principle that needs it cannot be checked.","notes":"The file is labs/data/recorded_run.jsonl: twelve English and twelve Arabic replies. This links back to Day 1: the log has to hold the fields accountability needs (model, prompt version, reviewer), and not the ones privacy forbids (the full prompt).","minutes":null,"lo":["LO6"]},{"id":"three-results","n":8,"title":"All three checks fail on the pilot's own log","kind":"content","session":1,"hash":"5b5b49bf","md":"#### [day3#three-results] All three checks fail on the pilot's own log\n\n*Measured in Lab 3.1*\n\n- **58% / 100%** replies marked correct, Arabic against English\n- **2 of 24** replies sent without the AI notice\n- **5** replies with no model, no reviewer or no escalation\n\nThe two sensitive replies that were never escalated are both Arabic.","notes":"From the solution run. Fairness: quality 58.3% against 100% (gap 41.7 points), escalation of sensitive enquiries 33.3% against 100%. Transparency: R09 and R22. Accountability: R15 has no model; R11 and R17 are sensitive with no reviewer; R06 and R18 are sensitive, Arabic, and never escalated.","minutes":null,"lo":["LO6"]},{"id":"tolerance","n":9,"title":"Rates across groups need a tolerance; duties to each person do not","kind":"content","session":1,"hash":"7415c197","md":"#### [day3#tolerance] Rates across groups need a tolerance; duties to each person do not\n\n*Thresholds*\n\n- **Fairness: ten points.** Rates move by chance across small groups. The gap is judged against a threshold set in advance.\n- **Transparency: zero.** Each guardian is owed the notice. One reply without it is one guardian misled.\n\n> **What goes wrong.** A threshold written after the results are known is fitted to pass.","notes":"Ask the room for an example of each kind in their own work. A useful extra point: with twelve replies per language, one reply moves the rate by more than eight points; a real test set needs more cases than this classroom one.","minutes":null,"lo":["LO6"]},{"id":"check-threshold","n":10,"title":"Dana wants to change the threshold","kind":"quiz","session":1,"hash":"055c3763","md":"#### [day3#check-threshold] Dana wants to change the threshold\n\n*Checkpoint*\n\n**Question:** The fairness check fails with a gap of 42 points. Dana proposes raising the threshold to 45 so the release can go ahead. What is wrong with that?\n\n- A. Nothing, if the new threshold is written down\n- B. Thresholds must always be five points\n- C. The check only matters after release\n- D. A threshold set after the results is fitted to pass","notes":"Answer: D. The legitimate path is the risk register: record the failure as a risk, treat it, and re-test; or accept it by someone with authority, with a reason.","minutes":null,"lo":["LO6"]},{"id":"lab-3-1","n":11,"title":"Three checks","kind":"lab","session":1,"hash":"593ff91d","md":"#### [day3#lab-3-1] Three checks\n\nLab 3.1 · 25 min\n\nWrite three checks that turn fairness, transparency and accountability into pass or fail results.\n\n[D3_1_write_three_checks.ipynb](https://sdaiaacademy.github.io/fn-106/labs/D3_1_write_three_checks.ipynb)\n\n- [ ] Turn fairness into a measurable check with a threshold (8 min)\n- [ ] Turn transparency into a check on every reply (6 min)\n- [ ] Turn accountability into a check on the log (6 min)\n- [ ] Run all three on the recorded run (5 min)\n- [ ] ✱ Stretch: Add a fourth check for privacy: no identifier in any reply","notes":"Watch for: fairness computed over all replies rather than per language; transparency that ignores the \"sent\" flag; accountability that misses empty strings. Expected: all three checks fail, the transparency failures are R09 and R22. Nothing depends on an earlier lab.","minutes":null,"lo":[]},{"id":"s2","n":12,"title":"Testing the assistant","kind":"section","session":2,"hash":"99f9706b","md":"#### [day3#s2] Testing the assistant\n\n*Session 2*\n\n- Run a scripted test set through an assistant\n- Compare reply quality and escalation rates per language\n- Name the bias types that explain a measured gap","notes":"","minutes":null,"lo":["LO6"]},{"id":"paired-test","n":13,"title":"Ask the same thing twice, once in each language","kind":"content","session":2,"hash":"a9c1af8e","md":"#### [day3#paired-test] Ask the same thing twice, once in each language\n\n*How to test for a language gap*\n\n- Twenty enquiries guardians send, each in English and in Arabic.\n- Arabic in the forms guardians write: Modern Standard and Gulf.\n- Twelve routine questions with a known answer; eight sensitive ones that must reach a person.\n- Same guardian, same child, same question: the only difference is the language.\n\n- **Example pair.** \"Can you tell me Yousef's absences so far?\" كم مرة غاب يوسف لين الحين؟","notes":"The set is labs/data/enquiries_40.jsonl. Pairing removes the excuse that the Arabic questions were harder. Ask an Arabic speaker in the room to read the Gulf example aloud and say what a system trained on formal Arabic would make of it.","minutes":null,"lo":["LO6"]},{"id":"standin-and-hosted","n":14,"title":"A scripted stand-in gives everyone the same numbers","kind":"content","session":2,"hash":"9000a6cd","md":"#### [day3#standin-and-hosted] A scripted stand-in gives everyone the same numbers\n\n*The model behind the test*\n\n- **Stand-in (default).** Fixed templates filled from the prompt. It reads Modern Standard Arabic phrasings and misses Gulf ones, on purpose, so the method can be learned on a known gap.\n- **Free hosted model (optional).** With a key, a real model drafts the replies. Results vary by model and day; synthetic data only.\n\n> **Say it plainly.** The stand-in is not evidence about any real model. The method is what transfers.","notes":"wafi.py documents both paths. Be explicit with participants: the 67% and 25% of Lab 3.2 are the stand-in's, designed to imitate a common weakness, and the recorded run of Lab 3.1 (58%) was written to show the same pattern. A participant with a key should run both and compare: the interesting discussion is whether the hosted model's gap is smaller, larger or different in kind.","minutes":null,"lo":["LO6"]},{"id":"forty-results","n":15,"title":"English is served fully; Gulf Arabic is served least","kind":"content","session":2,"hash":"837dabaf","md":"#### [day3#forty-results] English is served fully; Gulf Arabic is served least\n\n*Measured in Lab 3.2*\n\n| Variety | Routine replies correct | Sensitive enquiries escalated |\n| --- | --- | --- |\n| English | 12 of 12 | 8 of 8 |\n| Modern Standard Arabic | 6 of 6 | 2 of 4 |\n| Gulf Arabic | 2 of 6 | 0 of 4 |","notes":"From the solution run with the stand-in and Dana's router: Arabic routine 8 of 12 (67%), Arabic sensitive escalated 2 of 8 (25%). The escalations that work are the two whose Arabic words Dana happened to add (complaint and bullying in their standard forms). Every Gulf health, bullying, fee dispute and custody message was missed.","minutes":null,"lo":["LO6"]},{"id":"two-failures","n":16,"title":"A weak reply is visible; a missed escalation reaches nobody","kind":"content","session":2,"hash":"6ca07b13","md":"#### [day3#two-failures] A weak reply is visible; a missed escalation reaches nobody\n\n*Which gap matters more*\n\n- **Routine reply wrong.** The guardian sees a generic answer and asks again or calls. Annoying, recoverable.\n- **Sensitive enquiry not escalated.** \"Rahaf was unwell at school yesterday\" gets a template reply and no person reads it. The school never knew.","notes":"Q14AR is the example: a Gulf Arabic message about a child feeling unwell. Link to Day 3 Session 3: this is harm H3, and its impact depends on which enquiries are missed, not only on how many.","minutes":null,"lo":["LO6"]},{"id":"bias-types","n":17,"title":"Three bias types explain what the test measured","kind":"content","session":2,"hash":"39a77746","md":"#### [day3#bias-types] Three bias types explain what the test measured\n\n*The AI Bias Reference Guide*\n\n| Bias type | The guide's sense | At Rawafid |\n| --- | --- | --- |\n| **Language** | Trained on standard language, fails on dialect | Gulf phrasings fail where MSA succeeds |\n| **Evaluation** | Tests do not reflect the real users | The pilot was tested in English only |\n| **Automation** | People trust the system's output over their judgement | Staff read only what the router flags |","notes":"Source: AI Bias Reference Guide (SDAIA, first edition 2026): entries for language bias, evaluation bias and automation bias. The guide's own example for language bias is a model trained on formal text failing on dialect comments, which is exactly the stand-in's behaviour. Measurement bias is a distractor here: nothing suggests the expected values are wrong.","minutes":null,"lo":["LO6"]},{"id":"check-bias-type","n":18,"title":"Which bias type does the pilot's test show?","kind":"quiz","session":2,"hash":"4b0ce7b9","md":"#### [day3#check-bias-type] Which bias type does the pilot's test show?\n\n*Checkpoint*\n\n**Question:** Dana's pilot report said Wafi answered 100% of test enquiries correctly. Every test enquiry was in English. Which bias type from the national guide does the report show?\n\n- A. Automation bias\n- B. Evaluation bias\n- C. Measurement bias\n- D. Language bias","notes":"Answer: B. D is close: language bias is what the model does; the report's flaw is in the evaluation. Both appear in the Lab 3.2 answer, which is the point of naming them separately.","minutes":null,"lo":["LO6"]},{"id":"lab-3-2","n":19,"title":"Forty enquiries","kind":"lab","session":2,"hash":"a4257925","md":"#### [day3#lab-3-2] Forty enquiries\n\nLab 3.2 · 25 min\n\nRun forty scripted enquiries in Arabic and English, compare reply quality and escalation rates, and name the bias types from the national guide that explain any gap.\n\n[D3_2_run_forty_scripted.ipynb](https://sdaiaacademy.github.io/fn-106/labs/D3_2_run_forty_scripted.ipynb)\n\n- [ ] Run the forty enquiries through Wafi (6 min)\n- [ ] Score reply quality per language (6 min)\n- [ ] Compare escalation rates per language (5 min)\n- [ ] Name the bias types that explain the gaps (5 min)\n- [ ] Write the test report rows (3 min)\n- [ ] ✱ Stretch: Rerun with the Arabic keywords added and measure the change","notes":"Run with WAFI_MODEL=standin unless a participant has a working key. Watch for: scoring a sensitive enquiry by the reply text instead of escalation; averaging over both languages. Expected with the stand-in: Arabic routine 8 of 12, Arabic sensitive escalated 2 of 8; English 12 of 12 and 8 of 8.","minutes":null,"lo":[]},{"id":"s3","n":20,"title":"Risk tier and risk register","kind":"section","session":3,"hash":"07d2255e","md":"#### [day3#s3] Risk tier and risk register\n\n*Session 3*\n\n- Place an AI system in an ethics risk tier with reasons\n- Rate harms by likelihood and impact and compute the risk level\n- Write a register entry with treatment, owner and review date","notes":"","minutes":null,"lo":["LO5"]},{"id":"four-risk-levels","n":21,"title":"Four risk levels set how much is required before use","kind":"content","session":3,"hash":"982922fb","md":"#### [day3#four-risk-levels] Four risk levels set how much is required before use\n\n*The AI Ethics Principles*\n\n| Level | What follows |\n| --- | --- |\n| Little or no risk | No restrictions; ethical compliance recommended |\n| Limited risk | The AI ethics principles apply |\n| High risk | Conformity assessments before and after deployment, and the statutory requirements |\n| Unacceptable risk | Not allowed; examples include exploitation of children |","notes":"Source: AI Ethics Principles, the risk-based approach (little or no risk, limited, high, unacceptable). The levels concern risk to people's basic rights, safety and livelihood. Ask the room to place Wafi before showing the next slide.","minutes":null,"lo":["LO5"]},{"id":"wafi-tier","n":22,"title":"Limited risk, on one condition","kind":"content","session":3,"hash":"9c569cd0","md":"#### [day3#wafi-tier] Limited risk, on one condition\n\n*Placing Wafi*\n\n- Wafi answers factual questions; it decides nothing about a child.\n- Health, safety, custody, complaints and disputed fees are meant to reach a person first.\n- So the principles apply, and Wafi is tested against them.\n\n- **The condition.** If sensitive replies went out without review, or Wafi began to decide anything about a child, it would be high risk. Lab 3.2 showed the routing does not yet hold in Arabic.","notes":"This is the course's placement, and reasonable people may argue for high: minors' data at scale. The capstone review often changes this fact. The stretch of Lab 3.3 asks what follows if replies are sent without review.","minutes":null,"lo":["LO5"]},{"id":"framework-phases","n":23,"title":"Set the context, then four phases that repeat","kind":"content","session":3,"hash":"1cc09b58","md":"#### [day3#framework-phases] Set the context, then four phases that repeat\n\n*The National AI Risk Management Framework*\n\n1. **Context and scope** the system, its users, the rules\n2. **Identify** what could go wrong\n3. **Assess** likelihood × impact\n4. **Treat** avoid, mitigate, transfer, accept\n5. **Monitor and review** re-rate, report\n\nIt rests on four pillars: general principles, AI regulations, data regulations and sector regulations.","notes":"Source: National AI Risk Management Framework (SDAIA, April 2026; full text in Arabic, English summary). The catalog's \"four phases\" are read in this course as identify, assess, treat, and monitor and review, after setting the context. If the Arabic text you teach from names them differently, use its names.","minutes":null,"lo":["LO5"]},{"id":"likelihood-impact","n":24,"title":"Two four-point scales, multiplied, give four bands","kind":"content","session":3,"hash":"e4933054","md":"#### [day3#likelihood-impact] Two four-point scales, multiplied, give four bands\n\n*Assess*\n\n|  | Likelihood | Impact |\n| --- | --- | --- |\n| 1 | Rare | Low |\n| 2 | Unlikely | Medium |\n| 3 | Likely | High |\n| 4 | Almost certain | Catastrophic |\n\n| Level | Band |\n| --- | --- |\n| 1 to 2 | Low |\n| 3 to 6 | Medium |\n| 8 to 12 | High |\n| 16 | Catastrophic |","notes":"Source: the framework's assessment matrix. The framework's examples of catastrophic impact include a large leak of minors' or health data, which is why H2's impact is 4. Levels 7, 13, 14 and 15 cannot occur as products of two numbers from 1 to 4.","minutes":null,"lo":["LO5"]},{"id":"register-results","n":25,"title":"Three of five harms rate high before treatment","kind":"content","session":3,"hash":"9d500ed2","md":"#### [day3#register-results] Three of five harms rate high before treatment\n\n*Measured in Lab 3.3*\n\n| Harm | L × I | Band | Owner | After |\n| --- | --- | --- | --- | --- |\n| H1 wrong family's data | 2 × 3 = 6 | medium | Dana Al-Saleh | 3 medium |\n| H2 log leaks | 2 × 4 = 8 | high | Nasser Al-Mansour | 4 medium |\n| H3 Gulf Arabic served less | 4 × 2 = 8 | high | Layla Haddad | 4 medium |\n| H4 wrong number stated | 3 × 2 = 6 | medium | Osama Al-Qurashi | 2 low |\n| H5 drafts approved unread | 3 × 3 = 9 | high | Dr. Amal Al-Sayari | 6 medium |","notes":"The reference register. Every treatment is \"mitigate\"; review dates are 30 days for high and 90 for medium (Rawafid's choice). Participants' ratings will differ by a point; ask two tables with different H3 ratings to defend them. The defence matters more than the number.","minutes":null,"lo":["LO5"]},{"id":"residual","n":26,"title":"Treatment lowers likelihood more easily than impact","kind":"content","session":3,"hash":"83c759d1","md":"#### [day3#residual] Treatment lowers likelihood more easily than impact\n\n*Treat, then rate again*\n\n- **H2 after treatment: 1 × 4.** Minimised prompts and deletion after 90 days make a leak less likely and smaller. A leak of children's records is still catastrophic.\n- **Still high after treatment?** Treat it further, or have someone with the authority accept it with a recorded reason, and escalate.","notes":"Source: the framework's treatment phase (residual risk re-assessed; accepted within appetite or escalated). In the reference register no residual risk stays high, so every decision is \"accept and monitor\"; a participant who keeps H5 high should show the escalation to Dr. Amal.","minutes":null,"lo":["LO5"]},{"id":"check-rating","n":27,"title":"Rate the new harm","kind":"quiz","session":3,"hash":"8c751013","md":"#### [day3#check-rating] Rate the new harm\n\n*Checkpoint*\n\n**Question:** Nasser adds a harm: an export of the full log, with health notes of 434 children, is shared outside Rawafid. He rates it unlikely (2) and catastrophic (4). What is its level and band?\n\n- A. 6, medium\n- B. Catastrophic, because the impact is catastrophic\n- C. 8, high\n- D. 4, medium","notes":"Answer: C. B is tempting and wrong under this framework: only 16 (almost certain and catastrophic) is the catastrophic band. A catastrophic impact still deserves the attention of the group director whatever the band; say so.","minutes":null,"lo":["LO5"]},{"id":"lab-3-3","n":28,"title":"Tier and register","kind":"lab","session":3,"hash":"5e1c45eb","md":"#### [day3#lab-3-3] Tier and register\n\nLab 3.3 · 25 min\n\nPlace the assistant in a risk tier and rate five harms by likelihood and impact.\n\n[D3_3_place_assistant_risk.ipynb](https://sdaiaacademy.github.io/fn-106/labs/D3_3_place_assistant_risk.ipynb)\n\n- [ ] Place Wafi in an ethics risk tier with reasons (5 min)\n- [ ] Rate five harms by likelihood and impact (8 min)\n- [ ] Compute levels and bands (3 min)\n- [ ] Choose a treatment, owner and review date per harm (6 min)\n- [ ] Rate the residual risk again (3 min)\n- [ ] ✱ Stretch: Change one fact (replies sent without review) and redo the tier","notes":"Watch for: ratings with no \"why\"; treatments with no owner; residual ratings that are higher than the original. Expected reference: limited risk; H2, H3 and H5 high before treatment; nothing high after. Accept other ratings that are defended from the harm's facts.","minutes":null,"lo":[]},{"id":"s4","n":29,"title":"Disclosure and human review","kind":"section","session":4,"hash":"60092c6d","md":"#### [day3#s4] Disclosure and human review\n\n*Session 4*\n\n- Draft a disclosure that names the assistant, the data and the human route\n- Write a rule that sends sensitive replies to staff\n- Test the rule for recall in both languages","notes":"","minutes":null,"lo":["LO6"]},{"id":"notice-sources","n":30,"title":"Three sources decide what the notice says","kind":"content","session":4,"hash":"127e6568","md":"#### [day3#notice-sources] Three sources decide what the notice says\n\n*What parents must be told*\n\n- **PDPL Article 13.** Purpose and basis, how data is collected, who is responsible and how to reach them, recipients, rights.\n- **Generative AI Guidelines.** Say when content is made with generative AI; offer a channel that does not go through it.\n- **AI Ethics Principles.** Transparency, and humanity: a person reviews what matters.","notes":"Sources: PDPL Article 13 (information to the data subject at collection); Generative AI Guidelines for Government (notify beneficiaries of generative AI use, provide a non-automated channel, human review of outputs); AI Ethics Principles 3 and 6. The PDPL items apply to any controller; the guideline items are adopted by Rawafid's policy.","minutes":null,"lo":["LO6","LO1"]},{"id":"genai-two-guidelines","n":31,"title":"Two documents: one for government staff, one for everyone who builds or uses","kind":"content","session":4,"hash":"cbbc1349","md":"#### [day3#genai-two-guidelines] Two documents: one for government staff, one for everyone who builds or uses\n\n*The Generative AI Guidelines*\n\n- **For government.** Public data only in generative AI tools. Tell beneficiaries when content is made with generative AI, offer a channel that is not automated, and proofread outputs for accuracy.\n- **For the public.** Addressed to developers and users. Follow the Personal Data Protection Law, assess the tool on the four risk levels, label generated content, and verify outputs before relying on them.\n\n> **For Wafi.** Rawafid builds and uses a generative AI service, so the public guidelines speak to it directly; it adopts the government ones as its house rule.","notes":"Sources: Generative AI Guidelines for Government, sections 3.3 (transparency: notify beneficiaries, alternative non-automated channels, watermarks) and 3.5 (privacy and security), and its best practices on proofreading content; Generative AI Guidelines for the Public, section 4 (principles for developers and users, including the four risk levels of the AI Ethics Principles) and section 5 (risks and mitigation: content labelling, user verification). Both are guidelines, not law: the binding rules stay the PDPL and, for public entities, the NDMO policies. Day 2 used the government document for the data rule; today uses both for what people are told.","minutes":null,"lo":["LO6","LO2"]},{"id":"notice-draft","n":32,"title":"131 words that answer nine questions","kind":"content","session":4,"hash":"7ddfc991","md":"#### [day3#notice-draft] 131 words that answer nine questions\n\n*The reference notice, shortened*\n\n- \"Wafi is Rawafid Schools Group's assistant. It uses generative AI to draft replies to your questions about your child's attendance, lateness and fees. To answer, it reads your child's first name and this term's counts from our records; nothing else is sent. Questions about health, safety, custody, complaints or a disputed fee always go to a member of staff, who replies to you. [...] You may ask a person at any time [...]\"\n\nThe full text adds the basis, the 90-day retention, no sharing outside Rawafid, the rights and the data protection officer's contact.","notes":"The full notice is in Lab 3.4's solution. Point out what it does not say: no technical words, no model name, no promises the build cannot keep. Ask: which sentence would become false if Lab 1.2 had not been done? (\"nothing else is sent\".)","minutes":null,"lo":["LO6"]},{"id":"routing-rule","n":33,"title":"The routing rule needs the words guardians actually write","kind":"content","session":4,"hash":"ceaa90f0","md":"#### [day3#routing-rule] The routing rule needs the words guardians actually write\n\n*Human review that works in both languages*\n\n- English, Modern Standard Arabic and Gulf Arabic forms for health, harm, disputes, complaints and custody.\n- Leave out words routine questions use: \"fee\" and \"رسوم\" would send every balance question to staff.\n- Measure recall per language, and false alarms.\n\n- **Gulf forms that Dana's list missed.** تعبان · يضايقون · خصمتوا · صك حضانة","notes":"Ask the Arabic speakers in the room for more forms, including other varieties than Gulf. Every word added is a possible false alarm: the test shows it.","minutes":null,"lo":["LO6"]},{"id":"human-review","n":34,"title":"A review counts only if the reviewer can disagree with the draft","kind":"content","session":4,"hash":"a47c8dfe","md":"#### [day3#human-review] A review counts only if the reviewer can disagree with the draft\n\n*Human review*\n\n- **Sees the facts.** The reviewer reads the guardian's message and the record beside the draft, not the draft alone.\n- **Is named.** Each escalated reply records who approved it. Lab 3.1's accountability check reads that field.\n- **Has the time.** A queue cleared in seconds per reply is approval, not review. That is harm H5.\n\n> **What goes wrong.** The draft reads well, so it is approved unread: automation bias, with a person's name on it.","notes":"Sources: AI Ethics Principles, principle 3 (humanity: human-centred design that allows human choice) and principle 7 (accountability); the AI Bias Reference Guide's entry on automation bias. The fact behind harm H5 in labs/data/harms.json: the median review time of escalated drafts in the queue is under ten seconds. Ask Layla's question to the room: how would you know from the log that a review was real? Possible answers: time between draft and approval, the share of drafts edited, a sample re-read by a second person. Lab 3.4 writes the rule that decides what reaches the queue; this slide is about what happens in it.","minutes":null,"lo":["LO6"]},{"id":"recall-results","n":35,"title":"The new rule reaches a person for every sensitive enquiry","kind":"content","session":4,"hash":"494ccb73","md":"#### [day3#recall-results] The new rule reaches a person for every sensitive enquiry\n\n*Measured in Lab 3.4*\n\n| Rule | English recall | Arabic recall | False alarms |\n| --- | --- | --- | --- |\n| Dana's router | 8 of 8 | 2 of 8 | 0 of 24 |\n| The reference rule | 8 of 8 | 8 of 8 | 0 of 24 |\n\n> **Read it carefully.** A list that catches all forty has learned these forty. Grow the test set from the messages staff re-route by hand.","notes":"From the solution run of Lab 3.4. This is evaluation bias again, now on our side: the rule was written while looking at the test set. The fix is a held-out set and a log of misses in production.","minutes":null,"lo":["LO6"]},{"id":"check-notice","n":36,"title":"Which notice meets the guidelines?","kind":"quiz","session":4,"hash":"0b930820","md":"#### [day3#check-notice] Which notice meets the guidelines?\n\n*Checkpoint*\n\n**Question:** Layla must choose one line for the foot of every Wafi reply. Which one meets the Generative AI Guidelines' transparency items?\n\n- A. \"Sent by Wafi, Rawafid's digital service.\"\n- B. \"This reply may contain errors.\"\n- C. \"Drafted with AI. Write 'staff' to reach a person.\"\n- D. \"See our privacy policy for details.\"","notes":"Answer: C. The full Article 13 notice still appears once at first contact; this line is the per-reply reminder that the transparency check of Lab 3.1 looks for.","minutes":null,"lo":["LO6"]},{"id":"lab-3-4","n":37,"title":"Notice and routing rule","kind":"lab","session":4,"hash":"cda0e032","md":"#### [day3#lab-3-4] Notice and routing rule\n\nLab 3.4 · 25 min\n\nDraft the notice parents see and the rule that sends sensitive replies to staff.\n\n[D3_4_draft_notice_parents.ipynb](https://sdaiaacademy.github.io/fn-106/labs/D3_4_draft_notice_parents.ipynb)\n\n- [ ] Draft the notice parents see (7 min)\n- [ ] Check it against the required items (4 min)\n- [ ] Write the routing rule for sensitive replies (6 min)\n- [ ] Test the rule on the forty enquiries per language (5 min)\n- [ ] Choose your capstone build (3 min)\n- [ ] ✱ Stretch: Write the Arabic notice and check both say the same","notes":"Watch for: notices over 150 words; routing lists that include \"fee\" or \"رسوم\"; participants who edit the item check instead of the notice. Task 5 matters for tomorrow: everyone leaves with one line naming their capstone build. Participants without an own build use Wafi.","minutes":null,"lo":[]},{"id":"wrap-up","n":38,"title":"Test it, rate it, tell people the truth about it","kind":"content","session":4,"hash":"7c218008","md":"#### [day3#wrap-up] Test it, rate it, tell people the truth about it\n\n*Day 3 · Three things to keep*\n\n- **Checks with thresholds.** Set before the run; read the failing cases, not only the verdict.\n- **A register with owners.** Likelihood × impact, a treatment, a person, a date, and a second rating.\n- **A notice and a person.** Say it is AI, what it reads, and how to reach a human, in both languages.","notes":"Go round the room: each participant reads their capstone build line from Lab 3.4. Note any build that holds sensitive data in a regulated sector: the assessor will want the sector pillar of the framework.","minutes":null,"lo":[]},{"id":"next","n":39,"title":"Tomorrow: the responsible build pack, reviewed live","kind":"content","session":4,"hash":"14e6dfcf","md":"#### [day3#next] Tomorrow: the responsible build pack, reviewed live\n\n*Before the capstone*\n\n- Put the registers, the minimisation code and its re-identification test, the test report, the record of processing, the breach checklist and the notice in one public repository.\n- A README that links each part.\n- Six minutes to present; four for the assessor's changed fact.","notes":"Remind participants that the repository is public: synthetic data only, no real records, no keys. The changed fact is usually one of: a new data field, a new recipient, replies sent without review, or a hosted model in another country.","minutes":null,"lo":[]}],"activities":[{"id":"review-day2-q1","slide":"review-day2","type":"single","prompt":"After Lab 1.2 Wafi's prompt carries a child's first name, three counts and the guardian's message. Under Rawafid's rule, where may that prompt go with real records?","options":[{"key":"A","text":"To the free hosted model, since it is minimised"},{"key":"B","text":"To a model served inside Rawafid only"},{"key":"C","text":"Nowhere: it describes a child"},{"key":"D","text":"To any hosted model whose terms forbid training on it"}],"correct":[1],"explanation":"Every field of the minimised prompt is still Restricted personal data, and Restricted data goes to a locally served model only.","misconceptions":["Thinks a short prompt is a Public one","","Treats counts as health data, which they are not","Believes a provider's terms decide the classification"],"lo":["LO3"]},{"id":"check-threshold-q1","slide":"check-threshold","type":"single","prompt":"The fairness check fails with a gap of 42 points. Dana proposes raising the threshold to 45 so the release can go ahead. What is wrong with that?","options":[{"key":"A","text":"Nothing, if the new threshold is written down"},{"key":"B","text":"Thresholds must always be five points"},{"key":"C","text":"The check only matters after release"},{"key":"D","text":"A threshold set after the results is fitted to pass"}],"correct":[3],"explanation":"The threshold defines fair before the run; moving it after a failure hides the gap instead of treating it.","misconceptions":["Thinks the problem is the size of the number, not when it was set","Confuses a fairness threshold with a statistical significance test","Believes fairness checks only apply in production",""],"lo":["LO6"]},{"id":"check-bias-type-q1","slide":"check-bias-type","type":"single","prompt":"Dana's pilot report said Wafi answered 100% of test enquiries correctly. Every test enquiry was in English. Which bias type from the national guide does the report show?","options":[{"key":"A","text":"Automation bias"},{"key":"B","text":"Evaluation bias"},{"key":"C","text":"Measurement bias"},{"key":"D","text":"Language bias"}],"correct":[1],"explanation":"The test set did not reflect the guardians who use Wafi, so the score overstated how well it serves them.","misconceptions":["Confuses a test-set problem with people over-trusting outputs","","Thinks the expected answers themselves were wrong","Names a bias of the model's behaviour, not of the report"],"lo":["LO6"]},{"id":"check-rating-q1","slide":"check-rating","type":"single","prompt":"Nasser adds a harm: an export of the full log, with health notes of 434 children, is shared outside Rawafid. He rates it unlikely (2) and catastrophic (4). What is its level and band?","options":[{"key":"A","text":"6, medium"},{"key":"B","text":"Catastrophic, because the impact is catastrophic"},{"key":"C","text":"8, high"},{"key":"D","text":"4, medium"}],"correct":[2],"explanation":"The level is likelihood times impact, 2 × 4 = 8, and 8 to 12 is the high band.","misconceptions":["Adds the two ratings instead of multiplying them","Lets the impact rating alone decide the band","","Takes the higher rating as the level"],"lo":["LO5"]},{"id":"check-notice-q1","slide":"check-notice","type":"single","prompt":"Layla must choose one line for the foot of every Wafi reply. Which one meets the Generative AI Guidelines' transparency items?","options":[{"key":"A","text":"\"Sent by Wafi, Rawafid's digital service.\""},{"key":"B","text":"\"This reply may contain errors.\""},{"key":"C","text":"\"Drafted with AI. Write 'staff' to reach a person.\""},{"key":"D","text":"\"See our privacy policy for details.\""}],"correct":[2],"explanation":"It says the reply was made with AI and gives a channel that does not go through the AI.","misconceptions":["Thinks a brand name tells people they are dealing with AI","Believes a disclaimer replaces a route to a person","","Puts transparency in a document people must look for"],"lo":["LO6"]}],"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":"day3.md","llms":"../llms.txt"},"tasks":[],"tools":[]},"bridge":{"allowedOrigins":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

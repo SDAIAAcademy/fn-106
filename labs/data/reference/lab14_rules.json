@@ -1,0 +1,38 @@
+{
+ "student information system": {
+  "days": null,
+  "starts": "the student leaves Rawafid",
+  "period": "the period the applicable education records rules require, confirmed by the DPO",
+  "method": "secure erasure, then confirm with the system's audit report"
+ },
+ "fee system": {
+  "days": null,
+  "starts": "the end of the financial year of the last invoice",
+  "period": "the period the applicable financial records rules require, confirmed by Osama Al-Qurashi",
+  "method": "secure erasure; card digits removed at once when no longer needed"
+ },
+ "Wafi enquiry log": {
+  "days": 90,
+  "starts": "the date of the enquiry",
+  "period": "60 days for complaints plus 30 days to investigate",
+  "method": "scheduled deletion of rows and backups"
+ },
+ "Wafi reply cache": {
+  "days": 7,
+  "starts": "the date the reply was cached",
+  "period": "a week of repeated questions",
+  "method": "automatic expiry"
+ },
+ "staff review queue": {
+  "days": 90,
+  "starts": "the case is closed",
+  "period": "the same as the log",
+  "method": "scheduled deletion"
+ },
+ "model provider": {
+  "days": 0,
+  "starts": "the request is answered",
+  "period": "no retention, in the contract with the provider",
+  "method": "contract clause and the provider's confirmation"
+ }
+}

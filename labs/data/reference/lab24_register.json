@@ -1,0 +1,35 @@
+[
+ {
+  "artefact": "Qwen/Qwen3-4B",
+  "kind": "model weights",
+  "licence": "Apache License 2.0",
+  "spdx": "Apache-2.0",
+  "commercial_use": true,
+  "obligations": "Keep the licence and notices; mark changed files",
+  "restrictions": "No trademark rights",
+  "source": "https://huggingface.co/Qwen/Qwen3-4B",
+  "checked": "2026-11-15"
+ },
+ {
+  "artefact": "google/gemma-3-4b-it",
+  "kind": "model weights",
+  "licence": "Gemma Terms of Use",
+  "spdx": "LicenseRef-Gemma-Terms-of-Use",
+  "commercial_use": true,
+  "obligations": "Accept the terms; ship a Notice file; pass the use restrictions and a copy of the terms to recipients",
+  "restrictions": "Prohibited Use Policy; Google may restrict use that breaks the terms",
+  "source": "https://huggingface.co/google/gemma-3-4b-it",
+  "checked": "2026-11-15"
+ },
+ {
+  "artefact": "tatsu-lab/alpaca",
+  "kind": "dataset",
+  "licence": "Creative Commons Attribution Non Commercial 4.0",
+  "spdx": "CC-BY-NC-4.0",
+  "commercial_use": false,
+  "obligations": "Attribute the source",
+  "restrictions": "No commercial use",
+  "source": "https://huggingface.co/datasets/tatsu-lab/alpaca",
+  "checked": "2026-11-15"
+ }
+]
