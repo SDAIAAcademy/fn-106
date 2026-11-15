@@ -1,0 +1,27 @@
+{
+ "H1": {
+  "likelihood": 2,
+  "impact": 3,
+  "why": "Three shared numbers out of 860 guardians; another family's data to the wrong parent."
+ },
+ "H2": {
+  "likelihood": 2,
+  "impact": 4,
+  "why": "One export already leaked; the log holds minors' IDs and health notes at scale."
+ },
+ "H3": {
+  "likelihood": 4,
+  "impact": 2,
+  "why": "Measured on every Arabic run; weaker service, not yet a decision about a child."
+ },
+ "H4": {
+  "likelihood": 3,
+  "impact": 2,
+  "why": "A hosted model can misquote numbers; the guardian can check with the school."
+ },
+ "H5": {
+  "likelihood": 3,
+  "impact": 3,
+  "why": "Review takes under ten seconds; the reviewed replies are the sensitive ones."
+ }
+}

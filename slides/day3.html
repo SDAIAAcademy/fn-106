@@ -1,158 +1,400 @@
+<!-- ======================= OPENING ======================= -->
 <section class="slide title" id="title" data-auto="title">
-  <aside class="notes">REPLACE: welcome; introduce yourself; one question to the room that calibrates the pace; the rhythm of the day</aside>
+  <aside class="notes"><p>Day 3 turns principles into tests and risks into a register. Ask the room: "Wafi passed the pilot. Who decided what passing meant?" Nobody did: that is today's starting point.</p></aside>
 </section>
 
 <section class="slide" id="agenda" data-auto="agenda"></section>
 
-<!-- Session 1 -->
-
-<section class="slide section" id="s1" data-auto="section" data-session="1"></section>
-
-<section class="slide" id="s1-idea" data-lo="LO6">
-  <div class="kicker">REPLACE: the question this slide answers</div>
-  <h2>REPLACE: one idea, stated as a sentence</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: at most six bullets, each a complete thought</li>
-      <li>REPLACE: bold the key phrase; numbers come from the lab run, not from memory</li>
-    </ul>
-    <div class="card c-teal"><h4>In the case study</h4><p class="small mb0">REPLACE: tie the idea to the case study and its data</p></div>
+<section class="slide" id="review-day2" data-lo="LO3">
+  <div class="kicker">Review of Day 2</div>
+  <h2>Where may Wafi's minimised prompt go?</h2>
+  <div class="quiz" data-type="single" data-lo="LO3">
+    <p class="lead">After Lab 1.2 Wafi's prompt carries a child's first name, three counts and the guardian's message. Under Rawafid's rule, where may that prompt go with real records?</p>
+    <div class="opts">
+      <div class="opt" data-why="Thinks a short prompt is a Public one">To the free hosted model, since it is minimised</div>
+      <div class="opt" data-ok>To a model served inside Rawafid only</div>
+      <div class="opt" data-why="Treats counts as health data, which they are not">Nowhere: it describes a child</div>
+      <div class="opt" data-why="Believes a provider's terms decide the classification">To any hosted model whose terms forbid training on it</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> Every field of the minimised prompt is still Restricted personal data, and Restricted data goes to a locally served model only.</div>
   </div>
-  <div class="callout warn mt"><b>What goes wrong.</b> REPLACE: the failure participants will hit, and how to recognise it</div>
-  <aside class="notes">REPLACE: what to say, the demo to run, the question to ask the room, the common failure and its fix</aside>
+  <aside class="notes"><p>Answer: B. D is a common belief: a provider's no-training clause is a contract term worth having, but it does not change the data's level or make the prompt any less of a transfer.</p></aside>
 </section>
 
-<section class="slide" id="s1-steps" data-lo="LO6">
-  <div class="kicker">Step by step</div>
-  <h2>REPLACE: a process, shown one step per key press</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: name</b>REPLACE: what happens first</div>
-    <div class="arrow frag" data-frag="b">→</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: name</b>REPLACE: the next piece</div>
-    <div class="arrow frag" data-frag="c">→</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: name</b>REPLACE: the result</div>
+<!-- ======================= SESSION 1 ======================= -->
+<section class="slide section" id="s1" data-auto="section" data-session="1"></section>
+
+<section class="slide" id="seven-principles" data-lo="LO6">
+  <div class="kicker">The AI Ethics Principles</div>
+  <h2>Seven principles, and three of them can be tested today</h2>
+  <div class="cols cols-4 gap-s">
+    <div class="card c-teal"><h4>Fairness</h4><p class="small mb0">No bias, discrimination or stigma.</p></div>
+    <div class="card c-navy flat"><h4>Privacy and security</h4><p class="small mb0">Days 1 and 2.</p></div>
+    <div class="card c-navy flat"><h4>Humanity</h4><p class="small mb0">Human-centred, human oversight.</p></div>
+    <div class="card c-navy flat"><h4>Social and environmental benefits</h4><p class="small mb0">Serve people and the planet.</p></div>
+    <div class="card c-navy flat"><h4>Reliability and safety</h4><p class="small mb0">Works as specified, safely.</p></div>
+    <div class="card c-teal"><h4>Transparency and explainability</h4><p class="small mb0">People know and understand.</p></div>
+    <div class="card c-teal"><h4>Accountability and responsibility</h4><p class="small mb0">Someone answers for it.</p></div>
   </div>
-  <div class="callout tip mt frag"><b>Takeaway.</b> REPLACE: the one sentence to remember</div>
-  <aside class="notes">Press once per step and say what each step adds before the next one appears. REPLACE: the example to walk through</aside>
+  <aside class="notes"><p>Source: AI Ethics Principles (SDAIA, version 1.0, 2023), principles 1 to 7. Privacy and security has been the subject of two days. Humanity returns in Session 4 (human review). The three highlighted ones are the checks of Lab 3.1.</p></aside>
+</section>
+
+<section class="slide" id="principle-to-check" data-lo="LO6">
+  <div class="kicker">From a word to a test</div>
+  <h2>A principle becomes useful when it is a check that can fail</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>Principle</b>"fair to all guardians"</div>
+    <div class="arrow">→</div>
+    <div class="step c-cyan"><b>Measure</b>correct replies per language</div>
+    <div class="arrow">→</div>
+    <div class="step c-purple"><b>Threshold</b>gap at most 10 points, set first</div>
+    <div class="arrow">→</div>
+    <div class="step c-coral"><b>Result</b>pass or fail, with the cases to read</div>
+  </div>
+  <div class="callout tip mt"><b>The principle asks for this.</b> Fairness metrics are chosen early, with a threshold that defines fair and unfair, and monitored in production.</div>
+  <aside class="notes"><p>Source: AI Ethics Principles, fairness, the design and build-phase guidance (fairness assessment metrics chosen at design, thresholds defined, champion model within threshold, monitoring in production). Ask: who at Rawafid should sign the threshold? (The group director, not the developer.)</p></aside>
+</section>
+
+<section class="slide" id="recorded-run" data-lo="LO6">
+  <div class="kicker">What the checks read</div>
+  <h2>A recorded run: 24 replies from the pilot, with what each one did</h2>
+  <table class="t small">
+    <tr><th>Field</th><th>Feeds</th></tr>
+    <tr><td>language, sensitive, a reviewer's quality mark, escalated</td><td>Fairness</td></tr>
+    <tr><td>AI disclosure line, human route, sent</td><td>Transparency</td></tr>
+    <tr><td>model, prompt version, reviewed by</td><td>Accountability</td></tr>
+  </table>
+  <p class="small mt">If the log does not record a field, the principle that needs it cannot be checked.</p>
+  <aside class="notes"><p>The file is labs/data/recorded_run.jsonl: twelve English and twelve Arabic replies. This links back to Day 1: the log has to hold the fields accountability needs (model, prompt version, reviewer), and not the ones privacy forbids (the full prompt).</p></aside>
+</section>
+
+<section class="slide" id="three-results" data-lo="LO6">
+  <div class="kicker">Measured in Lab 3.1</div>
+  <h2>All three checks fail on the pilot's own log</h2>
+  <div class="cols cols-3 gap-s">
+    <div class="stat center"><div class="big">58% / 100%</div><div class="lbl">replies marked correct, Arabic against English</div></div>
+    <div class="stat center"><div class="big">2 of 24</div><div class="lbl">replies sent without the AI notice</div></div>
+    <div class="stat center"><div class="big">5</div><div class="lbl">replies with no model, no reviewer or no escalation</div></div>
+  </div>
+  <p class="small mt">The two sensitive replies that were never escalated are both Arabic.</p>
+  <aside class="notes"><p>From the solution run. Fairness: quality 58.3% against 100% (gap 41.7 points), escalation of sensitive enquiries 33.3% against 100%. Transparency: R09 and R22. Accountability: R15 has no model; R11 and R17 are sensitive with no reviewer; R06 and R18 are sensitive, Arabic, and never escalated.</p></aside>
+</section>
+
+<section class="slide" id="tolerance" data-lo="LO6">
+  <div class="kicker">Thresholds</div>
+  <h2>Rates across groups need a tolerance; duties to each person do not</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>Fairness: ten points</h4><p class="small mb0">Rates move by chance across small groups. The gap is judged against a threshold set in advance.</p></div>
+    <div class="card c-coral"><h4>Transparency: zero</h4><p class="small mb0">Each guardian is owed the notice. One reply without it is one guardian misled.</p></div>
+  </div>
+  <div class="callout warn mt"><b>What goes wrong.</b> A threshold written after the results are known is fitted to pass.</div>
+  <aside class="notes"><p>Ask the room for an example of each kind in their own work. A useful extra point: with twelve replies per language, one reply moves the rate by more than eight points; a real test set needs more cases than this classroom one.</p></aside>
+</section>
+
+<section class="slide" id="check-threshold" data-lo="LO6">
+  <div class="kicker">Checkpoint</div>
+  <h2>Dana wants to change the threshold</h2>
+  <div class="quiz" data-type="single" data-lo="LO6">
+    <p class="lead">The fairness check fails with a gap of 42 points. Dana proposes raising the threshold to 45 so the release can go ahead. What is wrong with that?</p>
+    <div class="opts">
+      <div class="opt" data-why="Thinks the problem is the size of the number, not when it was set">Nothing, if the new threshold is written down</div>
+      <div class="opt" data-why="Confuses a fairness threshold with a statistical significance test">Thresholds must always be five points</div>
+      <div class="opt" data-why="Believes fairness checks only apply in production">The check only matters after release</div>
+      <div class="opt" data-ok>A threshold set after the results is fitted to pass</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> The threshold defines fair before the run; moving it after a failure hides the gap instead of treating it.</div>
+  </div>
+  <aside class="notes"><p>Answer: D. The legitimate path is the risk register: record the failure as a risk, treat it, and re-test; or accept it by someone with authority, with a reason.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-3-1" data-auto="lab" data-lab="3.1">
-  <aside class="notes">REPLACE: what to watch for while participants work, the typical problems, and the fallback for anyone who did not finish an earlier lab</aside>
+  <aside class="notes"><p>Watch for: fairness computed over all replies rather than per language; transparency that ignores the "sent" flag; accountability that misses empty strings. Expected: all three checks fail, the transparency failures are R09 and R22. Nothing depends on an earlier lab.</p></aside>
 </section>
 
-<!-- Session 2 -->
-
+<!-- ======================= SESSION 2 ======================= -->
 <section class="slide section" id="s2" data-auto="section" data-session="2"></section>
 
-<section class="slide" id="s2-idea" data-lo="LO6">
-  <div class="kicker">REPLACE: the question this slide answers</div>
-  <h2>REPLACE: one idea, stated as a sentence</h2>
+<section class="slide" id="paired-test" data-lo="LO6">
+  <div class="kicker">How to test for a language gap</div>
+  <h2>Ask the same thing twice, once in each language</h2>
   <div class="cols cols-2">
     <ul class="bullets">
-      <li>REPLACE: at most six bullets, each a complete thought</li>
-      <li>REPLACE: bold the key phrase; numbers come from the lab run, not from memory</li>
+      <li>Twenty enquiries guardians send, each in English and in Arabic.</li>
+      <li>Arabic in the forms guardians write: Modern Standard and Gulf.</li>
+      <li>Twelve routine questions with a known answer; eight sensitive ones that must reach a person.</li>
+      <li>Same guardian, same child, same question: the only difference is the language.</li>
     </ul>
-    <div class="card c-teal"><h4>In the case study</h4><p class="small mb0">REPLACE: tie the idea to the case study and its data</p></div>
+    <div class="card c-teal"><h4>Example pair</h4><p class="small mb0">"Can you tell me Yousef's absences so far?"</p><p class="small mb0" dir="rtl" lang="ar">كم مرة غاب يوسف لين الحين؟</p></div>
   </div>
-  <div class="callout warn mt"><b>What goes wrong.</b> REPLACE: the failure participants will hit, and how to recognise it</div>
-  <aside class="notes">REPLACE: what to say, the demo to run, the question to ask the room, the common failure and its fix</aside>
+  <aside class="notes"><p>The set is labs/data/enquiries_40.jsonl. Pairing removes the excuse that the Arabic questions were harder. Ask an Arabic speaker in the room to read the Gulf example aloud and say what a system trained on formal Arabic would make of it.</p></aside>
 </section>
 
-<section class="slide" id="s2-steps" data-lo="LO6">
-  <div class="kicker">Step by step</div>
-  <h2>REPLACE: a process, shown one step per key press</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: name</b>REPLACE: what happens first</div>
-    <div class="arrow frag" data-frag="b">→</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: name</b>REPLACE: the next piece</div>
-    <div class="arrow frag" data-frag="c">→</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: name</b>REPLACE: the result</div>
+<section class="slide" id="standin-and-hosted" data-lo="LO6">
+  <div class="kicker">The model behind the test</div>
+  <h2>A scripted stand-in gives everyone the same numbers</h2>
+  <div class="cols cols-2">
+    <div class="card c-cyan"><h4>Stand-in (default)</h4><p class="small mb0">Fixed templates filled from the prompt. It reads Modern Standard Arabic phrasings and misses Gulf ones, on purpose, so the method can be learned on a known gap.</p></div>
+    <div class="card c-purple"><h4>Free hosted model (optional)</h4><p class="small mb0">With a key, a real model drafts the replies. Results vary by model and day; synthetic data only.</p></div>
   </div>
-  <div class="callout tip mt frag"><b>Takeaway.</b> REPLACE: the one sentence to remember</div>
-  <aside class="notes">Press once per step and say what each step adds before the next one appears. REPLACE: the example to walk through</aside>
+  <div class="callout warn mt"><b>Say it plainly.</b> The stand-in is not evidence about any real model. The method is what transfers.</div>
+  <aside class="notes"><p>wafi.py documents both paths. Be explicit with participants: the 58% and 25% numbers are the stand-in's, designed to imitate a common weakness. A participant with a key should run both and compare: the interesting discussion is whether the hosted model's gap is smaller, larger or different in kind.</p></aside>
+</section>
+
+<section class="slide" id="forty-results" data-lo="LO6">
+  <div class="kicker">Measured in Lab 3.2</div>
+  <h2>English is served fully; Gulf Arabic is served least</h2>
+  <table class="t">
+    <tr><th>Variety</th><th>Routine replies correct</th><th>Sensitive enquiries escalated</th></tr>
+    <tr><td>English</td><td>12 of 12</td><td>8 of 8</td></tr>
+    <tr><td>Modern Standard Arabic</td><td>6 of 6</td><td>2 of 4</td></tr>
+    <tr class="hl"><td>Gulf Arabic</td><td>2 of 6</td><td>0 of 4</td></tr>
+  </table>
+  <aside class="notes"><p>From the solution run with the stand-in and Dana's router: Arabic routine 8 of 12 (67%), Arabic sensitive escalated 2 of 8 (25%). The escalations that work are the two whose Arabic words Dana happened to add (complaint and bullying in their standard forms). Every Gulf health, bullying, fee dispute and custody message was missed.</p></aside>
+</section>
+
+<section class="slide" id="two-failures" data-lo="LO6">
+  <div class="kicker">Which gap matters more</div>
+  <h2>A weak reply is visible; a missed escalation reaches nobody</h2>
+  <div class="cols cols-2">
+    <div class="card c-cyan"><h4>Routine reply wrong</h4><p class="small mb0">The guardian sees a generic answer and asks again or calls. Annoying, recoverable.</p></div>
+    <div class="card c-coral"><h4>Sensitive enquiry not escalated</h4><p class="small mb0">"Rahaf was unwell at school yesterday" gets a template reply and no person reads it. The school never knew.</p></div>
+  </div>
+  <aside class="notes"><p>Q14AR is the example: a Gulf Arabic message about a child feeling unwell. Link to Day 3 Session 3: this is harm H3, and its impact depends on which enquiries are missed, not only on how many.</p></aside>
+</section>
+
+<section class="slide" id="bias-types" data-lo="LO6">
+  <div class="kicker">The AI Bias Reference Guide</div>
+  <h2>Three bias types explain what the test measured</h2>
+  <table class="t small">
+    <tr><th>Bias type</th><th>The guide's sense</th><th>At Rawafid</th></tr>
+    <tr><td><b>Language</b></td><td>Trained on standard language, fails on dialect</td><td>Gulf phrasings fail where MSA succeeds</td></tr>
+    <tr><td><b>Evaluation</b></td><td>Tests do not reflect the real users</td><td>The pilot was tested in English only</td></tr>
+    <tr><td><b>Automation</b></td><td>People trust the system's output over their judgement</td><td>Staff read only what the router flags</td></tr>
+  </table>
+  <aside class="notes"><p>Source: AI Bias Reference Guide (SDAIA, first edition 2026): entries for language bias, evaluation bias and automation bias. The guide's own example for language bias is a model trained on formal text failing on dialect comments, which is exactly the stand-in's behaviour. Measurement bias is a distractor here: nothing suggests the expected values are wrong.</p></aside>
+</section>
+
+<section class="slide" id="check-bias-type" data-lo="LO6">
+  <div class="kicker">Checkpoint</div>
+  <h2>Which bias type does the pilot's test show?</h2>
+  <div class="quiz" data-type="single" data-lo="LO6">
+    <p class="lead">Dana's pilot report said Wafi answered 100% of test enquiries correctly. Every test enquiry was in English. Which bias type from the national guide does the report show?</p>
+    <div class="opts">
+      <div class="opt" data-why="Confuses a test-set problem with people over-trusting outputs">Automation bias</div>
+      <div class="opt" data-ok>Evaluation bias</div>
+      <div class="opt" data-why="Thinks the expected answers themselves were wrong">Measurement bias</div>
+      <div class="opt" data-why="Names a bias of the model's behaviour, not of the report">Language bias</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> The test set did not reflect the guardians who use Wafi, so the score overstated how well it serves them.</div>
+  </div>
+  <aside class="notes"><p>Answer: B. D is close: language bias is what the model does; the report's flaw is in the evaluation. Both appear in the Lab 3.2 answer, which is the point of naming them separately.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-3-2" data-auto="lab" data-lab="3.2">
-  <aside class="notes">REPLACE: what to watch for while participants work, the typical problems, and the fallback for anyone who did not finish an earlier lab</aside>
+  <aside class="notes"><p>Run with WAFI_MODEL=standin unless a participant has a working key. Watch for: scoring a sensitive enquiry by the reply text instead of escalation; averaging over both languages. Expected with the stand-in: Arabic routine 8 of 12, Arabic sensitive escalated 2 of 8; English 12 of 12 and 8 of 8.</p></aside>
 </section>
 
-<!-- Session 3 -->
-
+<!-- ======================= SESSION 3 ======================= -->
 <section class="slide section" id="s3" data-auto="section" data-session="3"></section>
 
-<section class="slide" id="s3-idea" data-lo="LO5">
-  <div class="kicker">REPLACE: the question this slide answers</div>
-  <h2>REPLACE: one idea, stated as a sentence</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: at most six bullets, each a complete thought</li>
-      <li>REPLACE: bold the key phrase; numbers come from the lab run, not from memory</li>
-    </ul>
-    <div class="card c-teal"><h4>In the case study</h4><p class="small mb0">REPLACE: tie the idea to the case study and its data</p></div>
-  </div>
-  <div class="callout warn mt"><b>What goes wrong.</b> REPLACE: the failure participants will hit, and how to recognise it</div>
-  <aside class="notes">REPLACE: what to say, the demo to run, the question to ask the room, the common failure and its fix</aside>
+<section class="slide" id="four-risk-levels" data-lo="LO5">
+  <div class="kicker">The AI Ethics Principles</div>
+  <h2>Four risk levels set how much is required before use</h2>
+  <table class="t">
+    <tr><th>Level</th><th>What follows</th></tr>
+    <tr><td>Little or no risk</td><td>No restrictions; ethical compliance recommended</td></tr>
+    <tr class="hl"><td>Limited risk</td><td>The AI ethics principles apply</td></tr>
+    <tr><td>High risk</td><td>Conformity assessments before and after deployment, and the statutory requirements</td></tr>
+    <tr><td>Unacceptable risk</td><td>Not allowed; examples include exploitation of children</td></tr>
+  </table>
+  <aside class="notes"><p>Source: AI Ethics Principles, the risk-based approach (little or no risk, limited, high, unacceptable). The levels concern risk to people's basic rights, safety and livelihood. Ask the room to place Wafi before showing the next slide.</p></aside>
 </section>
 
-<section class="slide" id="s3-steps" data-lo="LO5">
-  <div class="kicker">Step by step</div>
-  <h2>REPLACE: a process, shown one step per key press</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: name</b>REPLACE: what happens first</div>
-    <div class="arrow frag" data-frag="b">→</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: name</b>REPLACE: the next piece</div>
-    <div class="arrow frag" data-frag="c">→</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: name</b>REPLACE: the result</div>
+<section class="slide" id="wafi-tier" data-lo="LO5">
+  <div class="kicker">Placing Wafi</div>
+  <h2>Limited risk, on one condition</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>Wafi answers factual questions; it decides nothing about a child.</li>
+      <li>Health, safety, custody, complaints and disputed fees are meant to reach a person first.</li>
+      <li>So the principles apply, and Wafi is tested against them.</li>
+    </ul>
+    <div class="card c-coral"><h4>The condition</h4><p class="small mb0">If sensitive replies went out without review, or Wafi began to decide anything about a child, it would be high risk. Lab 3.2 showed the routing does not yet hold in Arabic.</p></div>
   </div>
-  <div class="callout tip mt frag"><b>Takeaway.</b> REPLACE: the one sentence to remember</div>
-  <aside class="notes">Press once per step and say what each step adds before the next one appears. REPLACE: the example to walk through</aside>
+  <aside class="notes"><p>This is the course's placement, and reasonable people may argue for high: minors' data at scale. The capstone review often changes this fact. The stretch of Lab 3.3 asks what follows if replies are sent without review.</p></aside>
+</section>
+
+<section class="slide" id="framework-phases" data-lo="LO5">
+  <div class="kicker">The National AI Risk Management Framework</div>
+  <h2>Set the context, then four phases that repeat</h2>
+  <div class="flow">
+    <div class="step c-navy"><b>Context and scope</b>the system, its users, the rules</div>
+    <div class="arrow">→</div>
+    <div class="step c-teal"><b>Identify</b>what could go wrong</div>
+    <div class="arrow">→</div>
+    <div class="step c-cyan"><b>Assess</b>likelihood × impact</div>
+    <div class="arrow">→</div>
+    <div class="step c-purple"><b>Treat</b>avoid, mitigate, transfer, accept</div>
+    <div class="arrow">→</div>
+    <div class="step c-coral"><b>Monitor and review</b>re-rate, report</div>
+  </div>
+  <p class="small mt">It rests on four pillars: general principles, AI regulations, data regulations and sector regulations.</p>
+  <aside class="notes"><p>Source: National AI Risk Management Framework (SDAIA, April 2026; full text in Arabic, English summary). The catalog's "four phases" are read in this course as identify, assess, treat, and monitor and review, after setting the context. If the Arabic text you teach from names them differently, use its names.</p></aside>
+</section>
+
+<section class="slide" id="likelihood-impact" data-lo="LO5">
+  <div class="kicker">Assess</div>
+  <h2>Two four-point scales, multiplied, give four bands</h2>
+  <div class="cols cols-2">
+    <table class="t small">
+      <tr><th></th><th>Likelihood</th><th>Impact</th></tr>
+      <tr><td>1</td><td>Rare</td><td>Low</td></tr>
+      <tr><td>2</td><td>Unlikely</td><td>Medium</td></tr>
+      <tr><td>3</td><td>Likely</td><td>High</td></tr>
+      <tr><td>4</td><td>Almost certain</td><td>Catastrophic</td></tr>
+    </table>
+    <table class="t small">
+      <tr><th>Level</th><th>Band</th></tr>
+      <tr><td>1 to 2</td><td>Low</td></tr>
+      <tr><td>3 to 6</td><td>Medium</td></tr>
+      <tr><td>8 to 12</td><td>High</td></tr>
+      <tr class="hl"><td>16</td><td>Catastrophic</td></tr>
+    </table>
+  </div>
+  <aside class="notes"><p>Source: the framework's assessment matrix. The framework's examples of catastrophic impact include a large leak of minors' or health data, which is why H2's impact is 4. Levels 7, 13, 14 and 15 cannot occur as products of two numbers from 1 to 4.</p></aside>
+</section>
+
+<section class="slide" id="register-results" data-lo="LO5">
+  <div class="kicker">Measured in Lab 3.3</div>
+  <h2>Three of five harms rate high before treatment</h2>
+  <table class="t small">
+    <tr><th>Harm</th><th>L × I</th><th>Band</th><th>Owner</th><th>After</th></tr>
+    <tr><td>H1 wrong family's data</td><td>2 × 3 = 6</td><td>medium</td><td>Dana Al-Saleh</td><td>3 medium</td></tr>
+    <tr class="hl"><td>H2 log leaks</td><td>2 × 4 = 8</td><td>high</td><td>Nasser Al-Mansour</td><td>4 medium</td></tr>
+    <tr class="hl"><td>H3 Gulf Arabic served less</td><td>4 × 2 = 8</td><td>high</td><td>Layla Haddad</td><td>4 medium</td></tr>
+    <tr><td>H4 wrong number stated</td><td>3 × 2 = 6</td><td>medium</td><td>Osama Al-Qurashi</td><td>2 low</td></tr>
+    <tr class="hl"><td>H5 drafts approved unread</td><td>3 × 3 = 9</td><td>high</td><td>Dr. Amal Al-Sayari</td><td>6 medium</td></tr>
+  </table>
+  <aside class="notes"><p>The reference register. Every treatment is "mitigate"; review dates are 30 days for high and 90 for medium (Rawafid's choice). Participants' ratings will differ by a point; ask two tables with different H3 ratings to defend them. The defence matters more than the number.</p></aside>
+</section>
+
+<section class="slide" id="residual" data-lo="LO5">
+  <div class="kicker">Treat, then rate again</div>
+  <h2>Treatment lowers likelihood more easily than impact</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>H2 after treatment: 1 × 4</h4><p class="small mb0">Minimised prompts and deletion after 90 days make a leak less likely and smaller. A leak of children's records is still catastrophic.</p></div>
+    <div class="card c-coral"><h4>Still high after treatment?</h4><p class="small mb0">Treat it further, or have someone with the authority accept it with a recorded reason, and escalate.</p></div>
+  </div>
+  <aside class="notes"><p>Source: the framework's treatment phase (residual risk re-assessed; accepted within appetite or escalated). In the reference register no residual risk stays high, so every decision is "accept and monitor"; a participant who keeps H5 high should show the escalation to Dr. Amal.</p></aside>
+</section>
+
+<section class="slide" id="check-rating" data-lo="LO5">
+  <div class="kicker">Checkpoint</div>
+  <h2>Rate the new harm</h2>
+  <div class="quiz" data-type="single" data-lo="LO5">
+    <p class="lead">Nasser adds a harm: an export of the full log, with health notes of 434 children, is shared outside Rawafid. He rates it unlikely (2) and catastrophic (4). What is its level and band?</p>
+    <div class="opts">
+      <div class="opt" data-why="Adds the two ratings instead of multiplying them">6, medium</div>
+      <div class="opt" data-why="Lets the impact rating alone decide the band">Catastrophic, because the impact is catastrophic</div>
+      <div class="opt" data-ok>8, high</div>
+      <div class="opt" data-why="Takes the higher rating as the level">4, medium</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> The level is likelihood times impact, 2 × 4 = 8, and 8 to 12 is the high band.</div>
+  </div>
+  <aside class="notes"><p>Answer: C. B is tempting and wrong under this framework: only 16 (almost certain and catastrophic) is the catastrophic band. A catastrophic impact still deserves the attention of the group director whatever the band; say so.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-3-3" data-auto="lab" data-lab="3.3">
-  <aside class="notes">REPLACE: what to watch for while participants work, the typical problems, and the fallback for anyone who did not finish an earlier lab</aside>
+  <aside class="notes"><p>Watch for: ratings with no "why"; treatments with no owner; residual ratings that are higher than the original. Expected reference: limited risk; H2, H3 and H5 high before treatment; nothing high after. Accept other ratings that are defended from the harm's facts.</p></aside>
 </section>
 
-<!-- Session 4 -->
-
+<!-- ======================= SESSION 4 ======================= -->
 <section class="slide section" id="s4" data-auto="section" data-session="4"></section>
 
-<section class="slide" id="s4-idea" data-lo="LO6">
-  <div class="kicker">REPLACE: the question this slide answers</div>
-  <h2>REPLACE: one idea, stated as a sentence</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: at most six bullets, each a complete thought</li>
-      <li>REPLACE: bold the key phrase; numbers come from the lab run, not from memory</li>
-    </ul>
-    <div class="card c-teal"><h4>In the case study</h4><p class="small mb0">REPLACE: tie the idea to the case study and its data</p></div>
+<section class="slide" id="notice-sources" data-lo="LO6 LO1">
+  <div class="kicker">What parents must be told</div>
+  <h2>Three sources decide what the notice says</h2>
+  <div class="cols cols-3 gap-s">
+    <div class="card c-teal"><h4>PDPL Article 13</h4><p class="small mb0">Purpose and basis, how data is collected, who is responsible and how to reach them, recipients, rights.</p></div>
+    <div class="card c-cyan"><h4>Generative AI Guidelines</h4><p class="small mb0">Say when content is made with generative AI; offer a channel that does not go through it.</p></div>
+    <div class="card c-purple"><h4>AI Ethics Principles</h4><p class="small mb0">Transparency, and humanity: a person reviews what matters.</p></div>
   </div>
-  <div class="callout warn mt"><b>What goes wrong.</b> REPLACE: the failure participants will hit, and how to recognise it</div>
-  <aside class="notes">REPLACE: what to say, the demo to run, the question to ask the room, the common failure and its fix</aside>
+  <aside class="notes"><p>Sources: PDPL Article 13 (information to the data subject at collection); Generative AI Guidelines for Government (notify beneficiaries of generative AI use, provide a non-automated channel, human review of outputs); AI Ethics Principles 3 and 6. The PDPL items apply to any controller; the guideline items are adopted by Rawafid's policy.</p></aside>
 </section>
 
-<section class="slide" id="s4-steps" data-lo="LO6">
-  <div class="kicker">Step by step</div>
-  <h2>REPLACE: a process, shown one step per key press</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: name</b>REPLACE: what happens first</div>
-    <div class="arrow frag" data-frag="b">→</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: name</b>REPLACE: the next piece</div>
-    <div class="arrow frag" data-frag="c">→</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: name</b>REPLACE: the result</div>
+<section class="slide" id="notice-draft" data-lo="LO6">
+  <div class="kicker">The reference notice, shortened</div>
+  <h2>131 words that answer nine questions</h2>
+  <div class="card c-teal"><p class="small mb0">"Wafi is Rawafid Schools Group's assistant. It uses generative AI to draft replies to your questions about your child's attendance, lateness and fees. To answer, it reads your child's first name and this term's counts from our records; nothing else is sent. Questions about health, safety, custody, complaints or a disputed fee always go to a member of staff, who replies to you. [...] You may ask a person at any time [...]"</p></div>
+  <p class="small mt">The full text adds the basis, the 90-day retention, no sharing outside Rawafid, the rights and the data protection officer's contact.</p>
+  <aside class="notes"><p>The full notice is in Lab 3.4's solution. Point out what it does not say: no technical words, no model name, no promises the build cannot keep. Ask: which sentence would become false if Lab 1.2 had not been done? ("nothing else is sent".)</p></aside>
+</section>
+
+<section class="slide" id="routing-rule" data-lo="LO6">
+  <div class="kicker">Human review that works in both languages</div>
+  <h2>The routing rule needs the words guardians actually write</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>English, Modern Standard Arabic and Gulf Arabic forms for health, harm, disputes, complaints and custody.</li>
+      <li>Leave out words routine questions use: "fee" and "رسوم" would send every balance question to staff.</li>
+      <li>Measure recall per language, and false alarms.</li>
+    </ul>
+    <div class="card c-coral"><h4>Gulf forms that Dana's list missed</h4><p class="small mb0" dir="rtl" lang="ar">تعبان · يضايقون · خصمتوا · صك حضانة</p></div>
   </div>
-  <div class="callout tip mt frag"><b>Takeaway.</b> REPLACE: the one sentence to remember</div>
-  <aside class="notes">Press once per step and say what each step adds before the next one appears. REPLACE: the example to walk through</aside>
+  <aside class="notes"><p>Ask the Arabic speakers in the room for more forms, including other varieties than Gulf. Every word added is a possible false alarm: the test shows it.</p></aside>
+</section>
+
+<section class="slide" id="recall-results" data-lo="LO6">
+  <div class="kicker">Measured in Lab 3.4</div>
+  <h2>The new rule reaches a person for every sensitive enquiry</h2>
+  <table class="t">
+    <tr><th>Rule</th><th>English recall</th><th>Arabic recall</th><th>False alarms</th></tr>
+    <tr><td>Dana's router</td><td>8 of 8</td><td>2 of 8</td><td>0 of 24</td></tr>
+    <tr class="hl"><td>The reference rule</td><td>8 of 8</td><td>8 of 8</td><td>0 of 24</td></tr>
+  </table>
+  <div class="callout warn mt"><b>Read it carefully.</b> A list that catches all forty has learned these forty. Grow the test set from the messages staff re-route by hand.</div>
+  <aside class="notes"><p>From the solution run of Lab 3.4. This is evaluation bias again, now on our side: the rule was written while looking at the test set. The fix is a held-out set and a log of misses in production.</p></aside>
+</section>
+
+<section class="slide" id="check-notice" data-lo="LO6">
+  <div class="kicker">Checkpoint</div>
+  <h2>Which notice meets the guidelines?</h2>
+  <div class="quiz" data-type="single" data-lo="LO6">
+    <p class="lead">Layla must choose one line for the foot of every Wafi reply. Which one meets the Generative AI Guidelines' transparency items?</p>
+    <div class="opts">
+      <div class="opt" data-why="Thinks a brand name tells people they are dealing with AI">"Sent by Wafi, Rawafid's digital service."</div>
+      <div class="opt" data-why="Believes a disclaimer replaces a route to a person">"This reply may contain errors."</div>
+      <div class="opt" data-ok>"Drafted with AI. Write 'staff' to reach a person."</div>
+      <div class="opt" data-why="Puts transparency in a document people must look for">"See our privacy policy for details."</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> It says the reply was made with AI and gives a channel that does not go through the AI.</div>
+  </div>
+  <aside class="notes"><p>Answer: C. The full Article 13 notice still appears once at first contact; this line is the per-reply reminder that the transparency check of Lab 3.1 looks for.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-3-4" data-auto="lab" data-lab="3.4">
-  <aside class="notes">REPLACE: what to watch for while participants work, the typical problems, and the fallback for anyone who did not finish an earlier lab</aside>
+  <aside class="notes"><p>Watch for: notices over 150 words; routing lists that include "fee" or "رسوم"; participants who edit the item check instead of the notice. Task 5 matters for tomorrow: everyone leaves with one line naming their capstone build. Participants without an own build use Wafi.</p></aside>
 </section>
 
+<!-- ======================= CLOSE ======================= -->
 <section class="slide" id="wrap-up">
-  <div class="kicker">Day 3 · wrap-up</div>
-  <h2>Three things to keep</h2>
-  <div class="cols cols-3">
-    <div class="card c-teal"><h4>Remember</h4><p class="small mb0">REPLACE: one idea participants keep</p></div>
-    <div class="card c-coral"><h4>Remember</h4><p class="small mb0">REPLACE: one idea participants keep</p></div>
-    <div class="card c-purple"><h4>Remember</h4><p class="small mb0">REPLACE: one idea participants keep</p></div>
+  <div class="kicker">Day 3 · Three things to keep</div>
+  <h2>Test it, rate it, tell people the truth about it</h2>
+  <div class="cols cols-3 gap-s">
+    <div class="card c-teal"><h4>Checks with thresholds</h4><p class="small mb0">Set before the run; read the failing cases, not only the verdict.</p></div>
+    <div class="card c-cyan"><h4>A register with owners</h4><p class="small mb0">Likelihood × impact, a treatment, a person, a date, and a second rating.</p></div>
+    <div class="card c-coral"><h4>A notice and a person</h4><p class="small mb0">Say it is AI, what it reads, and how to reach a human, in both languages.</p></div>
   </div>
+  <aside class="notes"><p>Go round the room: each participant reads their capstone build line from Lab 3.4. Note any build that holds sensitive data in a regulated sector: the assessor will want the sector pillar of the framework.</p></aside>
 </section>
 
-<section class="slide dark" id="next" data-label="Next">
-  <div class="kicker">Next</div>
-  <h2>Capstone: Capstone project presentations</h2>
-  <p class="lead">REPLACE: what participants prepare before then; unfinished labs can be finished at home</p>
-  <aside class="notes">REPLACE: accounts, installs or reading participants need before the next unit</aside>
+<section class="slide dark" id="next">
+  <div class="kicker">Before the capstone</div>
+  <h2>Tomorrow: the responsible build pack, reviewed live</h2>
+  <ul class="bullets">
+    <li>Put the registers, the minimisation code and its re-identification test, the test report, the record of processing, the breach checklist and the notice in one public repository.</li>
+    <li>A README that links each part.</li>
+    <li>Six minutes to present; four for the assessor's changed fact.</li>
+  </ul>
+  <aside class="notes"><p>Remind participants that the repository is public: synthetic data only, no real records, no keys. The changed fact is usually one of: a new data field, a new recipient, replies sent without review, or a hosted model in another country.</p></aside>
 </section>

@@ -1,0 +1,14 @@
+{
+ "quality_rate": {
+  "ar": 58.3,
+  "en": 100.0
+ },
+ "escalation_rate": {
+  "ar": 33.3,
+  "en": 100.0
+ },
+ "quality_gap": 41.7,
+ "escalation_gap": 66.7,
+ "threshold": 10,
+ "passed": false
+}
