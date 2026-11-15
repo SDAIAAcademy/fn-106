@@ -137,7 +137,7 @@
     <div class="card c-purple"><h4>Free hosted model (optional)</h4><p class="small mb0">With a key, a real model drafts the replies. Results vary by model and day; synthetic data only.</p></div>
   </div>
   <div class="callout warn mt"><b>Say it plainly.</b> The stand-in is not evidence about any real model. The method is what transfers.</div>
-  <aside class="notes"><p>wafi.py documents both paths. Be explicit with participants: the 58% and 25% numbers are the stand-in's, designed to imitate a common weakness. A participant with a key should run both and compare: the interesting discussion is whether the hosted model's gap is smaller, larger or different in kind.</p></aside>
+  <aside class="notes"><p>wafi.py documents both paths. Be explicit with participants: the 67% and 25% of Lab 3.2 are the stand-in's, designed to imitate a common weakness, and the recorded run of Lab 3.1 (58%) was written to show the same pattern. A participant with a key should run both and compare: the interesting discussion is whether the hosted model's gap is smaller, larger or different in kind.</p></aside>
 </section>
 
 <section class="slide" id="forty-results" data-lo="LO6">
@@ -322,6 +322,17 @@
   <aside class="notes"><p>Sources: PDPL Article 13 (information to the data subject at collection); Generative AI Guidelines for Government (notify beneficiaries of generative AI use, provide a non-automated channel, human review of outputs); AI Ethics Principles 3 and 6. The PDPL items apply to any controller; the guideline items are adopted by Rawafid's policy.</p></aside>
 </section>
 
+<section class="slide" id="genai-two-guidelines" data-lo="LO6 LO2">
+  <div class="kicker">The Generative AI Guidelines</div>
+  <h2>Two documents: one for government staff, one for everyone who builds or uses</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>For government</h4><p class="small mb0">Public data only in generative AI tools. Tell beneficiaries when content is made with generative AI, offer a channel that is not automated, and proofread outputs for accuracy.</p></div>
+    <div class="card c-cyan"><h4>For the public</h4><p class="small mb0">Addressed to developers and users. Follow the Personal Data Protection Law, assess the tool on the four risk levels, label generated content, and verify outputs before relying on them.</p></div>
+  </div>
+  <div class="callout tip mt"><b>For Wafi.</b> Rawafid builds and uses a generative AI service, so the public guidelines speak to it directly; it adopts the government ones as its house rule.</div>
+  <aside class="notes"><p>Sources: Generative AI Guidelines for Government, sections 3.3 (transparency: notify beneficiaries, alternative non-automated channels, watermarks) and 3.5 (privacy and security), and its best practices on proofreading content; Generative AI Guidelines for the Public, section 4 (principles for developers and users, including the four risk levels of the AI Ethics Principles) and section 5 (risks and mitigation: content labelling, user verification). Both are guidelines, not law: the binding rules stay the PDPL and, for public entities, the NDMO policies. Day 2 used the government document for the data rule; today uses both for what people are told.</p></aside>
+</section>
+
 <section class="slide" id="notice-draft" data-lo="LO6">
   <div class="kicker">The reference notice, shortened</div>
   <h2>131 words that answer nine questions</h2>
@@ -342,6 +353,18 @@
     <div class="card c-coral"><h4>Gulf forms that Dana's list missed</h4><p class="small mb0" dir="rtl" lang="ar">تعبان · يضايقون · خصمتوا · صك حضانة</p></div>
   </div>
   <aside class="notes"><p>Ask the Arabic speakers in the room for more forms, including other varieties than Gulf. Every word added is a possible false alarm: the test shows it.</p></aside>
+</section>
+
+<section class="slide" id="human-review" data-lo="LO6">
+  <div class="kicker">Human review</div>
+  <h2>A review counts only if the reviewer can disagree with the draft</h2>
+  <div class="cols cols-3 gap-s">
+    <div class="card c-teal"><h4>Sees the facts</h4><p class="small mb0">The reviewer reads the guardian's message and the record beside the draft, not the draft alone.</p></div>
+    <div class="card c-cyan"><h4>Is named</h4><p class="small mb0">Each escalated reply records who approved it. Lab 3.1's accountability check reads that field.</p></div>
+    <div class="card c-coral"><h4>Has the time</h4><p class="small mb0">A queue cleared in seconds per reply is approval, not review. That is harm H5.</p></div>
+  </div>
+  <div class="callout warn mt"><b>What goes wrong.</b> The draft reads well, so it is approved unread: automation bias, with a person's name on it.</div>
+  <aside class="notes"><p>Sources: AI Ethics Principles, principle 3 (humanity: human-centred design that allows human choice) and principle 7 (accountability); the AI Bias Reference Guide's entry on automation bias. The fact behind harm H5 in labs/data/harms.json: the median review time of escalated drafts in the queue is under ten seconds. Ask Layla's question to the room: how would you know from the log that a review was real? Possible answers: time between draft and approval, the share of drafts edited, a sample re-read by a second person. Lab 3.4 writes the rule that decides what reaches the queue; this slide is about what happens in it.</p></aside>
 </section>
 
 <section class="slide" id="recall-results" data-lo="LO6">

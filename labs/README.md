@@ -20,6 +20,8 @@
 | Day 3 | Session 3 · Risk tier and risk register | [`D3_3_place_assistant_risk.ipynb`](https://colab.research.google.com/github/SDAIAAcademy/fn-106/blob/main/labs/D3_3_place_assistant_risk.ipynb) |
 | Day 3 | Session 4 · Disclosure and human review | [`D3_4_draft_notice_parents.ipynb`](https://colab.research.google.com/github/SDAIAAcademy/fn-106/blob/main/labs/D3_4_draft_notice_parents.ipynb) |
 
+**Before Day 1** work through [`PREWORK.md`](PREWORK.md): a reading guide to the core instruments that ends in an entry quiz of ten questions (about three hours).
+
 ## The case and its data
 
 Every lab works on Wafi, the parent-enquiry assistant of Rawafid Schools Group, a fictional private school group. All records in `data/` are synthetic: `prepare_data.py` writes them (seed 106, standard library only), so no real person is described. `rawafid.py` holds the shared helpers and `wafi.py` the assistant as Dana built it.

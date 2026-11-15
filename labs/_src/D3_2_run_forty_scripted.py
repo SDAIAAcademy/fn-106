@@ -93,7 +93,11 @@ routine = results[~results["sensitive"]]
 quality = (routine.groupby("lang")["correct"].mean() * 100).round(0)
 print("routine replies correct, % by language:", quality.to_dict())
 print("by variety:", (routine.groupby("variety")["correct"].mean() * 100).round(0).to_dict())
-U.check(quality["en"] - quality["ar"] >= 10, "Arabic routine replies are measurably weaker")
+gap = quality["en"] - quality["ar"]
+if {r["model"] for r in replies} <= {"stand-in"}:
+    U.check(gap >= 10, "Arabic routine replies are measurably weaker")  # the stand-in's planted weakness
+else:  # a hosted model answered: no gap is promised, so nothing is asserted
+    print(f"hosted model: the gap is {gap:.0f} points. Whatever it is, it is your finding: report it as measured.")
 
 # %% [markdown]
 # ## 3 · Escalation per language (5')

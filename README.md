@@ -46,7 +46,7 @@ People: Dr. Amal Al-Sayari (group director of schools), Nasser Al-Mansour (data 
 
 ## How the course runs
 
-Three teaching days of four sessions. Each session has about 20 minutes of ideas, a checkpoint, and a 25-minute lab notebook that starts from supplied files, so no lab depends on another. Guided pre-work (a reading guide to the core instruments, ending in an entry quiz) comes before Day 1; a follow-up task applies the build pack to a second case after the course.
+Three teaching days of four sessions. Each session has about 20 minutes of ideas, a checkpoint, and a 25-minute lab notebook that starts from supplied files, so no lab depends on another. Guided pre-work (a reading guide to the core instruments, ending in an entry quiz: `labs/PREWORK.md`) comes before Day 1; a follow-up task applies the build pack to a second case after the course.
 
 Labs run on a laptop processor or in Google Colab. Wafi drafts its replies with a scripted stand-in model that needs no key; with a free OpenRouter key it uses a free hosted model instead. Only synthetic data is ever sent to a hosted model.
 
