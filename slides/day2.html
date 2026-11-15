@@ -1,158 +1,469 @@
+<!-- ======================= OPENING ======================= -->
 <section class="slide title" id="title" data-auto="title">
-  <aside class="notes">REPLACE: welcome; introduce yourself; one question to the room that calibrates the pace; the rhythm of the day</aside>
+  <aside class="notes"><p>Welcome back. Yesterday was the law; today is the national data policies and what they decide for an AI build. Ask one person to say in one sentence what Wafi's prompt carries now (after Lab 1.2: a first name and three counts).</p></aside>
 </section>
 
 <section class="slide" id="agenda" data-auto="agenda"></section>
 
-<!-- Session 1 -->
-
-<section class="slide section" id="s1" data-auto="section" data-session="1"></section>
-
-<section class="slide" id="s1-idea" data-lo="LO3">
-  <div class="kicker">REPLACE: the question this slide answers</div>
-  <h2>REPLACE: one idea, stated as a sentence</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: at most six bullets, each a complete thought</li>
-      <li>REPLACE: bold the key phrase; numbers come from the lab run, not from memory</li>
-    </ul>
-    <div class="card c-teal"><h4>In the case study</h4><p class="small mb0">REPLACE: tie the idea to the case study and its data</p></div>
+<section class="slide" id="review-day1" data-lo="LO1 LO4">
+  <div class="kicker">Review of Day 1</div>
+  <h2>Which change does the most for Wafi's log?</h2>
+  <div class="quiz" data-type="single" data-lo="LO1">
+    <p class="lead">Wafi's log keeps every full prompt since the pilot began. Nasser can make one change this week. Which one reduces the exposure the most?</p>
+    <div class="opts">
+      <div class="opt" data-why="Treats a stronger lock as a substitute for keeping less: what is kept can still leak">Encrypt the log file on disk</div>
+      <div class="opt" data-why="Thinks removing names alone makes records anonymous; Lab 1.3 re-identified 96%">Remove the names from old rows</div>
+      <div class="opt" data-ok>Send minimised prompts and delete rows past 90 days</div>
+      <div class="opt" data-why="Believes telling people about a practice makes it lawful">Add the log to the privacy notice</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> Minimisation cuts what each row holds, and the retention rule cuts how many rows exist: 78% of the log was past a 90-day rule.</div>
   </div>
-  <div class="callout warn mt"><b>What goes wrong.</b> REPLACE: the failure participants will hit, and how to recognise it</div>
-  <aside class="notes">REPLACE: what to say, the demo to run, the question to ask the room, the common failure and its fix</aside>
+  <aside class="notes"><p>Answer: C. Encryption (A) is a security measure the law also asks for, but it does not reduce what a breach or a rights request exposes. Use this to bridge: today's question is not "how do we protect it" but "where may it go at all".</p></aside>
 </section>
 
-<section class="slide" id="s1-steps" data-lo="LO3">
-  <div class="kicker">Step by step</div>
-  <h2>REPLACE: a process, shown one step per key press</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: name</b>REPLACE: what happens first</div>
-    <div class="arrow frag" data-frag="b">→</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: name</b>REPLACE: the next piece</div>
-    <div class="arrow frag" data-frag="c">→</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: name</b>REPLACE: the result</div>
+<!-- ======================= SESSION 1 ======================= -->
+<section class="slide section" id="s1" data-auto="section" data-session="1"></section>
+
+<section class="slide" id="why-classify" data-lo="LO3">
+  <div class="kicker">What classification is for</div>
+  <h2>A classification level is a decision about handling, made once</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>Every data set gets a level when it is created or received.</li>
+      <li>The level decides access, storage, sharing, publication and, today, which model may see it.</li>
+      <li>Data not yet classified is treated as <b>Restricted</b> until it is.</li>
+      <li>The level is reviewed within a month of the first classification.</li>
+    </ul>
+    <div class="card c-purple"><h4>Whose policy?</h4><p class="small mb0">The NDMO Data Classification Policy is written for public entities. Rawafid, a private group, adopts it in its own data policy; the PDPL binds it by law.</p></div>
   </div>
-  <div class="callout tip mt frag"><b>Takeaway.</b> REPLACE: the one sentence to remember</div>
-  <aside class="notes">Press once per step and say what each step adds before the next one appears. REPLACE: the example to walk through</aside>
+  <aside class="notes"><p>Sources: Data Classification Policy (NDMO, version 1, 2020): scope (public entities), principle 3 timely classification, section 1.4 (unclassified data is treated as Restricted), step 6 (review within one month). Be honest about the scope: the policy binds government entities. Many private organisations that work with government adopt it; Rawafid does so in this course, which is a choice of the case, not a legal claim.</p></aside>
+</section>
+
+<section class="slide" id="four-levels" data-lo="LO3">
+  <div class="kicker">Four levels</div>
+  <h2>The level follows the impact of unauthorised disclosure</h2>
+  <table class="t">
+    <tr><th>Level</th><th>Impact</th><th>Example in the policy</th></tr>
+    <tr><td><b>Top Secret</b></td><td>High: exceptionally serious, irreparable</td><td>National security information</td></tr>
+    <tr><td><b>Secret</b></td><td>Medium: serious</td><td>Information on vital installations</td></tr>
+    <tr class="hl"><td><b>Restricted</b></td><td>Low: limited</td><td>Personal identifiers, a medical file, individual transactions</td></tr>
+    <tr><td><b>Public</b></td><td>None</td><td>Published statistics, public announcements</td></tr>
+  </table>
+  <p class="small mt">Restricted has sub-levels by scale: <b>A</b> a whole sector, <b>B</b> several entities or a group of individuals, <b>C</b> one entity or one individual.</p>
+  <aside class="notes"><p>Source: Data Classification Policy, section 1.3, Table 1 and the Restricted sub-levels. Point out where personal data sits: the policy's examples for Restricted include names, addresses, national ID numbers, phone numbers, bank accounts and medical files. A VIP's personal data can be Secret when it affects the national interest. School records are Restricted.</p></aside>
+</section>
+
+<section class="slide" id="impact-categories" data-lo="LO3">
+  <div class="kicker">How to assess impact</div>
+  <h2>Ask what disclosure would harm, then how badly and for how long</h2>
+  <div class="cols cols-4 gap-s">
+    <div class="card c-navy flat"><h4>National interest</h4><p class="small mb0">Reputation, security, economy, infrastructure, government functions.</p></div>
+    <div class="card c-cyan flat"><h4>Entity activities</h4><p class="small mb0">Profits and functions of entities.</p></div>
+    <div class="card c-coral flat"><h4>Individuals</h4><p class="small mb0">Health and safety; <b>privacy</b>.</p></div>
+    <div class="card c-green flat"><h4>Environment</h4><p class="small mb0">Environmental and natural resources.</p></div>
+  </div>
+  <p class="small mt">The level weighs the duration of the damage, the time to recover and its scale. Every impact named must be specific and evidence-based.</p>
+  <aside class="notes"><p>Source: Data Classification Policy, Table 2 (categories and levels) and step 3 (impact category, then impact level: duration, recovery, size). For individuals' privacy the policy's guidance is: disclosure of an individual's personal information is a Low impact. That is the line Lab 2.1 uses.</p></aside>
+</section>
+
+<section class="slide" id="low-impact-two-steps" data-lo="LO3">
+  <div class="kicker">The policy's process</div>
+  <h2>A low impact still has two questions before it becomes a level</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>Impact Low</b>limited, short-term, controllable</div>
+    <div class="arrow">→</div>
+    <div class="step c-coral"><b>Step 4</b>Would disclosure break a law? Yes: Restricted</div>
+    <div class="arrow">→</div>
+    <div class="step c-cyan"><b>Step 5</b>Do the benefits outweigh the harm? Yes: Public. No: Restricted</div>
+  </div>
+  <div class="callout tip mt"><b>Open by default.</b> The two steps exist so that data is not locked away when nothing forbids its release.</div>
+  <aside class="notes"><p>Source: Data Classification Policy, steps 3b, 4 and 5, and principle 1 (open by default, for the development sector). For Rawafid's record sets step 4 answers yes at once: disclosure would breach the PDPL. For the fee schedule nothing is at stake. The interesting case is the summary table.</p></aside>
+</section>
+
+<section class="slide" id="highest-level-wins" data-lo="LO3">
+  <div class="kicker">Combining data</div>
+  <h2>A set built from several levels takes the highest of them</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>Principle 4 · highest level of protection</h4><p class="small mb0">If a data set integrates parts with different levels, the highest level applies.</p></div>
+    <div class="card c-coral"><h4>At Rawafid</h4><p class="small mb0">The fee schedule (Public) joined with each family's balance (Restricted) is Restricted. So is a prompt that carries one Restricted field.</p></div>
+  </div>
+  <aside class="notes"><p>Source: Data Classification Policy, principle 4. This is the rule behind Lab 2.2's field-by-field decision: a prompt is a combined data set, so its level is the level of its most protected field.</p></aside>
+</section>
+
+<section class="slide" id="small-cells" data-lo="LO3">
+  <div class="kicker">Measured in Lab 2.1</div>
+  <h2>An aggregate table can still describe one child</h2>
+  <div class="cols cols-2">
+    <div class="stat center"><div class="big">12 / 95</div><div class="lbl">cells of the attendance summary hold fewer than five students</div></div>
+    <ul class="bullets">
+      <li>Each cell is campus, grade and gender, with an absence rate.</li>
+      <li>A cell of one student <b>is</b> that student's attendance.</li>
+      <li>Until small cells are suppressed or merged, the table is Restricted.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>From the solution run of Lab 2.1: 12 of 95 cells have under five students, mostly older grades at the smaller campuses (the generator thinned them on purpose). The same idea as Day 1's k: no row, no name, and still a child. The stretch suppresses them and reclassifies the table as Public.</p></aside>
+</section>
+
+<section class="slide" id="register-day2" data-lo="LO3">
+  <div class="kicker">The register</div>
+  <h2>Six sets, two levels, one reason each</h2>
+  <table class="t small">
+    <tr><th>Set</th><th>Level</th><th>Reason</th></tr>
+    <tr><td>fee_schedule</td><td>Public</td><td>Already published</td></tr>
+    <tr><td>guardians</td><td>Restricted B</td><td>Names, national IDs, mobiles, IBANs</td></tr>
+    <tr><td>students</td><td>Restricted B</td><td>Children's identities and health notes</td></tr>
+    <tr><td>attendance</td><td>Restricted B</td><td>Absences, with notes that can reveal health</td></tr>
+    <tr><td>fees</td><td>Restricted B</td><td>Detailed statements of individual transactions</td></tr>
+    <tr><td>attendance_summary</td><td>Restricted B</td><td>Cells under five students</td></tr>
+  </table>
+  <aside class="notes"><p>The reference register of Lab 2.1. The B sub-level: each set concerns a group of individuals. Ask: if a single student's file were leaked, is that C? Yes, for that one record; the register classifies the set as a whole. Owners and a review date one month on are in the lab's output.</p></aside>
+</section>
+
+<section class="slide" id="check-classify-combined" data-lo="LO3">
+  <div class="kicker">Checkpoint</div>
+  <h2>What level does Dana's new report take?</h2>
+  <div class="quiz" data-type="single" data-lo="LO3">
+    <p class="lead">Dana joins the published fee schedule with each family's balance to show who is behind on payments. What is the report's level?</p>
+    <div class="opts">
+      <div class="opt" data-ok>Restricted, the higher of its two parts</div>
+      <div class="opt" data-why="Averages levels instead of taking the highest">Somewhere between Public and Restricted</div>
+      <div class="opt" data-why="Lets the public part decide the level of the whole">Public, because the fees are published</div>
+      <div class="opt" data-why="Thinks a new combination needs no classification until someone asks">Unclassified until someone reviews it</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> Combined data takes the highest level of its parts, and each family's balance is a Restricted individual transaction.</div>
+  </div>
+  <aside class="notes"><p>Answer: A. D is wrong twice: data is classified when created, and unclassified data is treated as Restricted anyway.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-2-1" data-auto="lab" data-lab="2.1">
-  <aside class="notes">REPLACE: what to watch for while participants work, the typical problems, and the fallback for anyone who did not finish an earlier lab</aside>
+  <aside class="notes"><p>AI off for task 2, the first classification. Watch for: participants who make the student file Secret because it holds health data (the policy reserves Secret for serious national or entity-level impact; the PDPL's sensitive-data rules handle health); and those who make the summary Public at once. Expected: one Public set, five Restricted B, 12 small cells. Review date: one month from today.</p></aside>
 </section>
 
-<!-- Session 2 -->
-
+<!-- ======================= SESSION 2 ======================= -->
 <section class="slide section" id="s2" data-auto="section" data-session="2"></section>
 
-<section class="slide" id="s2-idea" data-lo="LO3">
-  <div class="kicker">REPLACE: the question this slide answers</div>
-  <h2>REPLACE: one idea, stated as a sentence</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: at most six bullets, each a complete thought</li>
-      <li>REPLACE: bold the key phrase; numbers come from the lab run, not from memory</li>
-    </ul>
-    <div class="card c-teal"><h4>In the case study</h4><p class="small mb0">REPLACE: tie the idea to the case study and its data</p></div>
+<section class="slide" id="three-destinations" data-lo="LO3">
+  <div class="kicker">Where a prompt can go</div>
+  <h2>Three destinations: a hosted service, a model you run, or no model</h2>
+  <div class="cols cols-3 gap-s">
+    <div class="card c-cyan"><h4>Hosted</h4><p class="small mb0">A provider's model over an API. Fast to start; the data leaves you, under the provider's terms and location.</p></div>
+    <div class="card c-teal"><h4>Locally served</h4><p class="small mb0">An open-weight model on your own machines in the Kingdom. The data stays under your controls.</p></div>
+    <div class="card c-coral"><h4>Neither</h4><p class="small mb0">Some data has no business in a prompt at all. Minimisation decides before any model does.</p></div>
   </div>
-  <div class="callout warn mt"><b>What goes wrong.</b> REPLACE: the failure participants will hit, and how to recognise it</div>
-  <aside class="notes">REPLACE: what to say, the demo to run, the question to ask the room, the common failure and its fix</aside>
+  <aside class="notes"><p>This is the decision the catalog asks participants to make. A locally served model does not appear in the labs: the course runs only free hosted models on synthetic data, so nobody downloads model weights. The decision is made on paper here and is what Rawafid would need for real data.</p></aside>
 </section>
 
-<section class="slide" id="s2-steps" data-lo="LO3">
-  <div class="kicker">Step by step</div>
-  <h2>REPLACE: a process, shown one step per key press</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: name</b>REPLACE: what happens first</div>
-    <div class="arrow frag" data-frag="b">→</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: name</b>REPLACE: the next piece</div>
-    <div class="arrow frag" data-frag="c">→</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: name</b>REPLACE: the result</div>
+<section class="slide" id="genai-guideline-rule" data-lo="LO3 LO2">
+  <div class="kicker">What the guidelines say</div>
+  <h2>Generative AI tools get Public data only</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>The Generative AI Guidelines for Government: do not enter data classified <b>Restricted or higher</b> into generative AI tools.</li>
+      <li>Limit their use to data classified <b>Public</b>; check the tool's privacy, disclosure and sharing terms.</li>
+      <li>Data analysis with generative AI is limited to Public or open data sets.</li>
+    </ul>
+    <div class="card c-purple"><h4>Rawafid's reading</h4><p class="small mb0">The rule covers hosted services Rawafid does not control. A model Rawafid runs itself, under the source system's access rules, may see minimised Restricted fields.</p></div>
   </div>
-  <div class="callout tip mt frag"><b>Takeaway.</b> REPLACE: the one sentence to remember</div>
-  <aside class="notes">Press once per step and say what each step adds before the next one appears. REPLACE: the example to walk through</aside>
+  <aside class="notes"><p>Source: Generative AI Guidelines for Government (SDAIA, 2025), section 3.5 (privacy and security: no Restricted or higher, limit to Public) and the best practices on data analysis. The card on the right is the course's interpretation for a private entity running its own model; say plainly that it is Rawafid's policy choice, and that a stricter reading (no generative AI on Restricted data at all) is also defensible.</p></aside>
+</section>
+
+<section class="slide" id="destination-rule-code" data-lo="LO3">
+  <div class="kicker">The rule as code</div>
+  <h2>Three lines turn a level into a destination</h2>
+  <pre class="code" data-file="Lab 2.2"><code class="language-python">def destination(level, has_sensitive):
+    if level == "Public":
+        return "hosted"
+    if level == "Restricted" and not has_sensitive:
+        return "local"
+    return "neither"</code></pre>
+  <p class="small mt">Pseudonymised data keeps its Restricted level, so pseudonymising does not change the answer.</p>
+  <aside class="notes"><p>Walk through the four test cases of the lab: Public goes anywhere; Restricted without sensitive fields goes to a local model; Restricted with health notes goes nowhere; Secret goes nowhere. Ask: what would make you add a fourth branch? (A sector regulator's rule, for example health data in a hospital.)</p></aside>
+</section>
+
+<section class="slide" id="six-sets-destinations" data-lo="LO3">
+  <div class="kicker">Measured in Lab 2.2</div>
+  <h2>Only the published fee schedule may go to a hosted model</h2>
+  <div class="bars">
+    <div class="row"><span>fee_schedule</span><div class="bar c-cyan" style="--w:100%"></div><span class="val">hosted</span></div>
+    <div class="row"><span>guardians, fees, summary</span><div class="bar c-teal" style="--w:66%"></div><span class="val">local</span></div>
+    <div class="row"><span>students, attendance</span><div class="bar c-coral" style="--w:33%"></div><span class="val">neither</span></div>
+  </div>
+  <p class="small mt">Field by field, all five fields of the minimised prompt are Restricted: <b>local only</b>. Minimised is small, not Public.</p>
+  <aside class="notes"><p>From the solution run: one hosted, three local, two neither (the student file and attendance carry health in notes). For the student and attendance sets, derived counts without notes may go to a local model. The bar lengths only order the three answers; they are not measurements.</p></aside>
+</section>
+
+<section class="slide" id="hosted-is-transfer" data-lo="LO1 LO3">
+  <div class="kicker">The other half of the question</div>
+  <h2>A hosted endpoint outside the Kingdom makes every prompt a transfer</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>Transfer only for listed purposes, without harm to national security or vital interests.</li>
+      <li>With an adequate level of protection abroad, and the <b>minimum</b> data needed.</li>
+      <li>Otherwise safeguards: standard contractual clauses, binding common rules or a certificate.</li>
+    </ul>
+    <div class="card c-coral"><h4>Location unknown?</h4><p class="small mb0">Treat it as abroad. If you cannot show where prompts are processed, you cannot show the conditions are met.</p></div>
+  </div>
+  <aside class="notes"><p>Sources: PDPL Article 29; Regulation on Personal Data Transfer outside the Kingdom, version 2.0, Articles 2 to 4 (purposes, the adequacy list, safeguards and exemptions). The free model router used in class sends prompts to providers it chooses; the course treats its location as unknown and therefore as a transfer. That is fine for synthetic data and decisive for real data.</p></aside>
+</section>
+
+<section class="slide" id="class-data-is-synthetic" data-lo="LO3">
+  <div class="kicker">Why the class may use a hosted model</div>
+  <h2>Synthetic records describe nobody, so they may go anywhere</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>In class</b>synthetic records, hosted free model</div>
+    <div class="arrow">→</div>
+    <div class="step c-purple"><b>The gate</b>before real records: classify again</div>
+    <div class="arrow">→</div>
+    <div class="step c-coral"><b>In production</b>Restricted fields, local model only</div>
+  </div>
+  <div class="callout warn mt"><b>What goes wrong.</b> A prototype built on a hosted model is pointed at real data "just for a test". The test is the breach.</div>
+  <aside class="notes"><p>This is the course's own rule, stated in the catalog entry: a free hosted endpoint used only with synthetic data. Lab 2.2's stretch asks participants to write the check that must hold before anyone points Wafi at real records.</p></aside>
+</section>
+
+<section class="slide" id="check-pseudonymised-hosted" data-lo="LO3">
+  <div class="kicker">Checkpoint</div>
+  <h2>Does pseudonymising open the hosted route?</h2>
+  <div class="quiz" data-type="single" data-lo="LO3">
+    <p class="lead">Dana pseudonymises attendance counts with a keyed hash and asks to send them to the free hosted model for a monthly summary. Under Rawafid's rule, where may they go?</p>
+    <div class="opts">
+      <div class="opt" data-why="Thinks pseudonymised data is anonymous and so Public">To the hosted model, now that they are pseudonymised</div>
+      <div class="opt" data-why="Believes a key held by Rawafid moves the data's location">To the hosted model, because Rawafid keeps the key</div>
+      <div class="opt" data-why="Over-applies the sensitive-data branch to counts without notes">Nowhere: attendance data can never reach a model</div>
+      <div class="opt" data-ok>To a locally served model only</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> Pseudonymised data is still personal data and keeps its Restricted level; counts without notes carry no health data, so a local model is permitted.</div>
+  </div>
+  <aside class="notes"><p>Answer: D. C is a careful but wrong answer: the "neither" applies to the raw attendance set because its notes can reveal health; derived counts without notes are not sensitive.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-2-2" data-auto="lab" data-lab="2.2">
-  <aside class="notes">REPLACE: what to watch for while participants work, the typical problems, and the fallback for anyone who did not finish an earlier lab</aside>
+  <aside class="notes"><p>The lab starts from the reference register of Lab 2.1, so nobody is blocked. Watch for: field_level() that calls the first name Public ("it is only a first name"); is_transfer() that treats unknown as inside. Expected: hosted for the fee schedule only; every prompt field local; the class endpoint a transfer.</p></aside>
 </section>
 
-<!-- Session 3 -->
-
+<!-- ======================= SESSION 3 ======================= -->
 <section class="slide section" id="s3" data-auto="section" data-session="3"></section>
 
-<section class="slide" id="s3-idea" data-lo="LO2">
-  <div class="kicker">REPLACE: the question this slide answers</div>
-  <h2>REPLACE: one idea, stated as a sentence</h2>
+<section class="slide" id="partner-request" data-lo="LO2">
+  <div class="kicker">The request</div>
+  <h2>A research centre asks for three years of attendance, with names</h2>
   <div class="cols cols-2">
     <ul class="bullets">
-      <li>REPLACE: at most six bullets, each a complete thought</li>
-      <li>REPLACE: bold the key phrase; numbers come from the lab run, not from memory</li>
+      <li><b>Purpose:</b> commute distance and absence in primary and middle school.</li>
+      <li><b>Fields:</b> names, national IDs, birth dates, district, guardian's employer, daily records, absence notes, health notes.</li>
+      <li><b>Storage:</b> a cloud workspace outside the Kingdom.</li>
+      <li><b>Retention:</b> indefinitely; <b>onward:</b> research partners when needed.</li>
     </ul>
-    <div class="card c-teal"><h4>In the case study</h4><p class="small mb0">REPLACE: tie the idea to the case study and its data</p></div>
+    <div class="card c-teal"><h4>The decision</h4><p class="small mb0">Not yes or no: <b>what</b>, in which form, <b>on what conditions</b>.</p></div>
   </div>
-  <div class="callout warn mt"><b>What goes wrong.</b> REPLACE: the failure participants will hit, and how to recognise it</div>
-  <aside class="notes">REPLACE: what to say, the demo to run, the question to ask the room, the common failure and its fix</aside>
+  <aside class="notes"><p>The request is in labs/data/partner_request.json. Al-Mizan Centre for Education Research is fictional. Ask the room for a gut answer before any instrument: most say no. The lab turns that into a reasoned yes with conditions, which is what the policy's sharing culture asks for.</p></aside>
 </section>
 
-<section class="slide" id="s3-steps" data-lo="LO2">
-  <div class="kicker">Step by step</div>
-  <h2>REPLACE: a process, shown one step per key press</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: name</b>REPLACE: what happens first</div>
-    <div class="arrow frag" data-frag="b">→</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: name</b>REPLACE: the next piece</div>
-    <div class="arrow frag" data-frag="c">→</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: name</b>REPLACE: the result</div>
+<section class="slide" id="eight-principles" data-lo="LO2">
+  <div class="kicker">The Data Sharing Policy</div>
+  <h2>Eight principles decide whether and how data is shared</h2>
+  <div class="cols cols-4 gap-s">
+    <div class="card c-teal flat"><h4>Sharing culture</h4><p class="small mb0">Share by default, under the policy.</p></div>
+    <div class="card c-teal flat"><h4>Single source</h4><p class="small mb0">The entity that produces data shares it.</p></div>
+    <div class="card c-coral flat"><h4>Legitimate purpose</h4><p class="small mb0">A legal basis; used only for that purpose.</p></div>
+    <div class="card c-coral flat"><h4>Authorised access</h4><p class="small mb0">Identified, verified people.</p></div>
+    <div class="card c-cyan flat"><h4>Transparency</h4><p class="small mb0">Data, level, storage, protection, destruction.</p></div>
+    <div class="card c-cyan flat"><h4>Accountability</h4><p class="small mb0">Shared, under an agreement.</p></div>
+    <div class="card c-purple flat"><h4>Security</h4><p class="small mb0">Controls per the national rules.</p></div>
+    <div class="card c-purple flat"><h4>Ethical use</h4><p class="small mb0">Fairness, integrity, trust.</p></div>
   </div>
-  <div class="callout tip mt frag"><b>Takeaway.</b> REPLACE: the one sentence to remember</div>
-  <aside class="notes">Press once per step and say what each step adds before the next one appears. REPLACE: the example to walk through</aside>
+  <aside class="notes"><p>Source: Data Sharing Policy (NDMO), section two, the eight principles. The policy governs government data shared with requesters; Rawafid's policy adopts the principles for its own sharing, and the PDPL's disclosure rules apply by law. The agreement signatory depends on the level: for Restricted data, the director of the data management office.</p></aside>
+</section>
+
+<section class="slide" id="pdpl-disclosure-research" data-lo="LO1 LO2">
+  <div class="kicker">The law's side</div>
+  <h2>The PDPL allows research sharing when the data does not identify the child</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>Disclosure (Article 15)</h4><p class="small mb0">Only in listed cases, among them consent, and later processing in a form that cannot identify the data subject directly or indirectly.</p></div>
+    <div class="card c-cyan"><h4>Research (Article 27)</h4><p class="small mb0">Without consent when the data does not specifically identify the person, or identity evidence is destroyed first and the data is not sensitive.</p></div>
+  </div>
+  <div class="callout warn mt"><b>The health notes fail both.</b> They are sensitive and they identify; a commute study does not need them.</div>
+  <aside class="notes"><p>Sources: PDPL Articles 15, 16 and 27. Article 16 adds cases where disclosure is refused even when Article 15 allows it, including conflict with the interests of a person lacking legal capacity: a child.</p></aside>
+</section>
+
+<section class="slide" id="cut-the-request" data-lo="LO2">
+  <div class="kicker">Measured in Lab 2.3</div>
+  <h2>Six of eleven requested fields survive, in a coarser form</h2>
+  <table class="t small">
+    <tr><th>Requested</th><th>Shared as</th></tr>
+    <tr><td>date of birth</td><td>birth year</td></tr>
+    <tr><td>grade</td><td>grade band, grades 1 to 9 only</td></tr>
+    <tr><td>gender, campus, district</td><td>as they are</td></tr>
+    <tr><td>daily attendance records</td><td>absence counts per month</td></tr>
+    <tr class="hl"><td>names, national IDs, employer, notes, health notes</td><td>refused</td></tr>
+  </table>
+  <aside class="notes"><p>From the solution run: the extract has 1,043 rows (grades 1 to 9) and ten columns, with a project pseudonym from a key used for this study only. The guardian's employer has nothing to do with commute distance; the district does.</p></aside>
+</section>
+
+<section class="slide" id="district-trade-off" data-lo="LO2 LO4">
+  <div class="kicker">The trade-off in the extract</div>
+  <h2>The field the study needs most makes the smallest groups</h2>
+  <div class="cols cols-2">
+    <div class="stack">
+      <div class="stat center"><div class="big">k = 2</div><div class="lbl">with the district: 4 of 96 groups under five</div></div>
+      <div class="stat center"><div class="big">k = 11</div><div class="lbl">without it: no group under five</div></div>
+    </div>
+    <ul class="bullets">
+      <li>Share the district and suppress or merge the small groups before release.</li>
+      <li>Or compute commute bands inside Rawafid and share those instead of the district.</li>
+      <li>Either way, write the choice into the conditions.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>From Lab 2.3's run on campus, district, grade band and gender. This links Day 1 Session 3 to sharing: the minimisation of a request is measured the same way as a pseudonymisation.</p></aside>
+</section>
+
+<section class="slide" id="conditions-of-sharing" data-lo="LO2">
+  <div class="kicker">The answer to the centre</div>
+  <h2>Yes, on nine conditions</h2>
+  <ol class="bullets small">
+    <li>The stated study only.</li>
+    <li>The pseudonymised extract, coarse fields.</li>
+    <li>Labelled Restricted in the metadata.</li>
+    <li>Stored in the Kingdom, or a lawful transfer.</li>
+    <li>Named researchers only.</li>
+    <li>No onward sharing.</li>
+    <li>Destroyed at the end, with a signed confirmation.</li>
+    <li>A secure channel, not email.</li>
+    <li>An agreement signed before any data moves.</li>
+  </ol>
+  <aside class="notes"><p>The reference conditions of Lab 2.3. Three principles were "not met" in the request as written: authorised access, collective accountability and data security. Each condition answers one of them, or the PDPL. The stretch is the destruction confirmation.</p></aside>
+</section>
+
+<section class="slide" id="check-research-purpose" data-lo="LO2">
+  <div class="kicker">Checkpoint</div>
+  <h2>Is "for research" enough?</h2>
+  <div class="quiz" data-type="single" data-lo="LO2">
+    <p class="lead">The centre says the purpose is research, so every requested field should be shared. What does the Data Sharing Policy's legitimate-purpose principle add?</p>
+    <div class="opts">
+      <div class="opt" data-why="Treats the word research as a basis for any data">Nothing: research is always a legitimate purpose</div>
+      <div class="opt" data-ok>The data is used only for the stated purpose, and fields beyond it are not shared</div>
+      <div class="opt" data-why="Confuses a legitimate purpose with the requester's status">Only public entities may receive data</div>
+      <div class="opt" data-why="Believes a purpose principle concerns storage">Data must be stored on the requester's own servers</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> A legitimate purpose rests on a legal basis or an operational need, and limits use to that purpose; the PDPL limits content to what the purpose needs.</div>
+  </div>
+  <aside class="notes"><p>Answer: B. Return to the field table: a study of commute distance needs the district, not the guardian's employer or the child's health notes.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-2-3" data-auto="lab" data-lab="2.3">
-  <aside class="notes">REPLACE: what to watch for while participants work, the typical problems, and the fallback for anyone who did not finish an earlier lab</aside>
+  <aside class="notes"><p>Watch for: assessments that mark everything "not met" (the policy's culture is to share when conditions hold); extracts that keep daily dates. Expected: three principles not met as requested, six of eleven fields kept in coarser form, 1,043 rows, 4 of 96 groups under five with the district.</p></aside>
 </section>
 
-<!-- Session 4 -->
-
+<!-- ======================= SESSION 4 ======================= -->
 <section class="slide section" id="s4" data-auto="section" data-session="4"></section>
 
-<section class="slide" id="s4-idea" data-lo="LO2">
-  <div class="kicker">REPLACE: the question this slide answers</div>
-  <h2>REPLACE: one idea, stated as a sentence</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: at most six bullets, each a complete thought</li>
-      <li>REPLACE: bold the key phrase; numbers come from the lab run, not from memory</li>
-    </ul>
-    <div class="card c-teal"><h4>In the case study</h4><p class="small mb0">REPLACE: tie the idea to the case study and its data</p></div>
+<section class="slide" id="three-things-licensed" data-lo="LO2">
+  <div class="kicker">What you reuse</div>
+  <h2>Weights, code and data each carry their own terms</h2>
+  <div class="cols cols-3 gap-s">
+    <div class="card c-teal"><h4>Weights</h4><p class="small mb0">An open-source licence, or the vendor's own terms with a use policy.</p></div>
+    <div class="card c-cyan"><h4>Code</h4><p class="small mb0">Usually a standard licence in the repository.</p></div>
+    <div class="card c-coral"><h4>Data</h4><p class="small mb0">Often Creative Commons, and with a provenance of its own.</p></div>
   </div>
-  <div class="callout warn mt"><b>What goes wrong.</b> REPLACE: the failure participants will hit, and how to recognise it</div>
-  <aside class="notes">REPLACE: what to say, the demo to run, the question to ask the room, the common failure and its fix</aside>
+  <div class="callout warn mt"><b>Open weights are not public domain.</b> Downloadable does not mean free of conditions.</div>
+  <aside class="notes"><p>Lab 2.2 concluded that Wafi needs a locally served model for real data. That raises the next question: which model, and which data to tune it on, under which terms. The course does not download the model: participants read cards and licences.</p></aside>
 </section>
 
-<section class="slide" id="s4-steps" data-lo="LO2">
-  <div class="kicker">Step by step</div>
-  <h2>REPLACE: a process, shown one step per key press</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: name</b>REPLACE: what happens first</div>
-    <div class="arrow frag" data-frag="b">→</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: name</b>REPLACE: the next piece</div>
-    <div class="arrow frag" data-frag="c">→</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: name</b>REPLACE: the result</div>
+<section class="slide" id="spdx" data-lo="LO2">
+  <div class="kicker">A shared vocabulary</div>
+  <h2>An SPDX identifier names one exact licence text</h2>
+  <div class="cols cols-2">
+    <table class="t small">
+      <tr><th>Licence</th><th>SPDX identifier</th></tr>
+      <tr><td>Apache License 2.0</td><td><code>Apache-2.0</code></td></tr>
+      <tr><td>Creative Commons Attribution Non Commercial 4.0</td><td><code>CC-BY-NC-4.0</code></td></tr>
+      <tr><td>A vendor's own terms</td><td><code>LicenseRef-</code> and a name</td></tr>
+    </table>
+    <ul class="bullets">
+      <li>A register, a scanner and a lawyer then mean the same thing.</li>
+      <li>Cards on model hubs carry a licence tag; read the licence file it points to.</li>
+      <li>Record the date you checked: terms change.</li>
+    </ul>
   </div>
-  <div class="callout tip mt frag"><b>Takeaway.</b> REPLACE: the one sentence to remember</div>
-  <aside class="notes">Press once per step and say what each step adds before the next one appears. REPLACE: the example to walk through</aside>
+  <aside class="notes"><p>Source: the SPDX License List (version of 2026-10-28 checked for this course). LicenseRef- is the SPDX convention for a licence outside the list. Show the list page if there is a network.</p></aside>
+</section>
+
+<section class="slide" id="three-cards" data-lo="LO2">
+  <div class="kicker">Read in Lab 2.4</div>
+  <h2>Two models and one dataset, three different answers</h2>
+  <table class="t small">
+    <tr><th>Artefact</th><th>Licence</th><th>For Wafi</th></tr>
+    <tr><td>Qwen3-4B (weights)</td><td>Apache-2.0</td><td><b>Yes</b>: keep the licence and notices</td></tr>
+    <tr><td>Gemma 3 4B IT (weights)</td><td>Gemma Terms of Use</td><td><b>Yes, with conditions</b>: use policy, notice file, pass restrictions on</td></tr>
+    <tr class="hl"><td>Alpaca (dataset)</td><td>CC-BY-NC-4.0</td><td><b>No</b>: non-commercial, English only, generated by another company's model</td></tr>
+  </table>
+  <aside class="notes"><p>Checked on 2026-11-15: the Qwen3-4B card links an Apache 2.0 licence file; Gemma 3 is gated on the hub and governed by the Gemma Terms of Use (last modified 1 April 2026), which incorporate a Prohibited Use Policy, require a Notice file and passing the use restrictions to recipients; the Alpaca card states CC BY-NC 4.0 and that the data was generated by text-davinci-003 and contains errors and biases. These facts change: recheck the week before a cohort. The names are examples, not recommendations.</p></aside>
+</section>
+
+<section class="slide" id="provenance" data-lo="LO2">
+  <div class="kicker">Beyond the licence</div>
+  <h2>Provenance asks where the content came from, and what came with it</h2>
+  <ul class="bullets">
+    <li><b>Who made it</b>, from what: a dataset generated by another model may carry that model's terms and errors.</li>
+    <li><b>Which languages</b>: an English-only dataset will not teach Gulf Arabic replies.</li>
+    <li><b>What is inside</b>: personal data in training text is still personal data.</li>
+    <li><b>When you checked</b>, and where the record of it lives.</li>
+  </ul>
+  <aside class="notes"><p>The national risk framework's data pillar mentions tracing data sources; the Generative AI Guidelines ask users to respect intellectual property. Day 3 measures what English-centred data does to Arabic users.</p></aside>
+</section>
+
+<section class="slide" id="which-instrument" data-lo="LO2">
+  <div class="kicker">Closing the day</div>
+  <h2>Each instrument decides its own question</h2>
+  <table class="t small">
+    <tr><th>Instrument</th><th>Decides</th></tr>
+    <tr><td>Data Classification Policy</td><td>The level of a data set, and who reviews it</td></tr>
+    <tr><td>Data Sharing Policy</td><td>Whether and on what conditions data goes to another entity</td></tr>
+    <tr><td>Open Data Policy</td><td>How Public data is released for anyone to reuse</td></tr>
+    <tr><td>Generative AI Guidelines</td><td>What may enter a generative AI tool, and what users are told</td></tr>
+    <tr class="hl"><td>Personal Data Protection Law</td><td>Everything about personal data, whichever policy also applies</td></tr>
+  </table>
+  <aside class="notes"><p>Sources: the four NDMO and SDAIA instruments read today. The Open Data Policy applies to unprotected public data of public entities: open by default, machine-readable, free, licensed. This table is the LO2 evidence in miniature; Lab 2.4's last task asks six questions about the build.</p></aside>
+</section>
+
+<section class="slide" id="check-licence" data-lo="LO2">
+  <div class="kicker">Checkpoint</div>
+  <h2>Can Rawafid tune Wafi on the dataset?</h2>
+  <div class="quiz" data-type="single" data-lo="LO2">
+    <p class="lead">Dana finds a public instruction dataset under CC-BY-NC-4.0 and wants to tune Wafi's replies with it. Rawafid is a fee-charging private school group. What does the licence allow?</p>
+    <div class="opts">
+      <div class="opt" data-why="Equates publicly downloadable with free for any use">Any use, since it is public on the hub</div>
+      <div class="opt" data-why="Thinks attribution alone satisfies a non-commercial licence">Any use, with attribution</div>
+      <div class="opt" data-ok>No use in Rawafid's commercial service</div>
+      <div class="opt" data-why="Confuses a licence condition with a classification level">Use only after classifying it as Public</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> NC means non-commercial: a fee-charging service is commercial use, whatever the attribution.</div>
+  </div>
+  <aside class="notes"><p>Answer: C. D mixes up two instruments: classification decides handling of Rawafid's own data, not the rights it has in someone else's.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-2-4" data-auto="lab" data-lab="2.4">
-  <aside class="notes">REPLACE: what to watch for while participants work, the typical problems, and the fallback for anyone who did not finish an earlier lab</aside>
+  <aside class="notes"><p>Task 4 without an assistant first. Watch for: Gemma marked "no" because it is not Apache (it allows commercial use under its terms); the six questions answered with "PDPL" for everything. Expected: Apache-2.0 yes, Gemma yes with conditions, Alpaca no; six of six on the instrument table, five needed to pass.</p></aside>
 </section>
 
+<!-- ======================= CLOSE ======================= -->
 <section class="slide" id="wrap-up">
-  <div class="kicker">Day 2 · wrap-up</div>
-  <h2>Three things to keep</h2>
-  <div class="cols cols-3">
-    <div class="card c-teal"><h4>Remember</h4><p class="small mb0">REPLACE: one idea participants keep</p></div>
-    <div class="card c-coral"><h4>Remember</h4><p class="small mb0">REPLACE: one idea participants keep</p></div>
-    <div class="card c-purple"><h4>Remember</h4><p class="small mb0">REPLACE: one idea participants keep</p></div>
+  <div class="kicker">Day 2 · Three things to keep</div>
+  <h2>The level decides where data may go; the purpose decides what goes</h2>
+  <div class="cols cols-3 gap-s">
+    <div class="card c-teal"><h4>Level first</h4><p class="small mb0">Classify by impact; the highest level of the parts wins; unclassified is Restricted.</p></div>
+    <div class="card c-cyan"><h4>Hosted is a choice</h4><p class="small mb0">Only Public data goes to a hosted model. Real records need a model you run.</p></div>
+    <div class="card c-coral"><h4>Yes, on conditions</h4><p class="small mb0">Sharing and reuse are decided field by field and term by term, and written down.</p></div>
   </div>
+  <aside class="notes"><p>Collect the six-question tables from two participants and compare them aloud. Then link to Day 3: today decided where data may go; tomorrow tests what Wafi does with it, for whom, and how risky that is.</p></aside>
 </section>
 
-<section class="slide dark" id="next" data-label="Next">
-  <div class="kicker">Next</div>
-  <h2>Day 3: Ethics and risk in practice</h2>
-  <p class="lead">REPLACE: what participants prepare before then; unfinished labs can be finished at home</p>
-  <aside class="notes">REPLACE: accounts, installs or reading participants need before the next unit</aside>
+<section class="slide dark" id="next">
+  <div class="kicker">Before Day 3</div>
+  <h2>Tomorrow: the ethics principles as tests, and the risk register</h2>
+  <ul class="bullets">
+    <li>Read the seven AI Ethics Principles' one-paragraph definitions and the four risk levels (about 15 minutes).</li>
+    <li>Skim the English summary of the National AI Risk Management Framework.</li>
+    <li>Optional: set a free OpenRouter key so Day 3's forty enquiries also run on a hosted model.</li>
+  </ul>
+  <aside class="notes"><p>The framework's full text is in Arabic; the English summary names its phases. The key is optional: the stand-in model gives every participant the same results, which makes the Day 3 discussion easier; a hosted model gives real but varying ones.</p></aside>
 </section>

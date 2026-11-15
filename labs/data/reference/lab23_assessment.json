@@ -1,0 +1,34 @@
+{
+ "sharing culture": {
+  "status": "met",
+  "reason": "Research on absence serves the public interest; sharing is the default when the conditions hold."
+ },
+ "single source of truth": {
+  "status": "met",
+  "reason": "Rawafid is the source of its own attendance records."
+ },
+ "legitimate purpose": {
+  "status": "met with conditions",
+  "reason": "The study is legitimate, but names, IDs, employer and health notes go beyond it; onward sharing would change the purpose."
+ },
+ "authorised access": {
+  "status": "not met",
+  "reason": "No named researchers; 'research partners when needed' is open-ended."
+ },
+ "transparency": {
+  "status": "met with conditions",
+  "reason": "Classification, storage, protection and destruction must be stated; today storage is abroad and retention indefinite."
+ },
+ "collective accountability": {
+  "status": "not met",
+  "reason": "No agreement yet; roles and responsibilities must be signed."
+ },
+ "data security": {
+  "status": "not met",
+  "reason": "A password-protected spreadsheet by email and a workspace outside the Kingdom."
+ },
+ "ethical data use": {
+  "status": "met with conditions",
+  "reason": "Children's health notes have no place in a commute study."
+ }
+}

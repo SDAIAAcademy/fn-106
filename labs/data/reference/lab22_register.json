@@ -1,0 +1,50 @@
+[
+ {
+  "name": "fee_schedule",
+  "level": "Public",
+  "sub_level": "",
+  "has_sensitive": false,
+  "destination": "hosted",
+  "permitted": "Any model service, hosted or local"
+ },
+ {
+  "name": "guardians",
+  "level": "Restricted",
+  "sub_level": "B",
+  "has_sensitive": false,
+  "destination": "local",
+  "permitted": "A model served inside Rawafid, minimised fields only; no hosted service"
+ },
+ {
+  "name": "students",
+  "level": "Restricted",
+  "sub_level": "B",
+  "has_sensitive": true,
+  "destination": "neither",
+  "permitted": "No model; derived counts without notes may go to a local model"
+ },
+ {
+  "name": "attendance",
+  "level": "Restricted",
+  "sub_level": "B",
+  "has_sensitive": true,
+  "destination": "neither",
+  "permitted": "No model; derived counts without notes may go to a local model"
+ },
+ {
+  "name": "fees",
+  "level": "Restricted",
+  "sub_level": "B",
+  "has_sensitive": false,
+  "destination": "local",
+  "permitted": "A model served inside Rawafid, minimised fields only; no hosted service"
+ },
+ {
+  "name": "attendance_summary",
+  "level": "Restricted",
+  "sub_level": "B",
+  "has_sensitive": false,
+  "destination": "local",
+  "permitted": "A model served inside Rawafid, minimised fields only; no hosted service"
+ }
+]

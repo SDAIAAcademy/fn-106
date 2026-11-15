@@ -1,13 +1,28 @@
+# /// script
+# requires-python = ">=3.11"
+# dependencies = ["pandas>=2.2"]
+# ///
 # %% [markdown]
-# # Lab 2.4 · Check the licences of two candidate open-weight models and one dataset and record the use restrictions
+# # Lab 2.4 · Licences and provenance
 #
 # Day 2 · Session 4 (Licences and provenance) · 25 min.
 #
-# REPLACE: what participants build in this lab, in two or three lines.
+# Dana wants to move Wafi to an open-weight model served inside Rawafid (Lab 2.2 said Restricted
+# data needs one) and to tune its reply style on a public instruction dataset. You read the cards of
+# two candidate models and one dataset, record each licence with its SPDX identifier, obligations and
+# restrictions, decide whether each fits Wafi, and close the day with six questions about the build,
+# each answered by the instrument that decides it.
+#
+# **Reference state.** `data/licences.json`: what the three cards and licence pages said when checked
+# on 2026-11-15, with their addresses. Open the addresses if you have a network; the lab runs
+# without one.
 #
 # **Tasks**
-# - [ ] REPLACE: the tasks, each with its minutes; they add up to 25
-# - [ ] ✱ Stretch · REPLACE: an extension for those who finish early
+# - [ ] 1 · Read two model cards and one dataset card (5')
+# - [ ] 2 · Record licence, SPDX identifier and obligations (7')
+# - [ ] 3 · Decide fit for Wafi per artefact (5')
+# - [ ] 4 · Answer six questions with the instrument that decides (8')
+# - [ ] ✱ Stretch · Trace where the dataset's text came from and what that adds
 
 # %%
 import os, sys, subprocess
@@ -20,26 +35,138 @@ if IN_COLAB:
         subprocess.run(["git", "clone", "-q", REPO_URL, "/content/fn-106"], check=True)
     os.chdir("/content/fn-106/labs")
 else:
-    while not Path("_tools").exists() and Path.cwd() != Path.cwd().parent:
+    while not Path("rawafid.py").exists() and Path.cwd() != Path.cwd().parent:
         os.chdir("..")  # solutions/ notebooks run from labs/
 sys.path.insert(0, os.getcwd())
 
+import pandas as pd
+import rawafid as U
+
+cards = U.json("licences.json")
+
 # %% [markdown]
-# ## 1 · REPLACE: the first task
-#
-# REPLACE: what to do and why, in two sentences.
+# ## 1 · The three cards (5')
 
 # %%
-# ✏️ Exercise
-def first_task():
+for c in cards:
+    print(f"\n{c['artefact']} ({c['kind']}) · {c['licence_name']} · checked {c['checked']}\n  {c['card']}")
+    for line in c["card_says"] + c["terms_summary"]:
+        print("  -", line)
+
+# %% [markdown]
+# **Look at** the three different things a "licence" can be: a standard open-source licence with an
+# SPDX identifier, a vendor's own terms with a use policy, and a Creative Commons licence on data.
+# Open weights are not public domain.
+
+# %% [markdown]
+# ## 2 · The licence register (7')
+#
+# ✏️ **Exercise** · Write `register_row(card)` returning: `artefact`, `kind`, `licence`, `spdx` (the
+# SPDX identifier, or `LicenseRef-` and a name for a licence the SPDX list does not hold),
+# `commercial_use` (True or False), `obligations` (what you must do) and `restrictions` (what you
+# may not do).
+
+# %%
+def register_row(card: dict) -> dict:
     # BEGIN SOLUTION
-    return "the reference result"
+    a = card["artefact"]
+    if card["spdx"] == "Apache-2.0":
+        ob, rs, com = "Keep the licence and notices; mark changed files", "No trademark rights", True
+    elif card["spdx"] == "CC-BY-NC-4.0":
+        ob, rs, com = "Attribute the source", "No commercial use", False
+    else:
+        ob = "Accept the terms; ship a Notice file; pass the use restrictions and a copy of the terms to recipients"
+        rs, com = "Prohibited Use Policy; Google may restrict use that breaks the terms", True
+    return {"artefact": a, "kind": card["kind"], "licence": card["licence_name"],
+            "spdx": card["spdx"] or "LicenseRef-Gemma-Terms-of-Use", "commercial_use": com,
+            "obligations": ob, "restrictions": rs, "source": card["card"], "checked": card["checked"]}
     # END SOLUTION
 
 # %%
-# Check, with a safety net: the cells below still run when the exercise is not done yet
 try:
-    result = first_task()
+    register = pd.DataFrame([register_row(c) for c in cards])
 except NotImplementedError:
-    result = "the reference result"
-print(result)
+    register = pd.DataFrame(U.reference("lab24_register"))
+U.check(list(register["spdx"])[:1] == ["Apache-2.0"] and "CC-BY-NC-4.0" in set(register["spdx"]), "SPDX identifiers recorded")
+U.check(register.set_index("artefact").loc["tatsu-lab/alpaca", "commercial_use"] == False, "the dataset forbids commercial use")
+register[["artefact", "licence", "spdx", "commercial_use", "obligations", "restrictions"]]
+
+# %% [markdown]
+# ## 3 · Fit for Wafi (5')
+#
+# Rawafid is a private school group that charges fees: its use is commercial. ✏️ **Exercise** · Return,
+# per artefact, `"yes"`, `"yes, with conditions"` or `"no"` and one reason.
+
+# %%
+def fit_for_wafi() -> dict[str, dict]:
+    # BEGIN SOLUTION
+    return {
+        "Qwen/Qwen3-4B": {"fit": "yes", "reason": "Apache-2.0 allows commercial use; keep the licence and notices."},
+        "google/gemma-3-4b-it": {"fit": "yes, with conditions", "reason": "Commercial use is not excluded, but the Prohibited Use Policy, the notice file and passing the restrictions on all apply."},
+        "tatsu-lab/alpaca": {"fit": "no", "reason": "Non-commercial licence, English only, and generated by another company's model with errors and biases the card warns of."},
+    }
+    # END SOLUTION
+
+# %%
+try:
+    fit = fit_for_wafi()
+except NotImplementedError:
+    fit = U.reference("lab24_fit")
+U.check(fit["tatsu-lab/alpaca"]["fit"] == "no", "the non-commercial dataset does not fit a fee-charging school")
+U.table([{"artefact": k, **v} for k, v in fit.items()])
+
+# %% [markdown]
+# ## 4 · Six questions, one instrument each (8')
+#
+# Answer without an assistant first. For each question, name the instrument that decides it:
+# `classification` (Data Classification Policy), `sharing` (Data Sharing Policy), `open data`
+# (Open Data Policy) or `genai` (Generative AI Guidelines). ✏️ **Exercise** · Return the six answers.
+
+# %%
+QUESTIONS = {
+    "Q1": "What level does the fees file carry, and who reviews that level within a month?",
+    "Q2": "May the research centre receive attendance data, and who on Rawafid's side signs the agreement?",
+    "Q3": "May the published fee schedule be released as a CSV file anyone may reuse without registering?",
+    "Q4": "May a member of staff paste a guardian's message into a public chatbot to draft a reply?",
+    "Q5": "Must parents be told that a reply was drafted with generative AI, and be offered a person instead?",
+    "Q6": "A file joins the fee schedule with each family's balance. Which level does the joined file take?",
+}
+
+def instruments() -> dict[str, str]:
+    # BEGIN SOLUTION
+    return {"Q1": "classification", "Q2": "sharing", "Q3": "open data", "Q4": "genai", "Q5": "genai", "Q6": "classification"}
+    # END SOLUTION
+
+# %%
+try:
+    answers = instruments()
+except NotImplementedError:
+    answers = U.reference("lab24_instruments")
+key = U.reference("lab24_instruments") if (U.REF / "lab24_instruments.json").exists() else answers
+score = sum(answers[q] == key[q] for q in QUESTIONS)
+print(f"{score} of 6 match the reference")
+U.check(score >= 5, "at least five of six match the reference (the LO2 evidence)")
+U.table([{"question": QUESTIONS[q], "instrument": answers[q]} for q in QUESTIONS])
+
+# %% [markdown]
+# ## ✱ Stretch · Provenance
+#
+# The dataset's card says its outputs were generated by another company's model. What would you need
+# to check about that model's terms before training on the data, and what does a dataset made only
+# of English text mean for a bilingual assistant?
+
+# %% [markdown]
+# ## Check yourself
+#
+# 1. Why does the SPDX identifier matter when you record a licence?
+# 2. What must Rawafid do if it gives a tuned Gemma model to a contractor?
+# 3. Which instrument decides whether a data set may be published as open data, and which decides its level first?
+#
+# <details><summary>Answers</summary>
+#
+# 1. It names one exact licence text, so a register, a scanner and a lawyer all mean the same thing.
+# 2. Make the use restrictions part of the agreement, tell the contractor they apply, and give a copy of the terms.
+# 3. The Open Data Policy decides publication, for data the Classification Policy has already classified Public.
+# </details>
+#
+# **Carry forward.** The licence register and the six-question table go into the capstone pack.

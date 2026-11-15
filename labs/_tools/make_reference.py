@@ -54,6 +54,7 @@ REFS = {
         "lab23_assessment": "assessment",
         "lab23_needed": "needed",
         "lab23_extract": "extract.to_dict('records')",
+        "lab23_conditions": "conds",
     },
     "D2_4_check_licences_two": {
         "lab24_register": "register.to_dict('records')",

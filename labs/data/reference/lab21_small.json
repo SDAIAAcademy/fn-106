@@ -1,0 +1,86 @@
+[
+ {
+  "campus": "Dammam",
+  "grade": "5",
+  "gender": "M",
+  "students": 3,
+  "absence_rate_pct": "2.2"
+ },
+ {
+  "campus": "Dammam",
+  "grade": "7",
+  "gender": "F",
+  "students": 3,
+  "absence_rate_pct": "8.3"
+ },
+ {
+  "campus": "Dammam",
+  "grade": "9",
+  "gender": "F",
+  "students": 3,
+  "absence_rate_pct": "3.3"
+ },
+ {
+  "campus": "Dammam",
+  "grade": "10",
+  "gender": "F",
+  "students": 2,
+  "absence_rate_pct": "7.5"
+ },
+ {
+  "campus": "Dammam",
+  "grade": "10",
+  "gender": "M",
+  "students": 1,
+  "absence_rate_pct": "16.7"
+ },
+ {
+  "campus": "Dammam",
+  "grade": "11",
+  "gender": "F",
+  "students": 3,
+  "absence_rate_pct": "6.1"
+ },
+ {
+  "campus": "Dammam",
+  "grade": "11",
+  "gender": "M",
+  "students": 1,
+  "absence_rate_pct": "0.0"
+ },
+ {
+  "campus": "Dammam",
+  "grade": "12",
+  "gender": "M",
+  "students": 3,
+  "absence_rate_pct": "6.1"
+ },
+ {
+  "campus": "Jeddah",
+  "grade": "8",
+  "gender": "F",
+  "students": 4,
+  "absence_rate_pct": "10.8"
+ },
+ {
+  "campus": "Jeddah",
+  "grade": "11",
+  "gender": "M",
+  "students": 3,
+  "absence_rate_pct": "3.3"
+ },
+ {
+  "campus": "Jeddah",
+  "grade": "12",
+  "gender": "M",
+  "students": 3,
+  "absence_rate_pct": "3.3"
+ },
+ {
+  "campus": "Riyadh North",
+  "grade": "11",
+  "gender": "M",
+  "students": 4,
+  "absence_rate_pct": "5.8"
+ }
+]
