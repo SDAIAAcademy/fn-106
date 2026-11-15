@@ -71,7 +71,7 @@ uv run jupyter lab</code></pre>
       <li><b>Directly:</b> a name, a national ID number, a mobile number.</li>
       <li><b>Indirectly:</b> a campus, a grade and a date of birth together.</li>
       <li><b>Sensitive data</b> is a named list in the law: racial or ethnic origin, beliefs, criminal and security data, biometric and genetic data, health data, and data showing a parent is unknown.</li>
-      <li>The law applies to processing in the Kingdom, and to processing from abroad of data of people living in the Kingdom.</li>
+      <li>It applies to processing in the Kingdom, and from abroad for people living here.</li>
     </ul>
     <div class="card c-coral"><h4>At Rawafid</h4><p class="small mb0">A note "asthma flare" on an absence is health data about a child. So is "insulin at lunch" in a student file.</p></div>
   </div>
@@ -312,11 +312,14 @@ prompt = ("You are Wafi ... using only these facts.\n"
   <h2>Use a keyed hash, and keep the key away from the data</h2>
   <div class="cols cols-2">
     <pre class="code s" data-file="Lab 1.3"><code class="language-python">def code(value, key):
-    mac = hmac.new(key.encode(), value.encode(), hashlib.sha256)
+    mac = hmac.new(key.encode(), value.encode(),
+                   hashlib.sha256)
     return "P" + mac.hexdigest()[:10]
 
-out = df.drop(columns=["full_name", "full_name_ar", "national_id"])
-out["student_id"] = out["student_id"].map(lambda v: code(v, KEY))</code></pre>
+out = df.drop(columns=["full_name",
+                       "full_name_ar", "national_id"])
+out["student_id"] = out["student_id"].map(
+    lambda v: code(v, KEY))</code></pre>
     <ul class="bullets">
       <li>Same person, same code: joins across files still work.</li>
       <li>Without the key nobody can recompute a code.</li>

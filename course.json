@@ -204,7 +204,7 @@
                 "minutes": 3
               }
             ],
-            "stretch": "Show that an unkeyed hash of a national ID is reversed by trying every ID"
+            "stretch": "Show that an unkeyed hash of a student number is reversed by trying every number"
           },
           "summary": "A pseudonym hides a name, not a person: quasi-identifiers link records back"
         },
