@@ -1,0 +1,27 @@
+[
+ {
+  "id": "H1",
+  "harm": "Wafi tells one guardian another family's balance or absences, after a mobile number is matched to the wrong family",
+  "facts": "Two families share a number in 3 records; replies are reviewed only when escalated"
+ },
+ {
+  "id": "H2",
+  "harm": "Wafi's log, with full prompts holding minors' national IDs and health notes, leaks at scale",
+  "facts": "The log holds every prompt since the pilot began; one export already reached a shared drive (Lab 1.4)"
+ },
+ {
+  "id": "H3",
+  "harm": "Guardians who write in Gulf Arabic get weaker replies and fewer escalations than guardians who write in English",
+  "facts": "Measured in Lab 3.2 on forty scripted enquiries"
+ },
+ {
+  "id": "H4",
+  "harm": "Wafi states a wrong balance or absence count and a guardian acts on it",
+  "facts": "Replies quote numbers from the records in the prompt; the stand-in model never invents, a hosted model can"
+ },
+ {
+  "id": "H5",
+  "harm": "Staff approve escalated drafts without reading them",
+  "facts": "Median review time of escalated drafts is under ten seconds in the review queue"
+ }
+]

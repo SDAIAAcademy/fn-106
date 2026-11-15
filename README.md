@@ -38,7 +38,27 @@ Participants make one small build lawful and responsible: a parent-enquiry assis
 
 ## Case study
 
-**REPLACE: the name of the fictional organisation every lab works on.** REPLACE: two sentences on the case study and its synthetic data
+**Rawafid Schools Group** is a fictional private school group with four campuses (Riyadh North, Riyadh East, Jeddah, Dammam) and about 1,200 students. Its systems lead built **Wafi** (وافي), an assistant that drafts replies to parents from attendance and fee records with a language model; its data protection officer must now make the build lawful and responsible.
+
+All records are synthetic, written by `labs/prepare_data.py` with a fixed seed: 860 guardians, 1,200 students, a term of attendance events, fees, Wafi's enquiry log, a public sports-day results page, a partner's data request, licence facts for two models and one dataset, forty scripted enquiries in Arabic and English and five candidate harms. Identification numbers, mobile numbers and bank account numbers have the right shape and belong to nobody. The data is planted with the problems the labs find.
+
+People: Dr. Amal Al-Sayari (group director of schools), Nasser Al-Mansour (data protection officer), Layla Haddad (head of parent relations), Osama Al-Qurashi (fees manager), Dana Al-Saleh (systems lead).
+
+## How the course runs
+
+Three teaching days of four sessions. Each session has about 20 minutes of ideas, a checkpoint, and a 25-minute lab notebook that starts from supplied files, so no lab depends on another. Guided pre-work (a reading guide to the core instruments, ending in an entry quiz) comes before Day 1; a follow-up task applies the build pack to a second case after the course.
+
+Labs run on a laptop processor or in Google Colab. Wafi drafts its replies with a scripted stand-in model that needs no key; with a free OpenRouter key it uses a free hosted model instead. Only synthetic data is ever sent to a hosted model.
+
+**AI policy.** AI off for the supervised scenario check and for the first classification of each data set. An assistant may tutor you through the instruments, and every answer is checked against the official text. Anything goes for drafting the build pack, provided no real personal data enters any assistant.
+
+## Assessment
+
+- A supervised scenario check on the national instruments, without AI (30%).
+- The capstone build pack, on the five-criterion rubric below (50%).
+- A ten-minute review in which the assessor changes one fact of the case (20%).
+
+Passing needs 70% overall and at least 60% on the scenario check. The certificate is a completion certificate with assessed work. The practice questions in `assessments/bank.json` rehearse the scenario check; the check's own items are not in this repository.
 
 <!-- academy:labs -->
 ## Labs
@@ -65,7 +85,15 @@ Every lab is a notebook in `labs/`. Open it in Google Colab from the course page
 
 A responsible build pack for the assistant or the participant's own build (registers, minimisation code with its re-identification test, ethics test report, a record of processing entry, a breach checklist and the disclosure), submitted as a public repository and defended in a ten-minute review
 
-**Submission:** REPLACE: what participants submit and how: a public repository link, or a shared folder for a course without code
+**Submission:** a public GitHub repository holding the build pack, with a README that links each part. The review: six minutes to walk through the pack, then four in which the assessor changes one fact (a new data field, a transfer abroad) and you revise the classification and risk entries live. The commit history is inspected.
+
+| Criterion | Weight |
+|---|---|
+| Data protection | 25 |
+| Classification and sharing | 20 |
+| Risk assessment | 20 |
+| Ethics tests | 20 |
+| Disclosure and records | 15 |
 
 ## Prerequisites
 
@@ -129,13 +157,16 @@ Each line is a capability; the examples are interchangeable.
 
 ### National references
 
-- Personal Data Protection Law and its implementing regulations: REPLACE: the address of the official text
-- Regulation on Personal Data Transfer outside the Kingdom: REPLACE: the address of the official text
-- PDPL guidelines on minimum data, records of processing, pseudonymisation and breach procedure: REPLACE: the address of the official text
-- NDMO Data Classification Policy: REPLACE: the address of the official text
-- NDMO Data Sharing Policy: REPLACE: the address of the official text
-- NDMO Open Data Policy: REPLACE: the address of the official text
-- SDAIA AI Ethics Principles: REPLACE: the address of the official text
-- SDAIA Generative AI Guidelines: REPLACE: the address of the official text
-- National AI Risk Management Framework: REPLACE: the address of the official text
-- SDAIA AI Bias Reference Guide: REPLACE: the address of the official text
+All were opened on 2026-11-15 from SDAIA's regulations and policies page and its research library. The NDMO policies are written for government entities; Rawafid, a private group, adopts them in its own data policy, while the PDPL binds it by law.
+
+
+- Personal Data Protection Law: https://sdaia.gov.sa/en/SDAIA/about/Documents/PersonalDataProtectionLaw.pdf, and its Implementing Regulation: https://sdaia.gov.sa/en/SDAIA/about/Documents/ImplementingRegulationPersonalDataProtectionLaw.pdf
+- Regulation on Personal Data Transfer outside the Kingdom: https://sdaia.gov.sa/Documents/RegulationonPersonalDataEN.pdf
+- PDPL guidelines: minimum personal data https://sdaia.gov.sa/Documents/MinmumPDGuideline.pdf; records of processing activities https://sdaia.gov.sa/Documents/PersonalDataProcessingActivitiesRecordsGuideline.pdf; destruction, anonymisation and pseudonymisation https://sdaia.gov.sa/Documents/PersonalDataDestructionAnonymizationAndEncryptionGuideline.pdf; breach incidents https://sdaia.gov.sa/en/SDAIA/about/Documents/PersonalDataBreachIncidents.pdf
+- NDMO Data Classification Policy: https://sdaia.gov.sa/en/SDAIA/about/Documents/DataClassificationPolicy.pdf
+- NDMO Data Sharing Policy: https://sdaia.gov.sa/en/SDAIA/about/Documents/DataSharingPolicyEN.pdf
+- NDMO Open Data Policy: https://sdaia.gov.sa/en/SDAIA/about/Documents/OpenDataPolicy.pdf
+- SDAIA AI Ethics Principles: https://sdaia.gov.sa/en/SDAIA/about/Documents/ai-principles.pdf
+- SDAIA Generative AI Guidelines: for government https://sdaia.gov.sa/en/SDAIA/about/Files/GenAIGuidelinesForGovernmentENCompressed.pdf; for the public https://sdaia.gov.sa/en/SDAIA/about/Files/GenerativeAIPublicEN.pdf
+- National AI Risk Management Framework (April 2026): the full text, in Arabic, https://sdaia.gov.sa/ar/MediaCenter/KnowledgeCenter/ResearchLibrary/ExecutiveSummaryAr.pdf; the English executive summary https://sdaia.gov.sa/en/MediaCenter/KnowledgeCenter/ResearchLibrary/ExecutiveSummaryEn.pdf
+- SDAIA AI Bias Reference Guide (first edition, May 2026): https://sdaia.gov.sa/en/MediaCenter/KnowledgeCenter/ResearchLibrary/EN-AI-BIAS.pdf

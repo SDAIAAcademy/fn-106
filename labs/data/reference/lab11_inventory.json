@@ -1,0 +1,298 @@
+[
+ {
+  "field": "attendance.note",
+  "read": true,
+  "sent": false,
+  "logged": false,
+  "stored": false,
+  "where": "student information system and fee system"
+ },
+ {
+  "field": "attendance.reason",
+  "read": true,
+  "sent": false,
+  "logged": false,
+  "stored": false,
+  "where": "student information system and fee system"
+ },
+ {
+  "field": "attendance.status",
+  "read": true,
+  "sent": false,
+  "logged": false,
+  "stored": false,
+  "where": "student information system and fee system"
+ },
+ {
+  "field": "derived.absences_this_term",
+  "read": false,
+  "sent": true,
+  "logged": false,
+  "stored": false,
+  "where": "model provider"
+ },
+ {
+  "field": "derived.balance",
+  "read": false,
+  "sent": true,
+  "logged": false,
+  "stored": false,
+  "where": "model provider"
+ },
+ {
+  "field": "derived.lates_this_term",
+  "read": false,
+  "sent": true,
+  "logged": false,
+  "stored": false,
+  "where": "model provider"
+ },
+ {
+  "field": "enquiry.text",
+  "read": true,
+  "sent": true,
+  "logged": true,
+  "stored": false,
+  "where": "Wafi enquiry log; model provider; parent channel"
+ },
+ {
+  "field": "fees.balance",
+  "read": true,
+  "sent": false,
+  "logged": false,
+  "stored": false,
+  "where": "student information system and fee system"
+ },
+ {
+  "field": "guardian.campus",
+  "read": true,
+  "sent": false,
+  "logged": false,
+  "stored": false,
+  "where": "student information system"
+ },
+ {
+  "field": "guardian.district",
+  "read": true,
+  "sent": false,
+  "logged": false,
+  "stored": false,
+  "where": "student information system"
+ },
+ {
+  "field": "guardian.email",
+  "read": true,
+  "sent": false,
+  "logged": false,
+  "stored": false,
+  "where": "student information system"
+ },
+ {
+  "field": "guardian.employer",
+  "read": true,
+  "sent": false,
+  "logged": false,
+  "stored": false,
+  "where": "student information system"
+ },
+ {
+  "field": "guardian.full_name",
+  "read": true,
+  "sent": true,
+  "logged": false,
+  "stored": false,
+  "where": "model provider; student information system"
+ },
+ {
+  "field": "guardian.full_name_ar",
+  "read": true,
+  "sent": false,
+  "logged": false,
+  "stored": false,
+  "where": "student information system"
+ },
+ {
+  "field": "guardian.guardian_id",
+  "read": true,
+  "sent": false,
+  "logged": false,
+  "stored": false,
+  "where": "student information system"
+ },
+ {
+  "field": "guardian.iban",
+  "read": true,
+  "sent": false,
+  "logged": false,
+  "stored": false,
+  "where": "student information system"
+ },
+ {
+  "field": "guardian.marketing_consent",
+  "read": true,
+  "sent": false,
+  "logged": false,
+  "stored": false,
+  "where": "student information system"
+ },
+ {
+  "field": "guardian.mobile",
+  "read": true,
+  "sent": true,
+  "logged": true,
+  "stored": false,
+  "where": "Wafi enquiry log; model provider; parent channel; student information system"
+ },
+ {
+  "field": "guardian.national_id",
+  "read": true,
+  "sent": true,
+  "logged": false,
+  "stored": false,
+  "where": "model provider; student information system"
+ },
+ {
+  "field": "guardian.preferred_language",
+  "read": true,
+  "sent": false,
+  "logged": false,
+  "stored": false,
+  "where": "student information system"
+ },
+ {
+  "field": "guardian.relationship",
+  "read": true,
+  "sent": true,
+  "logged": false,
+  "stored": false,
+  "where": "model provider; student information system"
+ },
+ {
+  "field": "prompt.hash",
+  "read": false,
+  "sent": false,
+  "logged": false,
+  "stored": true,
+  "where": "Wafi reply cache"
+ },
+ {
+  "field": "prompt.text",
+  "read": false,
+  "sent": false,
+  "logged": true,
+  "stored": false,
+  "where": "Wafi enquiry log"
+ },
+ {
+  "field": "reply.text",
+  "read": true,
+  "sent": false,
+  "logged": true,
+  "stored": true,
+  "where": "Wafi enquiry log; Wafi reply cache; model provider"
+ },
+ {
+  "field": "student.bus_route",
+  "read": true,
+  "sent": true,
+  "logged": false,
+  "stored": false,
+  "where": "model provider; student information system"
+ },
+ {
+  "field": "student.campus",
+  "read": true,
+  "sent": true,
+  "logged": false,
+  "stored": false,
+  "where": "model provider; student information system"
+ },
+ {
+  "field": "student.date_of_birth",
+  "read": true,
+  "sent": true,
+  "logged": false,
+  "stored": false,
+  "where": "model provider; student information system"
+ },
+ {
+  "field": "student.full_name",
+  "read": true,
+  "sent": true,
+  "logged": false,
+  "stored": false,
+  "where": "model provider; student information system"
+ },
+ {
+  "field": "student.full_name_ar",
+  "read": true,
+  "sent": true,
+  "logged": false,
+  "stored": false,
+  "where": "model provider; student information system"
+ },
+ {
+  "field": "student.gender",
+  "read": true,
+  "sent": true,
+  "logged": false,
+  "stored": false,
+  "where": "model provider; student information system"
+ },
+ {
+  "field": "student.grade",
+  "read": true,
+  "sent": true,
+  "logged": false,
+  "stored": false,
+  "where": "model provider; student information system"
+ },
+ {
+  "field": "student.guardian_id",
+  "read": true,
+  "sent": true,
+  "logged": false,
+  "stored": false,
+  "where": "model provider; student information system"
+ },
+ {
+  "field": "student.health_notes",
+  "read": true,
+  "sent": true,
+  "logged": false,
+  "stored": false,
+  "where": "model provider; student information system"
+ },
+ {
+  "field": "student.national_id",
+  "read": true,
+  "sent": true,
+  "logged": false,
+  "stored": false,
+  "where": "model provider; student information system"
+ },
+ {
+  "field": "student.nationality",
+  "read": true,
+  "sent": true,
+  "logged": false,
+  "stored": false,
+  "where": "model provider; student information system"
+ },
+ {
+  "field": "student.section",
+  "read": true,
+  "sent": true,
+  "logged": false,
+  "stored": false,
+  "where": "model provider; student information system"
+ },
+ {
+  "field": "student.student_id",
+  "read": true,
+  "sent": true,
+  "logged": false,
+  "stored": false,
+  "where": "model provider; student information system"
+ }
+]

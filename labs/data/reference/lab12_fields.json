@@ -1,0 +1,32 @@
+{
+ "before": [
+  "student.student_id",
+  "student.full_name",
+  "student.full_name_ar",
+  "student.national_id",
+  "student.date_of_birth",
+  "student.gender",
+  "student.grade",
+  "student.section",
+  "student.campus",
+  "student.nationality",
+  "student.health_notes",
+  "student.guardian_id",
+  "student.bus_route",
+  "guardian.full_name",
+  "guardian.national_id",
+  "guardian.mobile",
+  "guardian.relationship",
+  "derived.absences_this_term",
+  "derived.lates_this_term",
+  "derived.balance",
+  "enquiry.text"
+ ],
+ "after": [
+  "student.first_name",
+  "derived.absences_this_term",
+  "derived.lates_this_term",
+  "derived.balance",
+  "enquiry.text"
+ ]
+}

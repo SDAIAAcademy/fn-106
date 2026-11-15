@@ -1,0 +1,1201 @@
+student_id,full_name,full_name_ar,national_id,date_of_birth,gender,grade,section,campus,nationality,health_notes,guardian_id,bus_route
+S10001,Majed Al-Faraj,ماجد الفرج,2983254295,2019-06-14,M,2,C,Riyadh North,Indian,,G0001,
+S10002,Ziyad Al-Otaibi,زياد العتيبي,1209508285,2008-05-26,M,12,C,Riyadh North,Saudi,,G0002,
+S10003,Layan Al-Ghamdi,ليان الغامدي,2710919989,2016-03-15,F,5,B,Riyadh North,Yemeni,,G0003,RIY-6
+S10004,Mohammed Al-Subaie,محمد السبيعي,1055691919,2019-11-08,M,1,C,Riyadh North,Saudi,,G0004,
+S10005,Hassan Al-Hamad,حسن الحمد,2927510332,2015-03-04,M,5,B,Riyadh North,Indian,,G0005,
+S10006,Haya Siddiqui,هيا صديقي,2618268309,2011-04-26,F,9,A,Jeddah,Jordanian,"asthma, inhaler in bag",G0006,JED-8
+S10007,Hessa Nasser,حصة ناصر,1263822201,2017-03-26,F,3,B,Riyadh East,Saudi,,G0007,
+S10008,Ruba Bakr,ربى بكر,1796631374,2017-10-30,F,4,C,Jeddah,Saudi,,G0008,JED-9
+S10009,Ali Al-Rashidi,علي الرشيدي,1769386710,2008-02-07,M,12,B,Riyadh North,Saudi,,G0009,RIY-2
+S10010,Lama Al-Shammari,لمى الشمري,1738412819,2017-11-12,F,3,C,Jeddah,Saudi,,G0010,
+S10011,Reem Al-Shammari,ريم الشمري,1941547217,2011-07-11,F,10,C,Jeddah,Saudi,,G0010,JED-7
+S10012,Faisal Al-Shammari,فيصل الشمري,1035592547,2013-01-27,M,7,C,Jeddah,Saudi,,G0010,
+S10013,Badr Al-Omari,بدر العمري,2151812014,2013-08-05,M,7,C,Riyadh North,Jordanian,,G0011,
+S10014,Rahaf Al-Omari,رهف العمري,2714111344,2012-06-30,F,8,B,Riyadh North,Jordanian,,G0011,RIY-6
+S10015,Hassan Al-Otaibi,حسن العتيبي,2664451220,2013-06-04,M,7,B,Riyadh North,Sudanese,,G0012,
+S10016,Mansour Al-Otaibi,منصور العتيبي,1503541580,2018-06-29,M,3,A,Dammam,Saudi,,G0013,DAM-4
+S10017,Layan Al-Malki,ليان المالكي,2232466468,2017-02-26,F,3,C,Riyadh East,Egyptian,,G0014,
+S10018,Hassan Al-Malki,حسن المالكي,2953231327,2017-08-08,M,3,A,Riyadh East,Egyptian,,G0014,RIY-6
+S10019,Saud Al-Omari,سعود العمري,1901300747,2010-12-17,M,11,B,Riyadh North,Saudi,,G0015,RIY-1
+S10020,Lama Al-Omari,لمى العمري,1139577221,2018-03-31,F,2,B,Riyadh North,Saudi,,G0015,
+S10021,Yousef Al-Faraj,يوسف الفرج,2360246080,2014-09-22,M,6,B,Riyadh North,Jordanian,,G0016,
+S10022,Aseel Nasser,أسيل ناصر,1914881753,2013-12-08,F,7,A,Dammam,Saudi,,G0017,DAM-3
+S10023,Fatimah Al-Saeed,فاطمة السعيد,2314936850,2013-10-19,F,8,B,Riyadh North,Indian,,G0018,RIY-8
+S10024,Ali Siddiqui,علي صديقي,1105085635,2014-12-30,M,6,B,Riyadh North,Saudi,,G0019,RIY-7
+S10025,Saud Al-Zahrani,سعود الزهراني,2177437742,2011-01-31,M,9,C,Jeddah,Pakistani,,G0020,JED-7
+S10026,Majed Al-Zahrani,ماجد الزهراني,2381200338,2014-05-21,M,6,B,Jeddah,Pakistani,,G0020,JED-7
+S10027,Ali Al-Harbi,علي الحربي,1744884335,2011-05-27,M,9,B,Riyadh North,Saudi,,G0021,RIY-8
+S10028,Ruba Al-Shammari,ربى الشمري,2863742646,2018-05-05,F,2,B,Jeddah,Egyptian,,G0022,
+S10029,Lama Al-Shammari,لمى الشمري,2127951283,2008-10-20,F,12,B,Jeddah,Egyptian,,G0022,JED-2
+S10030,Yazan Al-Shammari,يزن الشمري,2731471968,2019-12-12,M,2,B,Jeddah,Egyptian,,G0022,
+S10031,Ali Al-Malki,علي المالكي,1471903330,2011-08-09,M,10,B,Riyadh East,Saudi,,G0023,
+S10032,Sara Al-Harbi,سارة الحربي,1034632498,2012-01-26,F,9,C,Riyadh East,Saudi,,G0024,
+S10033,Faisal Al-Dosari,فيصل الدوسري,1025642233,2019-05-12,M,2,C,Riyadh North,Saudi,,G0025,
+S10034,Badr Al-Zahrani,بدر الزهراني,1802051428,2012-08-08,M,8,C,Riyadh East,Saudi,,G0026,
+S10035,Hessa Al-Hamad,حصة الحمد,1533924433,2014-04-18,F,6,B,Riyadh North,Saudi,,G0027,RIY-8
+S10036,Saud Al-Hamad,سعود الحمد,1056641706,2018-09-26,M,2,C,Riyadh North,Saudi,,G0027,RIY-1
+S10037,Sara Al-Hamad,سارة الحمد,1887473234,2016-12-08,F,5,B,Riyadh North,Saudi,,G0027,
+S10038,Joud Al-Saeed,جود السعيد,2330780345,2018-09-04,F,2,B,Jeddah,Pakistani,,G0028,
+S10039,Asma Al-Saeed,أسماء السعيد,2385854780,2015-03-17,F,5,C,Jeddah,Pakistani,,G0028,
+S10040,Fatimah Al-Saeed,فاطمة السعيد,2773820676,2009-03-13,F,11,C,Jeddah,Pakistani,,G0028,JED-2
+S10041,Abdullah Nasser,عبدالله ناصر,1984684761,2020-01-08,M,1,C,Riyadh East,Saudi,,G0029,RIY-6
+S10042,Yousef Nasser,يوسف ناصر,1623077414,2017-11-25,M,3,A,Riyadh East,Saudi,,G0029,RIY-3
+S10043,Saud Al-Faraj,سعود الفرج,1253371219,2016-05-05,M,4,B,Dammam,Saudi,,G0030,
+S10044,Ruba Siddiqui,ربى صديقي,1868627094,2020-11-08,F,1,B,Dammam,Saudi,,G0031,
+S10045,Abdullah Al-Zahrani,عبدالله الزهراني,1629223554,2014-05-21,M,6,C,Dammam,Saudi,"hearing aid, front seat",G0032,
+S10046,Sara Al-Dosari,سارة الدوسري,1848613505,2012-02-29,F,8,A,Jeddah,Saudi,,G0033,
+S10047,Joud Al-Dosari,جود الدوسري,1071875606,2019-07-28,F,1,C,Jeddah,Saudi,,G0033,
+S10048,Saud Al-Dosari,سعود الدوسري,1731888362,2012-04-01,M,8,A,Jeddah,Saudi,,G0033,
+S10049,Asma Al-Subaie,أسماء السبيعي,1926955995,2020-08-26,F,1,A,Riyadh North,Saudi,,G0034,
+S10050,Hassan Al-Sharif,حسن الشريف,2484773296,2015-09-04,M,5,C,Jeddah,Sudanese,,G0035,JED-1
+S10051,Dima Al-Otaibi,ديما العتيبي,1489475859,2009-05-20,F,11,A,Jeddah,Saudi,,G0036,
+S10052,Haya Al-Subaie,هيا السبيعي,2845139559,2014-10-06,F,6,C,Dammam,Jordanian,,G0037,DAM-9
+S10053,Omar Al-Juhani,عمر الجهني,2147806245,2018-09-26,M,3,A,Riyadh North,Syrian,,G0038,RIY-9
+S10054,Majed Al-Ghamdi,ماجد الغامدي,1233021682,2017-05-11,M,3,A,Riyadh North,Saudi,,G0039,
+S10055,Omar Bakr,عمر بكر,2217103869,2016-03-20,M,4,A,Riyadh North,Yemeni,,G0040,RIY-8
+S10056,Abdullah Bakr,عبدالله بكر,2156812876,2018-10-03,M,2,C,Riyadh North,Yemeni,,G0040,
+S10057,Talal Bakr,طلال بكر,2778698466,2013-07-17,M,7,C,Riyadh North,Yemeni,,G0040,
+S10058,Ziyad Al-Dosari,زياد الدوسري,1689479929,2017-01-13,M,3,C,Riyadh North,Saudi,,G0041,
+S10059,Mohammed Al-Zahrani,محمد الزهراني,1855136837,2011-12-28,M,10,B,Riyadh East,Saudi,,G0042,RIY-6
+S10060,Dima Al-Ghamdi,ديما الغامدي,1586293295,2017-01-28,F,3,A,Riyadh North,Saudi,,G0043,
+S10061,Hassan Al-Ghamdi,حسن الغامدي,1586580146,2013-05-05,M,7,B,Riyadh North,Saudi,,G0043,
+S10062,Ruba Bakr,ربى بكر,1700655636,2015-03-01,F,6,A,Riyadh East,Saudi,,G0044,RIY-5
+S10063,Yousef Al-Anazi,يوسف العنزي,1891750886,2013-10-04,M,8,C,Jeddah,Saudi,,G0045,JED-2
+S10064,Lulwa Al-Anazi,لولوة العنزي,1255569453,2010-07-31,F,10,A,Jeddah,Saudi,,G0045,
+S10065,Maryam Haddad,مريم حداد,1350493279,2013-10-17,F,7,C,Riyadh East,Saudi,,G0046,RIY-8
+S10066,Yazan Al-Harbi,يزن الحربي,2070135310,2008-07-24,M,12,A,Riyadh North,Pakistani,,G0047,
+S10067,Dima Al-Zahrani,ديما الزهراني,2991666904,2011-07-21,F,9,B,Jeddah,Pakistani,,G0048,
+S10068,Badr Al-Zahrani,بدر الزهراني,2693483069,2014-05-25,M,6,B,Jeddah,Pakistani,,G0048,JED-5
+S10069,Saud Al-Zahrani,سعود الزهراني,2636665971,2009-05-17,M,11,A,Jeddah,Pakistani,"migraine, may rest in clinic",G0048,JED-6
+S10070,Ziyad Al-Omari,زياد العمري,1440593901,2011-01-10,M,9,B,Riyadh North,Saudi,,G0049,
+S10071,Faisal Al-Saeed,فيصل السعيد,1762995196,2015-08-19,M,6,A,Dammam,Saudi,"type 1 diabetes, insulin at lunch",G0050,
+S10072,Abdullah Al-Qahtani,عبدالله القحطاني,1812916940,2019-02-23,M,2,C,Jeddah,Saudi,,G0051,JED-3
+S10073,Saud Al-Qahtani,سعود القحطاني,1176914713,2012-02-11,M,8,C,Jeddah,Saudi,"type 1 diabetes, insulin at lunch",G0051,
+S10074,Omar Al-Omari,عمر العمري,2893479365,2016-02-06,M,4,C,Jeddah,Yemeni,,G0052,JED-1
+S10075,Nawaf Al-Omari,نواف العمري,2058665292,2016-11-23,M,4,B,Jeddah,Yemeni,,G0052,JED-8
+S10076,Sara Al-Subaie,سارة السبيعي,1455389705,2013-08-27,F,7,B,Riyadh North,Saudi,,G0053,
+S10077,Mohammed Al-Subaie,محمد السبيعي,1259562491,2017-08-04,M,4,C,Riyadh North,Saudi,,G0053,
+S10078,Rayan Al-Harbi,ريان الحربي,1551127557,2015-03-24,M,5,A,Jeddah,Saudi,severe egg allergy,G0054,
+S10079,Yousef Al-Shehri,يوسف الشهري,1975949521,2012-08-16,M,8,A,Jeddah,Saudi,,G0055,
+S10080,Hessa Al-Harbi,حصة الحربي,1417387998,2016-07-26,F,4,B,Jeddah,Saudi,,G0056,
+S10081,Jana Al-Shammari,جنى الشمري,2795888742,2015-12-02,F,5,B,Riyadh East,Pakistani,,G0057,
+S10082,Khalid Al-Rashidi,خالد الرشيدي,1698085192,2017-12-17,M,4,C,Jeddah,Saudi,"epilepsy, care plan on file",G0058,
+S10083,Rahaf Al-Ghamdi,رهف الغامدي,2479045243,2016-01-04,F,5,C,Riyadh North,Jordanian,,G0059,RIY-1
+S10084,Aseel Al-Dosari,أسيل الدوسري,1200556501,2015-07-06,F,5,B,Riyadh North,Saudi,,G0060,RIY-3
+S10085,Sara Al-Dosari,سارة الدوسري,1094612894,2010-09-02,F,10,B,Riyadh North,Saudi,"epilepsy, care plan on file",G0060,RIY-5
+S10086,Talal Al-Juhani,طلال الجهني,1485452456,2018-04-06,M,2,B,Riyadh North,Saudi,,G0061,
+S10087,Tala Al-Juhani,تالا الجهني,1500377971,2017-05-06,F,3,A,Riyadh North,Saudi,"ADHD, extra time in tests",G0061,
+S10088,Dima Al-Faraj,ديما الفرج,1945401030,2010-03-16,F,10,C,Jeddah,Saudi,,G0062,
+S10089,Sara Al-Faraj,سارة الفرج,1735626855,2020-07-05,F,1,C,Jeddah,Saudi,,G0062,
+S10090,Lulwa Al-Qahtani,لولوة القحطاني,2935272255,2012-12-10,F,8,B,Dammam,Syrian,,G0063,
+S10091,Dima Al-Qahtani,ديما القحطاني,2629844854,2020-08-03,F,1,A,Dammam,Syrian,,G0063,
+S10092,Fahd Al-Anazi,فهد العنزي,1491107169,2015-07-15,M,5,C,Riyadh East,Saudi,,G0064,
+S10093,Ziyad Al-Juhani,زياد الجهني,2798741331,2018-10-14,M,2,B,Dammam,Egyptian,,G0065,
+S10094,Fatimah Siddiqui,فاطمة صديقي,1320568054,2017-09-01,F,3,B,Jeddah,Saudi,,G0066,JED-4
+S10095,Anas Al-Shammari,أنس الشمري,2539018640,2017-11-08,M,3,A,Jeddah,Egyptian,,G0067,
+S10096,Joud Al-Ghamdi,جود الغامدي,2699443866,2016-09-03,F,4,B,Jeddah,Jordanian,,G0068,JED-2
+S10097,Fatimah Al-Ghamdi,فاطمة الغامدي,2108796081,2019-08-18,F,1,A,Jeddah,Jordanian,,G0068,
+S10098,Sara Al-Sharif,سارة الشريف,1738281192,2015-03-19,F,5,B,Dammam,Saudi,,G0069,DAM-8
+S10099,Omar Al-Hamad,عمر الحمد,1408276818,2018-09-05,M,2,B,Jeddah,Saudi,,G0070,
+S10100,Dima Al-Ghamdi,ديما الغامدي,2620700574,2018-10-18,F,3,C,Jeddah,Jordanian,,G0071,JED-3
+S10101,Hamza Al-Ghamdi,حمزة الغامدي,2139223850,2014-10-15,M,6,A,Jeddah,Jordanian,,G0071,JED-6
+S10102,Omar Bakr,عمر بكر,1740421834,2008-04-29,M,12,A,Dammam,Saudi,,G0072,
+S10103,Nawaf Bakr,نواف بكر,1515479542,2009-07-11,M,11,A,Dammam,Saudi,,G0072,
+S10104,Abdullah Al-Shammari,عبدالله الشمري,1366816406,2010-06-22,M,10,A,Riyadh North,Saudi,,G0073,RIY-1
+S10105,Hessa Al-Shammari,حصة الشمري,1008401151,2014-02-22,F,6,A,Riyadh North,Saudi,,G0073,
+S10106,Layan Al-Saeed,ليان السعيد,2164305177,2009-07-12,F,11,C,Jeddah,Yemeni,,G0074,JED-3
+S10107,Hamza Al-Hamad,حمزة الحمد,1194388934,2015-12-08,M,5,B,Riyadh East,Saudi,,G0075,
+S10108,Reem Al-Hamad,ريم الحمد,1299001875,2010-10-08,F,10,A,Riyadh East,Saudi,,G0075,RIY-9
+S10109,Rahaf Haddad,رهف حداد,1028752250,2017-11-12,F,3,C,Jeddah,Saudi,,G0076,
+S10110,Yazan Al-Harbi,يزن الحربي,2146283896,2012-05-05,M,8,A,Dammam,Yemeni,,G0077,
+S10111,Ziyad Al-Harbi,زياد الحربي,2724949049,2014-07-03,M,6,C,Dammam,Yemeni,,G0077,DAM-7
+S10112,Rahaf Al-Harbi,رهف الحربي,2944491771,2020-07-05,F,1,C,Dammam,Yemeni,,G0077,DAM-8
+S10113,Asma Al-Anazi,أسماء العنزي,2530955748,2015-02-06,F,5,B,Jeddah,Syrian,,G0078,
+S10114,Faisal Siddiqui,فيصل صديقي,2508793607,2016-09-19,M,4,B,Riyadh North,Yemeni,,G0079,
+S10115,Lulwa Siddiqui,لولوة صديقي,2895082460,2016-01-24,F,4,A,Riyadh North,Yemeni,,G0079,
+S10116,Hamza Siddiqui,حمزة صديقي,2569927263,2018-12-31,M,2,C,Riyadh North,Yemeni,,G0079,RIY-9
+S10117,Faisal Al-Ghamdi,فيصل الغامدي,1931071271,2011-05-20,M,9,A,Riyadh East,Saudi,,G0080,RIY-8
+S10118,Abdullah Al-Ghamdi,عبدالله الغامدي,1976501560,2016-08-23,M,4,A,Riyadh East,Saudi,,G0080,RIY-5
+S10119,Badr Al-Subaie,بدر السبيعي,2373515020,2018-01-27,M,2,A,Jeddah,Sudanese,,G0081,
+S10120,Layan Al-Subaie,ليان السبيعي,2764981711,2010-03-25,F,10,B,Jeddah,Sudanese,,G0081,
+S10121,Ghala Al-Saeed,غلا السعيد,1365065898,2014-06-25,F,7,C,Riyadh North,Saudi,,G0082,
+S10122,Faisal Al-Saeed,فيصل السعيد,1303626230,2012-12-06,M,8,B,Riyadh North,Saudi,,G0082,
+S10123,Hessa Al-Otaibi,حصة العتيبي,1720137231,2018-02-04,F,2,C,Riyadh North,Saudi,,G0083,
+S10124,Ruba Al-Otaibi,ربى العتيبي,1908535545,2010-08-10,F,11,B,Riyadh North,Saudi,"hearing aid, front seat",G0083,RIY-8
+S10125,Hamza Al-Otaibi,حمزة العتيبي,1230889112,2016-02-27,M,4,C,Riyadh North,Saudi,,G0083,RIY-4
+S10126,Ali Nasser,علي ناصر,1952253848,2008-12-12,M,12,B,Dammam,Saudi,,G0084,
+S10127,Ali Nasser,علي ناصر,1912832759,2015-01-20,M,5,B,Riyadh East,Saudi,,G0085,RIY-1
+S10128,Rahaf Al-Saeed,رهف السعيد,1358439453,2015-04-06,F,6,A,Riyadh East,Saudi,,G0086,RIY-1
+S10129,Ruba Al-Saeed,ربى السعيد,1382926665,2017-07-02,F,3,A,Riyadh East,Saudi,,G0086,RIY-5
+S10130,Nawaf Al-Dosari,نواف الدوسري,2524065139,2019-03-24,M,2,A,Dammam,Syrian,,G0087,
+S10131,Saud Al-Dosari,سعود الدوسري,2520708445,2017-08-06,M,3,B,Dammam,Syrian,,G0087,
+S10132,Layan Al-Ghamdi,ليان الغامدي,2967694258,2012-10-07,F,8,A,Riyadh North,Egyptian,,G0088,RIY-9
+S10133,Maryam Al-Ghamdi,مريم الغامدي,2349031924,2017-04-21,F,3,A,Riyadh North,Egyptian,,G0088,RIY-4
+S10134,Ruba Al-Ghamdi,ربى الغامدي,2623146487,2017-01-03,F,3,A,Riyadh North,Egyptian,,G0088,
+S10135,Aseel Haddad,أسيل حداد,1999191377,2013-05-09,F,7,C,Riyadh North,Saudi,,G0089,RIY-3
+S10136,Jana Al-Juhani,جنى الجهني,1286258883,2010-02-03,F,10,A,Riyadh North,Saudi,,G0090,RIY-6
+S10137,Lulwa Al-Juhani,لولوة الجهني,1174206418,2015-04-04,F,5,B,Riyadh North,Saudi,"epilepsy, care plan on file",G0090,RIY-2
+S10138,Fatimah Al-Juhani,فاطمة الجهني,1381655201,2018-09-26,F,3,C,Riyadh North,Saudi,,G0090,RIY-8
+S10139,Fahd Al-Harbi,فهد الحربي,1622572116,2015-12-03,M,5,C,Jeddah,Saudi,,G0091,JED-4
+S10140,Dima Al-Harbi,ديما الحربي,1411171607,2018-08-03,F,3,A,Jeddah,Saudi,,G0091,JED-7
+S10141,Shahad Al-Harbi,شهد الحربي,1847332397,2019-06-19,F,1,C,Jeddah,Saudi,,G0091,JED-6
+S10142,Asma Al-Otaibi,أسماء العتيبي,1717126493,2010-09-03,F,10,A,Riyadh North,Saudi,,G0092,RIY-8
+S10143,Maryam Al-Hamad,مريم الحمد,1322584020,2012-11-12,F,9,B,Riyadh East,Saudi,,G0093,
+S10144,Yazan Al-Hamad,يزن الحمد,1259092271,2010-09-21,M,10,B,Riyadh East,Saudi,,G0093,
+S10145,Yousef Al-Hamad,يوسف الحمد,1008178590,2016-04-08,M,4,C,Riyadh East,Saudi,,G0093,RIY-8
+S10146,Talal Al-Saeed,طلال السعيد,1393577265,2018-05-15,M,2,A,Jeddah,Saudi,,G0094,JED-9
+S10147,Fatimah Al-Saeed,فاطمة السعيد,1797241174,2012-05-08,F,9,B,Jeddah,Saudi,,G0094,
+S10148,Abdullah Al-Subaie,عبدالله السبيعي,1504983729,2016-10-30,M,5,C,Riyadh East,Saudi,,G0095,
+S10149,Joud Al-Subaie,جود السبيعي,1809944327,2017-11-15,F,4,A,Riyadh East,Saudi,,G0095,
+S10150,Asma Al-Faraj,أسماء الفرج,1444012886,2014-10-08,F,7,A,Riyadh North,Saudi,"asthma, inhaler in bag",G0096,
+S10151,Haya Al-Saeed,هيا السعيد,2393924735,2010-06-02,F,10,A,Riyadh East,Pakistani,,G0097,RIY-9
+S10152,Hassan Al-Saeed,حسن السعيد,2958763240,2020-05-31,M,1,A,Riyadh East,Pakistani,,G0097,
+S10153,Nawaf Al-Mutairi,نواف المطيري,2780243771,2009-07-20,M,11,B,Riyadh East,Egyptian,,G0098,RIY-1
+S10154,Rahaf Al-Mutairi,رهف المطيري,2418273128,2017-01-01,F,3,A,Riyadh East,Egyptian,,G0098,RIY-7
+S10155,Jana Al-Mutairi,جنى المطيري,2842326621,2013-06-09,F,8,B,Riyadh East,Egyptian,,G0098,
+S10156,Shahad Haddad,شهد حداد,2278795332,2011-01-12,F,9,A,Jeddah,Indian,"nut allergy, carries auto-injector",G0099,
+S10157,Saud Haddad,سعود حداد,2061200683,2018-02-24,M,2,B,Jeddah,Indian,,G0099,JED-7
+S10158,Layan Al-Qahtani,ليان القحطاني,1880919910,2017-07-02,F,3,A,Riyadh East,Saudi,,G0100,RIY-4
+S10159,Rahaf Al-Qahtani,رهف القحطاني,1013130859,2011-06-29,F,10,A,Riyadh East,Saudi,,G0100,
+S10160,Fahd Al-Qahtani,فهد القحطاني,1520841200,2012-01-09,M,8,C,Riyadh East,Saudi,,G0100,
+S10161,Tala Al-Rashidi,تالا الرشيدي,1373460168,2019-05-22,F,1,A,Jeddah,Saudi,,G0101,JED-1
+S10162,Hassan Siddiqui,حسن صديقي,1738737146,2013-03-09,M,7,B,Riyadh North,Saudi,,G0102,
+S10163,Hassan Al-Sharif,حسن الشريف,1287368371,2011-10-03,M,9,C,Riyadh North,Saudi,,G0103,
+S10164,Ghala Al-Dosari,غلا الدوسري,1575524209,2019-07-15,F,1,A,Dammam,Saudi,,G0104,DAM-6
+S10165,Shahad Al-Dosari,شهد الدوسري,1456818623,2015-09-06,F,5,B,Dammam,Saudi,,G0104,DAM-1
+S10166,Yazan Al-Sharif,يزن الشريف,1842999278,2016-09-21,M,4,C,Riyadh North,Saudi,,G0105,
+S10167,Omar Al-Rashidi,عمر الرشيدي,1541842389,2010-06-22,M,11,C,Riyadh East,Saudi,,G0106,RIY-4
+S10168,Faisal Al-Rashidi,فيصل الرشيدي,1065816678,2018-10-07,M,2,C,Riyadh East,Saudi,,G0106,RIY-1
+S10169,Abdullah Al-Rashidi,عبدالله الرشيدي,1961865556,2020-03-08,M,1,B,Riyadh North,Saudi,,G0107,
+S10170,Sara Al-Malki,سارة المالكي,1607198947,2013-10-08,F,7,B,Jeddah,Saudi,,G0108,
+S10171,Lulwa Al-Malki,لولوة المالكي,1011329219,2017-01-19,F,3,B,Jeddah,Saudi,,G0108,JED-4
+S10172,Mohammed Al-Malki,محمد المالكي,1581149360,2016-01-03,M,5,B,Jeddah,Saudi,,G0108,JED-5
+S10173,Layan Al-Hamad,ليان الحمد,1362459696,2019-08-24,F,2,C,Riyadh East,Saudi,,G0109,RIY-8
+S10174,Mansour Al-Hamad,منصور الحمد,1093338495,2013-08-03,M,7,A,Riyadh East,Saudi,,G0109,RIY-1
+S10175,Tala Al-Shammari,تالا الشمري,1094235958,2019-04-01,F,2,A,Dammam,Saudi,severe egg allergy,G0110,
+S10176,Mansour Al-Shammari,منصور الشمري,1446351960,2017-08-19,M,4,A,Dammam,Saudi,,G0110,
+S10177,Layan Al-Shammari,ليان الشمري,1147112690,2011-03-30,F,9,A,Dammam,Saudi,,G0110,
+S10178,Asma Al-Mutairi,أسماء المطيري,2984765835,2012-03-21,F,8,A,Riyadh East,Jordanian,,G0111,
+S10179,Dima Bakr,ديما بكر,2312469175,2015-05-10,F,5,B,Riyadh East,Indian,,G0112,
+S10180,Lulwa Bakr,لولوة بكر,1342589263,2017-03-03,F,3,A,Jeddah,Saudi,"type 1 diabetes, insulin at lunch",G0113,
+S10181,Shahad Al-Zahrani,شهد الزهراني,1400231262,2010-03-27,F,10,C,Jeddah,Saudi,,G0114,
+S10182,Reem Al-Zahrani,ريم الزهراني,1350857293,2019-10-13,F,1,C,Jeddah,Saudi,,G0114,JED-4
+S10183,Nawaf Al-Hamad,نواف الحمد,1630955461,2014-07-08,M,6,C,Riyadh North,Saudi,,G0115,
+S10184,Ali Al-Malki,علي المالكي,1897533393,2011-08-14,M,9,B,Riyadh East,Saudi,,G0116,RIY-6
+S10185,Omar Al-Hamad,عمر الحمد,2173238762,2010-05-26,M,11,A,Riyadh East,Pakistani,,G0117,
+S10186,Yousef Nasser,يوسف ناصر,1962516508,2013-04-03,M,7,C,Riyadh East,Saudi,,G0118,RIY-3
+S10187,Lulwa Nasser,لولوة ناصر,1370227806,2015-05-07,F,5,A,Riyadh East,Saudi,"hearing aid, front seat",G0118,
+S10188,Jana Nasser,جنى ناصر,1303262907,2018-02-16,F,2,C,Riyadh East,Saudi,,G0118,
+S10189,Reem Haddad,ريم حداد,1351959630,2018-07-26,F,3,B,Riyadh East,Saudi,,G0119,
+S10190,Yazan Nasser,يزن ناصر,1736060890,2013-08-19,M,7,C,Riyadh East,Saudi,,G0120,
+S10191,Yazan Al-Saeed,يزن السعيد,1046589209,2009-04-10,M,11,A,Jeddah,Saudi,,G0121,
+S10192,Joud Nasser,جود ناصر,2590699769,2014-07-22,F,6,B,Riyadh North,Sudanese,,G0122,
+S10193,Jana Nasser,جنى ناصر,2726537477,2010-04-27,F,10,B,Riyadh North,Sudanese,severe egg allergy,G0122,RIY-4
+S10194,Yousef Nasser,يوسف ناصر,2085063663,2010-05-02,M,10,C,Riyadh North,Sudanese,severe egg allergy,G0122,RIY-8
+S10195,Joud Al-Hamad,جود الحمد,1601862310,2018-01-02,F,2,C,Riyadh North,Saudi,,G0123,
+S10196,Lulwa Al-Zahrani,لولوة الزهراني,1030789719,2008-10-21,F,12,B,Riyadh North,Saudi,"hearing aid, front seat",G0124,RIY-1
+S10197,Shahad Al-Saeed,شهد السعيد,1586147992,2016-01-24,F,4,C,Jeddah,Saudi,,G0125,
+S10198,Faisal Al-Anazi,فيصل العنزي,1058264115,2017-08-28,M,3,B,Jeddah,Saudi,,G0126,JED-5
+S10199,Layan Al-Anazi,ليان العنزي,1020472615,2012-11-06,F,8,C,Jeddah,Saudi,,G0126,JED-2
+S10200,Anas Al-Rashidi,أنس الرشيدي,1995305798,2016-11-06,M,4,C,Riyadh East,Saudi,,G0127,
+S10201,Ziyad Al-Otaibi,زياد العتيبي,1633505523,2015-05-09,M,5,C,Riyadh East,Saudi,,G0128,RIY-4
+S10202,Shahad Al-Shammari,شهد الشمري,1955558679,2015-02-01,F,6,A,Riyadh North,Saudi,,G0129,RIY-1
+S10203,Nawaf Al-Shammari,نواف الشمري,1045220444,2017-07-07,M,4,B,Riyadh North,Saudi,,G0129,RIY-9
+S10204,Hamza Al-Dosari,حمزة الدوسري,1614524909,2017-09-18,M,3,B,Jeddah,Saudi,,G0130,JED-4
+S10205,Anas Al-Juhani,أنس الجهني,1662786400,2017-12-19,M,4,B,Riyadh North,Saudi,,G0131,
+S10206,Dima Al-Otaibi,ديما العتيبي,1345446980,2010-08-21,F,10,B,Riyadh North,Saudi,,G0132,RIY-5
+S10207,Majed Al-Anazi,ماجد العنزي,2749907076,2012-12-20,M,8,B,Riyadh North,Jordanian,,G0133,
+S10208,Tala Al-Anazi,تالا العنزي,2874947565,2008-03-05,F,12,A,Riyadh North,Jordanian,,G0133,RIY-7
+S10209,Shahad Al-Anazi,شهد العنزي,2882755609,2019-03-29,F,2,A,Riyadh North,Jordanian,,G0133,
+S10210,Yousef Bakr,يوسف بكر,2772042085,2014-08-23,M,6,B,Dammam,Jordanian,,G0134,
+S10211,Ghala Bakr,غلا بكر,2893592996,2012-03-12,F,8,A,Dammam,Jordanian,,G0134,DAM-9
+S10212,Ali Al-Zahrani,علي الزهراني,2110500482,2017-08-16,M,3,A,Riyadh East,Pakistani,,G0135,
+S10213,Hassan Al-Faraj,حسن الفرج,1535210589,2019-10-08,M,1,B,Dammam,Saudi,,G0136,
+S10214,Noura Al-Faraj,نورة الفرج,1763349929,2014-09-25,F,6,C,Dammam,Saudi,,G0136,DAM-3
+S10215,Ziyad Al-Faraj,زياد الفرج,1431817742,2017-09-03,M,3,B,Dammam,Saudi,,G0136,DAM-6
+S10216,Lama Al-Ghamdi,لمى الغامدي,1664680554,2010-12-16,F,11,A,Riyadh North,Saudi,,G0137,RIY-9
+S10217,Fatimah Al-Otaibi,فاطمة العتيبي,2602895824,2015-03-23,F,5,A,Dammam,Sudanese,,G0138,
+S10218,Saud Al-Otaibi,سعود العتيبي,2412806154,2014-07-25,M,6,B,Dammam,Sudanese,,G0138,DAM-9
+S10219,Shahad Al-Otaibi,شهد العتيبي,2329747510,2016-11-19,F,5,C,Dammam,Sudanese,,G0138,
+S10220,Lulwa Al-Shehri,لولوة الشهري,2133536585,2010-06-11,F,11,B,Riyadh North,Egyptian,,G0139,
+S10221,Saud Al-Malki,سعود المالكي,1780701462,2013-07-11,M,7,A,Jeddah,Saudi,,G0140,JED-8
+S10222,Faisal Al-Malki,فيصل المالكي,1982507780,2013-01-18,M,7,C,Jeddah,Saudi,,G0140,
+S10223,Rahaf Al-Anazi,رهف العنزي,1528328246,2018-01-11,F,2,A,Riyadh East,Saudi,,G0141,RIY-4
+S10224,Rahaf Al-Otaibi,رهف العتيبي,1250787724,2016-09-15,F,4,C,Riyadh North,Saudi,,G0142,
+S10225,Fatimah Al-Otaibi,فاطمة العتيبي,1288708060,2014-07-30,F,6,B,Riyadh East,Saudi,,G0143,
+S10226,Haya Al-Harbi,هيا الحربي,1317630295,2017-05-31,F,3,C,Riyadh East,Saudi,,G0144,
+S10227,Mansour Al-Ghamdi,منصور الغامدي,2022686197,2019-04-30,M,2,B,Riyadh East,Pakistani,,G0145,
+S10228,Faisal Al-Ghamdi,فيصل الغامدي,2514756988,2008-07-03,M,12,A,Riyadh East,Pakistani,"migraine, may rest in clinic",G0145,RIY-7
+S10229,Jana Al-Rashidi,جنى الرشيدي,1011344158,2012-03-29,F,8,C,Riyadh North,Saudi,,G0146,RIY-5
+S10230,Joud Al-Rashidi,جود الرشيدي,1636067808,2009-12-28,F,11,B,Riyadh North,Saudi,,G0146,
+S10231,Talal Al-Rashidi,طلال الرشيدي,1317398648,2013-02-25,M,7,B,Riyadh North,Saudi,,G0146,RIY-8
+S10232,Lama Al-Shammari,لمى الشمري,1431606083,2012-06-20,F,8,B,Riyadh East,Saudi,,G0147,
+S10233,Rayan Al-Otaibi,ريان العتيبي,2315296114,2011-05-12,M,9,C,Dammam,Syrian,,G0148,
+S10234,Hamza Al-Anazi,حمزة العنزي,1909438553,2017-09-30,M,4,C,Riyadh East,Saudi,,G0149,RIY-8
+S10235,Mansour Al-Anazi,منصور العنزي,1080080546,2008-06-12,M,12,A,Riyadh East,Saudi,"asthma, inhaler in bag",G0149,
+S10236,Noura Al-Anazi,نورة العنزي,1376850508,2018-01-12,F,2,B,Riyadh East,Saudi,,G0149,
+S10237,Ruba Siddiqui,ربى صديقي,2885386670,2020-08-16,F,1,B,Dammam,Syrian,,G0150,DAM-6
+S10238,Omar Siddiqui,عمر صديقي,2313881989,2014-08-19,M,6,C,Dammam,Syrian,,G0150,DAM-8
+S10239,Noura Siddiqui,نورة صديقي,1553506211,2008-04-26,F,12,A,Riyadh East,Saudi,,G0151,
+S10240,Layan Al-Ghamdi,ليان الغامدي,2174451824,2017-12-25,F,3,A,Jeddah,Jordanian,,G0152,JED-9
+S10241,Omar Al-Ghamdi,عمر الغامدي,2563297841,2017-10-13,M,3,A,Jeddah,Jordanian,"hearing aid, front seat",G0152,
+S10242,Reem Al-Shehri,ريم الشهري,1996213940,2017-08-21,F,3,C,Riyadh East,Saudi,,G0153,
+S10243,Ruba Al-Harbi,ربى الحربي,2109804520,2016-02-03,F,5,B,Riyadh East,Jordanian,,G0154,
+S10244,Mohammed Al-Rashidi,محمد الرشيدي,1467229233,2020-05-25,M,1,C,Riyadh East,Saudi,,G0155,RIY-9
+S10245,Majed Al-Shammari,ماجد الشمري,2052672492,2015-07-04,M,5,B,Jeddah,Syrian,"type 1 diabetes, insulin at lunch",G0156,JED-9
+S10246,Majed Haddad,ماجد حداد,2411900632,2012-11-25,M,8,A,Jeddah,Indian,,G0157,JED-4
+S10247,Fatimah Al-Saeed,فاطمة السعيد,1268517086,2010-12-06,F,10,A,Riyadh North,Saudi,,G0158,
+S10248,Saud Nasser,سعود ناصر,1414916563,2015-11-27,M,5,B,Riyadh North,Saudi,,G0159,
+S10249,Yousef Nasser,يوسف ناصر,1424861515,2018-02-08,M,2,B,Riyadh North,Saudi,,G0159,RIY-3
+S10250,Lulwa Al-Harbi,لولوة الحربي,1314075077,2015-02-27,F,6,C,Dammam,Saudi,,G0160,DAM-9
+S10251,Ghala Al-Subaie,غلا السبيعي,1116443594,2011-05-27,F,9,C,Riyadh East,Saudi,"hearing aid, front seat",G0161,
+S10252,Hessa Al-Subaie,حصة السبيعي,1902269251,2011-04-17,F,9,A,Riyadh East,Saudi,,G0161,
+S10253,Fatimah Al-Subaie,فاطمة السبيعي,1666074125,2020-11-01,F,1,C,Riyadh North,Saudi,,G0162,RIY-9
+S10254,Hessa Al-Subaie,حصة السبيعي,1586659093,2018-05-15,F,2,A,Riyadh North,Saudi,,G0162,RIY-8
+S10255,Mohammed Al-Zahrani,محمد الزهراني,1574751518,2015-01-13,M,6,C,Riyadh East,Saudi,,G0163,
+S10256,Rayan Al-Hamad,ريان الحمد,1613525454,2011-07-23,M,9,C,Jeddah,Saudi,,G0164,
+S10257,Noura Al-Hamad,نورة الحمد,1247557247,2011-01-14,F,9,A,Jeddah,Saudi,,G0164,
+S10258,Omar Haddad,عمر حداد,2419568155,2018-05-17,M,2,A,Riyadh East,Indian,,G0165,
+S10259,Yazan Haddad,يزن حداد,2848684080,2015-08-11,M,6,A,Riyadh East,Indian,,G0165,
+S10260,Nawaf Al-Ghamdi,نواف الغامدي,1115150744,2018-12-15,M,3,B,Riyadh East,Saudi,,G0166,
+S10261,Joud Al-Ghamdi,جود الغامدي,1057524872,2015-10-29,F,6,B,Riyadh East,Saudi,"ADHD, extra time in tests",G0166,RIY-6
+S10262,Lulwa Al-Ghamdi,لولوة الغامدي,1298828572,2013-01-02,F,7,B,Riyadh East,Saudi,,G0166,
+S10263,Yousef Al-Saeed,يوسف السعيد,1211623459,2011-03-16,M,9,A,Dammam,Saudi,,G0167,
+S10264,Noura Al-Mutairi,نورة المطيري,1830407786,2010-04-09,F,11,A,Riyadh North,Saudi,,G0168,
+S10265,Nawaf Al-Qahtani,نواف القحطاني,2262510688,2013-05-29,M,7,B,Riyadh North,Yemeni,,G0169,RIY-5
+S10266,Faisal Al-Qahtani,فيصل القحطاني,2597053630,2012-04-20,M,8,A,Riyadh North,Yemeni,,G0169,
+S10267,Dima Al-Zahrani,ديما الزهراني,2377238603,2018-01-08,F,2,B,Riyadh North,Indian,,G0170,RIY-6
+S10268,Abdullah Al-Zahrani,عبدالله الزهراني,2087311254,2016-09-02,M,4,A,Riyadh North,Indian,,G0170,RIY-1
+S10269,Sara Al-Faraj,سارة الفرج,2868756112,2018-12-25,F,2,C,Riyadh North,Pakistani,,G0171,RIY-8
+S10270,Talal Al-Juhani,طلال الجهني,1289757614,2017-05-01,M,3,A,Jeddah,Saudi,,G0172,JED-1
+S10271,Mansour Al-Juhani,منصور الجهني,1752986897,2013-03-14,M,7,C,Jeddah,Saudi,,G0172,
+S10272,Dima Al-Juhani,ديما الجهني,1736370558,2019-03-10,F,1,A,Jeddah,Saudi,,G0172,JED-3
+S10273,Abdullah Al-Ghamdi,عبدالله الغامدي,2858892879,2016-07-18,M,5,A,Jeddah,Syrian,,G0173,JED-5
+S10274,Rahaf Al-Ghamdi,رهف الغامدي,2551003401,2020-02-19,F,1,A,Jeddah,Syrian,,G0173,JED-2
+S10275,Noura Al-Qahtani,نورة القحطاني,1529325856,2018-08-13,F,2,C,Riyadh North,Saudi,,G0174,RIY-9
+S10276,Lulwa Al-Qahtani,لولوة القحطاني,1547448150,2014-03-04,F,6,A,Riyadh North,Saudi,,G0174,
+S10277,Yousef Al-Mutairi,يوسف المطيري,2336616180,2018-10-26,M,2,A,Dammam,Yemeni,,G0175,DAM-9
+S10278,Dima Nasser,ديما ناصر,1259286031,2013-07-22,F,8,A,Dammam,Saudi,,G0176,
+S10279,Shahad Nasser,شهد ناصر,1145397986,2017-09-11,F,3,A,Dammam,Saudi,,G0176,DAM-8
+S10280,Lulwa Nasser,لولوة ناصر,1246245104,2016-07-29,F,4,C,Dammam,Saudi,,G0176,
+S10281,Aseel Al-Anazi,أسيل العنزي,1319184085,2016-12-22,F,4,B,Riyadh North,Saudi,,G0177,RIY-7
+S10282,Mohammed Al-Anazi,محمد العنزي,1200663884,2019-05-07,M,1,A,Riyadh North,Saudi,,G0177,RIY-1
+S10283,Ghala Al-Otaibi,غلا العتيبي,1797727671,2019-10-29,F,1,C,Riyadh East,Saudi,,G0178,
+S10284,Badr Al-Otaibi,بدر العتيبي,1946453244,2016-06-12,M,5,A,Riyadh East,Saudi,,G0178,
+S10285,Layan Al-Qahtani,ليان القحطاني,1115088609,2015-06-29,F,5,B,Dammam,Saudi,"epilepsy, care plan on file",G0179,
+S10286,Ruba Al-Qahtani,ربى القحطاني,1066281690,2015-06-22,F,6,B,Dammam,Saudi,,G0179,DAM-8
+S10287,Lama Al-Qahtani,لمى القحطاني,1316203255,2015-05-08,F,6,B,Dammam,Saudi,,G0179,
+S10288,Fahd Bakr,فهد بكر,2067256299,2016-04-25,M,5,B,Riyadh North,Sudanese,"ADHD, extra time in tests",G0180,RIY-5
+S10289,Shahad Al-Ghamdi,شهد الغامدي,1447927891,2009-09-22,F,11,B,Riyadh North,Saudi,,G0181,
+S10290,Ghala Al-Hamad,غلا الحمد,1880356998,2018-07-26,F,3,C,Riyadh East,Saudi,,G0182,RIY-9
+S10291,Abdullah Al-Sharif,عبدالله الشريف,1021096245,2008-03-24,M,12,A,Riyadh North,Saudi,,G0183,
+S10292,Shahad Al-Subaie,شهد السبيعي,2605014879,2020-12-05,F,1,B,Jeddah,Syrian,,G0184,
+S10293,Ali Al-Subaie,علي السبيعي,1809007888,2010-04-08,M,11,B,Riyadh East,Saudi,,G0185,
+S10294,Jana Al-Sharif,جنى الشريف,2885220806,2014-08-27,F,6,B,Dammam,Sudanese,,G0186,DAM-3
+S10295,Faisal Al-Sharif,فيصل الشريف,2602864728,2017-02-25,M,4,B,Dammam,Sudanese,,G0186,DAM-2
+S10296,Majed Al-Shammari,ماجد الشمري,1246291893,2017-07-09,M,3,B,Jeddah,Saudi,,G0187,
+S10297,Badr Al-Shammari,بدر الشمري,1332552210,2016-08-06,M,5,A,Jeddah,Saudi,,G0187,
+S10298,Abdullah Bakr,عبدالله بكر,2477513485,2018-01-07,M,2,C,Jeddah,Jordanian,,G0188,
+S10299,Hassan Bakr,حسن بكر,2436803576,2015-05-04,M,5,A,Jeddah,Jordanian,,G0188,
+S10300,Jana Bakr,جنى بكر,2755812117,2017-04-26,F,4,C,Jeddah,Jordanian,,G0188,
+S10301,Lulwa Al-Sharif,لولوة الشريف,1044328010,2018-12-07,F,2,C,Jeddah,Saudi,,G0189,JED-5
+S10302,Rayan Al-Sharif,ريان الشريف,1875398043,2013-08-02,M,7,A,Jeddah,Saudi,,G0189,JED-1
+S10303,Talal Al-Sharif,طلال الشريف,1113816113,2012-10-08,M,8,C,Jeddah,Saudi,,G0189,
+S10304,Fatimah Al-Rashidi,فاطمة الرشيدي,1401058945,2011-11-26,F,9,C,Riyadh North,Saudi,,G0190,RIY-1
+S10305,Dima Bakr,ديما بكر,1989962657,2010-05-16,F,10,B,Jeddah,Saudi,,G0191,
+S10306,Dima Al-Shehri,ديما الشهري,1326289196,2019-03-27,F,1,A,Jeddah,Saudi,,G0192,JED-8
+S10307,Ghala Al-Shehri,غلا الشهري,1784601878,2019-07-11,F,2,A,Jeddah,Saudi,,G0192,JED-1
+S10308,Nawaf Al-Shehri,نواف الشهري,1344254519,2012-12-06,M,9,B,Jeddah,Saudi,,G0192,
+S10309,Badr Al-Saeed,بدر السعيد,2707402997,2015-11-22,M,5,C,Riyadh East,Yemeni,,G0193,RIY-3
+S10310,Haya Al-Saeed,هيا السعيد,2955222174,2010-12-28,F,10,B,Riyadh East,Yemeni,,G0193,
+S10311,Hamza Haddad,حمزة حداد,2913104588,2018-01-12,M,3,C,Riyadh East,Jordanian,,G0194,
+S10312,Tala Al-Anazi,تالا العنزي,1376252601,2014-10-05,F,6,C,Dammam,Saudi,,G0195,
+S10313,Aseel Al-Anazi,أسيل العنزي,1392740935,2018-05-10,F,3,A,Dammam,Saudi,,G0195,
+S10314,Jana Al-Anazi,جنى العنزي,1077758070,2016-12-18,F,4,C,Dammam,Saudi,,G0195,
+S10315,Abdullah Al-Anazi,عبدالله العنزي,1265234938,2018-09-29,M,3,A,Dammam,Saudi,,G0196,DAM-5
+S10316,Haya Al-Dosari,هيا الدوسري,1451302525,2009-08-09,F,12,B,Jeddah,Saudi,,G0197,JED-6
+S10317,Anas Al-Saeed,أنس السعيد,1355728425,2013-10-05,M,7,B,Riyadh North,Saudi,,G0198,RIY-6
+S10318,Fahd Al-Juhani,فهد الجهني,1155532042,2016-01-31,M,5,B,Dammam,Saudi,,G0199,DAM-2
+S10319,Badr Bakr,بدر بكر,1355431044,2013-02-06,M,7,A,Jeddah,Saudi,,G0200,JED-6
+S10320,Fatimah Bakr,فاطمة بكر,2282690726,2018-09-05,F,3,B,Riyadh North,Jordanian,,G0201,RIY-7
+S10321,Lama Bakr,لمى بكر,2702105304,2012-03-08,F,8,A,Riyadh North,Jordanian,,G0201,
+S10322,Haya Bakr,هيا بكر,2523026367,2011-05-15,F,9,B,Riyadh North,Jordanian,"nut allergy, carries auto-injector",G0201,
+S10323,Khalid Al-Shehri,خالد الشهري,1378359073,2017-10-18,M,3,A,Dammam,Saudi,"ADHD, extra time in tests",G0202,
+S10324,Ghala Al-Mutairi,غلا المطيري,1847421952,2015-05-17,F,6,C,Riyadh East,Saudi,,G0203,
+S10325,Hessa Al-Mutairi,حصة المطيري,1034804021,2019-11-14,F,1,A,Riyadh East,Saudi,,G0203,
+S10326,Layan Bakr,ليان بكر,2148789705,2011-12-23,F,9,A,Riyadh North,Sudanese,,G0204,
+S10327,Asma Al-Anazi,أسماء العنزي,1716201384,2017-09-11,F,3,C,Riyadh East,Saudi,"ADHD, extra time in tests",G0205,RIY-2
+S10328,Hamza Al-Anazi,حمزة العنزي,1596425006,2019-12-31,M,1,C,Riyadh East,Saudi,,G0205,
+S10329,Hessa Haddad,حصة حداد,2964874253,2008-07-06,F,12,C,Jeddah,Indian,,G0206,JED-9
+S10330,Ruba Haddad,ربى حداد,2406229146,2011-01-17,F,9,C,Jeddah,Indian,,G0206,JED-6
+S10331,Dima Al-Faraj,ديما الفرج,2385280735,2017-03-08,F,3,B,Jeddah,Sudanese,,G0207,
+S10332,Reem Al-Faraj,ريم الفرج,2128004985,2018-11-12,F,2,C,Jeddah,Sudanese,,G0207,
+S10333,Badr Al-Faraj,بدر الفرج,2728328414,2010-10-24,M,10,C,Jeddah,Sudanese,,G0207,JED-8
+S10334,Hassan Al-Juhani,حسن الجهني,2357923030,2013-10-18,M,8,B,Dammam,Jordanian,,G0208,DAM-5
+S10335,Khalid Al-Anazi,خالد العنزي,1104465074,2016-10-01,M,4,C,Riyadh East,Saudi,,G0209,RIY-9
+S10336,Rahaf Al-Anazi,رهف العنزي,1828277889,2018-05-09,F,2,C,Riyadh East,Saudi,,G0209,
+S10337,Ali Al-Anazi,علي العنزي,1635505012,2011-05-23,M,9,A,Riyadh East,Saudi,"epilepsy, care plan on file",G0209,
+S10338,Mansour Al-Ghamdi,منصور الغامدي,1659290354,2019-05-01,M,2,B,Jeddah,Saudi,,G0210,
+S10339,Aseel Haddad,أسيل حداد,2502837793,2016-05-31,F,4,A,Riyadh East,Sudanese,,G0211,
+S10340,Lulwa Haddad,لولوة حداد,2721015645,2011-12-26,F,10,A,Riyadh East,Sudanese,,G0211,
+S10341,Hessa Haddad,حصة حداد,2578395617,2015-01-05,F,6,B,Riyadh East,Sudanese,,G0211,
+S10342,Lulwa Khan,لولوة خان,1236090374,2019-02-02,F,1,B,Riyadh North,Saudi,,G0212,
+S10343,Layan Al-Harbi,ليان الحربي,1445790497,2015-03-28,F,5,A,Dammam,Saudi,,G0213,
+S10344,Hassan Al-Anazi,حسن العنزي,1115359845,2014-10-01,M,6,B,Riyadh East,Saudi,,G0214,RIY-4
+S10345,Hessa Al-Shammari,حصة الشمري,1200309443,2018-01-29,F,3,A,Riyadh East,Saudi,,G0215,RIY-6
+S10346,Talal Al-Shammari,طلال الشمري,1135746455,2010-07-28,M,10,C,Riyadh East,Saudi,,G0215,RIY-8
+S10347,Talal Al-Shammari,طلال الشمري,1085252118,2015-07-16,M,5,B,Riyadh East,Saudi,"migraine, may rest in clinic",G0215,RIY-9
+S10348,Maryam Al-Dosari,مريم الدوسري,1341257256,2020-03-12,F,1,C,Jeddah,Saudi,,G0216,JED-3
+S10349,Ghala Al-Dosari,غلا الدوسري,1084024385,2017-10-31,F,3,C,Jeddah,Saudi,,G0216,
+S10350,Hamza Nasser,حمزة ناصر,1145802507,2012-07-09,M,8,B,Dammam,Saudi,,G0217,
+S10351,Yousef Nasser,يوسف ناصر,1091330008,2012-12-12,M,8,B,Dammam,Saudi,,G0217,
+S10352,Omar Al-Rashidi,عمر الرشيدي,1067373969,2013-10-21,M,7,A,Riyadh East,Saudi,,G0218,
+S10353,Rahaf Al-Mutairi,رهف المطيري,1852832842,2018-03-17,F,2,B,Dammam,Saudi,,G0219,DAM-8
+S10354,Fahd Al-Mutairi,فهد المطيري,1317307421,2012-08-28,M,8,A,Dammam,Saudi,,G0219,
+S10355,Omar Haddad,عمر حداد,1952622272,2017-06-30,M,4,A,Dammam,Saudi,,G0220,DAM-1
+S10356,Tala Al-Subaie,تالا السبيعي,1986738149,2013-08-26,F,7,C,Jeddah,Saudi,,G0221,
+S10357,Talal Al-Subaie,طلال السبيعي,1227514705,2015-10-02,M,5,C,Jeddah,Saudi,,G0221,JED-1
+S10358,Nawaf Al-Subaie,نواف السبيعي,1816715633,2010-06-17,M,10,B,Jeddah,Saudi,,G0221,
+S10359,Abdullah Al-Subaie,عبدالله السبيعي,1561791923,2019-06-27,M,1,B,Riyadh East,Saudi,"ADHD, extra time in tests",G0222,
+S10360,Mansour Al-Ghamdi,منصور الغامدي,1625612812,2009-11-09,M,11,A,Riyadh East,Saudi,,G0223,RIY-4
+S10361,Hessa Al-Saeed,حصة السعيد,1817463774,2013-01-05,F,7,A,Riyadh East,Saudi,,G0224,RIY-6
+S10362,Faisal Al-Ghamdi,فيصل الغامدي,2925963214,2019-06-01,M,1,A,Dammam,Syrian,,G0225,
+S10363,Talal Al-Ghamdi,طلال الغامدي,2689901841,2012-04-04,M,8,A,Dammam,Syrian,,G0225,
+S10364,Sara Al-Ghamdi,سارة الغامدي,2631276557,2019-03-15,F,1,C,Dammam,Syrian,,G0225,
+S10365,Lama Al-Harbi,لمى الحربي,1765807996,2018-07-24,F,2,C,Riyadh East,Saudi,,G0226,
+S10366,Hessa Al-Harbi,حصة الحربي,1889546526,2017-03-17,F,3,B,Riyadh East,Saudi,,G0226,
+S10367,Fahd Al-Rashidi,فهد الرشيدي,1723667111,2012-10-24,M,8,A,Riyadh North,Saudi,,G0227,RIY-4
+S10368,Yazan Al-Rashidi,يزن الرشيدي,1128756714,2019-01-10,M,2,B,Riyadh North,Saudi,,G0227,
+S10369,Faisal Al-Hamad,فيصل الحمد,1747477370,2016-11-20,M,5,B,Dammam,Saudi,,G0228,
+S10370,Mohammed Al-Otaibi,محمد العتيبي,1839672385,2012-01-17,M,8,C,Riyadh East,Saudi,"ADHD, extra time in tests",G0229,
+S10371,Fatimah Al-Otaibi,فاطمة العتيبي,1115170616,2015-09-28,F,5,A,Jeddah,Saudi,,G0230,JED-6
+S10372,Anas Nasser,أنس ناصر,1751712187,2018-01-27,M,2,A,Dammam,Saudi,,G0231,DAM-9
+S10373,Layan Nasser,ليان ناصر,1357531227,2020-10-30,F,1,C,Dammam,Saudi,,G0231,DAM-7
+S10374,Sara Nasser,سارة ناصر,1547861270,2012-06-04,F,8,A,Dammam,Saudi,,G0231,
+S10375,Yousef Al-Shammari,يوسف الشمري,1782823916,2012-03-03,M,8,C,Jeddah,Saudi,,G0232,
+S10376,Joud Al-Shammari,جود الشمري,1518639884,2010-10-04,F,10,A,Jeddah,Saudi,"type 1 diabetes, insulin at lunch",G0232,
+S10377,Anas Al-Zahrani,أنس الزهراني,2412280822,2018-06-20,M,2,A,Dammam,Egyptian,,G0233,
+S10378,Mohammed Al-Zahrani,محمد الزهراني,2944154090,2014-01-01,M,6,B,Dammam,Egyptian,,G0233,DAM-1
+S10379,Omar Al-Hamad,عمر الحمد,1047752791,2019-01-11,M,2,B,Jeddah,Saudi,,G0234,JED-3
+S10380,Hessa Al-Shehri,حصة الشهري,2648420147,2020-11-06,F,1,C,Jeddah,Pakistani,"type 1 diabetes, insulin at lunch",G0235,JED-7
+S10381,Ghala Al-Shammari,غلا الشمري,1611158419,2016-08-26,F,4,A,Riyadh North,Saudi,,G0236,
+S10382,Abdullah Al-Shehri,عبدالله الشهري,1921239482,2016-12-05,M,5,B,Riyadh North,Saudi,,G0237,
+S10383,Noura Al-Shehri,نورة الشهري,1304481271,2017-06-04,F,3,B,Riyadh North,Saudi,"ADHD, extra time in tests",G0237,
+S10384,Badr Al-Juhani,بدر الجهني,1242056297,2013-03-24,M,7,B,Jeddah,Saudi,,G0238,
+S10385,Rayan Al-Juhani,ريان الجهني,1715513808,2018-07-29,M,2,C,Jeddah,Saudi,,G0238,JED-8
+S10386,Yousef Al-Hamad,يوسف الحمد,1229913517,2013-07-28,M,8,A,Riyadh North,Saudi,"asthma, inhaler in bag",G0239,RIY-5
+S10387,Hassan Khan,حسن خان,2315440805,2009-04-27,M,11,C,Riyadh East,Egyptian,,G0240,
+S10388,Majed Khan,ماجد خان,2174545458,2016-01-10,M,5,C,Riyadh East,Egyptian,,G0240,
+S10389,Sara Al-Qahtani,سارة القحطاني,1356766530,2018-10-03,F,2,C,Riyadh East,Saudi,,G0241,
+S10390,Ali Al-Qahtani,علي القحطاني,1868605265,2015-09-14,M,5,A,Riyadh East,Saudi,,G0241,
+S10391,Reem Haddad,ريم حداد,1169752856,2014-01-13,F,6,B,Riyadh North,Saudi,"epilepsy, care plan on file",G0242,
+S10392,Hamza Haddad,حمزة حداد,1368374704,2013-01-29,M,7,C,Riyadh North,Saudi,,G0242,RIY-3
+S10393,Joud Haddad,جود حداد,1263800030,2018-06-20,F,2,B,Riyadh North,Saudi,,G0242,
+S10394,Ruba Nasser,ربى ناصر,2714490102,2017-03-25,F,4,B,Jeddah,Indian,,G0243,
+S10395,Mansour Bakr,منصور بكر,1255238336,2019-07-29,M,2,A,Riyadh North,Saudi,,G0244,
+S10396,Khalid Siddiqui,خالد صديقي,1199658281,2011-02-23,M,9,C,Jeddah,Saudi,,G0245,JED-3
+S10397,Jana Bakr,جنى بكر,1144130715,2016-10-07,F,4,C,Dammam,Saudi,,G0246,
+S10398,Noura Bakr,نورة بكر,1041344944,2015-09-22,F,5,A,Dammam,Saudi,,G0246,
+S10399,Saud Khan,سعود خان,1202834429,2019-02-18,M,1,A,Riyadh North,Saudi,,G0247,
+S10400,Mohammed Al-Faraj,محمد الفرج,1591609452,2014-05-01,M,6,A,Dammam,Saudi,,G0248,
+S10401,Badr Al-Faraj,بدر الفرج,1154591302,2019-03-24,M,1,C,Dammam,Saudi,severe egg allergy,G0248,DAM-9
+S10402,Noura Al-Saeed,نورة السعيد,2103453591,2020-09-27,F,1,B,Riyadh East,Indian,,G0249,
+S10403,Badr Siddiqui,بدر صديقي,2715867357,2014-10-13,M,6,A,Riyadh East,Yemeni,,G0250,
+S10404,Fahd Al-Ghamdi,فهد الغامدي,1986263162,2017-08-10,M,3,B,Jeddah,Saudi,,G0251,JED-3
+S10405,Saud Al-Ghamdi,سعود الغامدي,1943800708,2015-01-09,M,5,B,Jeddah,Saudi,,G0251,
+S10406,Hassan Al-Ghamdi,حسن الغامدي,1934090233,2013-10-28,M,8,B,Jeddah,Saudi,,G0251,
+S10407,Hassan Al-Anazi,حسن العنزي,2745395558,2014-12-25,M,6,B,Riyadh East,Indian,,G0252,
+S10408,Talal Al-Zahrani,طلال الزهراني,2602271105,2012-01-30,M,9,A,Riyadh North,Syrian,,G0253,
+S10409,Majed Haddad,ماجد حداد,2950653158,2019-05-23,M,1,B,Jeddah,Yemeni,,G0254,JED-8
+S10410,Asma Haddad,أسماء حداد,2643397913,2016-07-31,F,4,B,Jeddah,Yemeni,,G0254,
+S10411,Saud Haddad,سعود حداد,2955535431,2016-03-28,M,5,A,Jeddah,Yemeni,,G0254,
+S10412,Faisal Al-Faraj,فيصل الفرج,1973749887,2011-11-11,M,9,A,Riyadh East,Saudi,,G0255,RIY-6
+S10413,Haya Al-Faraj,هيا الفرج,1084873554,2017-06-03,F,3,B,Riyadh East,Saudi,,G0255,
+S10414,Jana Al-Shehri,جنى الشهري,1706110353,2011-07-05,F,9,A,Dammam,Saudi,,G0256,
+S10415,Sara Al-Shehri,سارة الشهري,1024804082,2013-10-18,F,7,C,Dammam,Saudi,,G0256,
+S10416,Majed Nasser,ماجد ناصر,2285479551,2015-07-12,M,6,B,Jeddah,Indian,"migraine, may rest in clinic",G0257,
+S10417,Lulwa Nasser,لولوة ناصر,2613750813,2015-11-01,F,5,C,Jeddah,Indian,,G0257,JED-7
+S10418,Lulwa Nasser,لولوة ناصر,2472918642,2017-02-03,F,3,C,Jeddah,Indian,,G0257,JED-1
+S10419,Faisal Al-Zahrani,فيصل الزهراني,1056523456,2008-11-23,M,12,A,Riyadh North,Saudi,,G0258,RIY-8
+S10420,Fatimah Al-Zahrani,فاطمة الزهراني,1862238601,2015-02-12,F,5,C,Riyadh North,Saudi,,G0258,
+S10421,Ghala Al-Rashidi,غلا الرشيدي,1696553119,2012-02-05,F,8,B,Dammam,Saudi,,G0259,
+S10422,Fatimah Al-Zahrani,فاطمة الزهراني,2446710855,2017-03-12,F,3,C,Dammam,Yemeni,,G0260,
+S10423,Rahaf Al-Zahrani,رهف الزهراني,2204168147,2015-09-27,F,5,C,Dammam,Yemeni,,G0260,DAM-1
+S10424,Rayan Al-Zahrani,ريان الزهراني,2364691359,2019-12-03,M,1,C,Dammam,Yemeni,,G0260,DAM-5
+S10425,Hamza Al-Ghamdi,حمزة الغامدي,1479720200,2019-08-26,M,1,C,Riyadh North,Saudi,,G0261,
+S10426,Khalid Al-Ghamdi,خالد الغامدي,1548739256,2015-05-30,M,5,C,Riyadh North,Saudi,,G0261,
+S10427,Fahd Al-Ghamdi,فهد الغامدي,1979282439,2012-04-20,M,8,A,Riyadh North,Saudi,,G0261,
+S10428,Ali Al-Sharif,علي الشريف,2897296470,2015-01-22,M,5,B,Riyadh North,Egyptian,,G0262,
+S10429,Talal Al-Sharif,طلال الشريف,2500887703,2019-08-10,M,2,C,Riyadh North,Egyptian,,G0262,
+S10430,Ziyad Siddiqui,زياد صديقي,1971692633,2014-05-15,M,6,B,Dammam,Saudi,,G0263,
+S10431,Yazan Siddiqui,يزن صديقي,1930577060,2013-09-21,M,7,B,Dammam,Saudi,"type 1 diabetes, insulin at lunch",G0263,DAM-2
+S10432,Ziyad Al-Otaibi,زياد العتيبي,2695428729,2011-08-28,M,9,A,Riyadh East,Jordanian,,G0264,RIY-5
+S10433,Fahd Al-Otaibi,فهد العتيبي,2488281461,2017-10-29,M,3,B,Riyadh East,Jordanian,"hearing aid, front seat",G0264,
+S10434,Layan Al-Otaibi,ليان العتيبي,2950490921,2015-06-05,F,5,C,Riyadh East,Jordanian,,G0264,RIY-3
+S10435,Maryam Al-Subaie,مريم السبيعي,1004739135,2014-06-01,F,6,C,Jeddah,Saudi,"ADHD, extra time in tests",G0265,
+S10436,Tala Al-Subaie,تالا السبيعي,1729710144,2017-10-30,F,3,C,Jeddah,Saudi,,G0265,
+S10437,Ruba Al-Saeed,ربى السعيد,1662548726,2008-10-20,F,12,A,Jeddah,Saudi,,G0266,JED-3
+S10438,Maryam Al-Saeed,مريم السعيد,1675677396,2017-06-01,F,3,A,Jeddah,Saudi,,G0266,JED-5
+S10439,Majed Al-Saeed,ماجد السعيد,1029147561,2019-08-21,M,1,B,Jeddah,Saudi,,G0266,JED-4
+S10440,Joud Al-Anazi,جود العنزي,1627285935,2011-07-26,F,9,C,Riyadh North,Saudi,,G0267,RIY-9
+S10441,Ziyad Al-Hamad,زياد الحمد,1850417046,2013-05-25,M,7,C,Riyadh North,Saudi,,G0268,
+S10442,Maryam Al-Qahtani,مريم القحطاني,1012759716,2017-12-19,F,4,B,Riyadh North,Saudi,,G0269,RIY-1
+S10443,Fatimah Al-Qahtani,فاطمة القحطاني,1190947262,2011-08-24,F,10,C,Riyadh North,Saudi,,G0269,
+S10444,Ghala Al-Qahtani,غلا القحطاني,1000014701,2018-03-18,F,2,B,Riyadh North,Saudi,,G0269,RIY-1
+S10445,Shahad Al-Shammari,شهد الشمري,1222268793,2013-10-24,F,7,A,Riyadh North,Saudi,,G0270,RIY-1
+S10446,Badr Al-Shammari,بدر الشمري,1406508527,2010-05-09,M,10,A,Riyadh North,Saudi,,G0270,
+S10447,Shahad Al-Shammari,شهد الشمري,1029782680,2016-08-07,F,4,A,Riyadh North,Saudi,,G0270,RIY-3
+S10448,Ghala Bakr,غلا بكر,2109101724,2017-12-09,F,4,B,Jeddah,Egyptian,,G0271,JED-1
+S10449,Lama Al-Subaie,لمى السبيعي,1934585492,2011-03-27,F,9,B,Riyadh East,Saudi,,G0272,
+S10450,Ali Siddiqui,علي صديقي,1251487968,2017-02-10,M,3,C,Riyadh North,Saudi,,G0273,
+S10451,Yousef Siddiqui,يوسف صديقي,1615056592,2012-03-10,M,8,C,Riyadh North,Saudi,,G0273,
+S10452,Yousef Al-Dosari,يوسف الدوسري,1825554633,2013-03-15,M,7,B,Riyadh North,Saudi,"asthma, inhaler in bag",G0274,RIY-2
+S10453,Lulwa Al-Dosari,لولوة الدوسري,1813662695,2014-03-14,F,7,B,Riyadh North,Saudi,,G0274,
+S10454,Mohammed Bakr,محمد بكر,1007867875,2019-06-06,M,2,B,Dammam,Saudi,,G0275,
+S10455,Noura Al-Harbi,نورة الحربي,2899197398,2014-11-08,F,7,A,Jeddah,Egyptian,,G0276,
+S10456,Ruba Al-Harbi,ربى الحربي,2365386728,2016-05-08,F,5,B,Jeddah,Egyptian,,G0276,
+S10457,Jana Al-Ghamdi,جنى الغامدي,2509277962,2017-06-14,F,3,B,Dammam,Yemeni,,G0277,DAM-3
+S10458,Yousef Al-Ghamdi,يوسف الغامدي,2983245071,2019-07-16,M,1,B,Dammam,Yemeni,,G0277,
+S10459,Fahd Al-Rashidi,فهد الرشيدي,2003343197,2019-06-06,M,1,B,Riyadh East,Sudanese,,G0278,
+S10460,Ziyad Al-Juhani,زياد الجهني,1261322493,2018-06-22,M,2,B,Riyadh North,Saudi,,G0279,
+S10461,Yazan Al-Dosari,يزن الدوسري,1782112742,2012-02-04,M,8,A,Jeddah,Saudi,,G0280,JED-8
+S10462,Talal Al-Dosari,طلال الدوسري,1773499973,2018-01-26,M,2,A,Jeddah,Saudi,,G0280,
+S10463,Aseel Al-Otaibi,أسيل العتيبي,2261244235,2010-02-13,F,10,C,Riyadh North,Pakistani,,G0281,
+S10464,Ghala Al-Otaibi,غلا العتيبي,2892199642,2019-10-27,F,1,C,Riyadh North,Pakistani,,G0281,RIY-3
+S10465,Tala Al-Shehri,تالا الشهري,1983428427,2019-03-30,F,1,C,Jeddah,Saudi,"migraine, may rest in clinic",G0282,
+S10466,Hessa Al-Shammari,حصة الشمري,2748069112,2014-02-16,F,6,B,Riyadh East,Egyptian,,G0283,RIY-5
+S10467,Khalid Al-Saeed,خالد السعيد,1641942421,2010-08-29,M,11,C,Riyadh North,Saudi,"epilepsy, care plan on file",G0284,RIY-1
+S10468,Saud Al-Saeed,سعود السعيد,1140861288,2019-06-10,M,2,B,Riyadh North,Saudi,,G0284,
+S10469,Tala Al-Shehri,تالا الشهري,1419247183,2013-05-26,F,7,A,Riyadh North,Saudi,severe egg allergy,G0285,RIY-8
+S10470,Haya Al-Mutairi,هيا المطيري,1200047119,2018-01-07,F,2,B,Dammam,Saudi,,G0286,DAM-4
+S10471,Asma Al-Mutairi,أسماء المطيري,1496328965,2016-08-14,F,4,C,Dammam,Saudi,,G0286,
+S10472,Ghala Al-Mutairi,غلا المطيري,1006101080,2016-02-12,F,5,B,Dammam,Saudi,,G0286,
+S10473,Hessa Al-Juhani,حصة الجهني,2231430851,2019-03-05,F,1,C,Riyadh North,Yemeni,,G0287,RIY-3
+S10474,Ziyad Al-Otaibi,زياد العتيبي,2367744157,2017-06-20,M,3,C,Riyadh East,Indian,,G0288,RIY-7
+S10475,Layan Haddad,ليان حداد,1532201410,2016-03-03,F,5,B,Dammam,Saudi,,G0289,DAM-9
+S10476,Hessa Al-Otaibi,حصة العتيبي,1816685409,2016-09-09,F,4,A,Riyadh East,Saudi,,G0290,
+S10477,Dima Al-Anazi,ديما العنزي,1645084495,2010-07-16,F,10,B,Dammam,Saudi,,G0291,
+S10478,Abdullah Bakr,عبدالله بكر,1749081902,2009-05-03,M,12,B,Riyadh East,Saudi,,G0292,
+S10479,Mansour Bakr,منصور بكر,1744265410,2018-10-16,M,2,C,Riyadh East,Saudi,,G0292,RIY-4
+S10480,Fahd Bakr,فهد بكر,1557721355,2020-09-20,M,1,A,Riyadh East,Saudi,,G0292,
+S10481,Maryam Khan,مريم خان,2484617480,2014-12-19,F,7,A,Jeddah,Indian,,G0293,
+S10482,Talal Al-Malki,طلال المالكي,1261168329,2015-10-15,M,5,C,Riyadh East,Saudi,,G0294,
+S10483,Haya Al-Saeed,هيا السعيد,1868245114,2015-03-15,F,5,B,Riyadh East,Saudi,,G0295,
+S10484,Mansour Al-Faraj,منصور الفرج,1941570270,2012-12-06,M,8,B,Jeddah,Saudi,,G0296,JED-7
+S10485,Dima Al-Faraj,ديما الفرج,1821681401,2017-04-01,F,3,C,Jeddah,Saudi,,G0296,
+S10486,Aseel Al-Mutairi,أسيل المطيري,1863763450,2017-06-27,F,3,A,Riyadh East,Saudi,,G0297,
+S10487,Saud Al-Mutairi,سعود المطيري,1247517873,2013-09-15,M,7,B,Riyadh East,Saudi,"migraine, may rest in clinic",G0297,RIY-4
+S10488,Ruba Al-Sharif,ربى الشريف,1814494971,2020-07-22,F,1,C,Riyadh East,Saudi,,G0298,RIY-6
+S10489,Ghala Al-Sharif,غلا الشريف,1360863130,2019-01-29,F,1,B,Riyadh East,Saudi,,G0298,
+S10490,Omar Nasser,عمر ناصر,2940515326,2014-01-16,M,6,B,Riyadh East,Sudanese,,G0299,RIY-1
+S10491,Saud Al-Sharif,سعود الشريف,1804883331,2015-01-19,M,6,C,Dammam,Saudi,,G0300,
+S10492,Nawaf Al-Rashidi,نواف الرشيدي,1233177664,2010-11-09,M,10,B,Riyadh East,Saudi,,G0301,
+S10493,Hessa Al-Rashidi,حصة الرشيدي,1186828101,2015-11-15,F,5,C,Riyadh East,Saudi,"hearing aid, front seat",G0301,
+S10494,Mohammed Al-Juhani,محمد الجهني,1759274960,2012-08-22,M,8,C,Jeddah,Saudi,,G0302,
+S10495,Maryam Al-Zahrani,مريم الزهراني,1351148290,2015-04-30,F,5,C,Dammam,Saudi,,G0303,
+S10496,Lulwa Al-Zahrani,لولوة الزهراني,1614255122,2016-03-20,F,4,B,Dammam,Saudi,,G0303,
+S10497,Yazan Al-Zahrani,يزن الزهراني,1064022050,2014-12-28,M,6,B,Dammam,Saudi,,G0303,
+S10498,Talal Al-Shammari,طلال الشمري,1945391376,2017-07-20,M,3,C,Riyadh East,Saudi,"epilepsy, care plan on file",G0304,
+S10499,Yousef Al-Shammari,يوسف الشمري,1912567169,2017-03-13,M,3,C,Riyadh East,Saudi,,G0304,RIY-7
+S10500,Asma Al-Ghamdi,أسماء الغامدي,2496986571,2009-01-05,F,11,A,Riyadh North,Syrian,,G0305,
+S10501,Abdullah Al-Ghamdi,عبدالله الغامدي,2277539840,2017-01-24,M,3,A,Riyadh North,Syrian,,G0305,
+S10502,Faisal Al-Subaie,فيصل السبيعي,2706673681,2016-05-24,M,4,B,Riyadh North,Yemeni,,G0306,
+S10503,Ghala Bakr,غلا بكر,2884621597,2009-04-03,F,11,B,Riyadh North,Jordanian,,G0307,
+S10504,Anas Nasser,أنس ناصر,1933139200,2019-03-15,M,1,C,Riyadh North,Saudi,,G0308,RIY-4
+S10505,Shahad Al-Zahrani,شهد الزهراني,1365893032,2011-11-14,F,9,C,Riyadh East,Saudi,,G0309,RIY-1
+S10506,Fatimah Al-Qahtani,فاطمة القحطاني,1272073303,2013-09-22,F,7,B,Riyadh East,Saudi,,G0310,RIY-8
+S10507,Aseel Al-Qahtani,أسيل القحطاني,1022063913,2017-04-04,F,4,C,Riyadh East,Saudi,,G0310,
+S10508,Sara Al-Qahtani,سارة القحطاني,1977208580,2014-07-28,F,7,A,Riyadh East,Saudi,,G0310,
+S10509,Ruba Al-Faraj,ربى الفرج,2191228745,2011-11-13,F,9,C,Riyadh North,Jordanian,,G0311,
+S10510,Saud Al-Faraj,سعود الفرج,2345618151,2017-09-24,M,3,B,Riyadh North,Jordanian,,G0311,RIY-7
+S10511,Dima Al-Faraj,ديما الفرج,2330592412,2019-05-28,F,1,A,Riyadh North,Jordanian,,G0311,
+S10512,Talal Al-Hamad,طلال الحمد,1168971476,2019-08-28,M,2,C,Riyadh North,Saudi,,G0312,RIY-9
+S10513,Hessa Al-Hamad,حصة الحمد,1547595683,2015-03-08,F,5,A,Riyadh North,Saudi,,G0312,
+S10514,Hessa Al-Otaibi,حصة العتيبي,2947297102,2020-09-25,F,1,B,Riyadh North,Jordanian,,G0313,RIY-8
+S10515,Hassan Al-Otaibi,حسن العتيبي,2940375454,2010-04-28,M,10,C,Riyadh North,Jordanian,,G0313,RIY-1
+S10516,Layan Al-Shehri,ليان الشهري,1481160079,2019-08-23,F,1,B,Riyadh North,Saudi,,G0314,
+S10517,Noura Al-Shehri,نورة الشهري,1236749075,2016-12-27,F,4,C,Riyadh North,Saudi,"migraine, may rest in clinic",G0314,
+S10518,Talal Al-Shammari,طلال الشمري,1454394271,2011-04-30,M,9,C,Jeddah,Saudi,,G0315,JED-1
+S10519,Mansour Al-Anazi,منصور العنزي,1702474571,2019-11-27,M,1,A,Riyadh East,Saudi,,G0316,RIY-7
+S10520,Asma Al-Anazi,أسماء العنزي,1464207703,2016-12-08,F,5,A,Riyadh East,Saudi,,G0316,
+S10521,Anas Al-Anazi,أنس العنزي,1241768822,2017-12-26,M,4,B,Riyadh East,Saudi,,G0316,RIY-9
+S10522,Reem Al-Faraj,ريم الفرج,1709073676,2008-11-04,F,12,B,Riyadh East,Saudi,"migraine, may rest in clinic",G0317,
+S10523,Ghala Al-Anazi,غلا العنزي,2471433197,2020-05-18,F,1,C,Riyadh North,Jordanian,,G0318,RIY-3
+S10524,Joud Al-Anazi,جود العنزي,2869358705,2019-04-23,F,1,B,Riyadh North,Jordanian,,G0318,RIY-6
+S10525,Dima Al-Anazi,ديما العنزي,2950667215,2009-02-23,F,11,C,Riyadh North,Jordanian,,G0318,RIY-6
+S10526,Layan Al-Saeed,ليان السعيد,1240295368,2011-08-23,F,9,C,Riyadh North,Saudi,,G0319,
+S10527,Ruba Al-Saeed,ربى السعيد,1327850242,2012-01-07,F,8,C,Riyadh North,Saudi,"asthma, inhaler in bag",G0319,
+S10528,Talal Al-Harbi,طلال الحربي,1148405891,2019-04-02,M,1,A,Riyadh North,Saudi,,G0320,RIY-5
+S10529,Reem Al-Harbi,ريم الحربي,1128613087,2010-06-01,F,10,C,Riyadh North,Saudi,severe egg allergy,G0320,
+S10530,Ziyad Al-Hamad,زياد الحمد,1433012387,2018-09-02,M,2,B,Riyadh East,Saudi,,G0321,RIY-3
+S10531,Rayan Al-Mutairi,ريان المطيري,1038681172,2014-05-07,M,6,A,Jeddah,Saudi,,G0322,JED-8
+S10532,Hassan Al-Mutairi,حسن المطيري,1013133813,2016-09-17,M,4,A,Jeddah,Saudi,,G0322,
+S10533,Talal Al-Mutairi,طلال المطيري,1910141433,2013-06-09,M,7,C,Jeddah,Saudi,,G0322,
+S10534,Yousef Al-Hamad,يوسف الحمد,1134053297,2020-04-11,M,1,A,Riyadh North,Saudi,,G0323,RIY-2
+S10535,Lulwa Al-Hamad,لولوة الحمد,1021911824,2011-09-04,F,9,B,Riyadh North,Saudi,,G0323,RIY-1
+S10536,Lulwa Khan,لولوة خان,1968217290,2015-12-13,F,5,A,Jeddah,Saudi,"type 1 diabetes, insulin at lunch",G0324,
+S10537,Ziyad Siddiqui,زياد صديقي,1722997506,2018-09-02,M,2,C,Riyadh North,Saudi,,G0325,
+S10538,Jana Siddiqui,جنى صديقي,1510266101,2018-06-16,F,2,C,Riyadh North,Saudi,,G0325,
+S10539,Sara Al-Hamad,سارة الحمد,1847427887,2018-08-17,F,2,B,Jeddah,Saudi,,G0326,JED-5
+S10540,Ghala Al-Hamad,غلا الحمد,1388107181,2015-09-03,F,6,A,Jeddah,Saudi,,G0326,
+S10541,Rayan Al-Hamad,ريان الحمد,1188631163,2017-03-07,M,3,A,Jeddah,Saudi,,G0326,
+S10542,Tala Al-Mutairi,تالا المطيري,2314824757,2017-12-18,F,3,B,Riyadh North,Indian,,G0327,
+S10543,Fahd Al-Omari,فهد العمري,1147668484,2015-01-18,M,6,C,Riyadh East,Saudi,,G0328,RIY-6
+S10544,Hessa Al-Omari,حصة العمري,1134248534,2019-06-18,F,1,A,Riyadh East,Saudi,,G0328,RIY-5
+S10545,Abdullah Al-Qahtani,عبدالله القحطاني,2217685442,2009-07-04,M,11,A,Riyadh East,Pakistani,,G0329,
+S10546,Shahad Al-Saeed,شهد السعيد,1055035667,2019-12-03,F,1,A,Dammam,Saudi,,G0330,
+S10547,Reem Al-Saeed,ريم السعيد,1183698889,2018-08-01,F,3,A,Dammam,Saudi,,G0330,DAM-5
+S10548,Reem Al-Saeed,ريم السعيد,1139066140,2009-10-19,F,11,A,Dammam,Saudi,,G0330,DAM-9
+S10549,Haya Al-Subaie,هيا السبيعي,1337613156,2011-05-03,F,9,A,Riyadh East,Saudi,,G0331,
+S10550,Hamza Al-Subaie,حمزة السبيعي,1210298001,2018-01-16,M,3,B,Riyadh East,Saudi,,G0331,RIY-7
+S10551,Haya Nasser,هيا ناصر,1390315578,2013-03-02,F,7,A,Jeddah,Saudi,,G0332,
+S10552,Rahaf Nasser,رهف ناصر,1913687912,2019-12-26,F,1,B,Jeddah,Saudi,,G0332,
+S10553,Nawaf Al-Faraj,نواف الفرج,1773834750,2009-11-28,M,11,A,Jeddah,Saudi,,G0333,JED-4
+S10554,Badr Al-Subaie,بدر السبيعي,1227870089,2017-05-29,M,4,A,Dammam,Saudi,"type 1 diabetes, insulin at lunch",G0334,DAM-5
+S10555,Noura Al-Omari,نورة العمري,1801167379,2014-01-02,F,6,B,Riyadh North,Saudi,"migraine, may rest in clinic",G0335,
+S10556,Faisal Al-Omari,فيصل العمري,1163612249,2009-06-14,M,11,A,Riyadh North,Saudi,,G0335,
+S10557,Fatimah Al-Qahtani,فاطمة القحطاني,1232783967,2018-02-27,F,2,B,Riyadh North,Saudi,,G0336,RIY-6
+S10558,Haya Al-Hamad,هيا الحمد,1928057579,2012-06-27,F,8,B,Riyadh North,Saudi,,G0337,RIY-3
+S10559,Sara Al-Hamad,سارة الحمد,1965089454,2018-10-04,F,2,C,Riyadh North,Saudi,,G0337,
+S10560,Talal Al-Faraj,طلال الفرج,2062737155,2014-10-19,M,6,C,Riyadh North,Syrian,,G0338,RIY-2
+S10561,Fahd Al-Ghamdi,فهد الغامدي,1415786617,2008-08-23,M,12,C,Riyadh North,Saudi,,G0339,
+S10562,Reem Al-Saeed,ريم السعيد,1564601470,2016-01-04,F,4,C,Dammam,Saudi,,G0340,
+S10563,Mohammed Al-Harbi,محمد الحربي,1534961818,2018-04-21,M,2,C,Jeddah,Saudi,,G0341,
+S10564,Anas Al-Harbi,أنس الحربي,1736918528,2013-02-15,M,7,C,Jeddah,Saudi,"ADHD, extra time in tests",G0341,JED-9
+S10565,Yazan Al-Otaibi,يزن العتيبي,1222336586,2013-03-25,M,7,A,Dammam,Saudi,,G0342,
+S10566,Lama Al-Otaibi,لمى العتيبي,1626024389,2015-07-13,F,6,A,Dammam,Saudi,,G0342,
+S10567,Maryam Haddad,مريم حداد,2923970811,2010-11-25,F,11,A,Riyadh North,Pakistani,,G0343,
+S10568,Ziyad Al-Harbi,زياد الحربي,1683651168,2018-01-01,M,2,B,Jeddah,Saudi,,G0344,
+S10569,Mohammed Siddiqui,محمد صديقي,1318850636,2012-07-02,M,9,B,Jeddah,Saudi,,G0345,
+S10570,Khalid Al-Malki,خالد المالكي,1175267877,2014-11-05,M,7,B,Dammam,Saudi,,G0346,
+S10571,Haya Al-Malki,هيا المالكي,1697543946,2019-02-18,F,1,B,Dammam,Saudi,,G0346,
+S10572,Maryam Al-Malki,مريم المالكي,1827273246,2017-01-10,F,3,B,Dammam,Saudi,,G0346,
+S10573,Badr Al-Saeed,بدر السعيد,2986668846,2011-11-11,M,9,C,Riyadh North,Egyptian,,G0347,RIY-3
+S10574,Hessa Al-Harbi,حصة الحربي,2177073989,2017-03-28,F,3,A,Jeddah,Pakistani,,G0348,
+S10575,Ali Al-Shehri,علي الشهري,1691398724,2016-04-13,M,4,B,Jeddah,Saudi,,G0349,
+S10576,Aseel Al-Qahtani,أسيل القحطاني,1075610088,2018-01-14,F,2,A,Riyadh North,Saudi,,G0350,
+S10577,Rayan Bakr,ريان بكر,1811818777,2014-08-02,M,6,C,Dammam,Saudi,,G0351,
+S10578,Rahaf Bakr,رهف بكر,1842034482,2016-06-08,F,4,C,Dammam,Saudi,,G0351,
+S10579,Mohammed Al-Ghamdi,محمد الغامدي,1595911460,2014-03-14,M,6,C,Riyadh North,Saudi,,G0352,RIY-8
+S10580,Ruba Al-Ghamdi,ربى الغامدي,1714211367,2016-02-15,F,4,A,Riyadh North,Saudi,,G0352,
+S10581,Mansour Al-Ghamdi,منصور الغامدي,1453358767,2014-05-12,M,6,B,Riyadh North,Saudi,,G0352,
+S10582,Majed Al-Omari,ماجد العمري,2322672631,2011-01-12,M,9,B,Jeddah,Jordanian,,G0353,JED-3
+S10583,Yousef Haddad,يوسف حداد,2896031684,2017-05-13,M,3,A,Riyadh North,Syrian,,G0354,
+S10584,Dima Haddad,ديما حداد,2210536724,2009-04-16,F,11,B,Riyadh North,Syrian,,G0354,
+S10585,Lulwa Al-Qahtani,لولوة القحطاني,1271777600,2017-10-11,F,3,A,Riyadh North,Saudi,,G0355,RIY-9
+S10586,Aseel Al-Qahtani,أسيل القحطاني,1036039784,2011-07-23,F,9,A,Riyadh North,Saudi,,G0355,
+S10587,Saud Al-Faraj,سعود الفرج,2335517624,2018-08-24,M,2,B,Riyadh East,Yemeni,,G0356,RIY-5
+S10588,Hessa Al-Hamad,حصة الحمد,1446067581,2013-03-10,F,7,A,Riyadh East,Saudi,,G0357,
+S10589,Ruba Al-Hamad,ربى الحمد,1240441280,2016-06-18,F,4,B,Riyadh East,Saudi,"hearing aid, front seat",G0357,
+S10590,Haya Al-Shehri,هيا الشهري,1586480967,2018-03-15,F,3,B,Riyadh East,Saudi,,G0358,RIY-8
+S10591,Ziyad Al-Mutairi,زياد المطيري,2755191889,2015-01-22,M,6,C,Riyadh North,Indian,,G0359,
+S10592,Lulwa Al-Mutairi,لولوة المطيري,2779750605,2013-08-29,F,8,A,Riyadh North,Indian,"hearing aid, front seat",G0359,
+S10593,Joud Al-Mutairi,جود المطيري,2296363758,2011-12-06,F,9,B,Riyadh North,Indian,,G0359,RIY-8
+S10594,Rahaf Al-Qahtani,رهف القحطاني,1826650789,2018-12-13,F,2,C,Jeddah,Saudi,,G0360,
+S10595,Ali Al-Malki,علي المالكي,2993197862,2016-05-10,M,4,B,Jeddah,Indian,,G0361,JED-7
+S10596,Asma Al-Malki,أسماء المالكي,2489687393,2010-05-23,F,10,A,Jeddah,Indian,,G0361,
+S10597,Khalid Al-Rashidi,خالد الرشيدي,1862553200,2018-07-01,M,3,B,Jeddah,Saudi,,G0362,
+S10598,Tala Al-Subaie,تالا السبيعي,2802094887,2019-03-28,F,2,B,Riyadh North,Syrian,,G0363,RIY-5
+S10599,Hamza Bakr,حمزة بكر,1164667592,2013-07-04,M,8,A,Jeddah,Saudi,,G0364,JED-7
+S10600,Rayan Bakr,ريان بكر,1870681146,2015-12-18,M,5,B,Jeddah,Saudi,,G0364,
+S10601,Badr Al-Shehri,بدر الشهري,1425182762,2011-10-22,M,10,B,Riyadh North,Saudi,,G0365,RIY-8
+S10602,Rahaf Al-Harbi,رهف الحربي,1461314857,2019-11-30,F,1,C,Riyadh East,Saudi,,G0366,
+S10603,Mansour Al-Harbi,منصور الحربي,1557190636,2018-08-31,M,2,A,Riyadh East,Saudi,,G0366,RIY-8
+S10604,Dima Al-Harbi,ديما الحربي,1659744975,2012-01-24,F,8,A,Riyadh East,Saudi,,G0366,RIY-1
+S10605,Badr Al-Anazi,بدر العنزي,1934262324,2019-01-03,M,1,C,Jeddah,Saudi,,G0367,JED-6
+S10606,Hassan Al-Shammari,حسن الشمري,1809898607,2018-07-02,M,2,A,Riyadh North,Saudi,,G0368,
+S10607,Badr Al-Shammari,بدر الشمري,1253695716,2019-01-06,M,2,C,Riyadh North,Saudi,,G0368,RIY-8
+S10608,Badr Al-Sharif,بدر الشريف,2354948519,2017-01-01,M,4,A,Jeddah,Pakistani,,G0369,
+S10609,Yazan Siddiqui,يزن صديقي,1581689276,2018-09-15,M,2,A,Riyadh North,Saudi,,G0370,
+S10610,Dima Al-Ghamdi,ديما الغامدي,1530803075,2014-01-06,F,6,A,Riyadh North,Saudi,,G0371,
+S10611,Fahd Siddiqui,فهد صديقي,1565358869,2016-06-08,M,4,B,Riyadh North,Saudi,,G0372,
+S10612,Shahad Al-Ghamdi,شهد الغامدي,1311246270,2013-05-30,F,7,A,Jeddah,Saudi,"asthma, inhaler in bag",G0373,
+S10613,Nawaf Al-Otaibi,نواف العتيبي,2693963264,2010-10-16,M,10,A,Jeddah,Syrian,,G0374,
+S10614,Layan Al-Otaibi,ليان العتيبي,2968139075,2018-03-11,F,2,C,Jeddah,Syrian,,G0374,
+S10615,Abdullah Al-Sharif,عبدالله الشريف,1384198964,2012-02-24,M,8,C,Riyadh East,Saudi,"epilepsy, care plan on file",G0375,RIY-2
+S10616,Joud Al-Anazi,جود العنزي,2289082889,2018-10-27,F,2,B,Riyadh North,Pakistani,,G0376,RIY-6
+S10617,Nawaf Al-Anazi,نواف العنزي,2477701079,2013-03-05,M,8,C,Riyadh North,Pakistani,,G0376,
+S10618,Fatimah Nasser,فاطمة ناصر,1930646628,2017-05-17,F,3,C,Riyadh East,Saudi,"nut allergy, carries auto-injector",G0377,RIY-5
+S10619,Hamza Nasser,حمزة ناصر,1525461721,2013-03-25,M,7,B,Riyadh East,Saudi,,G0377,RIY-8
+S10620,Layan Nasser,ليان ناصر,2139745555,2008-07-23,F,12,A,Riyadh North,Indian,,G0378,RIY-2
+S10621,Haya Al-Omari,هيا العمري,1759336750,2010-08-17,F,10,A,Jeddah,Saudi,,G0379,JED-3
+S10622,Omar Al-Ghamdi,عمر الغامدي,1870581839,2010-02-04,M,10,C,Riyadh North,Saudi,,G0380,RIY-3
+S10623,Yazan Al-Ghamdi,يزن الغامدي,1418506596,2008-06-26,M,12,B,Riyadh North,Saudi,,G0380,
+S10624,Joud Al-Ghamdi,جود الغامدي,1125640431,2014-11-18,F,6,A,Riyadh North,Saudi,,G0380,RIY-9
+S10625,Hassan Al-Subaie,حسن السبيعي,1860170993,2011-06-22,M,9,A,Riyadh North,Saudi,,G0381,
+S10626,Yousef Al-Shehri,يوسف الشهري,1595597853,2019-01-23,M,1,B,Riyadh East,Saudi,,G0382,
+S10627,Rahaf Al-Shehri,رهف الشهري,1269301003,2013-02-27,F,7,A,Riyadh East,Saudi,,G0382,
+S10628,Noura Al-Shehri,نورة الشهري,1145238160,2009-05-21,F,11,A,Riyadh East,Saudi,,G0382,
+S10629,Reem Al-Mutairi,ريم المطيري,1350446045,2013-06-12,F,7,A,Riyadh North,Saudi,,G0383,
+S10630,Mohammed Al-Mutairi,محمد المطيري,1231296184,2011-11-08,M,9,B,Riyadh North,Saudi,,G0383,RIY-5
+S10631,Maryam Al-Omari,مريم العمري,1904132641,2011-10-13,F,9,A,Riyadh North,Saudi,,G0384,
+S10632,Rayan Al-Rashidi,ريان الرشيدي,1724152084,2014-10-07,M,6,C,Riyadh North,Saudi,,G0385,RIY-5
+S10633,Fahd Al-Rashidi,فهد الرشيدي,1057552581,2016-07-13,M,4,C,Riyadh North,Saudi,,G0385,
+S10634,Talal Bakr,طلال بكر,1812837097,2017-09-14,M,4,C,Riyadh North,Saudi,,G0386,
+S10635,Tala Bakr,تالا بكر,1130617786,2009-04-25,F,11,C,Riyadh North,Saudi,,G0386,
+S10636,Majed Al-Ghamdi,ماجد الغامدي,1304280393,2015-01-26,M,5,C,Riyadh North,Saudi,,G0387,RIY-6
+S10637,Yousef Al-Ghamdi,يوسف الغامدي,1990355528,2018-02-23,M,3,B,Riyadh North,Saudi,,G0387,
+S10638,Mohammed Bakr,محمد بكر,1741714342,2017-07-15,M,3,A,Jeddah,Saudi,,G0388,JED-1
+S10639,Layan Bakr,ليان بكر,1930318157,2017-10-27,F,3,C,Jeddah,Saudi,,G0388,
+S10640,Badr Al-Sharif,بدر الشريف,2542693756,2015-07-15,M,5,C,Jeddah,Syrian,,G0389,JED-1
+S10641,Joud Al-Sharif,جود الشريف,2734695453,2015-10-07,F,5,A,Jeddah,Syrian,,G0389,JED-6
+S10642,Lulwa Al-Sharif,لولوة الشريف,1234753528,2014-04-05,F,6,B,Jeddah,Saudi,,G0390,
+S10643,Ziyad Al-Qahtani,زياد القحطاني,1347144409,2014-07-23,M,6,A,Jeddah,Saudi,,G0391,JED-9
+S10644,Jana Al-Qahtani,جنى القحطاني,1798203388,2012-02-28,F,8,B,Jeddah,Saudi,,G0391,
+S10645,Mansour Al-Qahtani,منصور القحطاني,1327305688,2012-08-31,M,8,C,Jeddah,Saudi,,G0391,JED-8
+S10646,Yousef Al-Shehri,يوسف الشهري,1471716365,2012-09-02,M,9,C,Jeddah,Saudi,,G0392,
+S10647,Yousef Al-Shehri,يوسف الشهري,1979751852,2010-05-26,M,10,A,Jeddah,Saudi,,G0392,
+S10648,Hessa Khan,حصة خان,1494143712,2011-02-25,F,9,A,Riyadh North,Saudi,,G0393,
+S10649,Jana Al-Ghamdi,جنى الغامدي,1621409489,2014-12-28,F,7,A,Riyadh North,Saudi,,G0394,
+S10650,Noura Al-Ghamdi,نورة الغامدي,1399178625,2010-09-03,F,10,A,Riyadh North,Saudi,,G0394,RIY-3
+S10651,Khalid Haddad,خالد حداد,2400367610,2014-06-13,M,6,B,Dammam,Jordanian,,G0395,
+S10652,Omar Haddad,عمر حداد,1741270845,2011-12-23,M,9,C,Jeddah,Saudi,,G0396,JED-4
+S10653,Hamza Al-Mutairi,حمزة المطيري,2474537458,2011-06-08,M,9,B,Dammam,Jordanian,,G0397,DAM-5
+S10654,Faisal Bakr,فيصل بكر,1998386823,2014-05-09,M,6,A,Dammam,Saudi,,G0398,
+S10655,Reem Al-Dosari,ريم الدوسري,1457289297,2015-07-01,F,5,C,Riyadh East,Saudi,,G0399,RIY-8
+S10656,Tala Al-Dosari,تالا الدوسري,1221624289,2015-11-25,F,5,C,Riyadh East,Saudi,,G0399,
+S10657,Saud Haddad,سعود حداد,1812831540,2012-11-20,M,8,C,Dammam,Saudi,,G0400,
+S10658,Ruba Haddad,ربى حداد,1807802797,2015-04-12,F,5,C,Dammam,Saudi,"type 1 diabetes, insulin at lunch",G0400,DAM-6
+S10659,Maryam Al-Malki,مريم المالكي,1205187988,2017-03-28,F,3,A,Riyadh East,Saudi,"epilepsy, care plan on file",G0401,
+S10660,Dima Al-Anazi,ديما العنزي,1513426771,2009-06-18,F,11,C,Riyadh North,Saudi,,G0402,
+S10661,Fatimah Al-Anazi,فاطمة العنزي,1776582619,2020-02-19,F,1,B,Riyadh North,Saudi,,G0402,RIY-7
+S10662,Haya Haddad,هيا حداد,1619850454,2014-01-23,F,6,C,Jeddah,Saudi,,G0403,
+S10663,Maryam Al-Shammari,مريم الشمري,1596190844,2014-03-03,F,6,C,Jeddah,Saudi,,G0404,
+S10664,Fatimah Al-Shammari,فاطمة الشمري,1558668259,2018-03-17,F,2,A,Jeddah,Saudi,,G0404,
+S10665,Tala Nasser,تالا ناصر,2851508227,2012-09-05,F,8,C,Riyadh North,Sudanese,,G0405,RIY-7
+S10666,Faisal Al-Qahtani,فيصل القحطاني,2540011147,2012-10-27,M,8,A,Jeddah,Sudanese,"ADHD, extra time in tests",G0406,JED-6
+S10667,Yousef Al-Omari,يوسف العمري,1139998821,2017-06-28,M,4,A,Riyadh North,Saudi,"ADHD, extra time in tests",G0407,
+S10668,Lulwa Al-Omari,لولوة العمري,1216137182,2012-12-14,F,9,C,Riyadh North,Saudi,,G0407,RIY-5
+S10669,Dima Al-Omari,ديما العمري,1477047385,2018-01-26,F,2,A,Riyadh North,Saudi,,G0407,RIY-6
+S10670,Dima Al-Zahrani,ديما الزهراني,2749870443,2010-10-28,F,10,B,Riyadh East,Syrian,,G0408,
+S10671,Khalid Al-Zahrani,خالد الزهراني,2897127559,2015-05-09,M,6,A,Riyadh East,Syrian,,G0408,
+S10672,Khalid Al-Sharif,خالد الشريف,1218510824,2015-12-07,M,5,B,Riyadh North,Saudi,,G0409,
+S10673,Majed Al-Sharif,ماجد الشريف,1961477904,2019-01-04,M,1,A,Riyadh North,Saudi,,G0409,RIY-9
+S10674,Dima Al-Malki,ديما المالكي,1431727915,2017-01-04,F,3,C,Riyadh East,Saudi,,G0410,RIY-8
+S10675,Abdullah Al-Shehri,عبدالله الشهري,1230655818,2016-06-18,M,4,B,Riyadh North,Saudi,,G0411,RIY-9
+S10676,Hamza Al-Shehri,حمزة الشهري,1364210939,2017-12-11,M,3,C,Riyadh North,Saudi,,G0411,
+S10677,Aseel Al-Faraj,أسيل الفرج,1705118122,2017-06-16,F,3,B,Jeddah,Saudi,,G0412,
+S10678,Badr Al-Faraj,بدر الفرج,1239067764,2011-08-05,M,9,B,Jeddah,Saudi,,G0412,
+S10679,Hassan Al-Shammari,حسن الشمري,1330848070,2018-09-14,M,2,C,Riyadh North,Saudi,,G0413,
+S10680,Ziyad Al-Shammari,زياد الشمري,1196927839,2011-08-06,M,9,B,Riyadh North,Saudi,,G0413,
+S10681,Hessa Al-Zahrani,حصة الزهراني,1761387489,2015-05-09,F,5,A,Riyadh East,Saudi,"hearing aid, front seat",G0414,
+S10682,Yousef Al-Zahrani,يوسف الزهراني,1796479826,2015-12-04,M,5,C,Riyadh East,Saudi,,G0414,RIY-7
+S10683,Sara Al-Subaie,سارة السبيعي,2145235144,2014-04-05,F,6,A,Jeddah,Egyptian,,G0415,JED-3
+S10684,Lulwa Al-Subaie,لولوة السبيعي,2307159623,2008-10-22,F,12,C,Jeddah,Egyptian,,G0415,JED-3
+S10685,Saud Al-Subaie,سعود السبيعي,2854621962,2017-06-09,M,3,C,Jeddah,Egyptian,"ADHD, extra time in tests",G0415,
+S10686,Dima Al-Zahrani,ديما الزهراني,1121644896,2015-02-26,F,5,B,Riyadh East,Saudi,,G0416,RIY-7
+S10687,Ali Al-Dosari,علي الدوسري,1775941347,2017-03-02,M,4,B,Riyadh North,Saudi,,G0417,RIY-9
+S10688,Joud Al-Dosari,جود الدوسري,1302866171,2013-03-02,F,7,B,Riyadh North,Saudi,,G0417,
+S10689,Rayan Al-Ghamdi,ريان الغامدي,1434519323,2018-03-07,M,2,A,Riyadh East,Saudi,,G0418,
+S10690,Joud Khan,جود خان,2484688598,2019-12-26,F,1,C,Jeddah,Pakistani,,G0419,
+S10691,Hamza Al-Sharif,حمزة الشريف,1570030549,2019-04-07,M,1,C,Riyadh North,Saudi,,G0420,RIY-1
+S10692,Yousef Al-Qahtani,يوسف القحطاني,1446642484,2013-05-06,M,8,A,Riyadh East,Saudi,,G0421,
+S10693,Reem Al-Sharif,ريم الشريف,1416337735,2019-12-29,F,1,B,Riyadh East,Saudi,,G0422,
+S10694,Saud Al-Sharif,سعود الشريف,1391379666,2014-07-18,M,7,C,Riyadh East,Saudi,,G0423,RIY-9
+S10695,Lama Bakr,لمى بكر,1074207351,2019-02-07,F,2,C,Jeddah,Saudi,,G0424,JED-5
+S10696,Yousef Bakr,يوسف بكر,1029775970,2012-08-01,M,8,C,Jeddah,Saudi,"asthma, inhaler in bag",G0424,
+S10697,Asma Al-Rashidi,أسماء الرشيدي,1739291849,2014-08-22,F,6,C,Riyadh North,Saudi,,G0425,RIY-3
+S10698,Nawaf Al-Faraj,نواف الفرج,1686979314,2012-01-20,M,8,B,Jeddah,Saudi,,G0426,
+S10699,Tala Al-Faraj,تالا الفرج,1410001049,2019-09-08,F,1,B,Jeddah,Saudi,,G0426,
+S10700,Hamza Al-Faraj,حمزة الفرج,1883744130,2016-02-25,M,4,A,Jeddah,Saudi,"migraine, may rest in clinic",G0426,
+S10701,Shahad Al-Dosari,شهد الدوسري,2335112600,2012-11-14,F,8,C,Riyadh East,Yemeni,,G0427,
+S10702,Badr Al-Shehri,بدر الشهري,2851067859,2018-08-14,M,2,B,Riyadh East,Egyptian,,G0428,
+S10703,Layan Al-Faraj,ليان الفرج,2544514294,2020-05-27,F,1,C,Dammam,Indian,,G0429,DAM-4
+S10704,Talal Al-Juhani,طلال الجهني,1412859195,2016-11-13,M,4,B,Riyadh North,Saudi,,G0430,
+S10705,Hassan Al-Juhani,حسن الجهني,1476345390,2016-07-30,M,4,B,Riyadh North,Saudi,,G0430,
+S10706,Layan Al-Mutairi,ليان المطيري,1465112519,2013-01-27,F,7,A,Riyadh East,Saudi,,G0431,
+S10707,Ziyad Al-Qahtani,زياد القحطاني,2943120743,2017-11-14,M,3,A,Riyadh North,Syrian,,G0432,
+S10708,Hamza Al-Qahtani,حمزة القحطاني,2613159788,2013-03-30,M,7,A,Riyadh North,Syrian,,G0432,
+S10709,Talal Al-Qahtani,طلال القحطاني,2822117466,2010-10-26,M,10,C,Riyadh North,Syrian,"asthma, inhaler in bag",G0432,
+S10710,Haya Al-Juhani,هيا الجهني,1104912546,2011-11-11,F,9,A,Riyadh East,Saudi,"ADHD, extra time in tests",G0433,RIY-4
+S10711,Rahaf Al-Zahrani,رهف الزهراني,1783021676,2011-12-04,F,9,A,Jeddah,Saudi,,G0434,JED-9
+S10712,Ruba Al-Sharif,ربى الشريف,1100080854,2019-08-18,F,2,A,Dammam,Saudi,,G0435,
+S10713,Nawaf Siddiqui,نواف صديقي,1858796066,2018-08-03,M,2,A,Riyadh North,Saudi,,G0436,
+S10714,Fahd Siddiqui,فهد صديقي,1135146218,2014-03-07,M,7,C,Riyadh North,Saudi,,G0436,RIY-5
+S10715,Badr Al-Zahrani,بدر الزهراني,1604113865,2008-03-31,M,12,B,Riyadh North,Saudi,,G0437,
+S10716,Talal Al-Zahrani,طلال الزهراني,1023600056,2014-06-30,M,6,B,Riyadh North,Saudi,,G0437,
+S10717,Ali Al-Mutairi,علي المطيري,1599319164,2012-02-15,M,8,A,Jeddah,Saudi,,G0438,
+S10718,Talal Al-Mutairi,طلال المطيري,1852968704,2019-07-26,M,1,B,Jeddah,Saudi,,G0438,JED-8
+S10719,Mansour Al-Hamad,منصور الحمد,1322040540,2012-12-28,M,9,C,Riyadh North,Saudi,"hearing aid, front seat",G0439,
+S10720,Fatimah Al-Hamad,فاطمة الحمد,1443588203,2016-11-24,F,4,C,Riyadh North,Saudi,,G0439,
+S10721,Dima Al-Sharif,ديما الشريف,1189716271,2014-02-01,F,6,B,Riyadh East,Saudi,,G0440,RIY-1
+S10722,Abdullah Al-Omari,عبدالله العمري,1854698078,2013-05-18,M,8,C,Dammam,Saudi,,G0441,
+S10723,Yazan Al-Shammari,يزن الشمري,1187214633,2010-01-24,M,10,B,Riyadh East,Saudi,,G0442,
+S10724,Ali Al-Anazi,علي العنزي,1769245951,2017-07-03,M,3,B,Jeddah,Saudi,,G0443,
+S10725,Tala Al-Anazi,تالا العنزي,1161842010,2016-11-15,F,4,C,Jeddah,Saudi,,G0443,
+S10726,Tala Al-Anazi,تالا العنزي,1435736737,2016-07-26,F,4,B,Riyadh North,Saudi,,G0444,
+S10727,Hessa Al-Anazi,حصة العنزي,1184266611,2019-01-14,F,1,C,Riyadh North,Saudi,"asthma, inhaler in bag",G0444,
+S10728,Fahd Al-Qahtani,فهد القحطاني,1345612396,2011-10-01,M,9,B,Riyadh North,Saudi,,G0445,RIY-7
+S10729,Joud Al-Qahtani,جود القحطاني,1558374848,2014-05-25,F,6,B,Riyadh North,Saudi,,G0445,RIY-8
+S10730,Faisal Al-Omari,فيصل العمري,1180986186,2014-02-16,M,6,C,Jeddah,Saudi,"nut allergy, carries auto-injector",G0446,JED-2
+S10731,Yazan Al-Omari,يزن العمري,1325895099,2012-05-02,M,8,B,Jeddah,Saudi,,G0446,JED-8
+S10732,Dima Al-Omari,ديما العمري,1974287871,2018-04-07,F,3,A,Jeddah,Saudi,,G0446,JED-9
+S10733,Layan Nasser,ليان ناصر,1762508266,2012-01-29,F,8,C,Riyadh East,Saudi,,G0447,
+S10734,Aseel Al-Otaibi,أسيل العتيبي,1696984326,2014-03-09,F,6,B,Riyadh North,Saudi,,G0448,
+S10735,Rahaf Al-Otaibi,رهف العتيبي,1737950371,2013-05-26,F,8,C,Riyadh North,Saudi,,G0448,RIY-4
+S10736,Anas Al-Otaibi,أنس العتيبي,1206715233,2019-05-07,M,1,C,Riyadh North,Saudi,severe egg allergy,G0448,
+S10737,Joud Nasser,جود ناصر,1289351176,2019-03-18,F,1,C,Riyadh North,Saudi,,G0449,
+S10738,Yousef Nasser,يوسف ناصر,1792155483,2015-07-26,M,5,C,Riyadh North,Saudi,,G0449,
+S10739,Fatimah Nasser,فاطمة ناصر,1813188424,2011-01-19,F,9,B,Riyadh North,Saudi,,G0449,RIY-6
+S10740,Faisal Al-Juhani,فيصل الجهني,1664396412,2014-12-26,M,7,C,Riyadh North,Saudi,,G0450,RIY-5
+S10741,Lama Bakr,لمى بكر,1177537113,2018-12-24,F,2,C,Riyadh East,Saudi,,G0451,RIY-8
+S10742,Yazan Bakr,يزن بكر,1255053453,2019-06-18,M,1,C,Riyadh East,Saudi,"epilepsy, care plan on file",G0451,RIY-3
+S10743,Abdullah Bakr,عبدالله بكر,1545925392,2012-11-17,M,8,A,Riyadh East,Saudi,,G0451,RIY-5
+S10744,Jana Al-Zahrani,جنى الزهراني,2298685833,2012-11-22,F,8,A,Riyadh North,Indian,,G0452,RIY-3
+S10745,Noura Al-Zahrani,نورة الزهراني,2276986259,2010-02-05,F,10,A,Riyadh North,Indian,,G0452,RIY-9
+S10746,Talal Al-Zahrani,طلال الزهراني,2231429214,2010-07-21,M,11,B,Riyadh North,Indian,,G0452,RIY-9
+S10747,Sara Al-Hamad,سارة الحمد,1655437628,2016-05-13,F,4,C,Dammam,Saudi,,G0453,
+S10748,Noura Al-Anazi,نورة العنزي,2933522652,2014-03-27,F,6,C,Riyadh North,Indian,,G0454,
+S10749,Jana Al-Hamad,جنى الحمد,2849020652,2018-06-08,F,2,A,Riyadh East,Jordanian,,G0455,RIY-4
+S10750,Jana Al-Hamad,جنى الحمد,2022474391,2018-02-19,F,3,C,Riyadh East,Jordanian,"epilepsy, care plan on file",G0455,
+S10751,Hamza Al-Anazi,حمزة العنزي,2016323104,2016-05-13,M,4,A,Riyadh North,Jordanian,,G0456,
+S10752,Jana Al-Anazi,جنى العنزي,2112354776,2016-03-23,F,5,A,Riyadh North,Jordanian,,G0456,
+S10753,Mohammed Al-Hamad,محمد الحمد,1367329767,2008-01-27,M,12,B,Riyadh East,Saudi,,G0457,RIY-3
+S10754,Talal Al-Hamad,طلال الحمد,1451443304,2013-10-23,M,7,B,Riyadh East,Saudi,,G0457,
+S10755,Lulwa Khan,لولوة خان,1401611696,2011-05-13,F,10,C,Riyadh North,Saudi,"asthma, inhaler in bag",G0458,
+S10756,Omar Khan,عمر خان,1242706909,2016-01-25,M,4,C,Riyadh North,Saudi,,G0458,
+S10757,Maryam Al-Anazi,مريم العنزي,1078216553,2016-04-26,F,4,C,Riyadh North,Saudi,,G0459,RIY-5
+S10758,Layan Al-Anazi,ليان العنزي,1564203989,2012-06-13,F,8,B,Riyadh North,Saudi,,G0459,RIY-4
+S10759,Rahaf Al-Anazi,رهف العنزي,1413888614,2016-04-13,F,4,A,Riyadh North,Saudi,,G0459,RIY-7
+S10760,Ghala Al-Zahrani,غلا الزهراني,1645178877,2010-08-14,F,10,C,Riyadh North,Saudi,"migraine, may rest in clinic",G0460,RIY-4
+S10761,Ruba Al-Malki,ربى المالكي,1851494120,2011-10-05,F,10,B,Riyadh East,Saudi,"migraine, may rest in clinic",G0461,RIY-4
+S10762,Asma Al-Malki,أسماء المالكي,1895781924,2011-01-01,F,9,A,Riyadh East,Saudi,,G0461,RIY-7
+S10763,Khalid Al-Malki,خالد المالكي,1260385840,2014-07-28,M,6,C,Riyadh East,Saudi,,G0461,
+S10764,Sara Al-Omari,سارة العمري,1276752127,2019-10-21,F,2,C,Riyadh North,Saudi,,G0462,
+S10765,Aseel Al-Omari,أسيل العمري,1453533855,2019-12-28,F,1,C,Riyadh North,Saudi,,G0462,
+S10766,Faisal Al-Omari,فيصل العمري,1169138516,2019-04-25,M,1,A,Riyadh North,Saudi,"asthma, inhaler in bag",G0462,RIY-7
+S10767,Sara Al-Qahtani,سارة القحطاني,1359290765,2017-01-14,F,3,A,Dammam,Saudi,,G0463,DAM-7
+S10768,Fatimah Al-Hamad,فاطمة الحمد,1732845306,2015-06-23,F,5,B,Riyadh North,Saudi,,G0464,
+S10769,Yousef Al-Hamad,يوسف الحمد,1727346516,2012-06-13,M,8,B,Riyadh North,Saudi,,G0464,
+S10770,Reem Al-Malki,ريم المالكي,2330829282,2018-02-12,F,2,C,Jeddah,Indian,,G0465,
+S10771,Khalid Al-Juhani,خالد الجهني,1264469946,2019-09-12,M,2,C,Riyadh North,Saudi,,G0466,RIY-7
+S10772,Fahd Nasser,فهد ناصر,1109786273,2011-06-01,M,9,B,Riyadh North,Saudi,,G0467,
+S10773,Ali Nasser,علي ناصر,1973492605,2016-08-11,M,5,B,Riyadh North,Saudi,,G0467,
+S10774,Fatimah Khan,فاطمة خان,1746544292,2015-03-08,F,5,B,Riyadh East,Saudi,,G0468,
+S10775,Reem Khan,ريم خان,1666912318,2015-01-13,F,6,B,Riyadh East,Saudi,,G0468,
+S10776,Hamza Nasser,حمزة ناصر,1035270016,2016-06-03,M,4,C,Riyadh North,Saudi,,G0469,
+S10777,Hamza Nasser,حمزة ناصر,1834456528,2011-08-04,M,9,B,Riyadh North,Saudi,,G0469,
+S10778,Ziyad Al-Mutairi,زياد المطيري,1995956692,2017-07-16,M,3,B,Jeddah,Saudi,,G0470,JED-8
+S10779,Rayan Al-Mutairi,ريان المطيري,1625540048,2016-10-26,M,4,C,Jeddah,Saudi,,G0470,JED-5
+S10780,Layan Al-Harbi,ليان الحربي,1146967069,2012-10-11,F,9,C,Riyadh East,Saudi,,G0471,
+S10781,Saud Al-Harbi,سعود الحربي,1759689682,2016-10-02,M,5,B,Riyadh East,Saudi,,G0471,
+S10782,Badr Al-Harbi,بدر الحربي,1905072541,2017-05-22,M,3,A,Riyadh East,Saudi,,G0471,RIY-9
+S10783,Talal Al-Malki,طلال المالكي,1604440347,2020-06-16,M,1,C,Riyadh North,Saudi,,G0472,
+S10784,Joud Al-Malki,جود المالكي,1627887366,2013-10-08,F,7,A,Jeddah,Saudi,"migraine, may rest in clinic",G0473,JED-7
+S10785,Abdullah Al-Malki,عبدالله المالكي,2658401111,2011-09-30,M,9,B,Riyadh North,Egyptian,,G0474,
+S10786,Lama Al-Malki,لمى المالكي,2001210681,2017-01-15,F,3,A,Riyadh North,Egyptian,,G0474,
+S10787,Noura Al-Juhani,نورة الجهني,2795745209,2017-02-16,F,3,C,Jeddah,Indian,,G0475,JED-1
+S10788,Jana Al-Saeed,جنى السعيد,2672237275,2014-01-19,F,6,B,Riyadh North,Indian,,G0476,RIY-3
+S10789,Yousef Al-Zahrani,يوسف الزهراني,2860658747,2013-07-10,M,7,B,Jeddah,Syrian,,G0477,JED-3
+S10790,Hessa Al-Zahrani,حصة الزهراني,2283456186,2017-11-11,F,3,B,Jeddah,Syrian,"asthma, inhaler in bag",G0477,JED-8
+S10791,Asma Al-Zahrani,أسماء الزهراني,2035543228,2011-05-29,F,9,C,Jeddah,Syrian,,G0477,JED-5
+S10792,Joud Al-Subaie,جود السبيعي,1527189708,2012-04-26,F,8,B,Riyadh East,Saudi,,G0478,
+S10793,Jana Al-Ghamdi,جنى الغامدي,1732960950,2014-04-17,F,6,C,Jeddah,Saudi,,G0479,JED-2
+S10794,Majed Al-Hamad,ماجد الحمد,1611693618,2015-12-13,M,5,B,Riyadh East,Saudi,,G0480,
+S10795,Faisal Al-Hamad,فيصل الحمد,1693248061,2016-11-17,M,4,B,Riyadh East,Saudi,,G0480,
+S10796,Faisal Al-Hamad,فيصل الحمد,1731836875,2019-03-27,M,2,B,Riyadh East,Saudi,,G0480,
+S10797,Yousef Al-Malki,يوسف المالكي,1989762921,2015-07-30,M,5,A,Riyadh East,Saudi,,G0481,
+S10798,Maryam Al-Malki,مريم المالكي,1497327382,2014-08-23,F,6,C,Riyadh East,Saudi,,G0481,
+S10799,Tala Al-Juhani,تالا الجهني,1244615376,2015-03-23,F,5,C,Riyadh East,Saudi,,G0482,
+S10800,Rayan Al-Juhani,ريان الجهني,1098255566,2016-10-20,M,4,A,Riyadh East,Saudi,,G0482,
+S10801,Yazan Haddad,يزن حداد,2394095428,2018-07-03,M,2,C,Riyadh North,Pakistani,,G0483,
+S10802,Haya Al-Ghamdi,هيا الغامدي,1089228163,2011-11-19,F,10,A,Riyadh North,Saudi,,G0484,
+S10803,Nawaf Al-Qahtani,نواف القحطاني,1992843558,2018-06-03,M,2,A,Riyadh East,Saudi,"migraine, may rest in clinic",G0485,
+S10804,Layan Al-Qahtani,ليان القحطاني,1993461660,2016-04-04,F,4,C,Riyadh East,Saudi,,G0485,
+S10805,Omar Al-Faraj,عمر الفرج,1556050458,2016-09-02,M,4,C,Riyadh East,Saudi,"ADHD, extra time in tests",G0486,RIY-4
+S10806,Reem Al-Faraj,ريم الفرج,1140921385,2018-10-11,F,3,A,Riyadh East,Saudi,,G0486,
+S10807,Ruba Al-Faraj,ربى الفرج,1017473658,2012-05-24,F,8,A,Riyadh East,Saudi,,G0486,RIY-6
+S10808,Talal Siddiqui,طلال صديقي,2872841583,2013-03-29,M,8,A,Riyadh North,Pakistani,,G0487,RIY-4
+S10809,Abdullah Haddad,عبدالله حداد,1369874791,2010-12-08,M,10,B,Riyadh North,Saudi,,G0488,
+S10810,Shahad Al-Ghamdi,شهد الغامدي,1433735752,2017-08-03,F,3,C,Dammam,Saudi,,G0489,DAM-7
+S10811,Shahad Al-Anazi,شهد العنزي,1969837726,2015-11-25,F,5,A,Dammam,Saudi,,G0490,DAM-5
+S10812,Reem Al-Saeed,ريم السعيد,1453662797,2011-12-21,F,9,A,Riyadh North,Saudi,,G0491,
+S10813,Lama Al-Malki,لمى المالكي,1071788107,2019-09-30,F,1,C,Riyadh North,Saudi,,G0492,
+S10814,Abdullah Al-Malki,عبدالله المالكي,1683667220,2015-01-05,M,6,C,Riyadh North,Saudi,,G0492,
+S10815,Badr Al-Anazi,بدر العنزي,1898749322,2015-03-30,M,5,B,Jeddah,Saudi,,G0493,
+S10816,Joud Al-Anazi,جود العنزي,1856082857,2015-06-10,F,5,B,Jeddah,Saudi,,G0493,
+S10817,Maryam Al-Dosari,مريم الدوسري,1204540198,2013-04-06,F,8,B,Riyadh East,Saudi,,G0494,
+S10818,Lama Al-Hamad,لمى الحمد,1415641654,2016-03-29,F,4,C,Riyadh East,Saudi,,G0495,RIY-3
+S10819,Haya Khan,هيا خان,1058556641,2014-05-09,F,6,C,Riyadh North,Saudi,"migraine, may rest in clinic",G0496,RIY-2
+S10820,Jana Khan,جنى خان,1226336990,2012-08-06,F,8,A,Riyadh North,Saudi,,G0496,
+S10821,Lulwa Al-Sharif,لولوة الشريف,1697518028,2009-06-26,F,12,A,Jeddah,Saudi,,G0497,
+S10822,Mohammed Al-Sharif,محمد الشريف,1172077151,2012-05-26,M,9,B,Jeddah,Saudi,,G0497,JED-2
+S10823,Noura Al-Sharif,نورة الشريف,1952202783,2012-08-24,F,8,C,Jeddah,Saudi,"type 1 diabetes, insulin at lunch",G0497,
+S10824,Anas Al-Hamad,أنس الحمد,1306976846,2015-12-04,M,5,C,Riyadh East,Saudi,severe egg allergy,G0498,
+S10825,Rahaf Al-Sharif,رهف الشريف,2686390596,2019-10-08,F,1,A,Riyadh East,Indian,,G0499,RIY-4
+S10826,Rayan Al-Otaibi,ريان العتيبي,1735481047,2014-05-14,M,7,B,Jeddah,Saudi,,G0500,JED-6
+S10827,Khalid Al-Otaibi,خالد العتيبي,1546841419,2008-05-26,M,12,C,Jeddah,Saudi,,G0500,JED-7
+S10828,Majed Al-Saeed,ماجد السعيد,1396647235,2012-12-07,M,8,B,Riyadh North,Saudi,,G0501,
+S10829,Hamza Al-Zahrani,حمزة الزهراني,2267904025,2011-03-22,M,9,A,Riyadh East,Jordanian,,G0502,
+S10830,Fahd Al-Faraj,فهد الفرج,1531498379,2013-08-20,M,7,B,Riyadh North,Saudi,,G0503,
+S10831,Asma Al-Anazi,أسماء العنزي,1485407075,2017-06-13,F,3,C,Dammam,Saudi,"ADHD, extra time in tests",G0504,
+S10832,Ghala Al-Qahtani,غلا القحطاني,1477127817,2016-05-27,F,4,B,Dammam,Saudi,,G0505,DAM-5
+S10833,Mansour Al-Qahtani,منصور القحطاني,1558619886,2014-05-07,M,6,A,Dammam,Saudi,,G0505,
+S10834,Shahad Al-Shehri,شهد الشهري,2714128429,2014-06-16,F,7,C,Riyadh North,Jordanian,,G0506,
+S10835,Faisal Siddiqui,فيصل صديقي,1204002217,2016-09-09,M,4,A,Riyadh North,Saudi,,G0507,
+S10836,Mohammed Al-Harbi,محمد الحربي,1786351514,2018-03-13,M,2,B,Riyadh North,Saudi,,G0508,RIY-7
+S10837,Lama Al-Harbi,لمى الحربي,1305672988,2019-12-05,F,2,B,Riyadh North,Saudi,,G0508,RIY-7
+S10838,Maryam Al-Subaie,مريم السبيعي,2845380844,2020-01-10,F,1,A,Riyadh North,Syrian,,G0509,RIY-8
+S10839,Hessa Al-Omari,حصة العمري,1049981126,2016-01-23,F,4,C,Riyadh East,Saudi,"ADHD, extra time in tests",G0510,
+S10840,Dima Al-Dosari,ديما الدوسري,1975712884,2018-02-23,F,2,B,Jeddah,Saudi,,G0511,
+S10841,Reem Khan,ريم خان,2662159700,2019-12-23,F,1,A,Dammam,Jordanian,,G0512,DAM-4
+S10842,Aseel Al-Subaie,أسيل السبيعي,1317861810,2015-03-16,F,5,A,Dammam,Saudi,,G0513,DAM-2
+S10843,Hessa Al-Subaie,حصة السبيعي,1968014009,2013-06-20,F,7,A,Riyadh North,Saudi,"migraine, may rest in clinic",G0514,
+S10844,Mohammed Al-Saeed,محمد السعيد,2852360589,2017-02-26,M,4,C,Dammam,Syrian,,G0515,
+S10845,Badr Al-Mutairi,بدر المطيري,1629174497,2019-09-17,M,1,B,Riyadh East,Saudi,,G0516,
+S10846,Rahaf Al-Shehri,رهف الشهري,1283343686,2015-07-24,F,5,C,Riyadh East,Saudi,,G0517,RIY-1
+S10847,Mansour Al-Shehri,منصور الشهري,1381846135,2019-06-29,M,1,B,Riyadh East,Saudi,"nut allergy, carries auto-injector",G0517,
+S10848,Nawaf Al-Dosari,نواف الدوسري,2049857802,2018-04-15,M,3,C,Riyadh East,Pakistani,,G0518,RIY-3
+S10849,Joud Al-Saeed,جود السعيد,2016643626,2014-07-12,F,7,C,Riyadh East,Yemeni,,G0519,
+S10850,Sara Al-Dosari,سارة الدوسري,2634920678,2016-06-09,F,5,A,Riyadh North,Egyptian,"ADHD, extra time in tests",G0520,
+S10851,Joud Al-Dosari,جود الدوسري,2641907329,2011-04-05,F,10,B,Riyadh North,Egyptian,,G0520,
+S10852,Fahd Haddad,فهد حداد,1364765355,2017-10-30,M,3,C,Jeddah,Saudi,,G0521,JED-1
+S10853,Shahad Haddad,شهد حداد,1939867842,2018-04-12,F,2,C,Jeddah,Saudi,,G0521,
+S10854,Yazan Haddad,يزن حداد,1030272998,2018-06-03,M,3,C,Jeddah,Saudi,,G0521,
+S10855,Rahaf Al-Anazi,رهف العنزي,1147325568,2017-10-14,F,3,A,Riyadh East,Saudi,,G0522,RIY-5
+S10856,Anas Al-Malki,أنس المالكي,1668679317,2014-02-06,M,6,B,Riyadh North,Saudi,,G0523,RIY-4
+S10857,Talal Al-Ghamdi,طلال الغامدي,1868830882,2017-01-21,M,3,B,Riyadh East,Saudi,"asthma, inhaler in bag",G0524,RIY-9
+S10858,Anas Al-Sharif,أنس الشريف,1143206244,2013-02-07,M,8,B,Jeddah,Saudi,,G0525,JED-9
+S10859,Ziyad Al-Sharif,زياد الشريف,1683857306,2018-09-02,M,2,C,Jeddah,Saudi,"ADHD, extra time in tests",G0525,
+S10860,Yazan Al-Sharif,يزن الشريف,1797930452,2019-08-15,M,2,C,Jeddah,Saudi,,G0525,
+S10861,Fahd Al-Shammari,فهد الشمري,1107880697,2017-07-04,M,3,B,Riyadh North,Saudi,,G0526,
+S10862,Abdullah Khan,عبدالله خان,1975845291,2017-03-13,M,4,B,Jeddah,Saudi,"hearing aid, front seat",G0527,
+S10863,Ghala Khan,غلا خان,1428388727,2016-11-21,F,4,A,Jeddah,Saudi,severe egg allergy,G0527,
+S10864,Shahad Al-Hamad,شهد الحمد,1686971564,2011-10-07,F,10,A,Jeddah,Saudi,,G0528,
+S10865,Fatimah Al-Qahtani,فاطمة القحطاني,1050972548,2019-10-10,F,1,A,Riyadh North,Saudi,,G0529,RIY-9
+S10866,Omar Al-Anazi,عمر العنزي,2853497593,2016-05-14,M,4,A,Riyadh North,Syrian,"ADHD, extra time in tests",G0530,
+S10867,Rahaf Al-Otaibi,رهف العتيبي,1989712443,2017-01-08,F,3,C,Riyadh East,Saudi,,G0531,
+S10868,Majed Al-Otaibi,ماجد العتيبي,1034285082,2012-01-15,M,9,A,Riyadh East,Saudi,,G0531,
+S10869,Joud Al-Otaibi,جود العتيبي,1430705978,2016-12-30,F,4,A,Riyadh East,Saudi,,G0531,
+S10870,Hassan Al-Qahtani,حسن القحطاني,1456143012,2015-09-09,M,5,A,Riyadh East,Saudi,,G0532,
+S10871,Ruba Al-Qahtani,ربى القحطاني,1252086193,2018-01-02,F,2,C,Riyadh East,Saudi,,G0532,RIY-4
+S10872,Hamza Al-Hamad,حمزة الحمد,2341772559,2013-09-05,M,7,A,Dammam,Jordanian,,G0533,DAM-2
+S10873,Ali Al-Hamad,علي الحمد,2096492595,2011-07-01,M,10,C,Dammam,Jordanian,,G0533,DAM-4
+S10874,Mansour Al-Otaibi,منصور العتيبي,1163063544,2014-07-11,M,6,A,Dammam,Saudi,,G0534,DAM-1
+S10875,Nawaf Al-Otaibi,نواف العتيبي,1244800349,2017-05-13,M,4,A,Dammam,Saudi,,G0534,DAM-2
+S10876,Rahaf Al-Otaibi,رهف العتيبي,1160570586,2015-03-03,F,5,C,Dammam,Saudi,,G0534,DAM-7
+S10877,Yazan Al-Sharif,يزن الشريف,1008467140,2011-09-16,M,9,A,Jeddah,Saudi,,G0535,
+S10878,Fahd Al-Sharif,فهد الشريف,1079986012,2018-09-16,M,3,A,Jeddah,Saudi,,G0535,JED-8
+S10879,Fahd Al-Sharif,فهد الشريف,1513652166,2019-06-05,M,1,B,Jeddah,Saudi,,G0535,
+S10880,Lulwa Al-Malki,لولوة المالكي,1511812257,2009-04-30,F,11,A,Jeddah,Saudi,,G0536,JED-2
+S10881,Hessa Haddad,حصة حداد,1018394909,2017-02-19,F,3,C,Riyadh East,Saudi,,G0537,RIY-4
+S10882,Noura Haddad,نورة حداد,1235967271,2020-11-08,F,1,B,Riyadh East,Saudi,"type 1 diabetes, insulin at lunch",G0537,
+S10883,Hassan Al-Ghamdi,حسن الغامدي,1048280726,2012-12-08,M,8,A,Dammam,Saudi,"asthma, inhaler in bag",G0538,
+S10884,Fahd Bakr,فهد بكر,1103868496,2012-11-01,M,8,B,Riyadh East,Saudi,,G0539,
+S10885,Asma Al-Sharif,أسماء الشريف,1813164780,2018-08-18,F,2,B,Jeddah,Saudi,,G0540,
+S10886,Noura Al-Sharif,نورة الشريف,1778356805,2016-01-01,F,4,B,Jeddah,Saudi,,G0540,
+S10887,Saud Al-Shehri,سعود الشهري,1550443423,2013-01-07,M,8,A,Jeddah,Saudi,"epilepsy, care plan on file",G0541,JED-5
+S10888,Hessa Al-Hamad,حصة الحمد,2085044280,2015-01-19,F,5,C,Dammam,Indian,,G0542,DAM-4
+S10889,Dima Al-Malki,ديما المالكي,1683350780,2016-11-15,F,4,A,Riyadh North,Saudi,,G0543,
+S10890,Saud Al-Mutairi,سعود المطيري,1065761957,2011-08-18,M,9,C,Riyadh North,Saudi,,G0544,RIY-6
+S10891,Shahad Al-Mutairi,شهد المطيري,1470254081,2016-08-08,F,4,C,Riyadh North,Saudi,,G0544,
+S10892,Mansour Al-Subaie,منصور السبيعي,1343688647,2019-06-07,M,1,A,Riyadh North,Saudi,,G0545,RIY-3
+S10893,Sara Al-Malki,سارة المالكي,2148453069,2018-06-20,F,2,C,Riyadh North,Egyptian,,G0546,RIY-7
+S10894,Reem Al-Malki,ريم المالكي,2535146075,2017-11-06,F,3,C,Riyadh North,Egyptian,,G0546,
+S10895,Rahaf Al-Qahtani,رهف القحطاني,1733695406,2014-07-13,F,6,A,Riyadh North,Saudi,,G0547,
+S10896,Anas Al-Harbi,أنس الحربي,1619784307,2018-02-17,M,2,C,Riyadh North,Saudi,,G0548,RIY-3
+S10897,Layan Al-Harbi,ليان الحربي,1471104259,2019-02-19,F,1,B,Riyadh North,Saudi,"ADHD, extra time in tests",G0548,
+S10898,Tala Al-Harbi,تالا الحربي,1879474566,2017-07-26,F,3,B,Riyadh North,Saudi,,G0548,
+S10899,Fahd Al-Faraj,فهد الفرج,1852309544,2012-09-02,M,8,C,Jeddah,Saudi,,G0549,JED-3
+S10900,Haya Al-Faraj,هيا الفرج,1705957163,2014-09-12,F,6,B,Jeddah,Saudi,,G0549,
+S10901,Mohammed Al-Dosari,محمد الدوسري,1877639888,2013-09-18,M,7,A,Riyadh East,Saudi,,G0550,
+S10902,Sara Al-Dosari,سارة الدوسري,1387866432,2010-06-09,F,11,C,Riyadh East,Saudi,,G0550,
+S10903,Ali Al-Zahrani,علي الزهراني,1756757016,2019-09-22,M,2,C,Riyadh North,Saudi,,G0551,
+S10904,Lama Al-Anazi,لمى العنزي,1391106474,2011-11-03,F,9,B,Dammam,Saudi,,G0552,DAM-2
+S10905,Jana Al-Mutairi,جنى المطيري,1450340045,2017-06-09,F,4,C,Riyadh East,Saudi,,G0553,
+S10906,Faisal Al-Mutairi,فيصل المطيري,1692963655,2018-06-29,M,2,A,Riyadh East,Saudi,,G0553,
+S10907,Talal Al-Anazi,طلال العنزي,2576388588,2015-03-10,M,6,A,Riyadh East,Yemeni,,G0554,
+S10908,Lama Al-Anazi,لمى العنزي,2779378031,2017-12-13,F,4,B,Riyadh East,Yemeni,,G0554,RIY-7
+S10909,Abdullah Khan,عبدالله خان,1782997534,2016-04-19,M,4,B,Riyadh North,Saudi,,G0555,RIY-7
+S10910,Ruba Al-Harbi,ربى الحربي,2781993672,2018-02-21,F,2,B,Riyadh North,Pakistani,,G0556,RIY-4
+S10911,Rahaf Al-Harbi,رهف الحربي,2532482432,2019-03-17,F,1,B,Riyadh North,Pakistani,,G0556,
+S10912,Yazan Nasser,يزن ناصر,2714691262,2019-05-06,M,1,B,Jeddah,Sudanese,,G0557,
+S10913,Mansour Al-Qahtani,منصور القحطاني,2553999175,2015-09-09,M,5,A,Riyadh North,Syrian,,G0558,RIY-5
+S10914,Jana Bakr,جنى بكر,1087156875,2017-09-09,F,3,B,Dammam,Saudi,,G0559,
+S10915,Yazan Bakr,يزن بكر,1877824341,2019-01-23,M,1,C,Dammam,Saudi,,G0559,DAM-2
+S10916,Maryam Bakr,مريم بكر,2746695548,2019-04-07,F,1,C,Riyadh North,Sudanese,,G0560,RIY-4
+S10917,Reem Al-Subaie,ريم السبيعي,2440235859,2016-11-18,F,5,B,Riyadh North,Indian,,G0561,
+S10918,Layan Al-Subaie,ليان السبيعي,2522919391,2011-03-20,F,9,A,Riyadh North,Indian,,G0561,RIY-3
+S10919,Rahaf Al-Juhani,رهف الجهني,1412893268,2019-10-23,F,1,C,Jeddah,Saudi,"type 1 diabetes, insulin at lunch",G0562,
+S10920,Rayan Al-Juhani,ريان الجهني,1131321930,2019-08-16,M,1,C,Jeddah,Saudi,,G0562,
+S10921,Tala Al-Juhani,تالا الجهني,1955241156,2012-10-07,F,8,B,Riyadh North,Saudi,,G0563,
+S10922,Tala Al-Sharif,تالا الشريف,1697062872,2013-07-02,F,7,A,Jeddah,Saudi,,G0564,
+S10923,Nawaf Al-Shehri,نواف الشهري,1091909200,2017-05-24,M,3,A,Riyadh East,Saudi,,G0565,RIY-1
+S10924,Jana Al-Qahtani,جنى القحطاني,1279532236,2015-05-11,F,5,A,Riyadh North,Saudi,,G0566,RIY-3
+S10925,Aseel Al-Harbi,أسيل الحربي,2007302960,2014-12-24,F,6,C,Riyadh East,Egyptian,,G0567,
+S10926,Aseel Al-Harbi,أسيل الحربي,2232184170,2018-12-01,F,3,B,Riyadh East,Egyptian,,G0567,
+S10927,Noura Al-Juhani,نورة الجهني,1358394528,2013-10-11,F,7,B,Riyadh East,Saudi,,G0568,
+S10928,Rayan Al-Juhani,ريان الجهني,1434401785,2016-01-06,M,4,A,Riyadh East,Saudi,,G0568,
+S10929,Mansour Khan,منصور خان,2311109076,2009-03-20,M,12,B,Riyadh East,Yemeni,,G0569,RIY-7
+S10930,Maryam Khan,مريم خان,2317405415,2010-08-30,F,11,A,Riyadh East,Yemeni,,G0569,RIY-2
+S10931,Yousef Khan,يوسف خان,2735588105,2013-01-15,M,7,B,Riyadh East,Yemeni,,G0569,
+S10932,Fatimah Al-Saeed,فاطمة السعيد,1066174157,2009-03-11,F,11,A,Dammam,Saudi,,G0570,
+S10933,Ruba Al-Saeed,ربى السعيد,1184957947,2010-01-02,F,10,B,Riyadh East,Saudi,,G0571,RIY-4
+S10934,Omar Al-Saeed,عمر السعيد,1806821030,2018-03-09,M,3,C,Riyadh East,Saudi,,G0571,RIY-1
+S10935,Noura Al-Juhani,نورة الجهني,1550371666,2013-06-19,F,7,A,Riyadh East,Saudi,,G0572,RIY-7
+S10936,Sara Al-Juhani,سارة الجهني,1880767885,2016-11-20,F,4,B,Riyadh East,Saudi,,G0572,
+S10937,Anas Al-Juhani,أنس الجهني,1344447189,2012-11-03,M,8,C,Riyadh East,Saudi,,G0572,
+S10938,Mohammed Al-Mutairi,محمد المطيري,1980008141,2014-05-31,M,6,B,Riyadh North,Saudi,,G0573,RIY-7
+S10939,Noura Al-Mutairi,نورة المطيري,1693384263,2015-07-02,F,5,B,Riyadh North,Saudi,,G0573,RIY-9
+S10940,Talal Al-Mutairi,طلال المطيري,1095148601,2016-03-09,M,4,B,Riyadh North,Saudi,,G0573,
+S10941,Ruba Al-Saeed,ربى السعيد,1887242896,2011-01-14,F,9,B,Riyadh East,Saudi,,G0574,
+S10942,Ali Haddad,علي حداد,2624930752,2017-06-21,M,3,C,Jeddah,Pakistani,,G0575,
+S10943,Saud Al-Harbi,سعود الحربي,2096192498,2015-08-08,M,5,B,Riyadh North,Sudanese,,G0576,
+S10944,Abdullah Al-Saeed,عبدالله السعيد,2587941054,2012-08-31,M,8,B,Jeddah,Sudanese,,G0577,JED-6
+S10945,Fahd Al-Zahrani,فهد الزهراني,1343559447,2012-04-30,M,8,A,Riyadh North,Saudi,,G0578,
+S10946,Lama Al-Zahrani,لمى الزهراني,1256335190,2015-07-14,F,5,A,Riyadh North,Saudi,,G0578,
+S10947,Reem Bakr,ريم بكر,1432131981,2016-06-09,F,4,C,Jeddah,Saudi,,G0579,JED-7
+S10948,Majed Bakr,ماجد بكر,1412426726,2013-03-31,M,7,A,Jeddah,Saudi,,G0579,
+S10949,Mansour Bakr,منصور بكر,1674479807,2014-01-20,M,6,C,Jeddah,Saudi,"migraine, may rest in clinic",G0579,
+S10950,Hassan Al-Qahtani,حسن القحطاني,1270514170,2015-05-22,M,6,B,Jeddah,Saudi,severe egg allergy,G0580,JED-4
+S10951,Lulwa Al-Qahtani,لولوة القحطاني,1447423759,2016-06-11,F,4,A,Jeddah,Saudi,,G0580,
+S10952,Jana Khan,جنى خان,2645135658,2019-07-10,F,1,B,Riyadh North,Jordanian,,G0581,RIY-4
+S10953,Anas Khan,أنس خان,2058856066,2019-09-10,M,2,A,Riyadh North,Jordanian,,G0581,
+S10954,Shahad Al-Anazi,شهد العنزي,2824040428,2020-06-29,F,1,B,Riyadh East,Sudanese,,G0582,
+S10955,Ali Al-Anazi,علي العنزي,2036591917,2012-04-27,M,9,B,Riyadh East,Sudanese,,G0582,
+S10956,Ghala Al-Shehri,غلا الشهري,1477612431,2010-05-03,F,10,B,Riyadh North,Saudi,,G0583,
+S10957,Fahd Al-Shehri,فهد الشهري,1632158628,2018-02-16,M,2,C,Riyadh North,Saudi,,G0583,
+S10958,Saud Al-Shehri,سعود الشهري,1618745669,2011-08-15,M,9,A,Riyadh North,Saudi,,G0583,
+S10959,Aseel Al-Saeed,أسيل السعيد,1137065611,2016-03-03,F,4,B,Riyadh North,Saudi,,G0584,
+S10960,Aseel Al-Saeed,أسيل السعيد,1692682966,2015-01-27,F,5,A,Riyadh North,Saudi,,G0584,
+S10961,Talal Al-Qahtani,طلال القحطاني,1046993249,2018-09-25,M,2,B,Dammam,Saudi,,G0585,DAM-7
+S10962,Maryam Al-Qahtani,مريم القحطاني,1714991291,2015-10-16,F,5,C,Dammam,Saudi,,G0585,DAM-7
+S10963,Ghala Al-Shehri,غلا الشهري,1501756906,2015-10-26,F,5,C,Dammam,Saudi,,G0586,
+S10964,Haya Al-Shehri,هيا الشهري,1034743876,2016-10-28,F,4,C,Dammam,Saudi,,G0586,
+S10965,Noura Al-Harbi,نورة الحربي,1698605075,2019-02-25,F,2,A,Riyadh East,Saudi,,G0587,
+S10966,Ruba Al-Harbi,ربى الحربي,1709888405,2017-08-07,F,3,B,Riyadh East,Saudi,,G0587,RIY-2
+S10967,Ali Al-Juhani,علي الجهني,1742989519,2014-04-21,M,6,A,Riyadh East,Saudi,,G0588,
+S10968,Maryam Al-Shehri,مريم الشهري,1722936217,2013-09-08,F,7,C,Jeddah,Saudi,,G0589,
+S10969,Maryam Al-Shehri,مريم الشهري,1985452426,2019-05-19,F,1,B,Jeddah,Saudi,,G0589,
+S10970,Noura Al-Shehri,نورة الشهري,1041375630,2019-06-11,F,1,C,Jeddah,Saudi,,G0589,
+S10971,Lama Al-Hamad,لمى الحمد,1455158003,2011-07-15,F,9,C,Riyadh East,Saudi,,G0590,
+S10972,Hamza Al-Hamad,حمزة الحمد,1284213397,2020-05-31,M,1,A,Riyadh East,Saudi,,G0590,RIY-4
+S10973,Ruba Al-Otaibi,ربى العتيبي,1687192553,2010-06-28,F,10,A,Dammam,Saudi,"hearing aid, front seat",G0591,DAM-5
+S10974,Yazan Al-Dosari,يزن الدوسري,1218073097,2012-04-17,M,8,B,Riyadh North,Saudi,,G0592,RIY-9
+S10975,Ruba Al-Dosari,ربى الدوسري,1672745498,2017-07-03,F,4,A,Riyadh North,Saudi,,G0592,RIY-7
+S10976,Dima Al-Faraj,ديما الفرج,1211794883,2013-12-27,F,7,A,Riyadh East,Saudi,severe egg allergy,G0593,RIY-8
+S10977,Ghala Al-Faraj,غلا الفرج,1696268413,2018-07-26,F,2,C,Riyadh East,Saudi,,G0593,
+S10978,Reem Al-Omari,ريم العمري,1308672608,2020-06-14,F,1,B,Riyadh North,Saudi,,G0594,
+S10979,Haya Al-Otaibi,هيا العتيبي,1836073372,2017-07-03,F,4,A,Dammam,Saudi,,G0595,
+S10980,Khalid Al-Otaibi,خالد العتيبي,1427592856,2016-12-25,M,4,B,Dammam,Saudi,,G0595,
+S10981,Mansour Al-Faraj,منصور الفرج,1570339159,2014-09-08,M,6,B,Riyadh North,Saudi,,G0596,
+S10982,Faisal Khan,فيصل خان,1848396496,2016-12-27,M,5,C,Riyadh North,Saudi,,G0597,
+S10983,Mansour Khan,منصور خان,1188153641,2015-09-27,M,5,C,Riyadh North,Saudi,,G0597,
+S10984,Ali Al-Otaibi,علي العتيبي,1896393190,2014-03-07,M,6,B,Jeddah,Saudi,,G0598,
+S10985,Mansour Al-Rashidi,منصور الرشيدي,1372522292,2018-01-30,M,2,A,Jeddah,Saudi,,G0599,JED-7
+S10986,Ali Al-Saeed,علي السعيد,1101920959,2019-06-13,M,1,A,Dammam,Saudi,,G0600,
+S10987,Nawaf Al-Saeed,نواف السعيد,1626536788,2012-03-02,M,8,C,Dammam,Saudi,,G0600,DAM-3
+S10988,Dima Al-Sharif,ديما الشريف,1979332687,2011-05-24,F,10,B,Jeddah,Saudi,,G0601,
+S10989,Yousef Al-Sharif,يوسف الشريف,1730287812,2019-11-18,M,1,C,Jeddah,Saudi,,G0601,
+S10990,Ruba Al-Subaie,ربى السبيعي,1145695772,2013-11-13,F,7,B,Dammam,Saudi,,G0602,DAM-4
+S10991,Faisal Al-Subaie,فيصل السبيعي,1071290611,2013-01-21,M,8,C,Dammam,Saudi,,G0602,DAM-6
+S10992,Rayan Al-Mutairi,ريان المطيري,2123587792,2017-01-12,M,3,A,Jeddah,Indian,,G0603,JED-9
+S10993,Fatimah Al-Mutairi,فاطمة المطيري,2668265214,2019-11-17,F,1,A,Jeddah,Indian,"asthma, inhaler in bag",G0603,JED-2
+S10994,Ziyad Al-Harbi,زياد الحربي,1643659660,2011-10-18,M,9,C,Riyadh North,Saudi,,G0604,
+S10995,Majed Al-Harbi,ماجد الحربي,1556697789,2012-10-04,M,8,A,Riyadh North,Saudi,,G0604,RIY-2
+S10996,Omar Al-Mutairi,عمر المطيري,1484003514,2013-04-01,M,7,C,Dammam,Saudi,,G0605,
+S10997,Mohammed Al-Mutairi,محمد المطيري,1466847383,2014-11-17,M,6,A,Dammam,Saudi,,G0605,
+S10998,Aseel Al-Mutairi,أسيل المطيري,1339126560,2016-07-18,F,5,A,Dammam,Saudi,,G0605,DAM-7
+S10999,Rahaf Al-Saeed,رهف السعيد,1284827552,2014-06-19,F,6,B,Dammam,Saudi,,G0606,DAM-2
+S11000,Dima Al-Rashidi,ديما الرشيدي,1800001181,2014-08-26,F,7,B,Jeddah,Saudi,,G0607,JED-7
+S11001,Aseel Al-Anazi,أسيل العنزي,1891560725,2019-07-05,F,2,B,Riyadh North,Saudi,,G0608,RIY-4
+S11002,Mohammed Al-Anazi,محمد العنزي,1488302075,2016-03-02,M,4,A,Riyadh North,Saudi,,G0608,
+S11003,Mansour Al-Anazi,منصور العنزي,1073078090,2017-09-15,M,3,B,Riyadh North,Saudi,,G0608,RIY-2
+S11004,Sara Haddad,سارة حداد,1342648779,2016-06-21,F,4,A,Riyadh North,Saudi,,G0609,
+S11005,Ziyad Bakr,زياد بكر,1554830867,2016-10-01,M,5,A,Riyadh North,Saudi,"epilepsy, care plan on file",G0610,RIY-8
+S11006,Fatimah Bakr,فاطمة بكر,1570844680,2012-03-20,F,8,B,Riyadh North,Saudi,,G0610,
+S11007,Yazan Al-Otaibi,يزن العتيبي,1888613117,2019-02-09,M,2,A,Riyadh East,Saudi,,G0611,RIY-2
+S11008,Noura Al-Sharif,نورة الشريف,1077455531,2018-01-08,F,2,B,Dammam,Saudi,,G0612,
+S11009,Shahad Al-Faraj,شهد الفرج,1003595423,2013-09-13,F,7,A,Jeddah,Saudi,,G0613,
+S11010,Fahd Al-Faraj,فهد الفرج,1653142333,2015-05-23,M,5,C,Jeddah,Saudi,,G0613,
+S11011,Yousef Al-Shammari,يوسف الشمري,2593085919,2011-02-17,M,9,A,Dammam,Egyptian,"asthma, inhaler in bag",G0614,
+S11012,Fatimah Al-Shammari,فاطمة الشمري,2511715435,2019-05-14,F,1,C,Dammam,Egyptian,,G0614,
+S11013,Lama Al-Ghamdi,لمى الغامدي,1952130096,2010-02-03,F,10,A,Jeddah,Saudi,,G0615,JED-2
+S11014,Anas Al-Ghamdi,أنس الغامدي,2735716244,2010-03-09,M,10,C,Jeddah,Indian,,G0616,JED-3
+S11015,Ali Al-Ghamdi,علي الغامدي,2093262986,2015-05-16,M,5,A,Jeddah,Indian,,G0616,
+S11016,Saud Al-Sharif,سعود الشريف,1800247876,2011-06-07,M,9,B,Riyadh North,Saudi,,G0617,RIY-7
+S11017,Hessa Al-Sharif,حصة الشريف,1466072957,2016-06-23,F,4,A,Riyadh North,Saudi,,G0617,RIY-8
+S11018,Lulwa Al-Qahtani,لولوة القحطاني,2593560921,2016-06-24,F,4,B,Riyadh East,Pakistani,"nut allergy, carries auto-injector",G0618,RIY-9
+S11019,Rayan Al-Harbi,ريان الحربي,1643471358,2011-09-18,M,9,C,Dammam,Saudi,,G0619,
+S11020,Khalid Al-Faraj,خالد الفرج,1062006179,2019-12-29,M,1,C,Riyadh East,Saudi,"epilepsy, care plan on file",G0620,RIY-7
+S11021,Rahaf Al-Faraj,رهف الفرج,1090081531,2018-10-24,F,2,C,Riyadh East,Saudi,,G0620,RIY-2
+S11022,Noura Al-Mutairi,نورة المطيري,1690383772,2020-05-10,F,1,A,Dammam,Saudi,,G0621,
+S11023,Nawaf Siddiqui,نواف صديقي,1710446809,2015-06-11,M,5,A,Jeddah,Saudi,,G0622,JED-9
+S11024,Hassan Siddiqui,حسن صديقي,1497196869,2008-06-18,M,12,B,Jeddah,Saudi,,G0622,JED-2
+S11025,Anas Siddiqui,أنس صديقي,1731240426,2016-01-25,M,4,C,Jeddah,Saudi,"hearing aid, front seat",G0622,JED-8
+S11026,Maryam Al-Ghamdi,مريم الغامدي,1086118117,2008-02-07,F,12,C,Riyadh North,Saudi,,G0623,
+S11027,Haya Al-Ghamdi,هيا الغامدي,1089576524,2017-10-15,F,3,A,Riyadh North,Saudi,,G0623,
+S11028,Noura Al-Ghamdi,نورة الغامدي,1714811442,2018-06-25,F,3,C,Riyadh North,Saudi,,G0623,RIY-4
+S11029,Lama Siddiqui,لمى صديقي,1672347755,2008-11-06,F,12,B,Riyadh East,Saudi,,G0624,
+S11030,Abdullah Khan,عبدالله خان,1805991074,2017-09-13,M,3,B,Jeddah,Saudi,"migraine, may rest in clinic",G0625,
+S11031,Saud Khan,سعود خان,1035316345,2015-03-30,M,5,C,Jeddah,Saudi,,G0625,
+S11032,Reem Khan,ريم خان,1720851098,2017-07-17,F,3,A,Jeddah,Saudi,,G0625,
+S11033,Ali Siddiqui,علي صديقي,1821920607,2012-08-01,M,8,B,Dammam,Saudi,,G0626,
+S11034,Maryam Siddiqui,مريم صديقي,1052639254,2015-01-27,F,5,A,Dammam,Saudi,,G0626,
+S11035,Hassan Al-Otaibi,حسن العتيبي,1250966470,2014-09-17,M,6,C,Riyadh East,Saudi,,G0627,
+S11036,Dima Al-Otaibi,ديما العتيبي,1964283732,2008-10-04,F,12,B,Riyadh East,Saudi,,G0627,
+S11037,Ziyad Al-Shehri,زياد الشهري,2843472250,2019-09-21,M,2,A,Jeddah,Yemeni,,G0628,
+S11038,Abdullah Al-Ghamdi,عبدالله الغامدي,2442762871,2016-11-19,M,4,B,Riyadh East,Syrian,,G0629,
+S11039,Ali Al-Anazi,علي العنزي,1589956517,2016-08-28,M,5,A,Riyadh East,Saudi,"epilepsy, care plan on file",G0630,
+S11040,Ghala Haddad,غلا حداد,2160201718,2018-11-28,F,2,B,Jeddah,Syrian,,G0631,
+S11041,Saud Siddiqui,سعود صديقي,1236940751,2016-01-16,M,4,A,Riyadh East,Saudi,,G0632,
+S11042,Haya Haddad,هيا حداد,2074265906,2020-12-07,F,1,C,Riyadh East,Yemeni,,G0633,
+S11043,Hassan Al-Shehri,حسن الشهري,1349832896,2012-10-21,M,8,A,Riyadh North,Saudi,"type 1 diabetes, insulin at lunch",G0634,
+S11044,Saud Al-Hamad,سعود الحمد,2465653759,2016-02-24,M,5,A,Riyadh North,Jordanian,,G0635,
+S11045,Lama Nasser,لمى ناصر,1784507996,2016-05-31,F,4,A,Jeddah,Saudi,,G0636,JED-1
+S11046,Reem Al-Dosari,ريم الدوسري,2396972077,2018-12-03,F,2,A,Riyadh East,Indian,"nut allergy, carries auto-injector",G0637,RIY-5
+S11047,Hamza Al-Mutairi,حمزة المطيري,1838622638,2015-06-12,M,6,C,Riyadh East,Saudi,,G0638,RIY-7
+S11048,Yazan Al-Mutairi,يزن المطيري,1872377140,2009-08-05,M,12,A,Dammam,Saudi,,G0639,DAM-5
+S11049,Hessa Al-Omari,حصة العمري,1809965502,2019-07-31,F,2,A,Riyadh North,Saudi,,G0640,RIY-4
+S11050,Ruba Al-Omari,ربى العمري,1322745929,2008-09-17,F,12,A,Riyadh North,Saudi,,G0640,RIY-4
+S11051,Yousef Al-Sharif,يوسف الشريف,2417123191,2016-03-24,M,4,A,Dammam,Syrian,,G0641,
+S11052,Asma Al-Hamad,أسماء الحمد,1789921858,2014-12-16,F,7,B,Riyadh East,Saudi,,G0642,RIY-5
+S11053,Faisal Al-Subaie,فيصل السبيعي,1970340127,2015-11-23,M,5,C,Riyadh North,Saudi,,G0643,
+S11054,Fatimah Al-Subaie,فاطمة السبيعي,1620306065,2011-10-19,F,9,B,Riyadh North,Saudi,,G0643,RIY-2
+S11055,Jana Al-Dosari,جنى الدوسري,2849338503,2011-07-05,F,9,A,Jeddah,Indian,,G0644,
+S11056,Majed Al-Dosari,ماجد الدوسري,2705295673,2015-05-22,M,5,C,Jeddah,Indian,,G0644,JED-1
+S11057,Joud Al-Hamad,جود الحمد,1836845128,2010-02-18,F,10,C,Riyadh North,Saudi,,G0645,RIY-5
+S11058,Layan Al-Otaibi,ليان العتيبي,1003018846,2019-10-11,F,1,C,Riyadh East,Saudi,,G0646,
+S11059,Shahad Al-Qahtani,شهد القحطاني,1769960944,2009-01-15,F,11,B,Riyadh East,Saudi,,G0647,RIY-6
+S11060,Fatimah Al-Qahtani,فاطمة القحطاني,1451442600,2015-01-21,F,6,C,Riyadh East,Saudi,,G0647,
+S11061,Saud Al-Qahtani,سعود القحطاني,1127342941,2018-06-25,M,2,A,Riyadh East,Saudi,,G0647,
+S11062,Shahad Al-Dosari,شهد الدوسري,2189584737,2014-07-15,F,6,A,Riyadh North,Pakistani,,G0648,RIY-3
+S11063,Jana Al-Dosari,جنى الدوسري,2797428883,2014-10-15,F,6,B,Riyadh North,Pakistani,,G0648,
+S11064,Badr Al-Shehri,بدر الشهري,1710889263,2014-08-25,M,6,C,Dammam,Saudi,,G0649,DAM-1
+S11065,Hassan Al-Faraj,حسن الفرج,1118591714,2012-10-02,M,8,B,Riyadh East,Saudi,,G0650,
+S11066,Yousef Al-Rashidi,يوسف الرشيدي,1789444857,2010-01-06,M,11,C,Riyadh East,Saudi,,G0651,RIY-5
+S11067,Majed Al-Rashidi,ماجد الرشيدي,1523112735,2013-08-02,M,7,C,Riyadh East,Saudi,,G0651,
+S11068,Sara Nasser,سارة ناصر,1315429894,2011-06-14,F,9,C,Riyadh North,Saudi,,G0652,
+S11069,Reem Nasser,ريم ناصر,1455795188,2012-07-28,F,8,C,Riyadh North,Saudi,"hearing aid, front seat",G0652,RIY-9
+S11070,Maryam Al-Faraj,مريم الفرج,2744187735,2017-03-09,F,3,C,Riyadh East,Syrian,,G0653,RIY-5
+S11071,Hassan Al-Faraj,حسن الفرج,2805918571,2014-11-28,M,6,B,Riyadh East,Syrian,,G0653,
+S11072,Yazan Al-Otaibi,يزن العتيبي,1440709301,2011-10-27,M,9,C,Riyadh North,Saudi,,G0654,RIY-2
+S11073,Sara Al-Otaibi,سارة العتيبي,1957331352,2017-05-19,F,3,A,Riyadh North,Saudi,,G0654,RIY-7
+S11074,Haya Al-Omari,هيا العمري,1917419234,2009-03-24,F,11,C,Riyadh North,Saudi,,G0655,
+S11075,Lama Al-Faraj,لمى الفرج,1365476010,2016-11-14,F,4,A,Riyadh East,Saudi,,G0656,
+S11076,Dima Al-Faraj,ديما الفرج,1387351507,2008-07-23,F,12,C,Riyadh East,Saudi,,G0656,
+S11077,Jana Al-Faraj,جنى الفرج,1883637814,2016-06-10,F,4,B,Riyadh East,Saudi,,G0656,
+S11078,Dima Al-Subaie,ديما السبيعي,1461413626,2009-07-10,F,11,A,Dammam,Saudi,,G0657,
+S11079,Abdullah Al-Rashidi,عبدالله الرشيدي,2766975032,2016-10-21,M,4,B,Riyadh East,Indian,,G0658,
+S11080,Joud Al-Rashidi,جود الرشيدي,2558028786,2014-12-18,F,6,C,Dammam,Indian,,G0659,DAM-3
+S11081,Hamza Al-Anazi,حمزة العنزي,1440595201,2019-08-01,M,1,C,Riyadh East,Saudi,,G0660,
+S11082,Fatimah Al-Anazi,فاطمة العنزي,1293306917,2009-08-29,F,11,B,Riyadh East,Saudi,,G0660,
+S11083,Majed Al-Hamad,ماجد الحمد,2940538014,2019-04-16,M,1,B,Dammam,Egyptian,,G0661,DAM-5
+S11084,Ziyad Al-Juhani,زياد الجهني,2989020256,2017-01-23,M,3,C,Jeddah,Sudanese,severe egg allergy,G0662,
+S11085,Hamza Al-Juhani,حمزة الجهني,2367810813,2017-09-30,M,3,A,Jeddah,Sudanese,,G0662,
+S11086,Layan Al-Juhani,ليان الجهني,1227666561,2010-10-30,F,10,B,Riyadh East,Saudi,,G0663,
+S11087,Anas Al-Sharif,أنس الشريف,1848464829,2018-06-17,M,2,A,Riyadh East,Saudi,"ADHD, extra time in tests",G0664,
+S11088,Jana Al-Sharif,جنى الشريف,1540976048,2011-07-22,F,10,A,Riyadh East,Saudi,,G0664,
+S11089,Fahd Al-Ghamdi,فهد الغامدي,1077938267,2016-05-29,M,4,A,Riyadh East,Saudi,,G0665,
+S11090,Khalid Al-Shehri,خالد الشهري,1350599954,2019-09-07,M,1,B,Riyadh North,Saudi,,G0666,RIY-5
+S11091,Majed Khan,ماجد خان,1998218166,2017-12-24,M,4,B,Riyadh North,Saudi,,G0667,
+S11092,Lama Khan,لمى خان,1776761354,2019-02-18,F,1,B,Riyadh North,Saudi,,G0667,
+S11093,Dima Al-Hamad,ديما الحمد,2812058165,2015-02-16,F,5,B,Riyadh North,Syrian,,G0668,
+S11094,Hassan Al-Hamad,حسن الحمد,2881608389,2019-11-21,M,1,A,Riyadh North,Syrian,"hearing aid, front seat",G0668,
+S11095,Hessa Al-Rashidi,حصة الرشيدي,2143981337,2018-11-27,F,2,B,Riyadh East,Yemeni,,G0669,
+S11096,Aseel Al-Rashidi,أسيل الرشيدي,2376328695,2012-12-26,F,8,B,Riyadh East,Yemeni,,G0669,RIY-2
+S11097,Dima Al-Harbi,ديما الحربي,1533640969,2012-02-25,F,9,B,Jeddah,Saudi,,G0670,
+S11098,Hessa Al-Faraj,حصة الفرج,1633599286,2015-04-20,F,6,C,Riyadh East,Saudi,,G0671,RIY-4
+S11099,Yousef Al-Qahtani,يوسف القحطاني,1239417837,2013-05-29,M,8,B,Jeddah,Saudi,,G0672,JED-4
+S11100,Asma Nasser,أسماء ناصر,1617954745,2018-03-21,F,2,B,Jeddah,Saudi,,G0673,JED-2
+S11101,Omar Nasser,عمر ناصر,1963297683,2018-12-03,M,2,B,Jeddah,Saudi,,G0673,
+S11102,Mansour Nasser,منصور ناصر,1491115335,2009-02-09,M,12,C,Jeddah,Saudi,"ADHD, extra time in tests",G0673,
+S11103,Ghala Al-Sharif,غلا الشريف,2002022871,2015-01-26,F,5,C,Dammam,Indian,,G0674,DAM-9
+S11104,Layan Al-Dosari,ليان الدوسري,1331047830,2010-02-20,F,10,A,Riyadh North,Saudi,,G0675,
+S11105,Sara Khan,سارة خان,2083888124,2015-01-22,F,5,A,Riyadh North,Indian,,G0676,RIY-5
+S11106,Khalid Al-Omari,خالد العمري,1351908214,2019-11-26,M,1,A,Riyadh North,Saudi,,G0677,
+S11107,Rayan Al-Omari,ريان العمري,1689734730,2011-09-12,M,9,B,Riyadh North,Saudi,,G0677,
+S11108,Yazan Al-Rashidi,يزن الرشيدي,1704930003,2010-01-13,M,10,A,Riyadh East,Saudi,,G0678,
+S11109,Lama Khan,لمى خان,2535590643,2019-10-18,F,2,A,Riyadh North,Pakistani,,G0679,RIY-3
+S11110,Layan Al-Ghamdi,ليان الغامدي,1069854474,2015-01-17,F,5,A,Riyadh North,Saudi,,G0680,RIY-3
+S11111,Rayan Al-Juhani,ريان الجهني,2879894933,2019-06-02,M,1,C,Jeddah,Pakistani,,G0681,
+S11112,Reem Al-Juhani,ريم الجهني,2967662698,2009-04-12,F,11,B,Jeddah,Pakistani,,G0681,JED-1
+S11113,Aseel Al-Sharif,أسيل الشريف,2403444084,2010-02-04,F,11,C,Riyadh East,Yemeni,,G0682,RIY-2
+S11114,Mohammed Al-Malki,محمد المالكي,1422017292,2019-08-31,M,1,C,Riyadh East,Saudi,,G0683,
+S11115,Jana Al-Malki,جنى المالكي,1807112045,2019-03-07,F,1,B,Riyadh East,Saudi,,G0683,RIY-9
+S11116,Tala Al-Ghamdi,تالا الغامدي,1419562451,2015-01-26,F,5,B,Riyadh East,Saudi,,G0684,
+S11117,Yousef Al-Ghamdi,يوسف الغامدي,1752811973,2015-04-19,M,6,C,Riyadh East,Saudi,,G0684,
+S11118,Tala Al-Subaie,تالا السبيعي,1412106176,2009-08-30,F,12,A,Riyadh East,Saudi,"ADHD, extra time in tests",G0685,RIY-4
+S11119,Aseel Al-Omari,أسيل العمري,1248989965,2014-02-18,F,6,B,Dammam,Saudi,,G0686,DAM-8
+S11120,Hassan Al-Omari,حسن العمري,1088001348,2015-10-26,M,5,C,Dammam,Saudi,,G0686,DAM-6
+S11121,Faisal Siddiqui,فيصل صديقي,2102116809,2010-07-08,M,10,B,Riyadh North,Egyptian,,G0687,RIY-5
+S11122,Ziyad Al-Subaie,زياد السبيعي,1796839358,2019-07-28,M,1,C,Jeddah,Saudi,,G0688,JED-7
+S11123,Faisal Al-Mutairi,فيصل المطيري,1690680042,2015-01-20,M,5,A,Riyadh North,Saudi,,G0689,RIY-9
+S11124,Reem Al-Mutairi,ريم المطيري,1161304700,2018-07-18,F,2,B,Riyadh North,Saudi,,G0689,
+S11125,Lama Al-Sharif,لمى الشريف,1881923558,2012-03-03,F,9,A,Riyadh North,Saudi,"ADHD, extra time in tests",G0690,RIY-6
+S11126,Mansour Al-Ghamdi,منصور الغامدي,2896493678,2018-09-13,M,2,C,Riyadh North,Jordanian,,G0691,RIY-8
+S11127,Fahd Al-Qahtani,فهد القحطاني,1820577668,2011-10-09,M,9,C,Riyadh East,Saudi,,G0692,
+S11128,Dima Al-Harbi,ديما الحربي,2547454103,2009-04-08,F,11,B,Riyadh East,Pakistani,,G0693,RIY-5
+S11129,Lulwa Al-Harbi,لولوة الحربي,2195926397,2019-08-16,F,1,B,Riyadh East,Pakistani,,G0693,RIY-4
+S11130,Badr Haddad,بدر حداد,2679699406,2012-07-28,M,8,B,Riyadh North,Sudanese,,G0694,RIY-9
+S11131,Majed Haddad,ماجد حداد,2251967445,2010-12-28,M,10,C,Riyadh North,Sudanese,,G0694,
+S11132,Layan Al-Zahrani,ليان الزهراني,2152432334,2012-01-10,F,8,C,Riyadh North,Sudanese,severe egg allergy,G0695,RIY-3
+S11133,Hassan Al-Dosari,حسن الدوسري,1829696194,2012-06-06,M,9,C,Jeddah,Saudi,,G0696,JED-9
+S11134,Mohammed Al-Dosari,محمد الدوسري,1048359934,2012-07-18,M,8,B,Jeddah,Saudi,,G0696,JED-4
+S11135,Rayan Al-Juhani,ريان الجهني,1685157913,2009-02-10,M,12,B,Riyadh North,Saudi,,G0697,
+S11136,Ali Al-Anazi,علي العنزي,1740175110,2011-08-30,M,9,A,Dammam,Saudi,,G0698,DAM-4
+S11137,Nawaf Al-Juhani,نواف الجهني,1917161958,2011-07-21,M,9,B,Riyadh North,Saudi,,G0699,
+S11138,Nawaf Bakr,نواف بكر,1303310742,2015-06-22,M,5,A,Riyadh North,Saudi,,G0700,RIY-1
+S11139,Mansour Siddiqui,منصور صديقي,2359045755,2016-06-04,M,4,A,Riyadh North,Jordanian,,G0701,
+S11140,Anas Siddiqui,أنس صديقي,2558519338,2012-02-21,M,8,A,Riyadh North,Jordanian,"migraine, may rest in clinic",G0701,
+S11141,Aseel Al-Qahtani,أسيل القحطاني,1300260587,2019-04-06,F,1,A,Jeddah,Saudi,,G0702,JED-5
+S11142,Faisal Al-Hamad,فيصل الحمد,1747548634,2018-07-20,M,2,A,Jeddah,Saudi,,G0703,
+S11143,Sara Al-Omari,سارة العمري,1680582414,2019-01-02,F,1,B,Riyadh East,Saudi,,G0704,
+S11144,Jana Al-Omari,جنى العمري,1035882746,2016-05-14,F,5,B,Riyadh North,Saudi,,G0705,
+S11145,Lama Al-Omari,لمى العمري,1140135976,2009-02-22,F,11,A,Riyadh North,Saudi,,G0705,
+S11146,Talal Al-Saeed,طلال السعيد,1815913581,2015-10-23,M,6,B,Riyadh East,Saudi,,G0706,
+S11147,Asma Al-Faraj,أسماء الفرج,2875344928,2010-07-14,F,11,B,Riyadh North,Sudanese,,G0707,
+S11148,Ghala Al-Faraj,غلا الفرج,2360543920,2017-11-03,F,3,B,Riyadh North,Sudanese,,G0707,
+S11149,Asma Al-Dosari,أسماء الدوسري,1904848597,2013-04-28,F,7,A,Jeddah,Saudi,,G0708,
+S11150,Omar Al-Dosari,عمر الدوسري,1522959969,2019-06-08,M,2,A,Jeddah,Saudi,"hearing aid, front seat",G0708,
+S11151,Anas Khan,أنس خان,2010203874,2017-01-22,M,4,A,Riyadh East,Sudanese,,G0709,
+S11152,Yazan Khan,يزن خان,2666167348,2018-10-17,M,3,C,Riyadh East,Sudanese,,G0709,
+S11153,Joud Khan,جود خان,2538328609,2014-12-13,F,6,B,Riyadh East,Sudanese,,G0709,RIY-3
+S11154,Omar Al-Saeed,عمر السعيد,2580225676,2019-11-05,M,1,C,Riyadh East,Pakistani,,G0710,
+S11155,Faisal Al-Saeed,فيصل السعيد,2354186332,2017-06-29,M,4,C,Riyadh East,Pakistani,,G0710,
+S11156,Anas Al-Saeed,أنس السعيد,2605726995,2012-02-27,M,9,B,Riyadh East,Pakistani,,G0710,
+S11157,Reem Al-Anazi,ريم العنزي,1980534414,2019-06-19,F,1,C,Riyadh East,Saudi,,G0711,
+S11158,Rayan Al-Anazi,ريان العنزي,1984850505,2019-03-03,M,1,C,Riyadh East,Saudi,,G0711,
+S11159,Khalid Al-Anazi,خالد العنزي,1649570684,2018-01-24,M,2,A,Riyadh East,Saudi,,G0711,RIY-7
+S11160,Ali Nasser,علي ناصر,2439934696,2009-09-19,M,12,C,Riyadh North,Yemeni,,G0712,
+S11161,Faisal Bakr,فيصل بكر,1104726231,2016-01-14,M,4,B,Riyadh North,Saudi,,G0713,RIY-2
+S11162,Fatimah Al-Hamad,فاطمة الحمد,1773809054,2010-11-26,F,10,B,Jeddah,Saudi,,G0714,
+S11163,Rayan Al-Zahrani,ريان الزهراني,1482312748,2016-10-28,M,4,B,Riyadh North,Saudi,,G0715,
+S11164,Asma Al-Juhani,أسماء الجهني,1947919251,2009-01-23,F,11,C,Riyadh North,Saudi,,G0716,RIY-1
+S11165,Haya Al-Shammari,هيا الشمري,1080169825,2014-06-14,F,6,C,Riyadh North,Saudi,,G0717,RIY-5
+S11166,Omar Nasser,عمر ناصر,1216582192,2017-10-19,M,4,C,Dammam,Saudi,,G0718,
+S11167,Hamza Nasser,حمزة ناصر,1125068126,2017-06-24,M,3,C,Dammam,Saudi,,G0718,
+S11168,Ziyad Al-Omari,زياد العمري,1381218478,2019-06-30,M,2,C,Riyadh North,Saudi,,G0719,RIY-3
+S11169,Rayan Al-Omari,ريان العمري,1019966120,2012-11-14,M,8,B,Riyadh North,Saudi,,G0719,
+S11170,Ali Al-Omari,علي العمري,1217815808,2019-09-13,M,1,B,Riyadh North,Saudi,,G0719,RIY-3
+S11171,Layan Al-Harbi,ليان الحربي,1362740598,2018-06-28,F,2,B,Jeddah,Saudi,,G0720,JED-9
+S11172,Hassan Al-Harbi,حسن الحربي,1582388745,2016-01-09,M,4,C,Jeddah,Saudi,"hearing aid, front seat",G0720,
+S11173,Shahad Siddiqui,شهد صديقي,1722461616,2014-12-21,F,7,C,Riyadh North,Saudi,,G0721,RIY-6
+S11174,Badr Al-Zahrani,بدر الزهراني,1179967098,2018-03-11,M,2,C,Riyadh North,Saudi,,G0722,
+S11175,Badr Al-Dosari,بدر الدوسري,1926817503,2012-10-03,M,8,C,Dammam,Saudi,,G0723,DAM-5
+S11176,Rayan Al-Shehri,ريان الشهري,1960118141,2010-10-30,M,10,B,Riyadh East,Saudi,severe egg allergy,G0724,
+S11177,Ali Al-Shehri,علي الشهري,1909286221,2011-02-25,M,9,C,Riyadh East,Saudi,,G0724,
+S11178,Fahd Al-Shehri,فهد الشهري,1300146081,2009-01-05,M,11,C,Riyadh East,Saudi,"migraine, may rest in clinic",G0724,
+S11179,Ali Bakr,علي بكر,2544179430,2012-01-02,M,8,A,Dammam,Egyptian,,G0725,
+S11180,Hassan Al-Otaibi,حسن العتيبي,1682539305,2017-03-21,M,3,B,Riyadh North,Saudi,,G0726,RIY-2
+S11181,Layan Al-Otaibi,ليان العتيبي,1477412391,2014-01-13,F,6,A,Riyadh North,Saudi,,G0726,
+S11182,Asma Al-Otaibi,أسماء العتيبي,1188957743,2018-10-30,F,3,A,Riyadh North,Saudi,,G0726,
+S11183,Ruba Khan,ربى خان,1860722190,2014-11-14,F,6,C,Dammam,Saudi,,G0727,
+S11184,Tala Nasser,تالا ناصر,1058069990,2018-08-19,F,2,A,Riyadh East,Saudi,,G0728,
+S11185,Mohammed Nasser,محمد ناصر,1720038108,2015-10-01,M,5,A,Riyadh East,Saudi,,G0728,
+S11186,Anas Al-Shehri,أنس الشهري,2161485857,2016-04-04,M,5,C,Riyadh North,Sudanese,,G0729,RIY-6
+S11187,Asma Al-Shehri,أسماء الشهري,2754588653,2019-04-27,F,1,A,Riyadh North,Sudanese,,G0729,RIY-6
+S11188,Shahad Al-Shammari,شهد الشمري,1006232917,2013-11-03,F,7,C,Riyadh East,Saudi,,G0730,
+S11189,Talal Al-Ghamdi,طلال الغامدي,1296355368,2008-11-04,M,12,C,Riyadh North,Saudi,,G0731,
+S11190,Ziyad Al-Ghamdi,زياد الغامدي,1425319419,2012-11-12,M,8,C,Riyadh North,Saudi,,G0731,
+S11191,Layan Al-Malki,ليان المالكي,1179748339,2019-09-08,F,1,B,Riyadh North,Saudi,,G0732,
+S11192,Hamza Al-Malki,حمزة المالكي,1841520287,2016-02-25,M,5,B,Riyadh North,Saudi,,G0732,RIY-3
+S11193,Sara Al-Omari,سارة العمري,1499715957,2016-02-03,F,4,A,Riyadh East,Saudi,,G0733,
+S11194,Talal Siddiqui,طلال صديقي,2531318960,2017-03-15,M,4,A,Dammam,Egyptian,,G0734,
+S11195,Fatimah Al-Saeed,فاطمة السعيد,1150644408,2018-11-16,F,3,C,Riyadh East,Saudi,,G0735,RIY-1
+S11196,Faisal Al-Saeed,فيصل السعيد,1010090280,2019-10-31,M,1,A,Riyadh East,Saudi,,G0735,
+S11197,Tala Al-Zahrani,تالا الزهراني,2352317474,2013-06-27,F,7,A,Riyadh North,Syrian,,G0736,
+S11198,Anas Al-Harbi,أنس الحربي,1754727276,2018-06-16,M,2,B,Riyadh East,Saudi,"asthma, inhaler in bag",G0737,RIY-2
+S11199,Ghala Al-Harbi,غلا الحربي,1638823242,2010-06-04,F,10,A,Riyadh East,Saudi,,G0737,
+S11200,Abdullah Al-Harbi,عبدالله الحربي,1951335815,2008-02-15,M,12,B,Riyadh East,Saudi,,G0737,RIY-7

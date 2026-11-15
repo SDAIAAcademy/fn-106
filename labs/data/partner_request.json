@@ -1,0 +1,24 @@
+{
+ "requester": "Al-Mizan Centre for Education Research",
+ "kind": "a university research centre (private, in the Kingdom)",
+ "purpose": "Study how commute distance relates to absence in primary and middle school",
+ "requested_fields": [
+  "full_name",
+  "national_id",
+  "date_of_birth",
+  "gender",
+  "grade",
+  "campus",
+  "district",
+  "guardian_employer",
+  "daily_attendance_records",
+  "absence_notes",
+  "health_notes"
+ ],
+ "period": "the current term and the two previous years",
+ "storage": "a cloud research workspace hosted outside the Kingdom",
+ "retention": "kept indefinitely for future studies",
+ "onward_sharing": "with research partners when needed",
+ "security": "password-protected spreadsheet sent by email",
+ "contact": "the centre's principal investigator"
+}

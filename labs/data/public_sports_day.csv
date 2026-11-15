@@ -1,0 +1,321 @@
+name,campus,grade,gender,date_of_birth,event,place
+Badr Al-Faraj,Dammam,1,M,2019-03-24,60 m,3
+Dima Al-Qahtani,Dammam,1,F,2020-08-03,60 m,-
+Faisal Al-Ghamdi,Dammam,1,M,2019-06-01,60 m,1
+Reem Khan,Dammam,1,F,2019-12-23,60 m,2
+Anas Al-Zahrani,Dammam,2,M,2018-06-20,60 m,3
+Nawaf Al-Dosari,Dammam,2,M,2019-03-24,200 m,-
+Rahaf Al-Mutairi,Dammam,2,F,2018-03-17,relay,-
+Tala Al-Shammari,Dammam,2,F,2019-04-01,200 m,-
+Yousef Al-Mutairi,Dammam,2,M,2018-10-26,200 m,-
+Ziyad Al-Juhani,Dammam,2,M,2018-10-14,200 m,1
+Asma Al-Anazi,Dammam,3,F,2017-06-13,relay,-
+Fatimah Al-Zahrani,Dammam,3,F,2017-03-12,60 m,1
+Jana Bakr,Dammam,3,F,2017-09-09,long jump,-
+Reem Al-Saeed,Dammam,3,F,2018-08-01,long jump,-
+Shahad Al-Ghamdi,Dammam,3,F,2017-08-03,60 m,-
+Asma Al-Mutairi,Dammam,4,F,2016-08-14,60 m,2
+Badr Al-Subaie,Dammam,4,M,2017-05-29,long jump,2
+Faisal Al-Sharif,Dammam,4,M,2017-02-25,200 m,3
+Jana Bakr,Dammam,4,F,2016-10-07,relay,1
+Nawaf Al-Otaibi,Dammam,4,M,2017-05-13,60 m,2
+Rahaf Bakr,Dammam,4,F,2016-06-08,relay,1
+Reem Al-Saeed,Dammam,4,F,2016-01-04,60 m,3
+Sara Al-Hamad,Dammam,4,F,2016-05-13,long jump,-
+Talal Siddiqui,Dammam,4,M,2017-03-15,200 m,1
+Faisal Al-Hamad,Dammam,5,M,2016-11-20,relay,-
+Ghala Al-Shehri,Dammam,5,F,2015-10-26,long jump,1
+Layan Al-Harbi,Dammam,5,F,2015-03-28,relay,3
+Faisal Al-Saeed,Dammam,6,M,2015-08-19,long jump,-
+Faisal Bakr,Dammam,6,M,2014-05-09,200 m,1
+Jana Al-Sharif,Dammam,6,F,2014-08-27,long jump,3
+Joud Al-Rashidi,Dammam,6,F,2014-12-18,relay,3
+Lama Al-Qahtani,Dammam,6,F,2015-05-08,long jump,3
+Mansour Al-Otaibi,Dammam,6,M,2014-07-11,long jump,2
+Mohammed Al-Faraj,Dammam,6,M,2014-05-01,long jump,3
+Omar Siddiqui,Dammam,6,M,2014-08-19,relay,-
+Yazan Al-Zahrani,Dammam,6,M,2014-12-28,60 m,1
+Ziyad Al-Harbi,Dammam,6,M,2014-07-03,60 m,-
+Aseel Nasser,Dammam,7,F,2013-12-08,60 m,-
+Hassan Al-Ghamdi,Dammam,8,M,2012-12-08,long jump,-
+Hassan Al-Juhani,Dammam,8,M,2013-10-18,relay,-
+Yousef Nasser,Dammam,8,M,2012-12-12,relay,2
+Hamza Al-Mutairi,Dammam,9,M,2011-06-08,relay,-
+Lama Al-Anazi,Dammam,9,F,2011-11-03,200 m,-
+Ruba Al-Otaibi,Dammam,10,F,2010-06-28,relay,1
+Dima Al-Subaie,Dammam,11,F,2009-07-10,relay,-
+Fatimah Al-Saeed,Dammam,11,F,2009-03-11,60 m,-
+Aseel Al-Qahtani,Jeddah,1,F,2019-04-06,200 m,-
+Dima Al-Shehri,Jeddah,1,F,2019-03-27,200 m,3
+Fahd Al-Sharif,Jeddah,1,M,2019-06-05,long jump,-
+Joud Al-Dosari,Jeddah,1,F,2019-07-28,200 m,1
+Rahaf Al-Ghamdi,Jeddah,1,F,2020-02-19,200 m,2
+Rahaf Al-Juhani,Jeddah,1,F,2019-10-23,relay,-
+Rahaf Nasser,Jeddah,1,F,2019-12-26,200 m,3
+Rayan Al-Juhani,Jeddah,1,M,2019-08-16,long jump,-
+Reem Al-Zahrani,Jeddah,1,F,2019-10-13,relay,1
+Shahad Al-Subaie,Jeddah,1,F,2020-12-05,200 m,1
+Tala Al-Faraj,Jeddah,1,F,2019-09-08,relay,-
+Talal Al-Mutairi,Jeddah,1,M,2019-07-26,200 m,1
+Ghala Al-Shehri,Jeddah,2,F,2019-07-11,60 m,2
+Ghala Haddad,Jeddah,2,F,2018-11-28,relay,1
+Joud Al-Saeed,Jeddah,2,F,2018-09-04,long jump,1
+Layan Al-Otaibi,Jeddah,2,F,2018-03-11,relay,-
+Mansour Al-Ghamdi,Jeddah,2,M,2019-05-01,long jump,1
+Mohammed Al-Harbi,Jeddah,2,M,2018-04-21,long jump,-
+Omar Al-Hamad,Jeddah,2,M,2019-01-11,relay,-
+Omar Nasser,Jeddah,2,M,2018-12-03,relay,2
+Reem Al-Malki,Jeddah,2,F,2018-02-12,relay,3
+Sara Al-Hamad,Jeddah,2,F,2018-08-17,relay,2
+Saud Haddad,Jeddah,2,M,2018-02-24,60 m,3
+Talal Al-Dosari,Jeddah,2,M,2018-01-26,200 m,3
+Yazan Al-Sharif,Jeddah,2,M,2019-08-15,200 m,3
+Ziyad Al-Harbi,Jeddah,2,M,2018-01-01,60 m,2
+Ziyad Al-Sharif,Jeddah,2,M,2018-09-02,60 m,-
+Ali Haddad,Jeddah,3,M,2017-06-21,relay,3
+Anas Al-Shammari,Jeddah,3,M,2017-11-08,60 m,-
+Dima Al-Omari,Jeddah,3,F,2018-04-07,60 m,1
+Faisal Al-Anazi,Jeddah,3,M,2017-08-28,60 m,1
+Fatimah Siddiqui,Jeddah,3,F,2017-09-01,relay,-
+Ghala Al-Dosari,Jeddah,3,F,2017-10-31,long jump,1
+Layan Al-Ghamdi,Jeddah,3,F,2017-12-25,relay,-
+Maryam Al-Saeed,Jeddah,3,F,2017-06-01,relay,3
+Rahaf Haddad,Jeddah,3,F,2017-11-12,long jump,3
+Rayan Al-Hamad,Jeddah,3,M,2017-03-07,200 m,1
+Reem Khan,Jeddah,3,F,2017-07-17,60 m,3
+Yazan Haddad,Jeddah,3,M,2018-06-03,60 m,3
+Ali Al-Shehri,Jeddah,4,M,2016-04-13,long jump,1
+Joud Al-Ghamdi,Jeddah,4,F,2016-09-03,200 m,-
+Khalid Al-Rashidi,Jeddah,4,M,2017-12-17,200 m,3
+Noura Al-Sharif,Jeddah,4,F,2016-01-01,long jump,1
+Reem Bakr,Jeddah,4,F,2016-06-09,relay,-
+Asma Al-Anazi,Jeddah,5,F,2015-02-06,long jump,1
+Fatimah Al-Otaibi,Jeddah,5,F,2015-09-28,long jump,2
+Hassan Al-Sharif,Jeddah,5,M,2015-09-04,long jump,1
+Joud Al-Sharif,Jeddah,5,F,2015-10-07,60 m,2
+Majed Al-Dosari,Jeddah,5,M,2015-05-22,long jump,3
+Rayan Al-Harbi,Jeddah,5,M,2015-03-24,200 m,-
+Ruba Al-Harbi,Jeddah,5,F,2016-05-08,200 m,1
+Saud Khan,Jeddah,5,M,2015-03-30,long jump,3
+Talal Al-Subaie,Jeddah,5,M,2015-10-02,60 m,2
+Badr Al-Zahrani,Jeddah,6,M,2014-05-25,200 m,3
+Haya Al-Faraj,Jeddah,6,F,2014-09-12,relay,2
+Lulwa Al-Sharif,Jeddah,6,F,2014-04-05,relay,3
+Rayan Al-Mutairi,Jeddah,6,M,2014-05-07,long jump,2
+Ziyad Al-Qahtani,Jeddah,6,M,2014-07-23,60 m,3
+Asma Al-Dosari,Jeddah,7,F,2013-04-28,60 m,-
+Faisal Al-Shammari,Jeddah,7,M,2013-01-27,relay,3
+Maryam Al-Shehri,Jeddah,7,F,2013-09-08,long jump,-
+Maryam Khan,Jeddah,7,F,2014-12-19,relay,3
+Rayan Al-Otaibi,Jeddah,7,M,2014-05-14,relay,-
+Shahad Al-Ghamdi,Jeddah,7,F,2013-05-30,200 m,2
+Talal Al-Mutairi,Jeddah,7,M,2013-06-09,200 m,1
+Yousef Al-Zahrani,Jeddah,7,M,2013-07-10,200 m,-
+Anas Al-Sharif,Jeddah,8,M,2013-02-07,60 m,3
+Faisal Al-Qahtani,Jeddah,8,M,2012-10-27,relay,2
+Mansour Al-Faraj,Jeddah,8,M,2012-12-06,relay,3
+Mohammed Al-Dosari,Jeddah,8,M,2012-07-18,long jump,1
+Mohammed Al-Juhani,Jeddah,8,M,2012-08-22,long jump,-
+Yazan Al-Omari,Jeddah,8,M,2012-05-02,long jump,-
+Yousef Al-Shammari,Jeddah,8,M,2012-03-03,60 m,2
+Dima Al-Zahrani,Jeddah,9,F,2011-07-21,relay,2
+Fatimah Al-Saeed,Jeddah,9,F,2012-05-08,relay,2
+Khalid Siddiqui,Jeddah,9,M,2011-02-23,60 m,-
+Nawaf Al-Shehri,Jeddah,9,M,2012-12-06,long jump,2
+Noura Al-Hamad,Jeddah,9,F,2011-01-14,60 m,2
+Yazan Al-Sharif,Jeddah,9,M,2011-09-16,60 m,2
+Yousef Al-Shehri,Jeddah,9,M,2012-09-02,long jump,-
+Asma Al-Malki,Jeddah,10,F,2010-05-23,60 m,-
+Dima Al-Otaibi,Jeddah,11,F,2009-05-20,200 m,-
+Layan Al-Saeed,Jeddah,11,F,2009-07-12,relay,3
+Lulwa Al-Malki,Jeddah,11,F,2009-04-30,relay,2
+Hessa Haddad,Jeddah,12,F,2008-07-06,relay,1
+Lama Al-Shammari,Jeddah,12,F,2008-10-20,200 m,1
+Abdullah Al-Subaie,Riyadh East,1,M,2019-06-27,long jump,2
+Ghala Al-Otaibi,Riyadh East,1,F,2019-10-29,60 m,1
+Ghala Al-Sharif,Riyadh East,1,F,2019-01-29,200 m,2
+Hamza Al-Hamad,Riyadh East,1,M,2020-05-31,200 m,-
+Haya Haddad,Riyadh East,1,F,2020-12-07,relay,-
+Lulwa Al-Harbi,Riyadh East,1,F,2019-08-16,long jump,-
+Mansour Al-Anazi,Riyadh East,1,M,2019-11-27,200 m,2
+Reem Al-Sharif,Riyadh East,1,F,2019-12-29,relay,3
+Sara Al-Omari,Riyadh East,1,F,2019-01-02,60 m,-
+Shahad Al-Anazi,Riyadh East,1,F,2020-06-29,long jump,-
+Yousef Al-Shehri,Riyadh East,1,M,2019-01-23,relay,2
+Hessa Al-Rashidi,Riyadh East,2,F,2018-11-27,long jump,-
+Jana Nasser,Riyadh East,2,F,2018-02-16,long jump,-
+Noura Al-Harbi,Riyadh East,2,F,2019-02-25,long jump,2
+Rahaf Al-Anazi,Riyadh East,2,F,2018-01-11,relay,1
+Reem Al-Dosari,Riyadh East,2,F,2018-12-03,relay,1
+Ruba Al-Qahtani,Riyadh East,2,F,2018-01-02,relay,-
+Aseel Al-Harbi,Riyadh East,3,F,2018-12-01,long jump,2
+Badr Al-Harbi,Riyadh East,3,M,2017-05-22,60 m,2
+Haya Al-Harbi,Riyadh East,3,F,2017-05-31,60 m,2
+Maryam Al-Faraj,Riyadh East,3,F,2017-03-09,60 m,-
+Nawaf Al-Ghamdi,Riyadh East,3,M,2018-12-15,relay,2
+Omar Al-Saeed,Riyadh East,3,M,2018-03-09,200 m,1
+Rahaf Al-Otaibi,Riyadh East,3,F,2017-01-08,200 m,1
+Reem Al-Faraj,Riyadh East,3,F,2018-10-11,60 m,-
+Ruba Al-Saeed,Riyadh East,3,F,2017-07-02,long jump,-
+Yazan Khan,Riyadh East,3,M,2018-10-17,200 m,-
+Yousef Al-Shammari,Riyadh East,3,M,2017-03-13,200 m,3
+Abdullah Al-Ghamdi,Riyadh East,4,M,2016-11-19,relay,3
+Anas Al-Anazi,Riyadh East,4,M,2017-12-26,relay,-
+Aseel Haddad,Riyadh East,4,F,2016-05-31,200 m,-
+Faisal Al-Saeed,Riyadh East,4,M,2017-06-29,60 m,3
+Jana Al-Faraj,Riyadh East,4,F,2016-06-10,60 m,1
+Jana Al-Mutairi,Riyadh East,4,F,2017-06-09,long jump,-
+Joud Al-Otaibi,Riyadh East,4,F,2016-12-30,long jump,2
+Rayan Al-Juhani,Riyadh East,4,M,2016-10-20,200 m,-
+Abdullah Al-Subaie,Riyadh East,5,M,2016-10-30,long jump,1
+Ali Al-Anazi,Riyadh East,5,M,2016-08-28,200 m,1
+Ali Al-Qahtani,Riyadh East,5,M,2015-09-14,long jump,-
+Anas Al-Hamad,Riyadh East,5,M,2015-12-04,relay,-
+Badr Al-Otaibi,Riyadh East,5,M,2016-06-12,60 m,1
+Fatimah Khan,Riyadh East,5,F,2015-03-08,200 m,-
+Haya Al-Saeed,Riyadh East,5,F,2015-03-15,relay,-
+Rahaf Al-Shehri,Riyadh East,5,F,2015-07-24,60 m,1
+Saud Al-Harbi,Riyadh East,5,M,2016-10-02,200 m,-
+Ali Al-Juhani,Riyadh East,6,M,2014-04-21,60 m,-
+Fatimah Al-Qahtani,Riyadh East,6,F,2015-01-21,long jump,-
+Hassan Al-Anazi,Riyadh East,6,M,2014-12-25,60 m,3
+Hassan Al-Otaibi,Riyadh East,6,M,2014-09-17,200 m,1
+Joud Al-Ghamdi,Riyadh East,6,F,2015-10-29,60 m,2
+Khalid Al-Malki,Riyadh East,6,M,2014-07-28,60 m,-
+Mohammed Al-Zahrani,Riyadh East,6,M,2015-01-13,200 m,3
+Talal Al-Anazi,Riyadh East,6,M,2015-03-10,200 m,3
+Yazan Haddad,Riyadh East,6,M,2015-08-11,relay,2
+Yousef Al-Ghamdi,Riyadh East,6,M,2015-04-19,long jump,2
+Hessa Al-Hamad,Riyadh East,7,F,2013-03-10,relay,3
+Mansour Al-Hamad,Riyadh East,7,M,2013-08-03,relay,3
+Mohammed Al-Dosari,Riyadh East,7,M,2013-09-18,relay,1
+Omar Al-Rashidi,Riyadh East,7,M,2013-10-21,relay,-
+Shahad Al-Shammari,Riyadh East,7,F,2013-11-03,long jump,2
+Abdullah Al-Sharif,Riyadh East,8,M,2012-02-24,relay,1
+Abdullah Bakr,Riyadh East,8,M,2012-11-17,relay,2
+Aseel Al-Rashidi,Riyadh East,8,F,2012-12-26,relay,3
+Badr Al-Zahrani,Riyadh East,8,M,2012-08-08,200 m,-
+Dima Al-Harbi,Riyadh East,8,F,2012-01-24,60 m,-
+Ruba Al-Faraj,Riyadh East,8,F,2012-05-24,60 m,-
+Yousef Al-Qahtani,Riyadh East,8,M,2013-05-06,relay,2
+Asma Al-Malki,Riyadh East,9,F,2011-01-01,long jump,1
+Faisal Al-Ghamdi,Riyadh East,9,M,2011-05-20,200 m,3
+Lama Al-Hamad,Riyadh East,9,F,2011-07-15,long jump,2
+Sara Al-Harbi,Riyadh East,9,F,2012-01-26,200 m,2
+Shahad Al-Zahrani,Riyadh East,9,F,2011-11-14,60 m,3
+Ali Al-Malki,Riyadh East,10,M,2011-08-09,60 m,-
+Haya Al-Saeed,Riyadh East,10,F,2010-12-28,relay,1
+Jana Al-Sharif,Riyadh East,10,F,2011-07-22,long jump,3
+Reem Al-Hamad,Riyadh East,10,F,2010-10-08,200 m,-
+Talal Al-Shammari,Riyadh East,10,M,2010-07-28,60 m,3
+Yazan Al-Hamad,Riyadh East,10,M,2010-09-21,60 m,-
+Yazan Al-Rashidi,Riyadh East,10,M,2010-01-13,long jump,-
+Yousef Al-Rashidi,Riyadh East,11,M,2010-01-06,long jump,3
+Abdullah Al-Harbi,Riyadh East,12,M,2008-02-15,relay,1
+Dima Al-Otaibi,Riyadh East,12,F,2008-10-04,200 m,-
+Mansour Al-Anazi,Riyadh East,12,M,2008-06-12,200 m,2
+Noura Siddiqui,Riyadh East,12,F,2008-04-26,relay,2
+Tala Al-Subaie,Riyadh East,12,F,2009-08-30,60 m,2
+Ali Al-Omari,Riyadh North,1,M,2019-09-13,long jump,-
+Asma Al-Subaie,Riyadh North,1,F,2020-08-26,long jump,2
+Fatimah Al-Anazi,Riyadh North,1,F,2020-02-19,200 m,-
+Lama Al-Malki,Riyadh North,1,F,2019-09-30,200 m,1
+Layan Al-Shehri,Riyadh North,1,F,2019-08-23,60 m,-
+Maryam Al-Subaie,Riyadh North,1,F,2020-01-10,long jump,3
+Rahaf Al-Harbi,Riyadh North,1,F,2019-03-17,200 m,1
+Talal Al-Harbi,Riyadh North,1,M,2019-04-02,relay,-
+Yousef Al-Hamad,Riyadh North,1,M,2020-04-11,200 m,3
+Abdullah Bakr,Riyadh North,2,M,2018-10-03,long jump,-
+Hassan Al-Shammari,Riyadh North,2,M,2018-09-14,relay,2
+Hessa Al-Omari,Riyadh North,2,F,2019-07-31,60 m,3
+Joud Al-Anazi,Riyadh North,2,F,2018-10-27,relay,2
+Lama Al-Omari,Riyadh North,2,F,2018-03-31,long jump,3
+Mansour Bakr,Riyadh North,2,M,2019-07-29,200 m,1
+Mohammed Al-Harbi,Riyadh North,2,M,2018-03-13,60 m,2
+Nawaf Siddiqui,Riyadh North,2,M,2018-08-03,long jump,-
+Noura Al-Qahtani,Riyadh North,2,F,2018-08-13,long jump,2
+Ruba Al-Harbi,Riyadh North,2,F,2018-02-21,long jump,1
+Sara Al-Faraj,Riyadh North,2,F,2018-12-25,long jump,2
+Sara Al-Malki,Riyadh North,2,F,2018-06-20,60 m,1
+Tala Al-Subaie,Riyadh North,2,F,2019-03-28,long jump,3
+Talal Al-Hamad,Riyadh North,2,M,2019-08-28,200 m,-
+Talal Al-Juhani,Riyadh North,2,M,2018-04-06,long jump,1
+Yazan Al-Rashidi,Riyadh North,2,M,2019-01-10,200 m,-
+Ziyad Siddiqui,Riyadh North,2,M,2018-09-02,long jump,2
+Fahd Al-Shammari,Riyadh North,3,M,2017-07-04,relay,3
+Hamza Al-Shehri,Riyadh North,3,M,2017-12-11,long jump,2
+Hassan Al-Otaibi,Riyadh North,3,M,2017-03-21,200 m,3
+Lulwa Al-Qahtani,Riyadh North,3,F,2017-10-11,60 m,2
+Majed Al-Ghamdi,Riyadh North,3,M,2017-05-11,relay,-
+Maryam Al-Ghamdi,Riyadh North,3,F,2017-04-21,long jump,1
+Reem Al-Malki,Riyadh North,3,F,2017-11-06,relay,2
+Anas Al-Juhani,Riyadh North,4,M,2017-12-19,long jump,2
+Dima Al-Malki,Riyadh North,4,F,2016-11-15,relay,-
+Hamza Nasser,Riyadh North,4,M,2016-06-03,60 m,-
+Maryam Al-Anazi,Riyadh North,4,F,2016-04-26,60 m,-
+Maryam Al-Qahtani,Riyadh North,4,F,2017-12-19,60 m,2
+Nawaf Al-Shammari,Riyadh North,4,M,2017-07-07,60 m,1
+Sara Haddad,Riyadh North,4,F,2016-06-21,relay,2
+Shahad Al-Shammari,Riyadh North,4,F,2016-08-07,long jump,1
+Talal Al-Mutairi,Riyadh North,4,M,2016-03-09,long jump,1
+Abdullah Al-Shehri,Riyadh North,5,M,2016-12-05,60 m,3
+Anas Al-Shehri,Riyadh North,5,M,2016-04-04,long jump,-
+Aseel Al-Saeed,Riyadh North,5,F,2015-01-27,long jump,3
+Faisal Al-Mutairi,Riyadh North,5,M,2015-01-20,long jump,-
+Fatimah Al-Zahrani,Riyadh North,5,F,2015-02-12,relay,1
+Jana Al-Qahtani,Riyadh North,5,F,2015-05-11,relay,-
+Layan Al-Ghamdi,Riyadh North,5,F,2016-03-15,60 m,1
+Mansour Khan,Riyadh North,5,M,2015-09-27,relay,-
+Sara Khan,Riyadh North,5,F,2015-01-22,60 m,-
+Saud Nasser,Riyadh North,5,M,2015-11-27,200 m,-
+Ali Siddiqui,Riyadh North,6,M,2014-12-30,long jump,3
+Haya Al-Shammari,Riyadh North,6,F,2014-06-14,60 m,3
+Jana Al-Dosari,Riyadh North,6,F,2014-10-15,long jump,-
+Jana Al-Saeed,Riyadh North,6,F,2014-01-19,relay,1
+Joud Al-Ghamdi,Riyadh North,6,F,2014-11-18,long jump,2
+Joud Nasser,Riyadh North,6,F,2014-07-22,long jump,3
+Mansour Al-Faraj,Riyadh North,6,M,2014-09-08,relay,3
+Mohammed Al-Mutairi,Riyadh North,6,M,2014-05-31,60 m,-
+Noura Al-Anazi,Riyadh North,6,F,2014-03-27,long jump,-
+Rayan Al-Rashidi,Riyadh North,6,M,2014-10-07,200 m,-
+Anas Al-Saeed,Riyadh North,7,M,2013-10-05,long jump,1
+Badr Al-Omari,Riyadh North,7,M,2013-08-05,long jump,-
+Fahd Al-Faraj,Riyadh North,7,M,2013-08-20,long jump,-
+Joud Al-Dosari,Riyadh North,7,F,2013-03-02,relay,2
+Shahad Al-Shammari,Riyadh North,7,F,2013-10-24,60 m,-
+Fahd Al-Ghamdi,Riyadh North,8,M,2012-04-20,200 m,-
+Fahd Al-Zahrani,Riyadh North,8,M,2012-04-30,long jump,2
+Faisal Al-Saeed,Riyadh North,8,M,2012-12-06,200 m,3
+Jana Al-Zahrani,Riyadh North,8,F,2012-11-22,relay,-
+Majed Al-Anazi,Riyadh North,8,M,2012-12-20,60 m,-
+Rahaf Al-Omari,Riyadh North,8,F,2012-06-30,60 m,1
+Ruba Al-Saeed,Riyadh North,8,F,2012-01-07,relay,-
+Tala Al-Juhani,Riyadh North,8,F,2012-10-07,200 m,2
+Abdullah Al-Malki,Riyadh North,9,M,2011-09-30,relay,2
+Aseel Al-Qahtani,Riyadh North,9,F,2011-07-23,200 m,2
+Badr Al-Saeed,Riyadh North,9,M,2011-11-11,long jump,3
+Fahd Al-Qahtani,Riyadh North,9,M,2011-10-01,long jump,2
+Fahd Nasser,Riyadh North,9,M,2011-06-01,long jump,-
+Haya Bakr,Riyadh North,9,F,2011-05-15,200 m,3
+Hessa Khan,Riyadh North,9,F,2011-02-25,long jump,2
+Layan Al-Saeed,Riyadh North,9,F,2011-08-23,60 m,3
+Mansour Al-Hamad,Riyadh North,9,M,2012-12-28,long jump,2
+Maryam Al-Omari,Riyadh North,9,F,2011-10-13,60 m,1
+Reem Al-Saeed,Riyadh North,9,F,2011-12-21,200 m,2
+Ziyad Al-Omari,Riyadh North,9,M,2011-01-10,relay,-
+Ziyad Al-Shammari,Riyadh North,9,M,2011-08-06,200 m,3
+Abdullah Al-Shammari,Riyadh North,10,M,2010-06-22,long jump,-
+Hassan Al-Otaibi,Riyadh North,10,M,2010-04-28,200 m,-
+Haya Al-Ghamdi,Riyadh North,10,F,2011-11-19,60 m,3
+Noura Al-Ghamdi,Riyadh North,10,F,2010-09-03,200 m,2
+Yousef Nasser,Riyadh North,10,M,2010-05-02,200 m,-
+Asma Al-Juhani,Riyadh North,11,F,2009-01-23,long jump,3
+Dima Al-Anazi,Riyadh North,11,F,2009-06-18,200 m,3
+Dima Al-Anazi,Riyadh North,11,F,2009-02-23,relay,3
+Lama Al-Ghamdi,Riyadh North,11,F,2010-12-16,60 m,3
+Ruba Al-Otaibi,Riyadh North,11,F,2010-08-10,60 m,1
+Saud Al-Omari,Riyadh North,11,M,2010-12-17,relay,-
+Shahad Al-Ghamdi,Riyadh North,11,F,2009-09-22,60 m,2
+Tala Bakr,Riyadh North,11,F,2009-04-25,long jump,-
+Lulwa Al-Zahrani,Riyadh North,12,F,2008-10-21,200 m,2
+Talal Al-Ghamdi,Riyadh North,12,M,2008-11-04,60 m,3

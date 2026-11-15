@@ -3,24 +3,24 @@
   "version": 1,
   "questions": [
     {
-      "id": "q-example-1",
+      "id": "pdpl-log-is-a-store",
       "type": "single",
-      "prompt": "REPLACE: a practice question on LO1, as a short scenario",
+      "prompt": "A team maps its assistant's data: the student database, the fee database and the hosted model. The assistant writes each request body, prompt included, to an application log. What should the map add?",
       "options": [
-        "REPLACE: a wrong option that a common misconception makes tempting",
-        "REPLACE: the right answer",
-        "REPLACE: a wrong option that a common misconception makes tempting",
-        "REPLACE: a wrong option that a common misconception makes tempting"
+        "Nothing, logs are technical data",
+        "The application log, as a store of personal data",
+        "Only the hosted model's own logs",
+        "A note that logs are exempt for debugging"
       ],
       "correct": [
         1
       ],
-      "explanation": "REPLACE: why the right answer is right, in one sentence",
+      "explanation": "A log that keeps prompts holds whatever the prompts carry, so it is a store with the same obligations as a table.",
       "misconceptions": [
-        "REPLACE: the misconception behind this option",
+        "Treats technical files as outside the law whatever they contain",
         "",
-        "REPLACE: the misconception behind this option",
-        "REPLACE: the misconception behind this option"
+        "Looks only at stores outside the organisation",
+        "Invents a debugging exemption the law does not have"
       ],
       "lo": [
         "LO1"
@@ -32,52 +32,27 @@
       "weight": 1
     },
     {
-      "id": "q-example-2",
-      "type": "tf",
-      "prompt": "REPLACE: a statement on LO2 that is true",
-      "options": [
-        "True",
-        "False"
-      ],
-      "correct": [
-        0
-      ],
-      "explanation": "REPLACE: why the right answer is right, in one sentence",
-      "misconceptions": [
-        "",
-        "REPLACE: the misconception behind this option"
-      ],
-      "lo": [
-        "LO2"
-      ],
-      "day": "day1",
-      "session": 1,
-      "level": "understand",
-      "pool": "practice",
-      "weight": 1
-    },
-    {
-      "id": "q-example-3",
+      "id": "pdpl-transfer-step",
       "type": "single",
-      "prompt": "REPLACE: a practice question on LO3, as a short scenario",
+      "prompt": "On a data flow diagram, the step \"send prompt\" goes to a model endpoint hosted outside the Kingdom. Which obligation must be written on that edge besides minimum content?",
       "options": [
-        "REPLACE: a wrong option that a common misconception makes tempting",
-        "REPLACE: the right answer",
-        "REPLACE: a wrong option that a common misconception makes tempting",
-        "REPLACE: a wrong option that a common misconception makes tempting"
+        "Notice at collection only",
+        "The breach notification deadline",
+        "The conditions for transfer outside the Kingdom",
+        "The right to correction"
       ],
       "correct": [
-        1
+        2
       ],
-      "explanation": "REPLACE: why the right answer is right, in one sentence",
+      "explanation": "Sending personal data to a party outside the Kingdom is a transfer, allowed only under the conditions of Article 29 and its regulation.",
       "misconceptions": [
-        "REPLACE: the misconception behind this option",
+        "Puts a collection duty on a sending step",
+        "Confuses an incident duty with a routine flow",
         "",
-        "REPLACE: the misconception behind this option",
-        "REPLACE: the misconception behind this option"
+        "Picks a right that applies to stored records, not to this step"
       ],
       "lo": [
-        "LO3"
+        "LO1"
       ],
       "day": "day1",
       "session": 1,
@@ -86,80 +61,291 @@
       "weight": 1
     },
     {
-      "id": "q-example-4",
-      "type": "tf",
-      "prompt": "REPLACE: a statement on LO4 that is true",
+      "id": "pdpl-contract-basis",
+      "type": "single",
+      "prompt": "A guardian who signed the enrolment contract asks the school assistant how many days her son was absent. Which legal basis fits answering her?",
       "options": [
-        "True",
-        "False"
+        "The contract the guardian is a party to",
+        "Consent, collected again for each question",
+        "Legitimate interest, because the data is sensitive",
+        "No basis is needed for a parent"
       ],
       "correct": [
         0
       ],
-      "explanation": "REPLACE: why the right answer is right, in one sentence",
+      "explanation": "Processing in implementation of an agreement the data subject (here through the guardian) is a party to does not need separate consent.",
       "misconceptions": [
         "",
-        "REPLACE: the misconception behind this option"
+        "Believes consent is the only basis",
+        "Reverses the rule: legitimate interest is never available for sensitive data",
+        "Thinks a family relationship replaces a legal basis"
+      ],
+      "lo": [
+        "LO1"
+      ],
+      "day": "day1",
+      "session": 2,
+      "level": "apply",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "pdpl-legit-interest-health",
+      "type": "single",
+      "prompt": "A quality log of enquiries keeps the children's health notes. The school wants to keep it on its legitimate interest. What must change first?",
+      "options": [
+        "Nothing, quality checks are a legitimate interest",
+        "The guardians must be told once a year",
+        "The log must move to another server",
+        "The health notes must leave the log"
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "Legitimate interest is available only when no sensitive data is processed; health data is sensitive.",
+      "misconceptions": [
+        "Thinks any business reason is enough whatever the data",
+        "Replaces a condition on the data with a notice",
+        "Treats location of storage as the legal question",
+        ""
+      ],
+      "lo": [
+        "LO1"
+      ],
+      "day": "day1",
+      "session": 2,
+      "level": "understand",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "pdpl-72-hours",
+      "type": "single",
+      "prompt": "A file of guardians' details was exposed on 3 March. The school learns of it on 20 March and expects harm to the guardians. Under the breach guide, by when must SDAIA be notified?",
+      "options": [
+        "Within 72 hours of 3 March",
+        "Within 72 hours of 20 March",
+        "Within 30 days of 20 March",
+        "Only once misuse is confirmed"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "The 72 hours run from the moment the controller becomes aware, when harm to the data or the data subjects is expected.",
+      "misconceptions": [
+        "Starts the clock at the breach instead of at awareness",
+        "",
+        "Uses the period for answering a rights request",
+        "Waits for proof of misuse, which the guide does not require"
+      ],
+      "lo": [
+        "LO1"
+      ],
+      "day": "day1",
+      "session": 4,
+      "level": "apply",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "pdpl-rights-30-days",
+      "type": "single",
+      "prompt": "A guardian asks the school for a copy of all data it holds about her daughter. Without an extension, how long does the school have to act?",
+      "options": [
+        "Seven days",
+        "Ninety days",
+        "Thirty days",
+        "There is no limit"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "The Implementing Regulation sets 30 days, extendable once by 30 days with prior notice and reasons.",
+      "misconceptions": [
+        "Confuses it with a short cache period",
+        "Confuses it with a retention period",
+        "",
+        "Believes rights requests have no deadline"
+      ],
+      "lo": [
+        "LO1"
+      ],
+      "day": "day1",
+      "session": 4,
+      "level": "remember",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "pdpl-retention-rule",
+      "type": "single",
+      "prompt": "Which retention rule for an assistant's enquiry log is complete?",
+      "options": [
+        "Keep the log as long as it is useful",
+        "Delete old rows when the disk is full",
+        "Ninety days",
+        "Ninety days from the enquiry date, then scheduled deletion of rows and backups"
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "A rule names the period, the event that starts it and the method of destruction, backups included.",
+      "misconceptions": [
+        "Gives no period at all",
+        "Ties deletion to storage cost, not to purpose",
+        "Gives a period without a start or a method",
+        ""
+      ],
+      "lo": [
+        "LO1"
+      ],
+      "day": "day1",
+      "session": 4,
+      "level": "apply",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "min-five-fields",
+      "type": "single",
+      "prompt": "To answer \"what is left to pay for my son?\", which fields does the prompt need?",
+      "options": [
+        "The fee balance, the child's first name and the message",
+        "The whole fee record and the guardian's national ID",
+        "The student file, so the model has context",
+        "The guardian's IBAN, in case of a refund"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "The purpose needs the balance and a name to greet; every other field fails the actual-need test.",
+      "misconceptions": [
+        "",
+        "Keeps identifiers in case they help",
+        "Believes more context always improves the answer",
+        "Collects for a possible future need, which the guideline rules out"
       ],
       "lo": [
         "LO4"
       ],
       "day": "day1",
-      "session": 1,
-      "level": "understand",
-      "pool": "practice",
-      "weight": 1
-    },
-    {
-      "id": "q-example-5",
-      "type": "single",
-      "prompt": "REPLACE: a practice question on LO5, as a short scenario",
-      "options": [
-        "REPLACE: a wrong option that a common misconception makes tempting",
-        "REPLACE: the right answer",
-        "REPLACE: a wrong option that a common misconception makes tempting",
-        "REPLACE: a wrong option that a common misconception makes tempting"
-      ],
-      "correct": [
-        1
-      ],
-      "explanation": "REPLACE: why the right answer is right, in one sentence",
-      "misconceptions": [
-        "REPLACE: the misconception behind this option",
-        "",
-        "REPLACE: the misconception behind this option",
-        "REPLACE: the misconception behind this option"
-      ],
-      "lo": [
-        "LO5"
-      ],
-      "day": "day1",
-      "session": 1,
+      "session": 2,
       "level": "apply",
       "pool": "practice",
       "weight": 1
     },
     {
-      "id": "q-example-6",
-      "type": "tf",
-      "prompt": "REPLACE: a statement on LO6 that is true",
+      "id": "pseudo-still-personal",
+      "type": "single",
+      "prompt": "Student numbers are replaced by HMAC codes and names are removed. The school keeps the key. Under the PDPL guideline, the result is:",
       "options": [
-        "True",
-        "False"
+        "Anonymous data outside the law",
+        "Personal data, because it can be linked back",
+        "Public data that can be published",
+        "Encrypted data that needs no protection"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "Pseudonymised data stays personal data because additional information can link it to the person.",
+      "misconceptions": [
+        "Equates removing names with anonymisation",
+        "",
+        "Jumps from a privacy measure to a classification level",
+        "Treats a cryptographic step as an exemption"
+      ],
+      "lo": [
+        "LO4"
+      ],
+      "day": "day1",
+      "session": 3,
+      "level": "understand",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "reid-linkage",
+      "type": "single",
+      "prompt": "A pseudonymised file keeps campus, grade, gender and exact date of birth. The school's website lists sports-day winners with the same four details. What is the main risk?",
+      "options": [
+        "None, the file has no names",
+        "The website breaks copyright",
+        "A join on the four details re-identifies most children",
+        "The codes can be guessed without the key"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "Quasi-identifiers together are close to unique per child, so joining with a public list puts names back on the records.",
+      "misconceptions": [
+        "Thinks names are the only identifiers",
+        "Looks at the wrong legal question",
+        "",
+        "Blames the codes when the leak is in the other columns"
+      ],
+      "lo": [
+        "LO4"
+      ],
+      "day": "day1",
+      "session": 3,
+      "level": "analyse",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "reid-k-anonymity",
+      "type": "single",
+      "prompt": "After generalising birth date to birth year and grade to a band, the smallest group of identical quasi-identifiers holds one child. What does this mean?",
+      "options": [
+        "That child can still be singled out; suppress or generalise further",
+        "The data is now anonymous",
+        "Generalisation failed for every child",
+        "The key must be rotated"
       ],
       "correct": [
         0
       ],
-      "explanation": "REPLACE: why the right answer is right, in one sentence",
+      "explanation": "k = 1 means at least one record is unique on the quasi-identifiers, so it is still exposed even if the average risk fell.",
       "misconceptions": [
         "",
-        "REPLACE: the misconception behind this option"
+        "Reads a lower average as no risk",
+        "Confuses one exposed child with a complete failure",
+        "Fixes the codes when the problem is the other columns"
       ],
       "lo": [
-        "LO6"
+        "LO4"
       ],
       "day": "day1",
-      "session": 1,
+      "session": 3,
+      "level": "analyse",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "plain-hash",
+      "type": "single",
+      "prompt": "Why is a plain SHA-256 hash of the student number a weak pseudonym?",
+      "options": [
+        "SHA-256 is no longer secure",
+        "Hashes are too long to store",
+        "It cannot be joined across files",
+        "Anyone can hash every possible student number and look the codes up"
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "The space of student numbers is small, so an unkeyed hash is reversed by trying them all; a keyed hash prevents that.",
+      "misconceptions": [
+        "Blames the algorithm rather than the missing key",
+        "Treats storage size as the privacy problem",
+        "Gets it backwards: hashes join well, which is the danger",
+        ""
+      ],
+      "lo": [
+        "LO4"
+      ],
+      "day": "day1",
+      "session": 3,
       "level": "understand",
       "pool": "practice",
       "weight": 1

@@ -1,0 +1,1 @@
+# Colab already ships pandas. Nothing else is needed: the labs use the standard library for the hosted model.

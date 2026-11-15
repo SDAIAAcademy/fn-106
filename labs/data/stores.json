@@ -1,0 +1,38 @@
+[
+ {
+  "store": "student information system",
+  "holds": "students, guardians, attendance",
+  "current_rule": "kept while enrolled and for ever after",
+  "owner": "Dana Al-Saleh"
+ },
+ {
+  "store": "fee system",
+  "holds": "fees, card digits",
+  "current_rule": "kept for ever",
+  "owner": "Osama Al-Qurashi"
+ },
+ {
+  "store": "Wafi enquiry log",
+  "holds": "guardian mobile, enquiry, full prompt",
+  "current_rule": "never deleted",
+  "owner": "Dana Al-Saleh"
+ },
+ {
+  "store": "Wafi reply cache",
+  "holds": "prompt hash and reply text",
+  "current_rule": "never deleted",
+  "owner": "Dana Al-Saleh"
+ },
+ {
+  "store": "staff review queue",
+  "holds": "escalated enquiries and drafts",
+  "current_rule": "deleted when closed",
+  "owner": "Layla Haddad"
+ },
+ {
+  "store": "model provider",
+  "holds": "prompts and replies on the provider's side",
+  "current_rule": "unknown: set by the provider's terms",
+  "owner": "outside Rawafid"
+ }
+]

@@ -1,0 +1,7 @@
+[
+ "student.full_name",
+ "derived.absences_this_term",
+ "derived.lates_this_term",
+ "derived.balance",
+ "enquiry.text"
+]
